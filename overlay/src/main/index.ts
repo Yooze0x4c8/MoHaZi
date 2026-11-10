@@ -51,7 +51,7 @@ function createOverlay() {
   else win.loadFile(join(__dirname, '../renderer/index.html'))
 
   // 오버레이 숨기기/보이기
-  globalShortcut.register('Alt+O', () => (win.isVisible() ? win.hide() : win.showInactive()))
+  globalShortcut.register('F8', () => (win.isVisible() ? win.hide() : win.showInactive()))
 
   // 2초마다 게임 상태 확인, 바뀌었을 때만 렌더러에 알림
   win.webContents.on('did-finish-load', () => {

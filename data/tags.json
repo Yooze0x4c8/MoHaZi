@@ -1,0 +1,678 @@
+{
+  "labels": {
+    "ap": "주문력",
+    "ad": "공격력",
+    "attack_speed": "공격 속도",
+    "crit": "치명타",
+    "on_hit": "적중 시 효과",
+    "ability_haste": "스킬 가속",
+    "ult_haste": "궁 쿨감",
+    "ult": "궁극기 강화",
+    "tank": "체력",
+    "resist": "방어력·마저",
+    "shield": "보호막",
+    "heal": "회복",
+    "support": "아군 지원",
+    "ms": "이동 속도",
+    "dash": "돌진",
+    "range": "사거리",
+    "burn": "화상",
+    "true_dmg": "고정 피해",
+    "cc": "군중 제어",
+    "pen": "관통력",
+    "auto_cast": "자동 공격",
+    "summon": "소환물",
+    "item": "아이템",
+    "random": "무작위",
+    "damage": "피해 증가",
+    "stack": "중첩",
+    "stats": "능력치",
+    "gold": "골드"
+  },
+  "tags": {
+    "1001": [
+      "tank",
+      "resist"
+    ],
+    "1002": [
+      "item"
+    ],
+    "1004": [
+      "ability_haste",
+      "heal",
+      "shield",
+      "damage"
+    ],
+    "1005": [
+      "ms",
+      "support"
+    ],
+    "1006": [
+      "dash",
+      "damage"
+    ],
+    "1007": [
+      "ad"
+    ],
+    "1009": [
+      "ability_haste",
+      "burn",
+      "cc"
+    ],
+    "1011": [
+      "ult"
+    ],
+    "1013": [
+      "tank"
+    ],
+    "1015": [
+      "heal",
+      "damage"
+    ],
+    "1018": [
+      "shield",
+      "cc"
+    ],
+    "1019": [
+      "ability_haste",
+      "dash"
+    ],
+    "1020": [
+      "heal",
+      "tank"
+    ],
+    "1022": [
+      "attack_speed"
+    ],
+    "1023": [
+      "tank",
+      "heal",
+      "ms",
+      "damage"
+    ],
+    "1025": [
+      "true_dmg"
+    ],
+    "1026": [
+      "ms",
+      "damage"
+    ],
+    "1027": [
+      "dash"
+    ],
+    "1028": [
+      "pen"
+    ],
+    "1029": [
+      "on_hit"
+    ],
+    "1030": [
+      "ability_haste"
+    ],
+    "1032": [
+      "damage",
+      "ability_haste"
+    ],
+    "1035": [
+      "burn",
+      "cc"
+    ],
+    "1036": [
+      "on_hit",
+      "burn"
+    ],
+    "1037": [
+      "shield",
+      "heal"
+    ],
+    "1038": [
+      "damage"
+    ],
+    "1039": [
+      "cc",
+      "auto_cast"
+    ],
+    "1041": [
+      "tank",
+      "ap",
+      "ad"
+    ],
+    "1042": [
+      "heal",
+      "cc"
+    ],
+    "1044": [
+      "ms",
+      "cc"
+    ],
+    "1045": [
+      "burn",
+      "ability_haste"
+    ],
+    "1046": [
+      "damage"
+    ],
+    "1047": [
+      "crit"
+    ],
+    "1048": [
+      "crit"
+    ],
+    "1050": [
+      "support",
+      "ap"
+    ],
+    "1051": [
+      "attack_speed",
+      "damage"
+    ],
+    "1052": [
+      "attack_speed",
+      "on_hit"
+    ],
+    "1053": [
+      "ap",
+      "ad",
+      "tank",
+      "ability_haste",
+      "ms"
+    ],
+    "1054": [
+      "ap",
+      "ad",
+      "on_hit"
+    ],
+    "1056": [
+      "tank"
+    ],
+    "1057": [
+      "shield"
+    ],
+    "1058": [
+      "on_hit",
+      "ability_haste"
+    ],
+    "1060": [
+      "heal"
+    ],
+    "1061": [
+      "auto_cast"
+    ],
+    "1062": [
+      "random"
+    ],
+    "1063": [
+      "resist",
+      "dash"
+    ],
+    "1064": [
+      "heal"
+    ],
+    "1066": [
+      "auto_cast",
+      "cc"
+    ],
+    "1067": [
+      "heal"
+    ],
+    "1068": [
+      "ability_haste"
+    ],
+    "1069": [
+      "cc"
+    ],
+    "1070": [
+      "heal"
+    ],
+    "1071": [
+      "range"
+    ],
+    "1072": [
+      "support"
+    ],
+    "1073": [
+      "ms",
+      "dash"
+    ],
+    "1074": [
+      "on_hit",
+      "tank"
+    ],
+    "1075": [
+      "burn"
+    ],
+    "1076": [
+      "shield",
+      "heal",
+      "support",
+      "true_dmg",
+      "cc"
+    ],
+    "1077": [
+      "crit",
+      "heal"
+    ],
+    "1079": [
+      "ap",
+      "ad",
+      "attack_speed",
+      "on_hit",
+      "heal",
+      "damage"
+    ],
+    "1080": [
+      "crit",
+      "tank"
+    ],
+    "1081": [
+      "attack_speed",
+      "on_hit",
+      "ms"
+    ],
+    "1082": [
+      "ad",
+      "ability_haste",
+      "pen"
+    ],
+    "1084": [
+      "pen"
+    ],
+    "1085": [
+      "burn",
+      "cc"
+    ],
+    "1086": [
+      "range",
+      "damage"
+    ],
+    "1087": [
+      "attack_speed",
+      "on_hit"
+    ],
+    "1088": [
+      "ult_haste",
+      "ult"
+    ],
+    "1092": [
+      "crit",
+      "burn"
+    ],
+    "1095": [
+      "support",
+      "shield",
+      "heal",
+      "resist"
+    ],
+    "1097": [
+      "ap"
+    ],
+    "1098": [
+      "ms"
+    ],
+    "1103": [
+      "ability_haste"
+    ],
+    "1104": [
+      "summon"
+    ],
+    "1105": [
+      "ms"
+    ],
+    "1107": [
+      "on_hit"
+    ],
+    "1108": [
+      "true_dmg",
+      "cc",
+      "auto_cast"
+    ],
+    "1112": [
+      "ult"
+    ],
+    "1113": [
+      "ability_haste",
+      "range"
+    ],
+    "1115": [
+      "range"
+    ],
+    "1116": [
+      "dash"
+    ],
+    "1118": [
+      "crit",
+      "heal",
+      "shield",
+      "support"
+    ],
+    "1129": [
+      "ap",
+      "on_hit"
+    ],
+    "1133": [
+      "true_dmg",
+      "damage"
+    ],
+    "1134": [
+      "ad",
+      "attack_speed",
+      "heal",
+      "ms"
+    ],
+    "1136": [
+      "cc",
+      "ap",
+      "ad"
+    ],
+    "1138": [
+      "heal"
+    ],
+    "1141": [
+      "shield",
+      "heal",
+      "support"
+    ],
+    "1149": [
+      "resist",
+      "cc",
+      "tank"
+    ],
+    "1150": [
+      "ability_haste"
+    ],
+    "1151": [
+      "ability_haste"
+    ],
+    "1152": [
+      "tank",
+      "heal",
+      "item"
+    ],
+    "1154": [
+      "item"
+    ],
+    "1156": [
+      "item",
+      "ap"
+    ],
+    "1170": [
+      "range"
+    ],
+    "1180": [
+      "shield"
+    ],
+    "1181": [
+      "on_hit",
+      "tank"
+    ],
+    "1187": [
+      "dash",
+      "cc"
+    ],
+    "1194": [
+      "ult",
+      "cc"
+    ],
+    "1195": [
+      "ms",
+      "damage"
+    ],
+    "1198": [
+      "shield",
+      "heal",
+      "burn"
+    ],
+    "1204": [
+      "stack"
+    ],
+    "1205": [
+      "ap"
+    ],
+    "1206": [
+      "ad"
+    ],
+    "1208": [
+      "true_dmg"
+    ],
+    "1211": [
+      "ult"
+    ],
+    "1214": [
+      "ability_haste",
+      "damage"
+    ],
+    "1220": [
+      "crit",
+      "on_hit"
+    ],
+    "1225": [
+      "attack_speed",
+      "on_hit"
+    ],
+    "1237": [
+      "random"
+    ],
+    "1238": [
+      "random"
+    ],
+    "1243": [
+      "random"
+    ],
+    "1250": [
+      "ad"
+    ],
+    "1301": [
+      "support",
+      "auto_cast"
+    ],
+    "1305": [
+      "ms",
+      "cc"
+    ],
+    "1308": [
+      "ms",
+      "auto_cast"
+    ],
+    "1310": [
+      "true_dmg",
+      "cc"
+    ],
+    "1311": [
+      "shield",
+      "heal",
+      "damage"
+    ],
+    "1313": [
+      "heal"
+    ],
+    "1317": [
+      "item",
+      "ad"
+    ],
+    "1318": [
+      "item",
+      "ap"
+    ],
+    "1319": [
+      "item",
+      "tank",
+      "burn"
+    ],
+    "1320": [
+      "item",
+      "ad",
+      "crit"
+    ],
+    "1322": [
+      "attack_speed",
+      "ms"
+    ],
+    "1323": [
+      "cc",
+      "damage"
+    ],
+    "1324": [
+      "heal",
+      "shield",
+      "tank"
+    ],
+    "1336": [
+      "item",
+      "crit",
+      "ad"
+    ],
+    "1338": [
+      "item",
+      "ad"
+    ],
+    "1345": [
+      "support",
+      "heal"
+    ],
+    "1353": [
+      "tank"
+    ],
+    "1361": [
+      "item",
+      "tank",
+      "burn"
+    ],
+    "1390": [
+      "ap",
+      "stack"
+    ],
+    "1397": [
+      "attack_speed",
+      "damage"
+    ],
+    "1402": [
+      "stats"
+    ],
+    "1403": [
+      "stats"
+    ],
+    "1404": [
+      "stats"
+    ],
+    "1405": [
+      "ms"
+    ],
+    "1409": [
+      "damage"
+    ],
+    "1413": [
+      "cc",
+      "tank"
+    ],
+    "1418": [
+      "random"
+    ],
+    "1424": [
+      "random"
+    ],
+    "1996": [
+      "item",
+      "on_hit"
+    ],
+    "2001": [
+      "heal",
+      "support",
+      "gold"
+    ],
+    "2002": [
+      "damage"
+    ],
+    "2003": [
+      "ms",
+      "tank"
+    ],
+    "2004": [
+      "support"
+    ],
+    "2005": [
+      "burn",
+      "damage"
+    ],
+    "2006": [
+      "cc",
+      "dash"
+    ],
+    "2007": [
+      "damage"
+    ],
+    "2008": [
+      "tank"
+    ],
+    "2009": [
+      "attack_speed",
+      "ms"
+    ],
+    "2010": [
+      "damage"
+    ],
+    "2016": [
+      "ms"
+    ],
+    "2018": [
+      "ap",
+      "ability_haste"
+    ],
+    "2031": [
+      "cc",
+      "summon"
+    ],
+    "2055": [
+      "damage"
+    ],
+    "2064": [
+      "dash",
+      "ms"
+    ],
+    "2065": [
+      "cc"
+    ],
+    "2073": [
+      "heal",
+      "on_hit"
+    ],
+    "2087": [
+      "ap",
+      "ability_haste"
+    ],
+    "2088": [
+      "dash"
+    ],
+    "2089": [
+      "gold"
+    ],
+    "2095": [
+      "random",
+      "gold"
+    ],
+    "2098": [
+      "heal",
+      "ms",
+      "true_dmg"
+    ],
+    "2099": [
+      "damage"
+    ],
+    "2100": [
+      "ability_haste"
+    ],
+    "2103": [
+      "range",
+      "item"
+    ],
+    "2104": [
+      "damage"
+    ],
+    "2107": [
+      "damage",
+      "ms"
+    ],
+    "12317": [
+      "random"
+    ]
+  }
+}

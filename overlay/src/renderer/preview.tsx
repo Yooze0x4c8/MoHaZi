@@ -1,7 +1,9 @@
 // 미리보기: npm run dev 후 브라우저에서 /#preview-02 (01, 06, 07도) → screens/의 같은 번호 PNG와 비교
+// /#preview-02a: 실제 엔진·빌드 데이터로 갱플랭크 증강 화면. 패널에서 빌드를 누르면 다시 매긴다 (02a → 02b)
 import { useState, type CSSProperties } from 'react'
 import type { Build } from '../engine'
 import { BuildChip, BuildPanel } from './build'
+import { Overlay } from './view'
 import { AugmentGrades, CARD_X, type CardGrade } from './grades'
 
 const MOCK_02: CardGrade[] = [
@@ -65,6 +67,8 @@ function PanelPreview({ screen }: { screen: string }) {
 
 export function Preview({ screen }: { screen: string }) {
   if (MOCK_BUILDS[screen]) return <PanelPreview screen={screen} />
+  // 궁극기 대변혁, 대마법사, 무한의 대검 업그레이드
+  if (screen === '02a') return <><FakeGame /><Overlay alias="Gangplank" cards={[1088, 2087, 1336]} picked={[]} f7Open={false} /></>
   return (
     <>
       <FakeGame />

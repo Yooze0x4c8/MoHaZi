@@ -4,6 +4,7 @@ export type Grade = 'S' | 'A' | 'B' | 'C'
 export type Build = {
   id: string
   name: string
+  desc?: string    // 빌드 패널의 한 줄 설명
   style: 'fun' | 'meta'
   default?: boolean
   wantTags: Record<string, number>

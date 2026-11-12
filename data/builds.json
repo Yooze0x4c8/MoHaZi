@@ -5,6 +5,7 @@
    {
     "id": "Annie-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -23,6 +24,7 @@
    {
     "id": "Annie-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -45,6 +47,7 @@
    {
     "id": "Olaf-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -64,6 +67,7 @@
    {
     "id": "Olaf-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -87,6 +91,7 @@
    {
     "id": "Galio-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -104,6 +109,7 @@
    {
     "id": "Galio-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -127,6 +133,7 @@
    {
     "id": "TwistedFate-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -146,6 +153,7 @@
    {
     "id": "TwistedFate-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -168,6 +176,7 @@
    {
     "id": "XinZhao-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -192,6 +201,7 @@
    {
     "id": "Urgot-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -215,6 +225,7 @@
    {
     "id": "Leblanc-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -238,6 +249,7 @@
    {
     "id": "Vladimir-mage",
     "name": "흡혈 AP",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -264,6 +276,7 @@
    {
     "id": "FiddleSticks-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -288,6 +301,7 @@
    {
     "id": "Kayle-aponhit",
     "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -310,6 +324,7 @@
    {
     "id": "MasterYi-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -328,6 +343,7 @@
    {
     "id": "MasterYi-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -351,6 +367,7 @@
    {
     "id": "Alistar-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -375,6 +392,7 @@
    {
     "id": "Ryze-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -400,6 +418,7 @@
    {
     "id": "Sion-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -418,6 +437,7 @@
    {
     "id": "Sion-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -441,6 +461,7 @@
    {
     "id": "Sivir-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -465,6 +486,7 @@
    {
     "id": "Soraka-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -489,6 +511,7 @@
    {
     "id": "Teemo-aponhit",
     "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -506,6 +529,7 @@
    {
     "id": "Teemo-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -528,6 +552,7 @@
    {
     "id": "Tristana-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -551,6 +576,7 @@
    {
     "id": "Warwick-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -568,6 +594,7 @@
    {
     "id": "Warwick-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -591,6 +618,7 @@
    {
     "id": "Nunu-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -608,6 +636,7 @@
    {
     "id": "Nunu-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -631,6 +660,7 @@
    {
     "id": "MissFortune-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -650,6 +680,7 @@
    {
     "id": "MissFortune-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -674,6 +705,7 @@
    {
     "id": "Ashe-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -693,6 +725,7 @@
    {
     "id": "Ashe-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -715,6 +748,7 @@
    {
     "id": "Tryndamere-fighter",
     "name": "치명타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -738,6 +772,7 @@
    {
     "id": "Jax-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -755,6 +790,7 @@
    {
     "id": "Jax-aponhit",
     "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -776,6 +812,7 @@
    {
     "id": "Morgana-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -796,6 +833,7 @@
    {
     "id": "Morgana-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -818,6 +856,7 @@
    {
     "id": "Zilean-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -837,6 +876,7 @@
    {
     "id": "Zilean-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -860,6 +900,7 @@
    {
     "id": "Singed-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -883,6 +924,7 @@
    {
     "id": "Evelynn-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -906,6 +948,7 @@
    {
     "id": "Twitch-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -925,6 +968,7 @@
    {
     "id": "Twitch-aponhit",
     "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -946,6 +990,7 @@
    {
     "id": "Karthus-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -971,6 +1016,7 @@
    {
     "id": "Chogath-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -991,6 +1037,7 @@
    {
     "id": "Chogath-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1014,6 +1061,7 @@
    {
     "id": "Amumu-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1036,6 +1084,7 @@
    {
     "id": "Rammus-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1060,6 +1109,7 @@
    {
     "id": "Anivia-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1084,6 +1134,7 @@
    {
     "id": "Shaco-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1102,6 +1153,7 @@
    {
     "id": "Shaco-mage",
     "name": "AP 상자",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1127,6 +1179,7 @@
    {
     "id": "DrMundo-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1150,6 +1203,7 @@
    {
     "id": "Sona-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1174,6 +1228,7 @@
    {
     "id": "Kassadin-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1198,6 +1253,7 @@
    {
     "id": "Irelia-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1221,6 +1277,7 @@
    {
     "id": "Janna-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1245,6 +1302,7 @@
    {
     "id": "Gangplank-crit",
     "name": "치명타 배럴",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1264,6 +1322,7 @@
    {
     "id": "Gangplank-apult",
     "name": "AP 무한궁",
+    "desc": "궁 쿨감을 쌓아 궁을 쉬지 않고 깔아요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1285,6 +1344,7 @@
    {
     "id": "Corki-adcaster",
     "name": "스킬 물리",
+    "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1303,6 +1363,7 @@
    {
     "id": "Corki-burst",
     "name": "AP 코르키",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1326,6 +1387,7 @@
    {
     "id": "Karma-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1345,6 +1407,7 @@
    {
     "id": "Karma-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1369,6 +1432,7 @@
    {
     "id": "Taric-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1393,6 +1457,7 @@
    {
     "id": "Veigar-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1417,6 +1482,7 @@
    {
     "id": "Trundle-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1440,6 +1506,7 @@
    {
     "id": "Swain-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1463,6 +1530,7 @@
    {
     "id": "Caitlyn-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1486,6 +1554,7 @@
    {
     "id": "Blitzcrank-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1504,6 +1573,7 @@
    {
     "id": "Blitzcrank-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1526,6 +1596,7 @@
    {
     "id": "Malphite-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1544,6 +1615,7 @@
    {
     "id": "Malphite-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1567,6 +1639,7 @@
    {
     "id": "Katarina-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1591,6 +1664,7 @@
    {
     "id": "Nocturne-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1615,6 +1689,7 @@
    {
     "id": "Maokai-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1633,6 +1708,7 @@
    {
     "id": "Maokai-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1655,6 +1731,7 @@
    {
     "id": "Renekton-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1678,6 +1755,7 @@
    {
     "id": "JarvanIV-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1697,6 +1775,7 @@
    {
     "id": "JarvanIV-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1720,6 +1799,7 @@
    {
     "id": "Elise-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1743,6 +1823,7 @@
    {
     "id": "Orianna-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1768,6 +1849,7 @@
    {
     "id": "MonkeyKing-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1792,6 +1874,7 @@
    {
     "id": "Brand-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1816,6 +1899,7 @@
    {
     "id": "LeeSin-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1839,6 +1923,7 @@
    {
     "id": "Vayne-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1863,6 +1948,7 @@
    {
     "id": "Rumble-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1886,6 +1972,7 @@
    {
     "id": "Cassiopeia-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1911,6 +1998,7 @@
    {
     "id": "Skarner-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1934,6 +2022,7 @@
    {
     "id": "Heimerdinger-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1959,6 +2048,7 @@
    {
     "id": "Nasus-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1983,6 +2073,7 @@
    {
     "id": "Nidalee-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2007,6 +2098,7 @@
    {
     "id": "Udyr-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2025,6 +2117,7 @@
    {
     "id": "Udyr-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2048,6 +2141,7 @@
    {
     "id": "Poppy-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2066,6 +2160,7 @@
    {
     "id": "Poppy-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2089,6 +2184,7 @@
    {
     "id": "Gragas-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2108,6 +2204,7 @@
    {
     "id": "Gragas-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2131,6 +2228,7 @@
    {
     "id": "Pantheon-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2154,6 +2252,7 @@
    {
     "id": "Ezreal-adcaster",
     "name": "스킬 물리",
+    "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2172,6 +2271,7 @@
    {
     "id": "Ezreal-burst",
     "name": "AP 이즈리얼",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2195,6 +2295,7 @@
    {
     "id": "Mordekaiser-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2219,6 +2320,7 @@
    {
     "id": "Yorick-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2243,6 +2345,7 @@
    {
     "id": "Akali-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2266,6 +2369,7 @@
    {
     "id": "Kennen-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2290,6 +2394,7 @@
    {
     "id": "Garen-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2315,6 +2420,7 @@
    {
     "id": "Leona-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2338,6 +2444,7 @@
    {
     "id": "Malzahar-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2363,6 +2470,7 @@
    {
     "id": "Talon-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2386,6 +2494,7 @@
    {
     "id": "Riven-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2410,6 +2519,7 @@
    {
     "id": "KogMaw-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2428,6 +2538,7 @@
    {
     "id": "KogMaw-artillery",
     "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2450,6 +2561,7 @@
    {
     "id": "Shen-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2474,6 +2586,7 @@
    {
     "id": "Lux-artillery",
     "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2492,6 +2605,7 @@
    {
     "id": "Lux-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2516,6 +2630,7 @@
    {
     "id": "Xerath-artillery",
     "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2538,6 +2653,7 @@
    {
     "id": "Shyvana-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2555,6 +2671,7 @@
    {
     "id": "Shyvana-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2578,6 +2695,7 @@
    {
     "id": "Ahri-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2602,6 +2720,7 @@
    {
     "id": "Graves-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2624,6 +2743,7 @@
    {
     "id": "Fizz-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2642,6 +2762,7 @@
    {
     "id": "Fizz-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2664,6 +2785,7 @@
    {
     "id": "Volibear-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2682,6 +2804,7 @@
    {
     "id": "Volibear-aptank",
     "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2704,6 +2827,7 @@
    {
     "id": "Rengar-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2722,6 +2846,7 @@
    {
     "id": "Rengar-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2745,6 +2870,7 @@
    {
     "id": "Varus-adcaster",
     "name": "스킬 물리",
+    "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2762,6 +2888,7 @@
    {
     "id": "Varus-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2779,6 +2906,7 @@
    {
     "id": "Varus-aponhit",
     "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2800,6 +2928,7 @@
    {
     "id": "Nautilus-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2823,6 +2952,7 @@
    {
     "id": "Viktor-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2847,6 +2977,7 @@
    {
     "id": "Sejuani-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2870,6 +3001,7 @@
    {
     "id": "Fiora-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2893,6 +3025,7 @@
    {
     "id": "Ziggs-artillery",
     "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2915,6 +3048,7 @@
    {
     "id": "Lulu-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2940,6 +3074,7 @@
    {
     "id": "Draven-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2963,6 +3098,7 @@
    {
     "id": "Hecarim-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2987,6 +3123,7 @@
    {
     "id": "Khazix-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3010,6 +3147,7 @@
    {
     "id": "Darius-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3034,6 +3172,7 @@
    {
     "id": "Jayce-adcaster",
     "name": "스킬 물리",
+    "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3056,6 +3195,7 @@
    {
     "id": "Lissandra-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3080,6 +3220,7 @@
    {
     "id": "Diana-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3098,6 +3239,7 @@
    {
     "id": "Diana-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3121,6 +3263,7 @@
    {
     "id": "Quinn-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3140,6 +3283,7 @@
    {
     "id": "Quinn-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3163,6 +3307,7 @@
    {
     "id": "Syndra-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3186,6 +3331,7 @@
    {
     "id": "AurelionSol-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3211,6 +3357,7 @@
    {
     "id": "Kayn-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3229,6 +3376,7 @@
    {
     "id": "Kayn-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3252,6 +3400,7 @@
    {
     "id": "Zoe-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3276,6 +3425,7 @@
    {
     "id": "Zyra-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3301,6 +3451,7 @@
    {
     "id": "Kaisa-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3319,6 +3470,7 @@
    {
     "id": "Kaisa-aponhit",
     "name": "AP 카이사",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3340,6 +3492,7 @@
    {
     "id": "Seraphine-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3359,6 +3512,7 @@
    {
     "id": "Seraphine-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3383,6 +3537,7 @@
    {
     "id": "Gnar-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3406,6 +3561,7 @@
    {
     "id": "Zac-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3429,6 +3585,7 @@
    {
     "id": "Yasuo-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3452,6 +3609,7 @@
    {
     "id": "Velkoz-artillery",
     "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3475,6 +3633,7 @@
    {
     "id": "Taliyah-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3499,6 +3658,7 @@
    {
     "id": "Camille-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3523,6 +3683,7 @@
    {
     "id": "Akshan-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3547,6 +3708,7 @@
    {
     "id": "Belveth-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3570,6 +3732,7 @@
    {
     "id": "Braum-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3593,6 +3756,7 @@
    {
     "id": "Jhin-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3615,6 +3779,7 @@
    {
     "id": "Kindred-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3640,6 +3805,7 @@
    {
     "id": "Zeri-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3664,6 +3830,7 @@
    {
     "id": "Jinx-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3687,6 +3854,7 @@
    {
     "id": "TahmKench-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3710,6 +3878,7 @@
    {
     "id": "Briar-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3734,6 +3903,7 @@
    {
     "id": "Viego-fighter",
     "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3757,6 +3927,7 @@
    {
     "id": "Senna-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3776,6 +3947,7 @@
    {
     "id": "Senna-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3800,6 +3972,7 @@
    {
     "id": "Lucian-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3824,6 +3997,7 @@
    {
     "id": "Zed-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3847,6 +4021,7 @@
    {
     "id": "Kled-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3870,6 +4045,7 @@
    {
     "id": "Ekko-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3888,6 +4064,7 @@
    {
     "id": "Ekko-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3911,6 +4088,7 @@
    {
     "id": "Qiyana-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3934,6 +4112,7 @@
    {
     "id": "Vi-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3957,6 +4136,7 @@
    {
     "id": "Aatrox-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3980,6 +4160,7 @@
    {
     "id": "Nami-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4004,6 +4185,7 @@
    {
     "id": "Azir-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4030,6 +4212,7 @@
    {
     "id": "Yuumi-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4054,6 +4237,7 @@
    {
     "id": "Samira-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4079,6 +4263,7 @@
    {
     "id": "Thresh-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4102,6 +4287,7 @@
    {
     "id": "Illaoi-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4125,6 +4311,7 @@
    {
     "id": "RekSai-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4148,6 +4335,7 @@
    {
     "id": "Ivern-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4173,6 +4361,7 @@
    {
     "id": "Kalista-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4196,6 +4385,7 @@
    {
     "id": "Bard-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4222,6 +4412,7 @@
    {
     "id": "Rakan-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4246,6 +4437,7 @@
    {
     "id": "Xayah-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4269,6 +4461,7 @@
    {
     "id": "Ornn-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4293,6 +4486,7 @@
    {
     "id": "Sylas-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4317,6 +4511,7 @@
    {
     "id": "Neeko-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4340,6 +4535,7 @@
    {
     "id": "Aphelios-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4363,6 +4559,7 @@
    {
     "id": "Rell-engage",
     "name": "이니시 서폿",
+    "desc": "군중 제어와 체력으로 싸움을 열어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4386,6 +4583,7 @@
    {
     "id": "Pyke-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4410,6 +4608,7 @@
    {
     "id": "Vex-burst",
     "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4433,6 +4632,7 @@
    {
     "id": "Yone-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4456,6 +4656,7 @@
    {
     "id": "Ambessa-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4479,6 +4680,7 @@
    {
     "id": "Mel-mage",
     "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4503,6 +4705,7 @@
    {
     "id": "Yunara-onhit",
     "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4526,6 +4729,7 @@
    {
     "id": "Locke-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4549,6 +4753,7 @@
    {
     "id": "Sett-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4572,6 +4777,7 @@
    {
     "id": "Lillia-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4596,6 +4802,7 @@
    {
     "id": "Gwen-apbruiser",
     "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4620,6 +4827,7 @@
    {
     "id": "Renata-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4645,6 +4853,7 @@
    {
     "id": "Aurora-apassassin",
     "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4668,6 +4877,7 @@
    {
     "id": "Nilah-crit",
     "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4691,6 +4901,7 @@
    {
     "id": "KSante-tank",
     "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4714,6 +4925,7 @@
    {
     "id": "Smolder-adcaster",
     "name": "스킬 물리",
+    "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4738,6 +4950,7 @@
    {
     "id": "Milio-enchanter",
     "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4762,6 +4975,7 @@
    {
     "id": "Zaahen-bruiser",
     "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4785,6 +4999,7 @@
    {
     "id": "Hwei-artillery",
     "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4807,6 +5022,7 @@
    {
     "id": "Naafiri-lethality",
     "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
     "style": "meta",
     "default": true,
     "wantTags": {

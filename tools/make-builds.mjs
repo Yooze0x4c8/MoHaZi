@@ -36,6 +36,19 @@ const NAME = {
   engage: '이니시 서폿', enchanter: '보호 서폿'
 }
 
+// 패널에 보이는 한 줄 설명
+const DESC = {
+  crit: '치명타 증강으로 평타 한 방을 키워요', onhit: '공격 속도와 적중 효과로 평타를 키워요',
+  aponhit: '주문력과 적중 효과로 평타에 마법 피해를 얹어요', lethality: '물리 관통으로 스킬 한 번에 끝내요',
+  adcaster: '스킬 가속과 공격력으로 스킬을 자주 써요', bruiser: '체력과 회복으로 앞에서 오래 싸워요',
+  fighter: '공격 속도와 흡혈로 평타 싸움을 이겨요', burst: '주문력과 관통으로 콤보 한 번에 터뜨려요',
+  mage: '주문력과 스킬 가속으로 스킬을 계속 돌려요', artillery: '사거리와 주문력으로 멀리서 깎아요',
+  apassassin: '주문력과 돌진으로 파고들어 끊어요', apbruiser: '주문력과 회복으로 버티며 싸워요',
+  apult: '궁 쿨감을 쌓아 궁을 쉬지 않고 깔아요', tank: '체력과 방어 증강으로 앞을 막아요',
+  aptank: '체력에 주문력을 더해 버티며 피해를 줘요', engage: '군중 제어와 체력으로 싸움을 열어요',
+  enchanter: '회복과 보호막으로 아군을 지켜요'
+}
+
 // 챔피언: [프리셋, 덧붙임 태그?, 이름?] 목록. 첫 번째가 기본(meta) 빌드, 나머지는 재미(fun) 빌드.
 // 덧붙임에 같은 태그가 있으면 덮어쓰고, 프리셋의 피할 태그에서도 뺀다.
 const BUILDS = {
@@ -238,6 +251,7 @@ for (const c of champs) {
     return {
       id: `${c.alias}-${preset}`,
       name: name ?? NAME[preset],
+      desc: DESC[preset],
       style: i === 0 ? 'meta' : 'fun',
       default: i === 0,
       wantTags,

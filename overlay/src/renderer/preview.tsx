@@ -1,5 +1,7 @@
-// 미리보기: npm run dev 후 브라우저에서 /#preview → screens/02-augment-grades.png와 비교
-import type { CSSProperties } from 'react'
+// 미리보기: npm run dev 후 브라우저에서 /#preview-02 (01, 06, 07도) → screens/의 같은 번호 PNG와 비교
+import { useState, type CSSProperties } from 'react'
+import type { Build } from '../engine'
+import { BuildChip, BuildPanel } from './build'
 import { AugmentGrades, CARD_X, type CardGrade } from './grades'
 
 const MOCK_02: CardGrade[] = [
@@ -32,10 +34,41 @@ function FakeGame() {
   )
 }
 
-export function Preview() {
+// design.html의 갱플랭크 빌드 목업
+const b = (id: string, name: string, desc: string, style: Build['style'], def = false): Build =>
+  ({ id, name, desc, style, default: def, wantTags: {}, mustHave: [], avoidTags: [] })
+const AP = b('ap', 'AP 무한궁', '궁 쿨감을 쌓아 궁을 쉬지 않고 깔아요', 'fun')
+const BRUISER = b('bruiser', '브루저', '체력과 방어 증강으로 앞에서 오래 싸워요', 'meta', true)
+const CRIT = b('crit', '치명타', '치명타 증강으로 Q 한 방을 키워요', 'meta')
+const MOCK_BUILDS: Record<string, Build[]> = {
+  '01': [AP, BRUISER, CRIT],
+  '06': [CRIT, BRUISER, AP, b('tank', '탱커', '방어 증강으로 버티며 궁으로 받쳐줘요', 'meta'), b('onhit', '온힛', '공격 속도와 적중 효과로 평타를 키워요', 'fun')],
+  '07': [b('tank', '탱커', '방어 증강으로 아군 앞을 막아요', 'fun', true)]
+}
+
+function PanelPreview({ screen }: { screen: string }) {
+  const builds = MOCK_BUILDS[screen]
+  const [sel, setSel] = useState<string | null>(screen === '06' ? 'crit' : null)
+  return (
+    <>
+      <div style={abs({ inset: 0, background: 'radial-gradient(ellipse at 50% 42%,#4b525c 0%,#2c3138 55%,#1c1f24 100%)' })} />
+      <BuildPanel
+        champion={screen === '07' ? '브라움' : '갱플랭크'}
+        builds={builds}
+        selected={sel ?? (builds.find((x) => x.default) ?? builds[0]).id}
+        chosen={false}
+        onPick={setSel}
+      />
+    </>
+  )
+}
+
+export function Preview({ screen }: { screen: string }) {
+  if (MOCK_BUILDS[screen]) return <PanelPreview screen={screen} />
   return (
     <>
       <FakeGame />
+      <BuildChip build={{ ...AP, name: 'AP 무한궁 갱플' }} picked={1} />
       <AugmentGrades cards={MOCK_02} pick={0} />
     </>
   )

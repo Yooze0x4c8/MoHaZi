@@ -1,4 +1,4 @@
-import { app, BrowserWindow, desktopCapturer, globalShortcut, screen } from 'electron'
+import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, screen } from 'electron'
 import { join } from 'node:path'
 import https from 'node:https'
 
@@ -55,8 +55,17 @@ function createOverlay() {
   if (process.env.ELECTRON_RENDERER_URL) win.loadURL(process.env.ELECTRON_RENDERER_URL + (process.env.CAPTURE_ALWAYS ? '#capture' : ''))
   else win.loadFile(join(__dirname, '../renderer/index.html'))
 
-  // 오버레이 숨기기/보이기
-  globalShortcut.register('F8', () => (win.isVisible() ? win.hide() : win.showInactive()))
+  // 빌드 패널 위에서만 클릭을 받는다
+  const clickThrough = (on: boolean) => win.setIgnoreMouseEvents(on, { forward: true })
+  ipcMain.on('clickable', (_e, on: boolean) => clickThrough(!on))
+
+  // F8 오버레이 숨기기/보이기, F7 빌드 바꾸기
+  globalShortcut.register('F8', () => {
+    if (!win.isVisible()) return win.showInactive()
+    win.hide()
+    clickThrough(true) // 패널 위에서 숨겨도 다시 보일 때 게임 클릭을 막지 않게
+  })
+  globalShortcut.register('F7', () => win.webContents.send('f7'))
 
   // 2초마다 게임 상태 확인, 바뀌었을 때만 렌더러에 알림
   win.webContents.on('did-finish-load', () => {

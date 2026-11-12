@@ -1,0 +1,4827 @@
+{
+ "Annie": {
+  "name": "애니",
+  "builds": [
+   {
+    "id": "Annie-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Annie-aptank",
+    "name": "AP 탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.7
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Olaf": {
+  "name": "올라프",
+  "builds": [
+   {
+    "id": "Olaf-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "attack_speed": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Olaf-tank",
+    "name": "탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Galio": {
+  "name": "갈리오",
+  "builds": [
+   {
+    "id": "Galio-aptank",
+    "name": "AP 탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Galio-burst",
+    "name": "AP 폭딜",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "TwistedFate": {
+  "name": "트위스티드 페이트",
+  "builds": [
+   {
+    "id": "TwistedFate-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "TwistedFate-onhit",
+    "name": "적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "XinZhao": {
+  "name": "신 짜오",
+  "builds": [
+   {
+    "id": "XinZhao-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "attack_speed": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Urgot": {
+  "name": "우르곳",
+  "builds": [
+   {
+    "id": "Urgot-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.7,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Leblanc": {
+  "name": "르블랑",
+  "builds": [
+   {
+    "id": "Leblanc-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Vladimir": {
+  "name": "블라디미르",
+  "builds": [
+   {
+    "id": "Vladimir-mage",
+    "name": "흡혈 AP",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "heal": 0.8,
+     "tank": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "FiddleSticks": {
+  "name": "피들스틱",
+  "builds": [
+   {
+    "id": "FiddleSticks-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.6,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kayle": {
+  "name": "케일",
+  "builds": [
+   {
+    "id": "Kayle-aponhit",
+    "name": "AP 적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 1,
+     "damage": 0.3,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "MasterYi": {
+  "name": "마스터 이",
+  "builds": [
+   {
+    "id": "MasterYi-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "true_dmg": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "MasterYi-crit",
+    "name": "치명타",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Alistar": {
+  "name": "알리스타",
+  "builds": [
+   {
+    "id": "Alistar-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.3,
+     "ms": 0.3,
+     "heal": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Ryze": {
+  "name": "라이즈",
+  "builds": [
+   {
+    "id": "Ryze-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 1,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "tank": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Sion": {
+  "name": "사이온",
+  "builds": [
+   {
+    "id": "Sion-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.8,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Sion-lethality",
+    "name": "물리 관통",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Sivir": {
+  "name": "시비르",
+  "builds": [
+   {
+    "id": "Sivir-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "on_hit": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Soraka": {
+  "name": "소라카",
+  "builds": [
+   {
+    "id": "Soraka-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 1,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Teemo": {
+  "name": "티모",
+  "builds": [
+   {
+    "id": "Teemo-aponhit",
+    "name": "AP 적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3,
+     "burn": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Teemo-onhit",
+    "name": "적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Tristana": {
+  "name": "트리스타나",
+  "builds": [
+   {
+    "id": "Tristana-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Warwick": {
+  "name": "워윅",
+  "builds": [
+   {
+    "id": "Warwick-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Warwick-tank",
+    "name": "탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Nunu": {
+  "name": "누누와 윌럼프",
+  "builds": [
+   {
+    "id": "Nunu-aptank",
+    "name": "AP 탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Nunu-burst",
+    "name": "AP 폭딜",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "MissFortune": {
+  "name": "미스 포츈",
+  "builds": [
+   {
+    "id": "MissFortune-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "ult": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "MissFortune-lethality",
+    "name": "물리 관통",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4,
+     "ult": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Ashe": {
+  "name": "애쉬",
+  "builds": [
+   {
+    "id": "Ashe-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Ashe-onhit",
+    "name": "적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Tryndamere": {
+  "name": "트린다미어",
+  "builds": [
+   {
+    "id": "Tryndamere-fighter",
+    "name": "치명타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.3,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "crit": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Jax": {
+  "name": "잭스",
+  "builds": [
+   {
+    "id": "Jax-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Jax-aponhit",
+    "name": "AP 적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Morgana": {
+  "name": "모르가나",
+  "builds": [
+   {
+    "id": "Morgana-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.8,
+     "range": 0.4,
+     "shield": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Morgana-aptank",
+    "name": "AP 탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Zilean": {
+  "name": "질리언",
+  "builds": [
+   {
+    "id": "Zilean-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 1,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Zilean-burst",
+    "name": "AP 폭딜",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Singed": {
+  "name": "신지드",
+  "builds": [
+   {
+    "id": "Singed-aptank",
+    "name": "AP 탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5,
+     "ms": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Evelynn": {
+  "name": "이블린",
+  "builds": [
+   {
+    "id": "Evelynn-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Twitch": {
+  "name": "트위치",
+  "builds": [
+   {
+    "id": "Twitch-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "on_hit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Twitch-aponhit",
+    "name": "AP 적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Karthus": {
+  "name": "카서스",
+  "builds": [
+   {
+    "id": "Karthus-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "ult": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Chogath": {
+  "name": "초가스",
+  "builds": [
+   {
+    "id": "Chogath-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4,
+     "stack": 0.6,
+     "ult": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Chogath-burst",
+    "name": "AP 폭딜",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Amumu": {
+  "name": "아무무",
+  "builds": [
+   {
+    "id": "Amumu-aptank",
+    "name": "AP 탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Rammus": {
+  "name": "람머스",
+  "builds": [
+   {
+    "id": "Rammus-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 1,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4,
+     "ms": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Anivia": {
+  "name": "애니비아",
+  "builds": [
+   {
+    "id": "Anivia-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.6,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Shaco": {
+  "name": "샤코",
+  "builds": [
+   {
+    "id": "Shaco-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Shaco-mage",
+    "name": "AP 상자",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "summon": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "DrMundo": {
+  "name": "문도 박사",
+  "builds": [
+   {
+    "id": "DrMundo-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 1,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Sona": {
+  "name": "소나",
+  "builds": [
+   {
+    "id": "Sona-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.6,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kassadin": {
+  "name": "카사딘",
+  "builds": [
+   {
+    "id": "Kassadin-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4,
+     "ability_haste": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Irelia": {
+  "name": "이렐리아",
+  "builds": [
+   {
+    "id": "Irelia-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 1,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "dash": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Janna": {
+  "name": "잔나",
+  "builds": [
+   {
+    "id": "Janna-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 1,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Gangplank": {
+  "name": "갱플랭크",
+  "builds": [
+   {
+    "id": "Gangplank-crit",
+    "name": "치명타 배럴",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Gangplank-apult",
+    "name": "AP 무한궁",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ult_haste": 1,
+     "ap": 0.8,
+     "ult": 0.7,
+     "ability_haste": 0.7
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Corki": {
+  "name": "코르키",
+  "builds": [
+   {
+    "id": "Corki-adcaster",
+    "name": "스킬 물리",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.9,
+     "ability_haste": 1,
+     "pen": 0.5,
+     "range": 0.4,
+     "damage": 0.4,
+     "crit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Corki-burst",
+    "name": "AP 코르키",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Karma": {
+  "name": "카르마",
+  "builds": [
+   {
+    "id": "Karma-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.6,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Karma-mage",
+    "name": "AP 마법사",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Taric": {
+  "name": "타릭",
+  "builds": [
+   {
+    "id": "Taric-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.6,
+     "ms": 0.3,
+     "heal": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Veigar": {
+  "name": "베이가",
+  "builds": [
+   {
+    "id": "Veigar-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3,
+     "stack": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Trundle": {
+  "name": "트런들",
+  "builds": [
+   {
+    "id": "Trundle-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.6,
+     "damage": 0.3,
+     "tank": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Swain": {
+  "name": "스웨인",
+  "builds": [
+   {
+    "id": "Swain-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.8,
+     "ability_haste": 0.6,
+     "tank": 0.6,
+     "damage": 0.4,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Caitlyn": {
+  "name": "케이틀린",
+  "builds": [
+   {
+    "id": "Caitlyn-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.8,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Blitzcrank": {
+  "name": "블리츠크랭크",
+  "builds": [
+   {
+    "id": "Blitzcrank-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.3,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Blitzcrank-aptank",
+    "name": "AP 탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Malphite": {
+  "name": "말파이트",
+  "builds": [
+   {
+    "id": "Malphite-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.9,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Malphite-burst",
+    "name": "AP 폭딜",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Katarina": {
+  "name": "카타리나",
+  "builds": [
+   {
+    "id": "Katarina-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4,
+     "on_hit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Nocturne": {
+  "name": "녹턴",
+  "builds": [
+   {
+    "id": "Nocturne-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "attack_speed": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Maokai": {
+  "name": "마오카이",
+  "builds": [
+   {
+    "id": "Maokai-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.5,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Maokai-aptank",
+    "name": "AP 탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Renekton": {
+  "name": "레넥톤",
+  "builds": [
+   {
+    "id": "Renekton-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "JarvanIV": {
+  "name": "자르반 4세",
+  "builds": [
+   {
+    "id": "JarvanIV-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "JarvanIV-lethality",
+    "name": "물리 관통",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Elise": {
+  "name": "엘리스",
+  "builds": [
+   {
+    "id": "Elise-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Orianna": {
+  "name": "오리아나",
+  "builds": [
+   {
+    "id": "Orianna-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "shield": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "MonkeyKing": {
+  "name": "오공",
+  "builds": [
+   {
+    "id": "MonkeyKing-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "crit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Brand": {
+  "name": "브랜드",
+  "builds": [
+   {
+    "id": "Brand-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 1,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "LeeSin": {
+  "name": "리 신",
+  "builds": [
+   {
+    "id": "LeeSin-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Vayne": {
+  "name": "베인",
+  "builds": [
+   {
+    "id": "Vayne-onhit",
+    "name": "적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "true_dmg": 0.6,
+     "crit": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Rumble": {
+  "name": "럼블",
+  "builds": [
+   {
+    "id": "Rumble-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Cassiopeia": {
+  "name": "카시오페아",
+  "builds": [
+   {
+    "id": "Cassiopeia-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Skarner": {
+  "name": "스카너",
+  "builds": [
+   {
+    "id": "Skarner-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.8,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Heimerdinger": {
+  "name": "하이머딩거",
+  "builds": [
+   {
+    "id": "Heimerdinger-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "summon": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Nasus": {
+  "name": "나서스",
+  "builds": [
+   {
+    "id": "Nasus-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.5,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "stack": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Nidalee": {
+  "name": "니달리",
+  "builds": [
+   {
+    "id": "Nidalee-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3,
+     "range": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Udyr": {
+  "name": "우디르",
+  "builds": [
+   {
+    "id": "Udyr-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "tank": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Udyr-tank",
+    "name": "탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Poppy": {
+  "name": "뽀삐",
+  "builds": [
+   {
+    "id": "Poppy-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Poppy-lethality",
+    "name": "물리 관통",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Gragas": {
+  "name": "그라가스",
+  "builds": [
+   {
+    "id": "Gragas-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Gragas-tank",
+    "name": "탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Pantheon": {
+  "name": "판테온",
+  "builds": [
+   {
+    "id": "Pantheon-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Ezreal": {
+  "name": "이즈리얼",
+  "builds": [
+   {
+    "id": "Ezreal-adcaster",
+    "name": "스킬 물리",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.9,
+     "ability_haste": 1,
+     "pen": 0.5,
+     "range": 0.4,
+     "damage": 0.4,
+     "on_hit": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Ezreal-burst",
+    "name": "AP 이즈리얼",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Mordekaiser": {
+  "name": "모데카이저",
+  "builds": [
+   {
+    "id": "Mordekaiser-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3,
+     "shield": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Yorick": {
+  "name": "요릭",
+  "builds": [
+   {
+    "id": "Yorick-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "summon": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Akali": {
+  "name": "아칼리",
+  "builds": [
+   {
+    "id": "Akali-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kennen": {
+  "name": "케넨",
+  "builds": [
+   {
+    "id": "Kennen-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.6,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Garen": {
+  "name": "가렌",
+  "builds": [
+   {
+    "id": "Garen-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "crit": 0.4,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Leona": {
+  "name": "레오나",
+  "builds": [
+   {
+    "id": "Leona-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.3,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Malzahar": {
+  "name": "말자하",
+  "builds": [
+   {
+    "id": "Malzahar-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "summon": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Talon": {
+  "name": "탈론",
+  "builds": [
+   {
+    "id": "Talon-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Riven": {
+  "name": "리븐",
+  "builds": [
+   {
+    "id": "Riven-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.7,
+     "shield": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "KogMaw": {
+  "name": "코그모",
+  "builds": [
+   {
+    "id": "KogMaw-onhit",
+    "name": "적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "range": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "KogMaw-artillery",
+    "name": "AP 포킹",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Shen": {
+  "name": "쉔",
+  "builds": [
+   {
+    "id": "Shen-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4,
+     "support": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Lux": {
+  "name": "럭스",
+  "builds": [
+   {
+    "id": "Lux-artillery",
+    "name": "AP 포킹",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "shield": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Lux-enchanter",
+    "name": "보호 서폿",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Xerath": {
+  "name": "제라스",
+  "builds": [
+   {
+    "id": "Xerath-artillery",
+    "name": "AP 포킹",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Shyvana": {
+  "name": "쉬바나",
+  "builds": [
+   {
+    "id": "Shyvana-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Shyvana-apbruiser",
+    "name": "AP 브루저",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Ahri": {
+  "name": "아리",
+  "builds": [
+   {
+    "id": "Ahri-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4,
+     "heal": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Graves": {
+  "name": "그레이브즈",
+  "builds": [
+   {
+    "id": "Graves-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 1,
+     "attack_speed": 0.7,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Fizz": {
+  "name": "피즈",
+  "builds": [
+   {
+    "id": "Fizz-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Fizz-aptank",
+    "name": "AP 탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Volibear": {
+  "name": "볼리베어",
+  "builds": [
+   {
+    "id": "Volibear-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.7,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "tank": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Volibear-aptank",
+    "name": "AP 탱커",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Rengar": {
+  "name": "렝가",
+  "builds": [
+   {
+    "id": "Rengar-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Rengar-crit",
+    "name": "치명타",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Varus": {
+  "name": "바루스",
+  "builds": [
+   {
+    "id": "Varus-adcaster",
+    "name": "스킬 물리",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.9,
+     "ability_haste": 1,
+     "pen": 0.5,
+     "range": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Varus-onhit",
+    "name": "적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Varus-aponhit",
+    "name": "AP 적중",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Nautilus": {
+  "name": "노틸러스",
+  "builds": [
+   {
+    "id": "Nautilus-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.3,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Viktor": {
+  "name": "빅토르",
+  "builds": [
+   {
+    "id": "Viktor-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Sejuani": {
+  "name": "세주아니",
+  "builds": [
+   {
+    "id": "Sejuani-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Fiora": {
+  "name": "피오라",
+  "builds": [
+   {
+    "id": "Fiora-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.6,
+     "damage": 0.3,
+     "true_dmg": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Ziggs": {
+  "name": "직스",
+  "builds": [
+   {
+    "id": "Ziggs-artillery",
+    "name": "AP 포킹",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Lulu": {
+  "name": "룰루",
+  "builds": [
+   {
+    "id": "Lulu-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 1,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3,
+     "attack_speed": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Draven": {
+  "name": "드레이븐",
+  "builds": [
+   {
+    "id": "Draven-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 1,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Hecarim": {
+  "name": "헤카림",
+  "builds": [
+   {
+    "id": "Hecarim-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "ms": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Khazix": {
+  "name": "카직스",
+  "builds": [
+   {
+    "id": "Khazix-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Darius": {
+  "name": "다리우스",
+  "builds": [
+   {
+    "id": "Darius-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "stack": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Jayce": {
+  "name": "제이스",
+  "builds": [
+   {
+    "id": "Jayce-adcaster",
+    "name": "스킬 물리",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.9,
+     "ability_haste": 1,
+     "pen": 0.5,
+     "range": 0.4,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Lissandra": {
+  "name": "리산드라",
+  "builds": [
+   {
+    "id": "Lissandra-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.8,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Diana": {
+  "name": "다이애나",
+  "builds": [
+   {
+    "id": "Diana-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Diana-apbruiser",
+    "name": "AP 브루저",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Quinn": {
+  "name": "퀸",
+  "builds": [
+   {
+    "id": "Quinn-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4,
+     "range": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Quinn-crit",
+    "name": "치명타",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Syndra": {
+  "name": "신드라",
+  "builds": [
+   {
+    "id": "Syndra-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "AurelionSol": {
+  "name": "아우렐리온 솔",
+  "builds": [
+   {
+    "id": "AurelionSol-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "stack": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kayn": {
+  "name": "케인",
+  "builds": [
+   {
+    "id": "Kayn-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Kayn-bruiser",
+    "name": "브루저",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Zoe": {
+  "name": "조이",
+  "builds": [
+   {
+    "id": "Zoe-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3,
+     "range": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Zyra": {
+  "name": "자이라",
+  "builds": [
+   {
+    "id": "Zyra-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "summon": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kaisa": {
+  "name": "카이사",
+  "builds": [
+   {
+    "id": "Kaisa-onhit",
+    "name": "적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "crit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Kaisa-aponhit",
+    "name": "AP 카이사",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Seraphine": {
+  "name": "세라핀",
+  "builds": [
+   {
+    "id": "Seraphine-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.8,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Seraphine-mage",
+    "name": "AP 마법사",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Gnar": {
+  "name": "나르",
+  "builds": [
+   {
+    "id": "Gnar-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.7,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Zac": {
+  "name": "자크",
+  "builds": [
+   {
+    "id": "Zac-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.6,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Yasuo": {
+  "name": "야스오",
+  "builds": [
+   {
+    "id": "Yasuo-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.8,
+     "damage": 0.4,
+     "item": 0.3,
+     "dash": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Velkoz": {
+  "name": "벨코즈",
+  "builds": [
+   {
+    "id": "Velkoz-artillery",
+    "name": "AP 포킹",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "true_dmg": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Taliyah": {
+  "name": "탈리야",
+  "builds": [
+   {
+    "id": "Taliyah-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Camille": {
+  "name": "카밀",
+  "builds": [
+   {
+    "id": "Camille-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "true_dmg": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Akshan": {
+  "name": "아크샨",
+  "builds": [
+   {
+    "id": "Akshan-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "on_hit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Belveth": {
+  "name": "벨베스",
+  "builds": [
+   {
+    "id": "Belveth-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 1,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "stack": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Braum": {
+  "name": "브라움",
+  "builds": [
+   {
+    "id": "Braum-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.7,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Jhin": {
+  "name": "진",
+  "builds": [
+   {
+    "id": "Jhin-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 1,
+     "range": 0.7,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Kindred": {
+  "name": "킨드레드",
+  "builds": [
+   {
+    "id": "Kindred-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "on_hit": 0.5,
+     "stack": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Zeri": {
+  "name": "제리",
+  "builds": [
+   {
+    "id": "Zeri-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "ms": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Jinx": {
+  "name": "징크스",
+  "builds": [
+   {
+    "id": "Jinx-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "TahmKench": {
+  "name": "탐 켄치",
+  "builds": [
+   {
+    "id": "TahmKench-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.5,
+     "heal": 0.6,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Briar": {
+  "name": "브라이어",
+  "builds": [
+   {
+    "id": "Briar-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.8,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3,
+     "attack_speed": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Viego": {
+  "name": "비에고",
+  "builds": [
+   {
+    "id": "Viego-fighter",
+    "name": "평타 전사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3,
+     "crit": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Senna": {
+  "name": "세나",
+  "builds": [
+   {
+    "id": "Senna-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.6,
+     "damage": 0.4,
+     "item": 0.3,
+     "stack": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Senna-enchanter",
+    "name": "보호 서폿",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Lucian": {
+  "name": "루시안",
+  "builds": [
+   {
+    "id": "Lucian-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Zed": {
+  "name": "제드",
+  "builds": [
+   {
+    "id": "Zed-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kled": {
+  "name": "클레드",
+  "builds": [
+   {
+    "id": "Kled-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Ekko": {
+  "name": "에코",
+  "builds": [
+   {
+    "id": "Ekko-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Ekko-apbruiser",
+    "name": "AP 브루저",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Qiyana": {
+  "name": "키아나",
+  "builds": [
+   {
+    "id": "Qiyana-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Vi": {
+  "name": "바이",
+  "builds": [
+   {
+    "id": "Vi-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Aatrox": {
+  "name": "아트록스",
+  "builds": [
+   {
+    "id": "Aatrox-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 1,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Nami": {
+  "name": "나미",
+  "builds": [
+   {
+    "id": "Nami-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Azir": {
+  "name": "아지르",
+  "builds": [
+   {
+    "id": "Azir-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4,
+     "summon": 0.6,
+     "attack_speed": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Yuumi": {
+  "name": "유미",
+  "builds": [
+   {
+    "id": "Yuumi-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Samira": {
+  "name": "사미라",
+  "builds": [
+   {
+    "id": "Samira-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "dash": 0.5,
+     "heal": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Thresh": {
+  "name": "쓰레쉬",
+  "builds": [
+   {
+    "id": "Thresh-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.3,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Illaoi": {
+  "name": "일라오이",
+  "builds": [
+   {
+    "id": "Illaoi-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.6,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "RekSai": {
+  "name": "렉사이",
+  "builds": [
+   {
+    "id": "RekSai-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Ivern": {
+  "name": "아이번",
+  "builds": [
+   {
+    "id": "Ivern-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3,
+     "summon": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Kalista": {
+  "name": "칼리스타",
+  "builds": [
+   {
+    "id": "Kalista-onhit",
+    "name": "적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "dash": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Bard": {
+  "name": "바드",
+  "builds": [
+   {
+    "id": "Bard-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.6,
+     "cc": 0.6,
+     "stack": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Rakan": {
+  "name": "라칸",
+  "builds": [
+   {
+    "id": "Rakan-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.6,
+     "ms": 0.5,
+     "ap": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Xayah": {
+  "name": "자야",
+  "builds": [
+   {
+    "id": "Xayah-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Ornn": {
+  "name": "오른",
+  "builds": [
+   {
+    "id": "Ornn-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4,
+     "item": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Sylas": {
+  "name": "사일러스",
+  "builds": [
+   {
+    "id": "Sylas-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3,
+     "ult": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Neeko": {
+  "name": "니코",
+  "builds": [
+   {
+    "id": "Neeko-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Aphelios": {
+  "name": "아펠리오스",
+  "builds": [
+   {
+    "id": "Aphelios-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Rell": {
+  "name": "렐",
+  "builds": [
+   {
+    "id": "Rell-engage",
+    "name": "이니시 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "cc": 1,
+     "tank": 0.8,
+     "resist": 0.6,
+     "support": 0.6,
+     "shield": 0.3,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Pyke": {
+  "name": "파이크",
+  "builds": [
+   {
+    "id": "Pyke-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4,
+     "support": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Vex": {
+  "name": "벡스",
+  "builds": [
+   {
+    "id": "Vex-burst",
+    "name": "AP 폭딜",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Yone": {
+  "name": "요네",
+  "builds": [
+   {
+    "id": "Yone-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.8,
+     "damage": 0.4,
+     "item": 0.3,
+     "dash": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Ambessa": {
+  "name": "암베사",
+  "builds": [
+   {
+    "id": "Ambessa-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.7
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Mel": {
+  "name": "멜",
+  "builds": [
+   {
+    "id": "Mel-mage",
+    "name": "AP 마법사",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Yunara": {
+  "name": "유나라",
+  "builds": [
+   {
+    "id": "Yunara-onhit",
+    "name": "적중",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3,
+     "crit": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Locke": {
+  "name": "로크",
+  "builds": [
+   {
+    "id": "Locke-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Sett": {
+  "name": "세트",
+  "builds": [
+   {
+    "id": "Sett-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Lillia": {
+  "name": "릴리아",
+  "builds": [
+   {
+    "id": "Lillia-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3,
+     "ms": 0.7
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Gwen": {
+  "name": "그웬",
+  "builds": [
+   {
+    "id": "Gwen-apbruiser",
+    "name": "AP 브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3,
+     "on_hit": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Renata": {
+  "name": "레나타 글라스크",
+  "builds": [
+   {
+    "id": "Renata-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Aurora": {
+  "name": "오로라",
+  "builds": [
+   {
+    "id": "Aurora-apassassin",
+    "name": "AP 암살",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.5,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Nilah": {
+  "name": "닐라",
+  "builds": [
+   {
+    "id": "Nilah-crit",
+    "name": "치명타",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "damage": 0.4,
+     "item": 0.3,
+     "heal": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "KSante": {
+  "name": "크산테",
+  "builds": [
+   {
+    "id": "KSante-tank",
+    "name": "탱커",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.9,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Smolder": {
+  "name": "스몰더",
+  "builds": [
+   {
+    "id": "Smolder-adcaster",
+    "name": "스킬 물리",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.9,
+     "ability_haste": 1,
+     "pen": 0.5,
+     "range": 0.4,
+     "damage": 0.4,
+     "stack": 1,
+     "burn": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Milio": {
+  "name": "밀리오",
+  "builds": [
+   {
+    "id": "Milio-enchanter",
+    "name": "보호 서폿",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Zaahen": {
+  "name": "자헨",
+  "builds": [
+   {
+    "id": "Zaahen-bruiser",
+    "name": "브루저",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   }
+  ]
+ },
+ "Hwei": {
+  "name": "흐웨이",
+  "builds": [
+   {
+    "id": "Hwei-artillery",
+    "name": "AP 포킹",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   }
+  ]
+ },
+ "Naafiri": {
+  "name": "나피리",
+  "builds": [
+   {
+    "id": "Naafiri-lethality",
+    "name": "물리 관통",
+    "style": "meta",
+    "default": true,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   }
+  ]
+ }
+}

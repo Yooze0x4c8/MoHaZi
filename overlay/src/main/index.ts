@@ -1,8 +1,9 @@
-import { app, BrowserWindow, globalShortcut, screen } from 'electron'
+import { app, BrowserWindow, desktopCapturer, globalShortcut, screen } from 'electron'
 import { join } from 'node:path'
 import https from 'node:https'
 
-export type Game = { champion: string; gameMode: string } | null
+// alias: data/builds.json 키 (rawChampionName = 'game_character_displayname_<alias>')
+export type Game = { champion: string; alias: string; gameMode: string } | null
 
 // Live Client Data API는 자체 서명 인증서를 쓴다.
 // ponytail: 인증서 검증을 끔 (localhost 전용). 공개 배포 땐 riotgames.pem을 ca로 고정.
@@ -26,7 +27,9 @@ async function detectGame(): Promise<Game> {
     const d = await getAllGameData()
     const id = (p: any) => p.riotId ?? p.summonerName
     const me = d.allPlayers?.find((p: any) => id(p) === id(d.activePlayer ?? {}))
-    return me ? { champion: me.championName, gameMode: d.gameData?.gameMode } : null
+    return me
+      ? { champion: me.championName, alias: String(me.rawChampionName ?? '').split('_').pop()!, gameMode: d.gameData?.gameMode }
+      : null
   } catch {
     return null
   }
@@ -46,8 +49,10 @@ function createOverlay() {
   })
   win.setAlwaysOnTop(true, 'screen-saver')
   win.setIgnoreMouseEvents(true, { forward: true })
+  // 화면 캡처에 오버레이 자신이 찍히지 않게 (Win10 2004+). 녹화·방송에도 안 보인다.
+  win.setContentProtection(true)
 
-  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(process.env.ELECTRON_RENDERER_URL)
+  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(process.env.ELECTRON_RENDERER_URL + (process.env.CAPTURE_ALWAYS ? '#capture' : ''))
   else win.loadFile(join(__dirname, '../renderer/index.html'))
 
   // 오버레이 숨기기/보이기
@@ -64,6 +69,13 @@ function createOverlay() {
         win.webContents.send('game', game)
       }
     }, 2000)
+  })
+
+  // 렌더러의 getDisplayMedia 요청에 선택 창 없이 주 모니터를 넘긴다 (캡처는 src/capture)
+  win.webContents.session.setDisplayMediaRequestHandler(async (_req, cb) => {
+    const sources = await desktopCapturer.getSources({ types: ['screen'] })
+    const id = String(screen.getPrimaryDisplay().id)
+    cb({ video: sources.find((s) => s.display_id === id) ?? sources[0] })
   })
 }
 

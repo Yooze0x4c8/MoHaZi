@@ -3,6 +3,7 @@ import { join } from 'node:path'
 import { mkdir, writeFile } from 'node:fs/promises'
 import https from 'node:https'
 import { readText } from './ocr'
+import { autoUpdater } from 'electron-updater'
 
 // alias: data/builds.json 키 (rawChampionName = 'game_character_displayname_<alias>')
 export type Game = { champion: string; alias: string; gameMode: string } | null
@@ -91,11 +92,26 @@ function createOverlay() {
   for (let i = 0; i < px.length; i += 4) px.set([0xff, 0x95, 0x6e, 0xff], i) // BGRA #6E95FF
   tray = new Tray(nativeImage.createFromBitmap(px, { width: 16, height: 16 }))
   tray.setToolTip('MoHaZi 증강 오버레이')
-  tray.setContextMenu(Menu.buildFromTemplate([
+  const menu = (updateReady: boolean) => Menu.buildFromTemplate([
     { label: '숨기기 / 보이기 (F8)', click: toggle },
+    ...(updateReady ? [{ label: '지금 재시작해서 업데이트', click: () => autoUpdater.quitAndInstall() }] : []),
     { type: 'separator' },
     { label: '종료', click: () => app.quit() }
-  ]))
+  ])
+  tray.setContextMenu(menu(false))
+
+  // 자동 업데이트: GitHub Releases(package.json build.publish)에서 새 버전을 받아 두고 앱을 끌 때 설치한다.
+  // 설치된 앱에서만 (개발 모드엔 app-update.yml이 없다). 서명이 없어도 된다 (publisherName을 안 두면 서명 검사 안 함)
+  if (app.isPackaged) {
+    autoUpdater.on('update-downloaded', ({ version }) => {
+      tray.setContextMenu(menu(true))
+      tray.displayBalloon({ title: 'MoHaZi 업데이트', content: `${version} 버전을 받았어요. 다음에 켤 때 적용돼요.` })
+    })
+    autoUpdater.on('error', (e) => console.error('[update]', e)) // 인터넷이 없거나 GitHub이 안 될 때. 앱은 그대로 쓴다
+    const check = () => autoUpdater.checkForUpdates().catch(() => {})
+    check()
+    setInterval(check, 6 * 60 * 60 * 1000)
+  }
 
   // 수집 모드 (0-4): COLLECT=1 npm run dev
   // - 게임 중 3초마다 원본 해상도 JPG 자동 저장 (게임 중엔 단축키가 안 먹혀서)

@@ -99,6 +99,8 @@ function createOverlay() {
     { label: '종료', click: () => app.quit() }
   ])
   tray.setContextMenu(menu(false))
+  // 창 없이 트레이에만 뜨는 앱이라, 켜졌다는 걸 한 번 알려 준다
+  tray.displayBalloon({ title: 'MoHaZi 실행 중', content: '증바람 판에 들어가면 오버레이가 떠요. 끄기는 트레이 아이콘 우클릭.' })
 
   // 자동 업데이트: GitHub Releases(package.json build.publish)에서 새 버전을 받아 두고 앱을 끌 때 설치한다.
   // 설치된 앱에서만 (개발 모드엔 app-update.yml이 없다). 서명이 없어도 된다 (publisherName을 안 두면 서명 검사 안 함)

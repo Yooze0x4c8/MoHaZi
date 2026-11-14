@@ -27,7 +27,7 @@
     "typescript": "^5.6.3",
     "vite": "^5.4.11"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "build": {
     "appId": "com.mohazi.overlay",
     "productName": "MoHaZi",
@@ -43,7 +43,8 @@
       "signAndEditExecutable": false
     },
     "nsis": {
-      "oneClick": true,
+      "oneClick": false,
+      "include": "build/installer.nsh",
       "perMachine": false,
       "shortcutName": "MoHaZi"
     },

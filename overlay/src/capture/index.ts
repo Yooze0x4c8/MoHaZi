@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 // 렌더러에서 돈다. 주 모니터 스트림을 열어 두고 필요할 때 프레임 한 장씩 떼어 온다.
 // (desktopCapturer.getSources는 한 장에 0.5초 넘게 걸려 쓰지 않는다)
-import { CARD_X, NAME, findCards, resolveCards, type Region } from './recognize'
+import { CARD_X, NAME, findCards, rerollsLeft, resolveCards, type Region } from './recognize'
 import { loadTemplates } from '../engine/match'
 import ICONS_JSON from '../../../data/icon-features.json'
 import AUGMENTS_JSON from '../../../data/augments.json'
@@ -57,7 +57,8 @@ const NAMES: Record<number, string> = Object.fromEntries(AUGMENTS_JSON.map((a) =
 
 // 프레임 → 떠 있는 증강 3장 (1-5). 결과는 onCards로, 증강 화면이 아니면 null.
 // 반환 함수는 startCapture의 onFrame: 증강 화면이면 true(다음 캡처를 빨리)
-export function recognizer(onCards: (ids: (number | null)[] | null) => void) {
+// onRerolls: 카드별 리롤 버튼을 쓸 수 있는지 (증강 화면일 때 매 프레임)
+export function recognizer(onCards: (ids: (number | null)[] | null) => void, onRerolls?: (avail: boolean[]) => void) {
   const ctx = new OffscreenCanvas(1920, 1080).getContext('2d', { willReadFrequently: true })!
   const region: Region = (x, y, w, h) => ctx.getImageData(x, y, w, h)
   let misses = 0, busy = false
@@ -79,6 +80,7 @@ export function recognizer(onCards: (ids: (number | null)[] | null) => void) {
     // 한 프레임 놓쳤다고 등급이 깜빡이지 않게 두 번 연속 못 찾을 때만 지운다
     if (!slots) { if (++misses === 2) { onCards(null); lastKey = '' } return false }
     misses = 0
+    onRerolls?.(rerollsLeft(region))
     const key = slots.map((s) => s.id).join()
     if (key === lastKey) { onCards(last); return last != null }
     if (busy) return true

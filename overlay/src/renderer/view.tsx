@@ -93,9 +93,9 @@ function SwitchBanner({ from, s, onAccept }: { from: Build; s: Switch; onAccept:
 // 한 챔피언의 오버레이: 빌드 패널/칩 + 카드 등급 + 재계산 알림.
 // 챔피언이 바뀌면 key로 새로 만들어 고른 빌드를 기본으로 되돌린다.
 // cards: 지금 떠 있는 증강 3장의 ID (못 알아본 카드는 null, 증강 화면이 아니면 null), picked: 고른 증강
-// rerolls: 남은 리롤 횟수 (null = 모름), f7: F7을 누른 횟수 (단축키가 먹히는 PC용. 바뀔 때마다 패널 토글)
+// rerolls: 카드별 리롤 버튼을 쓸 수 있는지 (null = 모름), f7: F7을 누른 횟수 (단축키가 먹히는 PC용. 바뀔 때마다 패널 토글)
 // picked: 처음 고른 증강 (미리보기용). 게임에선 비어서 시작하고 화면에서 추정해 채운다 (3-3)
-type Props = { alias: string; cards: (number | null)[] | null; rerolls?: number | null; picked?: number[]; f7?: number }
+type Props = { alias: string; cards: (number | null)[] | null; rerolls?: boolean[] | null; picked?: number[]; f7?: number }
 
 export function Overlay(props: Props) {
   const champ = BUILDS[props.alias]
@@ -168,7 +168,7 @@ function ChampOverlay({ champ, cards, rerolls = null, picked: initial = [], f7 =
 
   const build = champ.builds.find((b) => b.id === choice) ?? champ.builds.find((b) => b.default) ?? champ.builds[0]
   const rated = resolved && rateCards(resolved, build, TAGS, LABELS, picked)
-  const reroll = !!rated && shouldReroll(rated.cards, rerolls)
+  const reroll = !!rated && shouldReroll(rated.cards, rerolls ? rerolls.filter(Boolean).length : null)
   // 패널: 처음엔 펼침, 첫 증강을 고르면 접힘. 칩·접기 버튼(또는 F7)으로 언제든 접고 편다
   const hadPick = picked.length > 0
   const [panelOpen, setPanelOpen] = useState(!hadPick)
@@ -203,7 +203,7 @@ function ChampOverlay({ champ, cards, rerolls = null, picked: initial = [], f7 =
       {/* key에 빌드를 넣어 다시 매길 때 등장 애니메이션을 다시 보여준다 */}
       {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => c ?? { grade: '?', reason: '' })} pick={reroll ? undefined : rated.pick}
         onOpen={(i) => setSearching((s) => (s === i ? null : i))} />}
-      {reroll && <RerollCallout rerolls={rerolls} />}
+      {reroll && <RerollCallout avail={rerolls} />}
       {searching != null && (
         <UnknownSearch key={searching} left={CARD_X[searching] + 10}
           onPick={(id) => { setFixed((f) => ({ ...f, [searching]: id })); setSearching(null) }}

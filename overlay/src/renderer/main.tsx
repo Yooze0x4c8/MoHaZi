@@ -22,6 +22,7 @@ function App() {
   const [game, setGame] = useState<Game>(null)
   const [f7, setF7] = useState(0) // F7 누른 횟수 (게임 중엔 안 먹히는 PC가 있어 마우스가 기본)
   const [cards, setCards] = useState<(number | null)[] | null>(null) // 떠 있는 증강 3장 (못 알아본 카드는 null)
+  const [rerolls, setRerolls] = useState<boolean[] | null>(null) // 카드별 리롤 버튼을 쓸 수 있는지
   const [saved, setSaved] = useState<number | null>(null) // 수집 모드: 방금 저장한 장 수 (1초 표시)
   const snap = useRef(false)
 
@@ -43,7 +44,8 @@ function App() {
   inGame.current = !!game || location.hash === '#capture' || COLLECT
   useEffect(() => {
     // 같은 결과면 상태를 바꾸지 않는다 (재렌더·검색 팝업 초기화 방지)
-    const recognize = recognizer((ids) => setCards((old) => (old?.join() === ids?.join() ? old : ids)))
+    const recognize = recognizer((ids) => setCards((old) => (old?.join() === ids?.join() ? old : ids)),
+      (avail) => setRerolls((old) => (old?.join() === avail.join() ? old : avail)))
     // 수집 모드: 원본 해상도 그대로 저장 (16:10 등 비율도 그대로). 그리기는 지금 한다 (프레임이 곧 바뀜)
     const save = (video: HTMLVideoElement, auto: boolean) => {
       const c = new OffscreenCanvas(video.videoWidth, video.videoHeight)
@@ -68,7 +70,7 @@ function App() {
   return (
     <Stage>
       {savedToast}
-      <Overlay key={game.alias} alias={game.alias} cards={cards} f7={f7} />
+      <Overlay key={game.alias} alias={game.alias} cards={cards} rerolls={rerolls} f7={f7} />
     </Stage>
   )
 }

@@ -69,7 +69,7 @@ export function rateCards(ids: (number | null)[], build: Build, tags: Tags, labe
   return { cards, pick }
 }
 
-// 리롤 권장: 세 장 모두 B 이하이고 리롤이 남았을 때. rerolls null = 남은 횟수를 모름(있다고 본다).
+// 리롤 권장: 세 장 모두 B 이하이고 리롤이 남았을 때. rerolls = 쓸 수 있는 리롤 버튼 수, null = 모름(있다고 본다).
 // 못 알아본 카드가 있으면 판단하지 않는다
 export function shouldReroll(cards: (Rated | null)[], rerolls: number | null) {
   return rerolls !== 0 && cards.length > 0 && cards.every((c) => c != null && (c.grade === 'B' || c.grade === 'C'))

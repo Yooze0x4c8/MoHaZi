@@ -52,3 +52,16 @@ export function cardAt(p: { x: number; y: number } | null) {
   const i = CARD_X.findIndex((x) => p.x >= x && p.x <= x + CARD.w)
   return i < 0 ? null : i
 }
+
+// 리롤 버튼 상태 (3-4): 카드마다 버튼이 하나, 쓰면 회색이 된다. 쓸 수 있으면 갈색·금색.
+// 버튼 안쪽에서 따뜻한 색(빨강 − 파랑 > 25) 픽셀 비율로 가른다 (실제 66개: 쓸 수 있음 0.78 이상, 쓴 뒤 0.03 이하)
+// ponytail: 롤 커서(금색)가 버튼을 덮으면 0.13~0.15로 섞여 '쓴 것'으로 읽힐 수 있다. 커서를 치우면 돌아온다
+const WARM_MIN = 0.4
+export function rerollsLeft(region: Region) {
+  return CARD_X.map((x) => {
+    const { data } = region(x + REROLL.dx + 6, REROLL.y + 6, REROLL.w - 12, REROLL.h - 12)
+    let warm = 0
+    for (let i = 0; i < data.length; i += 4) if (data[i] - data[i + 2] > 25) warm++
+    return warm / (data.length / 4) > WARM_MIN
+  })
+}

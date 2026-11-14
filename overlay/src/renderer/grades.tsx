@@ -64,11 +64,12 @@ export function PickBrackets({ x }: { x: number }) {
   )
 }
 
-// 리롤 권장: 게임 리롤 버튼마다 14px 꺾쇠 + 카드 아래 가운데 안내. rerolls null = 남은 횟수 모름
-export function RerollCallout({ rerolls }: { rerolls: number | null }) {
+// 리롤 권장: 아직 쓸 수 있는 리롤 버튼에 14px 꺾쇠 + 카드 아래 가운데 안내. avail null = 모름(전부 꺾쇠, 횟수 없이)
+export function RerollCallout({ avail }: { avail: boolean[] | null }) {
+  const left = avail?.filter(Boolean).length
   return (
     <>
-      {CARD_X.map((x) => (
+      {CARD_X.filter((_, i) => !avail || avail[i]).map((x) => (
         <div key={x} className="rr" style={{ left: x + REROLL.dx - 12 }}>
           <div className="br tl" /><div className="br tr" /><div className="br bl" /><div className="br brr" />
         </div>
@@ -77,7 +78,7 @@ export function RerollCallout({ rerolls }: { rerolls: number | null }) {
         <span className="tick" />
         <div>
           <div className="t">리롤을 권장해요</div>
-          <div className="s">세 장 모두 B 이하예요.{rerolls != null && ` 리롤 ${rerolls}번 남음`}</div>
+          <div className="s">세 장 모두 B 이하예요.{left != null && ` 리롤 ${left}번 남음`}</div>
         </div>
       </div>
     </>

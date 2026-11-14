@@ -3,7 +3,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import { loadTemplates } from '../engine/match.ts'
-import { CARD_X, ICON, cardAt, findCards, resolveCards, type Region } from './recognize.ts'
+import { CARD_X, ICON, REROLL, cardAt, findCards, rerollsLeft, resolveCards, type Region } from './recognize.ts'
 
 const templates = loadTemplates(JSON.parse(fs.readFileSync(new URL('../../../data/icon-features.json', import.meta.url), 'utf8')))
 const px = (id: number) => templates.find((t) => t.id === id)!.px
@@ -60,4 +60,20 @@ test('고른 카드 추정: 마우스가 올라간 카드 번호, 카드 밖이�
   assert.equal(cardAt({ x: CARD_X[1] - 20, y: 400 }), null) // 카드 사이 틈
   assert.equal(cardAt({ x: CARD_X[1] + 160, y: 900 }), null) // 카드 아래 (리롤·파란 버튼)
   assert.equal(cardAt(null), null)
+})
+
+test('리롤 버튼: 갈색·금색이면 쓸 수 있음, 회색이면 쓴 것', () => {
+  const W = 1920, data = new Uint8Array(W * 1080 * 4)
+  const paint = (k: number, rgb: number[]) => {
+    for (let y = REROLL.y; y < REROLL.y + REROLL.h; y++) for (let x = CARD_X[k] + REROLL.dx; x < CARD_X[k] + REROLL.dx + REROLL.w; x++) data.set([...rgb, 255], (y * W + x) * 4)
+  }
+  paint(0, [120, 75, 35]) // 쓸 수 있음 (갈색)
+  paint(1, [40, 42, 46]) // 쓴 것 (회색)
+  paint(2, [200, 130, 60]) // 마우스를 올린 쓸 수 있는 버튼 (밝은 주황)
+  const region: Region = (x, y, w, h) => {
+    const out = new Uint8Array(w * h * 4)
+    for (let r = 0; r < h; r++) out.set(data.subarray(((y + r) * W + x) * 4, ((y + r) * W + x + w) * 4), r * w * 4)
+    return { width: w, height: h, data: out }
+  }
+  assert.deepEqual(rerollsLeft(region), [true, false, true])
 })

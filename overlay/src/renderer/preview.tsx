@@ -92,7 +92,7 @@ export function Preview({ screen }: { screen: string }) {
   if (screen === 'pick') return <PickPreview />
   if (screen === '04') return <SwitchPreview />
   // 치명타 배럴에 거인의 결의, 대마법사, 사악한 정신 → 모두 B 이하라 리롤 권장 (고른 증강: 천상의 신체, 정신 변환)
-  if (screen === '03') return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, 2087, 1097]} rerolls={1} picked={[1013, 1056]} /></>
+  if (screen === '03') return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, 2087, 1097]} rerolls={[true, false, false]} picked={[1013, 1056]} /></>
   if (MOCK_BUILDS[screen]) return <PanelPreview screen={screen} />
   // 궁극기 대변혁, 대마법사, 무한의 대검 업그레이드
   if (screen === '02a') return <><FakeGame /><Overlay alias="Gangplank" cards={[1088, 2087, 1336]} picked={[]} /></>

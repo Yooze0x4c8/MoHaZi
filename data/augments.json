@@ -176,6 +176,14 @@
     "icon": "1032.png"
   },
   {
+    "id": 1034,
+    "nameId": "VeilOfWarding",
+    "name": "감시의 장막",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1034.png"
+  },
+  {
     "id": 1035,
     "nameId": "ARAM_FeeltheBurn",
     "name": "저주의 화염",
@@ -952,6 +960,30 @@
     "icon": "1313.png"
   },
   {
+    "id": 1314,
+    "nameId": "MightyShield",
+    "name": "강력한 방패",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1314.png"
+  },
+  {
+    "id": 1315,
+    "nameId": "SwiftAndSafe",
+    "name": "빠르고 안전하게",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1315.png"
+  },
+  {
+    "id": 1316,
+    "nameId": "WindBeneathBlade",
+    "name": "칼날 아래 바람",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1316.png"
+  },
+  {
     "id": 1317,
     "nameId": "ARAM_Upgrade_Cutlass",
     "name": "해적검 업그레이드",
@@ -984,6 +1016,14 @@
     "icon": "1320.png"
   },
   {
+    "id": 1321,
+    "nameId": "Gash",
+    "name": "깊은 상처",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1321.png"
+  },
+  {
     "id": 1322,
     "nameId": "ARAM_GetExcited",
     "name": "신난다!",
@@ -1008,12 +1048,108 @@
     "icon": "1324.png"
   },
   {
+    "id": 1325,
+    "nameId": "GlassCannon",
+    "name": "유리 대포",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1325.png"
+  },
+  {
+    "id": 1326,
+    "nameId": "Nightstalking",
+    "name": "밤의 추적",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1326.png"
+  },
+  {
+    "id": 1327,
+    "nameId": "Adamant",
+    "name": "단호함",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1327.png"
+  },
+  {
+    "id": 1328,
+    "nameId": "CriticalRhythm",
+    "name": "치명적 리듬",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1328.png"
+  },
+  {
+    "id": 1329,
+    "nameId": "BiggestSnowballEver",
+    "name": "데굴데굴 눈덩이!",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1329.png"
+  },
+  {
+    "id": 1330,
+    "nameId": "ReEnergize",
+    "name": "재충전",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1330.png"
+  },
+  {
+    "id": 1331,
+    "nameId": "EmpyreanPromise",
+    "name": "창공의 서약",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1331.png"
+  },
+  {
+    "id": 1332,
+    "nameId": "OminousPact",
+    "name": "불길한 서약",
+    "rarity": "prismatic",
+    "desc": "지금 1레벨이 증가하고 두 라운드마다 추가로 1레벨이 증가합니다. 레벨 제한이 사라집니다. @RoundCounterForBonus@라운드 이후 이 증강을 선택할 경우, @BonusForLatePick@레벨이 추가로 증가합니다. 이 증강을 레벨 업하면 즉시 레벨이 오릅니다.",
+    "icon": "1332.png"
+  },
+  {
+    "id": 1333,
+    "nameId": "EscapePlan",
+    "name": "도주 계획",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1333.png"
+  },
+  {
+    "id": 1334,
+    "nameId": "SnowballUpgrade",
+    "name": "눈덩이 업그레이드",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1334.png"
+  },
+  {
+    "id": 1335,
+    "nameId": "Goldrend",
+    "name": "골드 강탈",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1335.png"
+  },
+  {
     "id": 1336,
     "nameId": "ARAM_Upgrade_IE",
     "name": "무한의 대검 업그레이드",
     "rarity": "gold",
     "desc": null,
     "icon": "1336.png"
+  },
+  {
+    "id": 1337,
+    "nameId": "KingMe",
+    "name": "나는 왕이다",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1337.png"
   },
   {
     "id": 1338,
@@ -1024,12 +1160,92 @@
     "icon": "1338.png"
   },
   {
+    "id": 1339,
+    "nameId": "LaserHeal",
+    "name": "체력 회복 광선",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1339.png"
+  },
+  {
+    "id": 1340,
+    "nameId": "Upgrade_MikaelsBlessing",
+    "name": "미카엘의 축복 업그레이드",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1340.png"
+  },
+  {
+    "id": 1341,
+    "nameId": "HatOnAHat",
+    "name": "모자 겹쳐쓰기",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1341.png"
+  },
+  {
+    "id": 1342,
+    "nameId": "SnowballRoulette",
+    "name": "눈덩이 룰렛",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1342.png"
+  },
+  {
+    "id": 1343,
+    "nameId": "Quest_Sneakerhead",
+    "name": "신발 수집가",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1343.png"
+  },
+  {
+    "id": 1344,
+    "nameId": "FinalForm",
+    "name": "최종 형태",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1344.png"
+  },
+  {
     "id": 1345,
     "nameId": "ARAM_SpiritualPurification",
     "name": "영혼의 정화",
     "rarity": "gold",
     "desc": null,
     "icon": "1345.png"
+  },
+  {
+    "id": 1346,
+    "nameId": "Vampirism",
+    "name": "흡혈병",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1346.png"
+  },
+  {
+    "id": 1347,
+    "nameId": "Poltergeist",
+    "name": "폴터가이스트",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1347.png"
+  },
+  {
+    "id": 1348,
+    "nameId": "Flash2",
+    "name": "점멸 2",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1348.png"
+  },
+  {
+    "id": 1349,
+    "nameId": "UltimateAwakening",
+    "name": "궁극의 각성",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1349.png"
   },
   {
     "id": 1353,
@@ -1040,12 +1256,92 @@
     "icon": "1353.png"
   },
   {
+    "id": 1356,
+    "nameId": "CriticalMissile",
+    "name": "치명적 미사일",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1356.png"
+  },
+  {
+    "id": 1358,
+    "nameId": "PinballSnowball",
+    "name": "핀볼",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1358.png"
+  },
+  {
     "id": 1361,
     "nameId": "ARAM_Quest_VoidImmolation",
     "name": "이케시아의 몰락",
     "rarity": "prismatic",
     "desc": "즉시: 바미의 불씨를 획득합니다. 조건: 태양불꽃 방패와 공허한 광휘를 보유해야 합니다. 보상: 태양불꽃 방패와 공허한 광휘가 공허의 불길로 합쳐집니다.",
     "icon": "1361.png"
+  },
+  {
+    "id": 1372,
+    "nameId": "BabyKitty",
+    "name": "엄마 찾는 아기 고양이",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1372.png"
+  },
+  {
+    "id": 1373,
+    "nameId": "ShrinkEngine",
+    "name": "축소 엔진",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1373.png"
+  },
+  {
+    "id": 1375,
+    "nameId": "SoulEater",
+    "name": "영혼의 포식자",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1375.png"
+  },
+  {
+    "id": 1379,
+    "nameId": "Upgrade_SwordOfBlossom",
+    "name": "꽃피는 새벽의 검 업그레이드",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1379.png"
+  },
+  {
+    "id": 1384,
+    "nameId": "Donation",
+    "name": "후원",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1384.png"
+  },
+  {
+    "id": 1386,
+    "nameId": "YouSpinMeRightRound",
+    "name": "빙글빙글",
+    "rarity": "silver",
+    "desc": "소환사 주문이 영웅의 비상으로 변경됩니다. 영웅의 비상을 사용하면 갈고리총을 발사해 지형에 고정시키며, 이후 스킬을 재사용하면 갈고리에 매달려 이동합니다. 매달려 이동하는 동안 주변 적을 자동 공격합니다. 적 챔피언에게 부딪히거나 스킬을 재사용하면 영웅의 비상이 끝납니다.",
+    "icon": "1386.png"
+  },
+  {
+    "id": 1388,
+    "nameId": "InfiniteRecursion",
+    "name": "무한 반복",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1388.png"
+  },
+  {
+    "id": 1389,
+    "nameId": "HandOfBaron",
+    "name": "남작의 도움",
+    "rarity": "prismatic",
+    "desc": "적응형 능력치를 @AFAmp*100@% 얻습니다. 주변 아군 미니언이 대폭 강화됩니다.",
+    "icon": "1389.png"
   },
   {
     "id": 1390,
@@ -1056,12 +1352,44 @@
     "icon": "1390.png"
   },
   {
+    "id": 1391,
+    "nameId": "RedEnvelopes",
+    "name": "붉은 봉투",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1391.png"
+  },
+  {
+    "id": 1392,
+    "nameId": "GoldenSnowball",
+    "name": "신성한 눈덩이",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "1392.png"
+  },
+  {
     "id": 1397,
     "nameId": "ARAM_Cerberus",
     "name": "케르베로스",
     "rarity": "prismatic",
     "desc": "칼날비와 집중 공격 핵심 룬을 얻습니다. 칼날비 - 첫 3회의 기본 공격 시 공격 속도가 크게 증가합니다. 집중 공격 - 같은 적에게 3회 기본 공격을 가하면 폭발적 피해를 입히고 전투에서 벗어날 때까지 피해량이 증가합니다.",
     "icon": "1397.png"
+  },
+  {
+    "id": 1400,
+    "nameId": "TrainOfTheDead",
+    "name": "최후의 도시 대중교통",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1400.png"
+  },
+  {
+    "id": 1401,
+    "nameId": "GrowthSpurt",
+    "name": "급속 성장",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1401.png"
   },
   {
     "id": 1402,
@@ -1096,12 +1424,28 @@
     "icon": "1405.png"
   },
   {
+    "id": 1406,
+    "nameId": "GrandmasChiliOil",
+    "name": "할머니의 고추기름",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "1406.png"
+  },
+  {
     "id": 1409,
     "nameId": "ARAM_Poro_Blast",
     "name": "포로 발사기",
     "rarity": "gold",
     "desc": null,
     "icon": "1409.png"
+  },
+  {
+    "id": 1411,
+    "nameId": "Upgrade_Thornmail",
+    "name": "가시 갑옷 업그레이드",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1411.png"
   },
   {
     "id": 1413,
@@ -1112,12 +1456,52 @@
     "icon": "1413.png"
   },
   {
+    "id": 1414,
+    "nameId": "Dropybara_Active",
+    "name": "카피바라 폭격",
+    "rarity": "prismatic",
+    "desc": "{{Cherry_OrbitalLaser_Summary}} 이 라운드에 입힌 피해량: @f1@ 입힌 총 피해량: @f2@",
+    "icon": "1414.png"
+  },
+  {
+    "id": 1415,
+    "nameId": "Twinfire",
+    "name": "쌍둥이 불꽃",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "1415.png"
+  },
+  {
+    "id": 1416,
+    "nameId": "HextechSoul",
+    "name": "마법공학의 영혼",
+    "rarity": "silver",
+    "desc": "스킬 또는 기본 공격으로 적을 공격할 때마다 추가 피해를 입히는 지옥불 영혼을 얻습니다.",
+    "icon": "1416.png"
+  },
+  {
     "id": 1418,
     "nameId": "ARAM_CrackOpenThatEgg",
     "name": "알 깨기",
     "rarity": "silver",
     "desc": null,
     "icon": "1418.png"
+  },
+  {
+    "id": 1420,
+    "nameId": "Sonata",
+    "name": "소나타",
+    "rarity": "gold",
+    "desc": "@Cooldown@초마다 인내의 아리아와 기민함의 노래를 번갈아 자동 사용합니다. 인내의 아리아는 주변 아군의 체력을 회복시키고 일시적으로 보호막 오라를 부여합니다. 기민함의 노래는 추가 이동 속도를 부여하는 오라를 잠시 동안 생성합니다.",
+    "icon": "1420.png"
+  },
+  {
+    "id": 1421,
+    "nameId": "PromQueen",
+    "name": "퀸카",
+    "rarity": "prismatic",
+    "desc": "@BaseCD@초마다 반짝이는 티아라를 자동 사용해 자신에게 내려오게 합니다. 티아라를 쓰면 라칸의 궁극기를 얻어 닿는 적을 매혹합니다.",
+    "icon": "1421.png"
   },
   {
     "id": 1424,
@@ -1232,6 +1616,22 @@
     "icon": "2018.png"
   },
   {
+    "id": 2024,
+    "nameId": "CritNCast",
+    "name": "치명적 가속",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2024.png"
+  },
+  {
+    "id": 2026,
+    "nameId": "KillSecured",
+    "name": "확보된 킬",
+    "rarity": "silver",
+    "desc": "체력이 @HealthThreshold*100@% 아래인 적에게 접근 시 이동 속도가 @MovementSpeed*100@% 증가합니다.",
+    "icon": "2026.png"
+  },
+  {
     "id": 2031,
     "nameId": "ARAM_DropBear",
     "name": "곰 투하",
@@ -1240,12 +1640,76 @@
     "icon": "2031.png"
   },
   {
+    "id": 2032,
+    "nameId": "FishBait",
+    "name": "상어 미끼",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2032.png"
+  },
+  {
+    "id": 2034,
+    "nameId": "SharkTempest",
+    "name": "상어 폭풍",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2034.png"
+  },
+  {
+    "id": 2042,
+    "nameId": "BrushPower",
+    "name": "Hide on bush",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2042.png"
+  },
+  {
+    "id": 2043,
+    "nameId": "NatureIsHealing",
+    "name": "자연의 회복",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2043.png"
+  },
+  {
+    "id": 2046,
+    "nameId": "PoroCharge_Active",
+    "name": "포로 쇄도",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2046.png"
+  },
+  {
+    "id": 2054,
+    "nameId": "SpellVolley",
+    "name": "3연발",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2054.png"
+  },
+  {
     "id": 2055,
     "nameId": "ARAM_Multishot",
     "name": "다중 공격",
     "rarity": "prismatic",
     "desc": null,
     "icon": "2055.png"
+  },
+  {
+    "id": 2062,
+    "nameId": "Ability_SelfAOE_DoubleCast",
+    "name": "메아리 시전",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2062.png"
+  },
+  {
+    "id": 2063,
+    "nameId": "DimensionShift_Active",
+    "name": "차원 이동",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2063.png"
   },
   {
     "id": 2064,
@@ -1264,12 +1728,68 @@
     "icon": "2065.png"
   },
   {
+    "id": 2072,
+    "nameId": "Missile_Split",
+    "name": "주문 분산",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2072.png"
+  },
+  {
     "id": 2073,
     "nameId": "ARAM_SustainingStrike",
     "name": "흡수",
     "rarity": "silver",
     "desc": null,
     "icon": "2073.png"
+  },
+  {
+    "id": 2076,
+    "nameId": "TitansPulse",
+    "name": "확고한 의지로",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2076.png"
+  },
+  {
+    "id": 2077,
+    "nameId": "DarkWind",
+    "name": "굶주린 속박",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2077.png"
+  },
+  {
+    "id": 2078,
+    "nameId": "ChainReaction",
+    "name": "연쇄 반응",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2078.png"
+  },
+  {
+    "id": 2080,
+    "nameId": "Snowbomb",
+    "name": "눈 폭발",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2080.png"
+  },
+  {
+    "id": 2082,
+    "nameId": "Equilibrium",
+    "name": "우리의 치유",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2082.png"
+  },
+  {
+    "id": 2083,
+    "nameId": "BurstingTeeth",
+    "name": "이빨 요정",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2083.png"
   },
   {
     "id": 2087,
@@ -1296,12 +1816,36 @@
     "icon": "2089.png"
   },
   {
+    "id": 2091,
+    "nameId": "EndlessDecimation",
+    "name": "끝없는 학살",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2091.png"
+  },
+  {
     "id": 2095,
     "nameId": "ARAM_HighRoller",
     "name": "도박꾼",
     "rarity": "prismatic",
     "desc": null,
     "icon": "2095.png"
+  },
+  {
+    "id": 2096,
+    "nameId": "LittleExtraHelp",
+    "name": "작은 도움",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2096.png"
+  },
+  {
+    "id": 2097,
+    "nameId": "VoidDash",
+    "name": "공허 돌진",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2097.png"
   },
   {
     "id": 2098,
@@ -1328,6 +1872,14 @@
     "icon": "2100.png"
   },
   {
+    "id": 2102,
+    "nameId": "PressureCooker",
+    "name": "압력솥",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2102.png"
+  },
+  {
     "id": 2103,
     "nameId": "ARAM_BangBang",
     "name": "초장거리 저격",
@@ -1350,6 +1902,646 @@
     "rarity": "prismatic",
     "desc": null,
     "icon": "2107.png"
+  },
+  {
+    "id": 2108,
+    "nameId": "SupportMain",
+    "name": "서포터 주력",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2108.png"
+  },
+  {
+    "id": 2109,
+    "nameId": "SnapBack",
+    "name": "원상복구",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2109.png"
+  },
+  {
+    "id": 2111,
+    "nameId": "Bonk",
+    "name": "꽁!",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2111.png"
+  },
+  {
+    "id": 2115,
+    "nameId": "SquishySlappyGrab",
+    "name": "말랑 찰싹 손",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2115.png"
+  },
+  {
+    "id": 2116,
+    "nameId": "SpecializedEmpowerment",
+    "name": "위력 추구",
+    "rarity": "gold",
+    "desc": "기본 공격 시 @APDamage@의 물리 피해를 추가로 입힙니다.",
+    "icon": "2116.png"
+  },
+  {
+    "id": 2118,
+    "nameId": "SkipTheBasics",
+    "name": "궁극기 봇",
+    "rarity": "prismatic",
+    "desc": "스킬 가속이 궁극기에만 적용되지만, 효과가 50% 증가합니다. 스킬 가속이 100 증가합니다.",
+    "icon": "2118.png"
+  },
+  {
+    "id": 2119,
+    "nameId": "Overextender",
+    "name": "무리한 진입",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2119.png"
+  },
+  {
+    "id": 2123,
+    "nameId": "Overloaded",
+    "name": "과충전",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2123.png"
+  },
+  {
+    "id": 2125,
+    "nameId": "ItsGoTime",
+    "name": "출발할 시간",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2125.png"
+  },
+  {
+    "id": 2126,
+    "nameId": "KeepGoing",
+    "name": "재장전",
+    "rarity": "gold",
+    "desc": "총 공격 속도가 @TotalASValue*100@% 증가합니다. 초당 공격 횟수 @Breakpoint1@회에서 마법 피해({{ Item_Keyword_OnHit }})가 @OnHitDamage@ 증가합니다. 총 공격 속도가 추가 공격 속도의 증가율로 계산됩니다. 적에게 입힌 적중 시 마법 피해: @f1@",
+    "icon": "2126.png"
+  },
+  {
+    "id": 2127,
+    "nameId": "ForgedByTheMaster",
+    "name": "장인의 솜씨",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2127.png"
+  },
+  {
+    "id": 2128,
+    "nameId": "BloodMoneyBurn",
+    "name": "타오르는 이자",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2128.png"
+  },
+  {
+    "id": 2129,
+    "nameId": "Terraind",
+    "name": "지형 생성됨",
+    "rarity": "gold",
+    "desc": "총 공격 속도가 @TotalASValue*100@% 증가합니다. 초당 공격 횟수 @Breakpoint1@회에서 마법 피해({{ Item_Keyword_OnHit }})가 @OnHitDamage@ 증가합니다. 총 공격 속도가 추가 공격 속도의 증가율로 계산됩니다. 적에게 입힌 적중 시 마법 피해: @f1@",
+    "icon": "2129.png"
+  },
+  {
+    "id": 2131,
+    "nameId": "DontChangeTheChannel",
+    "name": "채널 고정",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2131.png"
+  },
+  {
+    "id": 2132,
+    "nameId": "WarlockJuicebox",
+    "name": "마도사의 주스 상자",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2132.png"
+  },
+  {
+    "id": 2133,
+    "nameId": "MercysStrike",
+    "name": "자비의 일격",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2133.png"
+  },
+  {
+    "id": 2134,
+    "nameId": "SurgeField",
+    "name": "방출 역장",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2134.png"
+  },
+  {
+    "id": 2135,
+    "nameId": "Overkill",
+    "name": "바늘꽂이",
+    "rarity": "prismatic",
+    "desc": "치명적 속도와 정복자 핵심 룬을 얻습니다. 치명적 속도 - 챔피언을 기본 공격하면 공격 속도가 증가합니다. 이 효과는 6회까지 중첩됩니다. 6회 중첩되면 기본 공격 시 투사체를 날려 추가 피해를 입힙니다. 정복자 - 챔피언에게 기본 공격 및 스킬 적중 시 적응형 능력치를 얻습니다. 이 효과는 12회까지 중첩됩니다. 12회 중첩되면 챔피언에게 입힌 피해의 일정 비율만큼 체력을 회복합니다.",
+    "icon": "2135.png"
+  },
+  {
+    "id": 2136,
+    "nameId": "TrustyWeapon",
+    "name": "믿음직한 무기",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2136.png"
+  },
+  {
+    "id": 2137,
+    "nameId": "PatOnTheBack",
+    "name": "격려하기",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2137.png"
+  },
+  {
+    "id": 2138,
+    "nameId": "WardingWeapon",
+    "name": "적응형 와드",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2138.png"
+  },
+  {
+    "id": 2139,
+    "nameId": "PinCushion",
+    "name": "고슴도치",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2139.png"
+  },
+  {
+    "id": 2140,
+    "nameId": "Upgrade_Ravenous",
+    "name": "굶주린 히드라 업그레이드",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2140.png"
+  },
+  {
+    "id": 2141,
+    "nameId": "Quest_UltraHydra",
+    "name": "궁극의 히드라",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "2141.png"
+  },
+  {
+    "id": 2143,
+    "nameId": "Upgrade_SunderedSky",
+    "name": "갈라진 하늘 업그레이드",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "2143.png"
+  },
+  {
+    "id": 2144,
+    "nameId": "DoubleDefense",
+    "name": "보강",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2144.png"
+  },
+  {
+    "id": 2148,
+    "nameId": "DoubleStrike",
+    "name": "2연속 공격",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2148.png"
+  },
+  {
+    "id": 2157,
+    "nameId": "Upgrade_DeathDance",
+    "name": "죽음의 무도 업그레이드",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "2157.png"
+  },
+  {
+    "id": 3004,
+    "nameId": "GetJinxed",
+    "name": "떴다, 징크스",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3004.png"
+  },
+  {
+    "id": 3016,
+    "nameId": "ThirdTimesTheHarm",
+    "name": "해악의 숫자 3",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3016.png"
+  },
+  {
+    "id": 3018,
+    "nameId": "BigShot",
+    "name": "묵직한 한 방",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3018.png"
+  },
+  {
+    "id": 3025,
+    "nameId": "Sound_Barrier",
+    "name": "음속 장벽",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3025.png"
+  },
+  {
+    "id": 3036,
+    "nameId": "DoubleTime",
+    "name": "더블 타임",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3036.png"
+  },
+  {
+    "id": 3039,
+    "nameId": "Salvation",
+    "name": "구원",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3039.png"
+  },
+  {
+    "id": 3048,
+    "nameId": "BouncingBees",
+    "name": "튕기는 꿀벌",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3048.png"
+  },
+  {
+    "id": 3049,
+    "nameId": "ArmoredImpact",
+    "name": "장갑 충격",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3049.png"
+  },
+  {
+    "id": 3051,
+    "nameId": "BlueBarrier",
+    "name": "푸른 방어막",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3051.png"
+  },
+  {
+    "id": 3052,
+    "nameId": "HandsOffTheTalent",
+    "name": "아티스트 보호",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3052.png"
+  },
+  {
+    "id": 3053,
+    "nameId": "MoshMonster",
+    "name": "모시핏 괴물",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3053.png"
+  },
+  {
+    "id": 3055,
+    "nameId": "UltimateRecursion",
+    "name": "궁극의 반복",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3055.png"
+  },
+  {
+    "id": 3058,
+    "nameId": "TickleMonster",
+    "name": "간지럼 괴물",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3058.png"
+  },
+  {
+    "id": 3059,
+    "nameId": "NoManaNoProblem",
+    "name": "마나 없음, 상관없음",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3059.png"
+  },
+  {
+    "id": 3060,
+    "nameId": "OneHitWonder",
+    "name": "원 히트 원더",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3060.png"
+  },
+  {
+    "id": 3063,
+    "nameId": "GiftoftheDrowned",
+    "name": "가라앉은 자의 축복",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3063.png"
+  },
+  {
+    "id": 3071,
+    "nameId": "BrassBlast",
+    "name": "트럼펫 폭발",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3071.png"
+  },
+  {
+    "id": 3075,
+    "nameId": "Recoil",
+    "name": "고반동",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3075.png"
+  },
+  {
+    "id": 3078,
+    "nameId": "TheBoomAndTheBass",
+    "name": "붐 앤 베이스",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3078.png"
+  },
+  {
+    "id": 3079,
+    "nameId": "Totentanz",
+    "name": "죽음의 춤",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3079.png"
+  },
+  {
+    "id": 3081,
+    "nameId": "WeaponOfDestiny",
+    "name": "운명의 무기",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3081.png"
+  },
+  {
+    "id": 3085,
+    "nameId": "FlowOfSpirit",
+    "name": "영혼의 흐름",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3085.png"
+  },
+  {
+    "id": 3086,
+    "nameId": "BEES",
+    "name": "벌이다!!!",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3086.png"
+  },
+  {
+    "id": 3088,
+    "nameId": "CrimsonCobalt",
+    "name": "핏빛 코발트",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3088.png"
+  },
+  {
+    "id": 3094,
+    "nameId": "LichBrain",
+    "name": "리치 두뇌",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3094.png"
+  },
+  {
+    "id": 3116,
+    "nameId": "TakeemDownDownDown",
+    "name": "전부 다 무너뜨려",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3116.png"
+  },
+  {
+    "id": 3118,
+    "nameId": "ArcaneAxiom",
+    "name": "비전 원칙",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3118.png"
+  },
+  {
+    "id": 3121,
+    "nameId": "Fruitify",
+    "name": "과일화",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3121.png"
+  },
+  {
+    "id": 3123,
+    "nameId": "JeweledBracelet",
+    "name": "보석 팔찌",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3123.png"
+  },
+  {
+    "id": 3129,
+    "nameId": "SapMagic",
+    "name": "마법 흡수",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3129.png"
+  },
+  {
+    "id": 3131,
+    "nameId": "StillHere",
+    "name": "죽지 않아",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3131.png"
+  },
+  {
+    "id": 3132,
+    "nameId": "HeavyIsTheCrown",
+    "name": "왕관의 무게",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3132.png"
+  },
+  {
+    "id": 3134,
+    "nameId": "LonelyWarrior",
+    "name": "고독한 전사",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "3134.png"
+  },
+  {
+    "id": 3149,
+    "nameId": "GroupHug",
+    "name": "단체 포옹",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3149.png"
+  },
+  {
+    "id": 3150,
+    "nameId": "Upgrade_Stormsurge",
+    "name": "폭풍 쇄도 업그레이드",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3150.png"
+  },
+  {
+    "id": 3159,
+    "nameId": "RISE",
+    "name": "RISE",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "3159.png"
+  },
+  {
+    "id": 3163,
+    "nameId": "EnchantingButterflies",
+    "name": "황홀한 나비",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "3163.png"
+  },
+  {
+    "id": 7001,
+    "nameId": "Upgrade_ZzRotPortal",
+    "name": "업그레이드: 즈롯 차원문",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "7001.png"
+  },
+  {
+    "id": 7002,
+    "nameId": "DontStopCleavin",
+    "name": "끝없는 양날 베기",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "7002.png"
+  },
+  {
+    "id": 7003,
+    "nameId": "DoOrDie",
+    "name": "모 아니면 도",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "7003.png"
+  },
+  {
+    "id": 7004,
+    "nameId": "DrinkUp",
+    "name": "들이켜",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "7004.png"
+  },
+  {
+    "id": 7005,
+    "nameId": "HasteMakesWaste",
+    "name": "급할수록 돌아가라",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "7005.png"
+  },
+  {
+    "id": 7006,
+    "nameId": "StabbyStabby",
+    "name": "심술쟁이",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "7006.png"
+  },
+  {
+    "id": 7007,
+    "nameId": "Upgrade_DeathFireGrasp",
+    "name": "업그레이드: 죽음불꽃 손아귀",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "7007.png"
+  },
+  {
+    "id": 7008,
+    "nameId": "DoransBiggestFan",
+    "name": "도란 열혈 팬",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "7008.png"
+  },
+  {
+    "id": 7009,
+    "nameId": "Upgrade_InnervatingLocket",
+    "name": "업그레이드: 활력증진의 펜던트",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "7009.png"
+  },
+  {
+    "id": 7010,
+    "nameId": "FutureSightHeartsteel",
+    "name": "시간 왜곡: 강철심장",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "7010.png"
+  },
+  {
+    "id": 7011,
+    "nameId": "TrueEternity",
+    "name": "진정한 영원",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "7011.png"
+  },
+  {
+    "id": 7012,
+    "nameId": "HexCore",
+    "name": "마공학 핵",
+    "rarity": "prismatic",
+    "desc": null,
+    "icon": "7012.png"
+  },
+  {
+    "id": 7013,
+    "nameId": "SpiritOfTheJungleMain",
+    "name": "정글 장인의 영혼",
+    "rarity": "gold",
+    "desc": null,
+    "icon": "7013.png"
+  },
+  {
+    "id": 7014,
+    "nameId": "DipDiveDodge",
+    "name": "분노 유발",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "7014.png"
+  },
+  {
+    "id": 7015,
+    "nameId": "SummonersSafari",
+    "name": "소환사의 사파리",
+    "rarity": "silver",
+    "desc": null,
+    "icon": "7015.png"
   },
   {
     "id": 12317,

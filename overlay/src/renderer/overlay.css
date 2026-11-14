@@ -30,7 +30,7 @@
 
 /* 1920×1080 기준 좌표를 쓰는 무대. 실제 화면 크기에 맞춰 zoom */
 .stage {
-  position: fixed; top: 0; left: 0; width: 1920px; height: 1080px;
+  position: fixed; top: 0; width: 1920px; height: 1080px; /* left는 Stage가 가운데 정렬로 준다 */
   font-family: var(--font); letter-spacing: -0.01em; color: var(--text-primary);
   word-break: keep-all; -webkit-font-smoothing: antialiased; pointer-events: none;
 }
@@ -43,7 +43,7 @@
 
 /* GradeStrip: 280×56, 등급 칸 56×56 */
 .strip {
-  position: absolute; top: 272px; width: 280px; height: 56px;
+  position: absolute; top: 165px; width: 320px; height: 56px; /* 카드(y 193) 위쪽에 28px 걸침, 카드 폭 */
   display: flex; align-items: stretch; border-radius: var(--radius-strip); overflow: hidden;
   animation: enter 180ms var(--ease-out) both;
 }
@@ -66,7 +66,7 @@
 .strip.dim .r1 { color: rgba(242, 239, 232, .6); }
 
 /* PickBrackets: 22×22 꺾쇠 4개, 카드 바깥 12px */
-.pick { position: absolute; top: 238px; width: 304px; height: 514px; animation: settle 220ms var(--ease-out) 120ms both; }
+.pick { position: absolute; top: 131px; width: 344px; height: 601px; /* 등급 띠 위 ~ 카드 아래(720)+12 */ animation: settle 220ms var(--ease-out) 120ms both; }
 .pick-label { position: absolute; left: 2px; top: 0; font-size: 13px; font-weight: 600; color: var(--accent); }
 .br { position: absolute; width: 22px; height: 22px; border: 0 solid var(--accent); }
 .br.tl { left: 0; top: 22px; border-top-width: 2px; border-left-width: 2px; }
@@ -90,7 +90,7 @@
 
 /* BuildChip: 높이 40, 왼쪽 위 32 */
 .chip {
-  position: absolute; left: 32px; top: 32px; height: 40px; padding: 0 6px 0 14px; border-radius: 4px;
+  position: absolute; left: calc(32px + var(--edge, 0px)); top: 32px; height: 40px; padding: 0 6px 0 14px; border-radius: 4px;
   display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600;
 }
 .chip .sub { color: var(--text-muted); font-weight: 400; font-size: 13px; }
@@ -98,7 +98,7 @@
 
 /* BuildPanel: 너비 368, 왼쪽 32 / 위 200. 클릭을 받는 유일한 영역 */
 .panel {
-  position: absolute; left: 32px; top: 200px; width: 368px; border-radius: 6px; overflow: hidden;
+  position: absolute; left: calc(32px + var(--edge, 0px)); top: 200px; width: 368px; border-radius: 6px; overflow: hidden;
   pointer-events: auto; animation: enter 180ms var(--ease-out) both;
 }
 .p-head { padding: 20px 20px 16px; }
@@ -168,7 +168,7 @@
 .btnreset { font: inherit; color: inherit; text-align: left; padding: 0; cursor: pointer; pointer-events: auto; }
 button.strip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .pop {
-  position: absolute; top: 340px; width: 300px; border-radius: 6px; padding: 12px;
+  position: absolute; top: 233px; width: 300px; border-radius: 6px; padding: 12px; /* 등급 띠 아래 12px */
   pointer-events: auto; animation: enter 180ms var(--ease-out) both;
 }
 .srlab { display: block; font-size: 12px; color: var(--text-muted); margin: 0 2px 6px; }
@@ -186,14 +186,33 @@ button.strip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2
 .help { font-size: 12px; color: var(--text-muted); padding: 8px 10px 2px; line-height: 1.5; }
 
 /* RerollCallout: 리롤 버튼(카드 x+80, y 764, 120×40) 바깥 12px에 14px 꺾쇠, 안내는 가운데 y 836 */
-.rr { position: absolute; top: 752px; width: 144px; height: 64px; animation: settle 220ms var(--ease-out) 120ms both; }
+.rr { position: absolute; top: 733px; width: 92px; height: 64px; /* 리롤 버튼(68×40, y 745) 바깥 12px */ animation: settle 220ms var(--ease-out) 120ms both; }
 .rr .br { width: 14px; height: 14px; }
 .rr .br.tl, .rr .br.tr { top: 0; }
 .callout {
-  position: absolute; left: 50%; top: 836px; transform: translateX(-50%); border-radius: 4px;
+  position: absolute; left: 50%; top: 905px; transform: translateX(-50%); border-radius: 4px; /* 파란 버튼(y 822~892) 아래 */
   display: flex; align-items: center; gap: 16px; padding: 14px 20px; white-space: nowrap;
   animation: toast-in 180ms var(--ease-out) 120ms both;
 }
 .callout .t { font-size: 16px; font-weight: 600; }
 .callout .s { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
 .callout .tick { width: 2px; align-self: stretch; background: var(--accent); }
+
+/* 마우스로 접고 펴기 (게임 중엔 전역 단축키가 안 먹힌다) */
+.p-head { position: relative; }
+.fold {
+  position: absolute; right: 12px; top: 14px; border: 1px solid rgba(242, 239, 232, .28); background: transparent;
+  border-radius: 3px; padding: 4px 10px; font: inherit; font-size: 12px; color: var(--text-muted); cursor: pointer;
+  transition: color 120ms var(--ease-out), border-color 120ms var(--ease-out);
+}
+.fold:hover { color: var(--text-primary); border-color: rgba(242, 239, 232, .5); }
+button.chip { cursor: pointer; border: 1px solid var(--line); transition: background-color 120ms var(--ease-out); }
+button.chip:hover { background: rgba(30, 32, 38, .9); }
+.chip .caret { font-size: 11px; color: var(--text-muted); padding-right: 6px; }
+.fold:focus-visible, button.chip:focus-visible, .accept:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.accept {
+  display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 3px;
+  border: 1px solid var(--accent); background: rgba(110, 149, 255, .14); cursor: pointer;
+  transition: background-color 120ms var(--ease-out);
+}
+.accept:hover { background: rgba(110, 149, 255, .26); }

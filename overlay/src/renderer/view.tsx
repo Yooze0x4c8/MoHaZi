@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState, type KeyboardEvent } from 'react'
+import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { rateCards, shouldReroll, suggestSwitch, type Build, type Labels, type Switch, type Tags } from '../engine'
 import { search } from '../engine/search'
 import { AugmentGrades, CARD_X, RerollCallout } from './grades'
@@ -35,7 +35,7 @@ function UnknownSearch({ x, onPick, onClose }: { x: number; onPick: (id: number)
   }
 
   return (
-    <div className="pop glass" style={{ left: x - 10 }} onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
+    <div className="pop glass" style={{ left: x + 10 }} onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
       <label className="srlab" htmlFor="aug-search">증강 이름 검색</label>
       <input id="aug-search" className="inp" autoFocus autoComplete="off" spellCheck={false} value={q}
         onChange={(e) => { setQ(e.target.value); setSel(0) }} onKeyDown={onKey} />
@@ -64,8 +64,9 @@ const ro = (w: string) => {
   return c >= 0 && c < 11172 && c % 28 !== 0 && c % 28 !== 8 ? '으로' : '로'
 }
 
-// 다른 빌드가 훨씬 맞을 때 위쪽 배너. 버튼 없이 F7 안내만 (오버레이는 클릭 통과)
-function SwitchBanner({ from, s }: { from: Build; s: Switch }) {
+// 다른 빌드가 훨씬 맞을 때 위쪽 배너. 바꾸기 버튼만 클릭을 받는다 (F7도 된다)
+function SwitchBanner({ from, s, onAccept }: { from: Build; s: Switch; onAccept: () => void }) {
+  useEffect(() => () => clickable(false), [])
   const fit = (name: string, v: number, on: boolean) => (
     <div className={`fit${on ? ' on' : ''}`}>
       <span className="lab">{name}</span>
@@ -77,7 +78,12 @@ function SwitchBanner({ from, s }: { from: Build; s: Switch }) {
     <div className="switch glass">
       <div className="t"><b>{s.to.name} 빌드가 더 맞아요</b><p>{s.why}</p></div>
       <div className="fits">{fit(from.name, s.fromFit, false)}{fit(s.to.name, s.toFit, true)}</div>
-      <div className="act"><div><span className="key">F7</span>{s.to.name}{ro(s.to.name)} 바꾸기</div><span>그대로 두려면 무시하세요</span></div>
+      <div className="act">
+        <button type="button" className="accept btnreset" onClick={onAccept} onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
+          {s.to.name}{ro(s.to.name)} 바꾸기
+        </button>
+        <span>그대로 두려면 무시하세요</span>
+      </div>
     </div>
   )
 }
@@ -85,15 +91,15 @@ function SwitchBanner({ from, s }: { from: Build; s: Switch }) {
 // 한 챔피언의 오버레이: 빌드 패널/칩 + 카드 등급 + 재계산 알림.
 // 챔피언이 바뀌면 key로 새로 만들어 고른 빌드를 기본으로 되돌린다.
 // cards: 지금 떠 있는 증강 3장의 ID (못 알아본 카드는 null, 증강 화면이 아니면 null), picked: 고른 증강
-// rerolls: 남은 리롤 횟수 (null = 모름)
-type Props = { alias: string; cards: (number | null)[] | null; rerolls?: number | null; picked: number[]; f7Open: boolean; onBuildPicked?: () => void }
+// rerolls: 남은 리롤 횟수 (null = 모름), f7: F7을 누른 횟수 (단축키가 먹히는 PC용. 바뀔 때마다 패널 토글)
+type Props = { alias: string; cards: (number | null)[] | null; rerolls?: number | null; picked: number[]; f7?: number }
 
 export function Overlay(props: Props) {
   const champ = BUILDS[props.alias]
   return champ ? <ChampOverlay champ={champ} {...props} /> : <BuildChip picked={0} />
 }
 
-function ChampOverlay({ champ, cards, rerolls = null, picked, f7Open, onBuildPicked }: Props & { champ: { name: string; builds: Build[] } }) {
+function ChampOverlay({ champ, cards, rerolls = null, picked, f7 = 0 }: Props & { champ: { name: string; builds: Build[] } }) {
   const [choice, setChoice] = useState<string | null>(null)
   const [toast, setToast] = useState<{ name: string; n: number } | null>(null)
 
@@ -112,27 +118,34 @@ function ChampOverlay({ champ, cards, rerolls = null, picked, f7Open, onBuildPic
   const build = champ.builds.find((b) => b.id === choice) ?? champ.builds.find((b) => b.default) ?? champ.builds[0]
   const rated = cards && rateCards(cards.map((id, i) => id ?? fixed[i] ?? null), build, TAGS, LABELS, picked)
   const reroll = !!rated && shouldReroll(rated.cards, rerolls)
-  // 첫 증강을 고르기 전까지는 패널, 그 뒤엔 칩 (F7로 다시 연다)
-  const panelOpen = picked.length === 0 || f7Open
+  // 패널: 처음엔 펼침, 첫 증강을 고르면 접힘. 칩·접기 버튼(또는 F7)으로 언제든 접고 편다
+  const hadPick = picked.length > 0
+  const [panelOpen, setPanelOpen] = useState(!hadPick)
+  useEffect(() => { if (hadPick) setPanelOpen(false) }, [hadPick])
 
   const pick = (id: string) => {
-    if (id === build.id) return onBuildPicked?.()
+    if (hadPick) setPanelOpen(false) // 첫 증강 뒤엔 고르면 접는다 (그 전엔 비교해 보게 둔다)
+    if (id === build.id) return
     setChoice(id)
     // 떠 있는 카드가 있을 때만 알림. 등급은 다음 렌더에서 새 빌드로 다시 계산된다
     if (cards) setToast((t) => ({ name: champ.builds.find((b) => b.id === id)!.name, n: (t?.n ?? 0) + 1 }))
-    onBuildPicked?.()
   }
 
   // 전환 제안은 증강 화면에서만 (평소엔 위쪽 게임 UI를 가리지 않게). 이때 F7은 패널 대신 제안 빌드로 바로 바꾼다
   const sw = cards ? suggestSwitch(picked, build, champ.builds, TAGS, LABELS) : null
-  // 레이아웃 이펙트라 패널이 한 프레임 열렸다 닫히는 게 보이지 않는다
-  useLayoutEffect(() => { if (f7Open && sw) pick(sw.to.id) }, [f7Open])
+  const lastF7 = useRef(f7)
+  useEffect(() => {
+    if (f7 === lastF7.current) return
+    lastF7.current = f7
+    if (sw && !panelOpen) pick(sw.to.id)
+    else setPanelOpen((o) => !o)
+  }, [f7])
 
   return (
     <>
       {panelOpen
-        ? <BuildPanel champion={champ.name} builds={champ.builds} selected={build.id} chosen={choice != null} onPick={pick} />
-        : <BuildChip build={build} picked={picked.length} />}
+        ? <BuildPanel champion={champ.name} builds={champ.builds} selected={build.id} chosen={choice != null} onPick={pick} onClose={() => setPanelOpen(false)} />
+        : <BuildChip build={build} picked={picked.length} onOpen={() => setPanelOpen(true)} />}
       {/* key에 빌드를 넣어 다시 매길 때 등장 애니메이션을 다시 보여준다 */}
       {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => c ?? { grade: '?', reason: '' })} pick={reroll ? undefined : rated.pick}
         onOpen={(i) => setSearching((s) => (s === i ? null : i))} />}
@@ -142,7 +155,7 @@ function ChampOverlay({ champ, cards, rerolls = null, picked, f7Open, onBuildPic
           onPick={(id) => { setFixed((f) => ({ ...f, [searching]: id })); setSearching(null) }}
           onClose={() => setSearching(null)} />
       )}
-      {sw && !panelOpen && <SwitchBanner from={build} s={sw} />}
+      {sw && !panelOpen && <SwitchBanner from={build} s={sw} onAccept={() => pick(sw.to.id)} />}
       {toast && <RescoreToast key={toast.n} name={toast.name} />}
     </>
   )

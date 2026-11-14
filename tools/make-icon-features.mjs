@@ -46,18 +46,20 @@ const json = { size: N, icons }
 fs.writeFileSync('data/icon-features.json', JSON.stringify(json) + '\n')
 console.log(`아이콘 ${Object.keys(icons).length}개 → data/icon-features.json`)
 
-// 모의 인게임: 무작위 배경에 합성 → 72px로 축소 → 1~2px 밀림 → 잡음 ±12. 쌍둥이(같은 그림)는 맞힌 것으로 친다
-// ponytail: 실제 카드 크기·밀림 정도는 가정값. 0-4 스크린샷이 생기면 samples/labels.json 대조로 바꾼다
+// 모의 인게임: 어두운 무작위 배경(카드 안은 항상 어둡다)에 아이콘을 물들여(골드 카드는 주황·빨강) 합성
+// → 162px(실측 크기)로 축소 → 1~2px 밀림 → 잡음 ±12. 쌍둥이(같은 그림)는 맞힌 것으로 친다
+// 실제 스크린샷 대조는 samples/labels.json (tools/check-screens.mjs)
 const templates = loadTemplates(json)
 let seed = 1
 const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647)
-function inGame(img, size = 72) {
-  const bg = [rnd() * 255, rnd() * 255, rnd() * 255], dx = Math.round(rnd() * 4 - 2), dy = Math.round(rnd() * 4 - 2)
+function inGame(img, size = 162) {
+  const bg = [rnd() * 50, rnd() * 40, rnd() * 50], dx = Math.round(rnd() * 4 - 2), dy = Math.round(rnd() * 4 - 2)
+  const tint = [0.7 + rnd() * 0.5, 0.5 + rnd() * 0.5, 0.4 + rnd() * 0.6]
   const out = new Uint8Array(size * size * 4), s = img.width / size
   for (let y = 0; y < size; y++) for (let x = 0; x < size; x++) {
     const sx = Math.min(img.width - 1, Math.max(0, Math.floor((x + dx) * s))), sy = Math.min(img.height - 1, Math.max(0, Math.floor((y + dy) * s)))
     const i = (sy * img.width + sx) * 4, a = img.data[i + 3] / 255, o = (y * size + x) * 4
-    for (let c = 0; c < 3; c++) out[o + c] = Math.max(0, Math.min(255, img.data[i + c] * a + bg[c] * (1 - a) + (rnd() * 24 - 12)))
+    for (let c = 0; c < 3; c++) out[o + c] = Math.max(0, Math.min(255, img.data[i + c] * tint[c] * a + bg[c] * (1 - a) + (rnd() * 24 - 12)))
     out[o + 3] = 255
   }
   return { width: size, height: size, data: out }

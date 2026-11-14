@@ -9,15 +9,16 @@ import AUGMENTS_JSON from '../../../data/augments.json'
 const SLOW_MS = 700 // 평소 (초당 1~2회)
 const FAST_MS = 250 // 증강 화면일 때
 
-// 프레임은 항상 1920×1080으로 줄여 넘긴다. 롤 UI는 16:9에서 해상도에 비례하므로
-// 2560×1440 등도 1920 기준 좌표·템플릿 하나로 인식할 수 있다.
-// ponytail: 16:9만 맞음. 16:10·울트라와이드는 비율 좌표가 필요 (기획서 3단계)
+// 프레임은 높이 1080으로 (비율 유지) 줄여 넘기고, 인식기는 이를 1920 폭 가운데에 그린다.
+// 롤 UI는 화면 높이에 비례해 커지고 가운데 정렬되므로(2880×1800 실측) 16:9·16:10 모두 1920×1080 좌표 하나로 맞는다.
+// 16:10은 양옆에 빈칸, 21:9는 양옆이 잘린다 (가운데 카드 영역은 그대로)
 export const BASE_W = 1920
 export const BASE_H = 1080
 
 // active()가 true인 동안 캡처해 onFrame에 넘긴다. onFrame이 true를 돌려주면 다음 캡처를 빨리 한다.
 // 비활성일 땐 스트림을 닫아 비용을 없앤다. 프레임(ImageBitmap)은 onFrame이 끝나면 닫힌다.
-export function startCapture(active: () => boolean, onFrame: (f: ImageBitmap) => boolean | void) {
+// video: 원본 해상도 화면 (수집 모드 저장용)
+export function startCapture(active: () => boolean, onFrame: (f: ImageBitmap, video: HTMLVideoElement) => boolean | void) {
   let video: HTMLVideoElement | null = null
 
   const tick = async () => {
@@ -31,10 +32,10 @@ export function startCapture(active: () => boolean, onFrame: (f: ImageBitmap) =>
           await video.play()
         }
         const t = performance.now()
-        const f = await createImageBitmap(video, { resizeWidth: BASE_W, resizeHeight: BASE_H, resizeQuality: 'high' })
+        const f = await createImageBitmap(video, { resizeWidth: Math.round((video.videoWidth * BASE_H) / video.videoHeight), resizeHeight: BASE_H, resizeQuality: 'high' })
         if (import.meta.env.DEV) console.log(`[capture] ${video.videoWidth}x${video.videoHeight} → ${f.width}x${f.height} ${Math.round(performance.now() - t)}ms`)
         try {
-          fast = onFrame(f) === true
+          fast = onFrame(f, video) === true
         } finally {
           f.close()
         }
@@ -68,7 +69,8 @@ export function recognizer(onCards: (ids: (number | null)[] | null) => void) {
   }
 
   return (f: ImageBitmap) => {
-    ctx.drawImage(f, 0, 0)
+    ctx.clearRect(0, 0, BASE_W, BASE_H)
+    ctx.drawImage(f, (BASE_W - f.width) / 2, 0) // 가운데 정렬 (16:10이면 양옆 빈칸)
     const t = performance.now()
     const slots = findCards(region, TEMPLATES)
     if (import.meta.env.DEV) console.log(`[recognize] ${slots ? slots.map((s) => `${s.id}(${s.rel.toFixed(2)})`).join(' ') : '증강 화면 아님'} ${Math.round(performance.now() - t)}ms`)
@@ -77,9 +79,9 @@ export function recognizer(onCards: (ids: (number | null)[] | null) => void) {
     misses = 0
     if (busy) return true
     busy = true
-    // 프레임은 onFrame이 끝나면 닫히므로 이름 영역은 지금 떼어 둔다 (같은 그림 후보가 있는 카드만 OCR)
-    const names = slots.map((s, i) => (s.twins.length ? ctx.getImageData(CARD_X[i] + NAME.dx, NAME.y, NAME.w, NAME.h) : null))
-    resolveCards(slots, async (i) => (window.api ? window.api.ocr(await png(names[i]!)) : ''), NAMES)
+    // 프레임은 onFrame이 끝나면 닫히므로 이름 영역은 지금 떼어 둔다 (OCR은 resolveCards가 필요한 카드만 부른다)
+    const names = slots.map((_, i) => ctx.getImageData(CARD_X[i] + NAME.dx, NAME.y, NAME.w, NAME.h))
+    resolveCards(slots, async (i) => (window.api ? window.api.ocr(await png(names[i])) : ''), NAMES)
       .then(onCards)
       .catch((e) => console.error('[recognize]', e))
       .finally(() => (busy = false))

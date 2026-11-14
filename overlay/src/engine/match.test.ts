@@ -23,8 +23,8 @@ const circle = icon([200, 60, 60], (x, y) => (x - 16) ** 2 + (y - 16) ** 2 < 100
 const bar = icon([200, 60, 60], (x) => x > 12 && x < 20) // 같은 색, 다른 모양
 const T = [{ id: 1, px: shrink(circle) }, { id: 2, px: shrink(bar) }, { id: 3, px: shrink(circle) }]
 
-test('매칭: 배경색과 상관없이 모양으로 고르고, 같은 그림은 twins로 알린다', () => {
-  for (const bg of [[20, 20, 25], [240, 230, 200]]) {
+test('매칭: 어두운 배경색과 상관없이 모양으로 고르고, 같은 그림은 twins로 알린다', () => {
+  for (const bg of [[20, 20, 25], [70, 30, 30]]) { // 카드 안은 항상 어둡다 (붉은빛은 골드 카드)
     assert.equal(match(onBg(bar, bg), T).id, 2)
     const r = match(onBg(circle, bg), T)
     assert.ok(r.id === 1 || r.id === 3)

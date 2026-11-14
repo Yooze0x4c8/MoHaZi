@@ -26,9 +26,10 @@ function Row({ b, sel, onPick }: { b: Build; sel: boolean; onPick?: () => void }
   )
 }
 
-// 빌드 선택 패널. chosen: 사용자가 직접 고른 적 있는지 (안내 문구가 바뀐다)
-export function BuildPanel({ champion, builds, selected, chosen, onPick }: {
-  champion: string; builds: Build[]; selected: string; chosen: boolean; onPick: (id: string) => void
+// 빌드 선택 패널. chosen: 사용자가 직접 고른 적 있는지 (안내 문구가 바뀐다), onClose: 칩으로 접기
+// (게임 중엔 전역 단축키가 안 먹혀서 접고 펴기는 마우스로 한다. 오버레이 위에선 클릭·스크롤이 된다)
+export function BuildPanel({ champion, builds, selected, chosen, onPick, onClose }: {
+  champion: string; builds: Build[]; selected: string; chosen: boolean; onPick: (id: string) => void; onClose: () => void
 }) {
   useEffect(() => () => clickable(false), []) // 마우스 아래에서 닫혀도 클릭 통과로 되돌린다
   const one = builds.length === 1
@@ -36,6 +37,7 @@ export function BuildPanel({ champion, builds, selected, chosen, onPick }: {
   return (
     <div className="panel glass" onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
       <div className="p-head">
+        <button type="button" className="fold" onClick={onClose} aria-label="패널 접기">접기</button>
         <div className="eyebrow">{champion}</div>
         <h2>{one ? '이 빌드로 시작해요' : '어떤 빌드로 갈까요?'}</h2>
       </div>
@@ -45,26 +47,26 @@ export function BuildPanel({ champion, builds, selected, chosen, onPick }: {
       <div className="p-foot">
         <div className="note">
           {one ? '알려진 빌드가 하나뿐이라 바로 적용했어요.'
-            : chosen ? <>첫 증강을 고르면 패널이 닫혀요. 그 뒤에는 <b>F7</b>로 바꿔요.</>
+            : chosen ? <>첫 증강을 고르면 패널이 접혀요. 왼쪽 위 빌드 이름을 누르면 다시 펼쳐져요.</>
             : <>고르지 않으면 기본 빌드인 <b>{def.name}</b> 기준으로 추천해요. 첫 증강을 고르기 전까지 언제든 바꿀 수 있어요.</>}
         </div>
-        <div className="hints">
-          {!one && <div>클릭해서 고르기</div>}
-          <div><span className="key">F8</span>숨기기</div>
-        </div>
+        {!one && <div className="hints"><div>클릭해서 고르기</div></div>}
       </div>
     </div>
   )
 }
 
-// 패널이 닫힌 뒤 왼쪽 위에 남는 칩. build가 없으면 "빌드 없음"
-export function BuildChip({ build, picked }: { build?: Build; picked: number }) {
+// 패널을 접으면 왼쪽 위에 남는 칩. 누르면 패널이 펼쳐진다. build가 없으면 "빌드 없음" (누를 수 없음)
+export function BuildChip({ build, picked, onOpen }: { build?: Build; picked: number; onOpen?: () => void }) {
+  useEffect(() => () => clickable(false), [])
+  if (!build) return <div className="chip glass"><span className="tick" />빌드 없음</div>
   return (
-    <div className="chip glass">
+    <button type="button" className="chip glass btnreset" onClick={onOpen} aria-label="빌드 패널 펼치기"
+      onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
       <span className="tick" />
-      {build ? build.name : '빌드 없음'}
-      {build && <span className="sub">증강 {picked}개</span>}
-      {build && <span className="key">F7</span>}
-    </div>
+      {build.name}
+      <span className="sub">증강 {picked}개</span>
+      <span className="caret" aria-hidden>▾</span>
+    </button>
   )
 }

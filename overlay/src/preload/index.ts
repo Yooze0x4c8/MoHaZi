@@ -10,5 +10,5 @@ contextBridge.exposeInMainWorld('api', {
   ocr: (png: Uint8Array): Promise<string> => ipcRenderer.invoke('ocr', png),
   // 수집 모드 (COLLECT=1)에서만 쓰인다
   onSnap: (cb: () => void) => ipcRenderer.on('snap', () => cb()),
-  saveFrame: (png: Uint8Array): Promise<number> => ipcRenderer.invoke('save-frame', png)
+  saveFrame: (img: Uint8Array, auto: boolean): Promise<number> => ipcRenderer.invoke('save-frame', img, auto)
 })

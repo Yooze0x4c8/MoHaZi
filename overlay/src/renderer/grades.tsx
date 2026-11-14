@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
 export type Grade = 'S' | 'A' | 'B' | 'C' | '?'
 
@@ -10,11 +10,14 @@ export type CardGrade = {
 }
 
 // 1920×1080 기준 카드 왼쪽 x (인식과 같은 값)
-import { CARD_X } from '../capture/recognize'
+import { CARD_X, REROLL } from '../capture/recognize'
 export { CARD_X }
 
 export function Stage({ children }: { children: ReactNode }) {
-  return <div className="stage" style={{ zoom: window.innerWidth / 1920 }}>{children}</div>
+  // 게임 UI처럼 화면 높이에 맞춰 키우고 가로는 가운데 (16:10이면 양옆이 남는다)
+  // --edge: 화면이 1920 기준보다 좁을 때(16:10) 무대 밖으로 나간 폭. 왼쪽에 붙는 칩·패널은 이만큼 안으로 들인다
+  const z = window.innerHeight / 1080, left = (window.innerWidth / z - 1920) / 2
+  return <div className="stage" style={{ zoom: z, left, '--edge': `${Math.max(0, -left)}px` } as CSSProperties}>{children}</div>
 }
 
 const clickable = (on: boolean) => window.api?.setClickable(on)
@@ -54,7 +57,7 @@ export function RerollCallout({ rerolls }: { rerolls: number | null }) {
   return (
     <>
       {CARD_X.map((x) => (
-        <div key={x} className="rr" style={{ left: x + 68 }}>
+        <div key={x} className="rr" style={{ left: x + REROLL.dx - 12 }}>
           <div className="br tl" /><div className="br tr" /><div className="br bl" /><div className="br brr" />
         </div>
       ))}

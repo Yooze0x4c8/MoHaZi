@@ -63,12 +63,15 @@ function inGame(img, size = 72) {
   return { width: size, height: size, data: out }
 }
 
-let ok = 0, total = 0, low = []
+let ok = 0, total = 0, low = [], rels = []
 for (let round = 0; round < 3; round++) for (const [id, img] of Object.entries(imgs)) {
   const r = match(inGame(img), templates)
   total++
+  rels.push(r.rel)
   if (r.id === Number(id) || r.twins.includes(Number(id))) ok++
   else low.push(`${id}→${r.id}(${r.conf.toFixed(2)})`)
 }
 console.log(`모의 정확도 ${(100 * ok / total).toFixed(1)}% (${ok}/${total})`)
 if (low.length) console.log('틀림:', low.join(' '))
+rels.sort((a, b) => a - b)
+console.log(`상대 거리 rel: 중앙값 ${rels[rels.length >> 1].toFixed(2)}, 95% ${rels[Math.floor(rels.length * 0.95)].toFixed(2)}, 최대 ${rels.at(-1).toFixed(2)} (아이콘 없는 단색 화면은 1.00)`)

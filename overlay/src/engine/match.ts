@@ -27,16 +27,25 @@ export function shrink(img: Img, n = N): Uint8Array {
 // 0~255 평균 색 차이. 배경색은 템플릿이 투명한 칸의 프레임 평균으로 추정하고,
 // 템플릿을 그 배경 위에 합성해 전체 칸을 비교한다 → 모양(알파)과 색을 같이 보되 배경색에는 무관
 export function dist(frame: Uint8Array, t: Uint8Array) {
+  return compare(frame, t).d
+}
+
+// d: 위의 거리, rel: d ÷ (아이콘이 없을 때 = 배경만 있을 때의 거리). 0이면 꼭 맞음, 1 근처면 아이콘이 없는 것
+// 불투명한 부분이 작은 아이콘은 단색 화면과도 d가 작게 나오므로 "여기 아이콘이 있나"는 rel로 본다
+function compare(frame: Uint8Array, t: Uint8Array) {
   const bg = [0, 0, 0]
   let n = 0
   for (let i = 0; i < t.length; i += 4) if (t[i + 3] < 32) { bg[0] += frame[i]; bg[1] += frame[i + 1]; bg[2] += frame[i + 2]; n++ }
   if (n) for (let c = 0; c < 3; c++) bg[c] /= n
-  let s = 0
+  let s = 0, e = 0
   for (let i = 0; i < t.length; i += 4) {
     const a = t[i + 3] / 255
-    for (let c = 0; c < 3; c++) s += Math.abs(frame[i + c] - (t[i + c] * a + bg[c] * (1 - a)))
+    for (let c = 0; c < 3; c++) {
+      const want = t[i + c] * a + bg[c] * (1 - a)
+      s += Math.abs(frame[i + c] - want); e += Math.abs(bg[c] - want)
+    }
   }
-  return s / (t.length / 4 * 3)
+  return { d: s / (t.length / 4 * 3), rel: s / Math.max(e, 1) }
 }
 
 // 같은 그림인지: 템플릿끼리 RGBA 원값 평균 차이 (dist는 합성된 화면용이라 템플릿끼리는 0이 안 나온다)
@@ -51,12 +60,12 @@ export function same(a: Uint8Array, b: Uint8Array) {
 // twins: 1등과 같은 그림을 쓰는 다른 증강 (아이콘만으로는 구분 불가 → 이름 비교 필요)
 export function match(img: Img, templates: Template[]) {
   const f = shrink(img)
-  const ranked = templates.map((t) => ({ t, d: dist(f, t.px) })).sort((a, b) => a.d - b.d)
+  const ranked = templates.map((t) => ({ t, ...compare(f, t.px) })).sort((a, b) => a.d - b.d)
   const best = ranked[0]
   const twins = ranked.filter((r) => r !== best && same(r.t.px, best.t.px)).map((r) => r.t.id)
   const second = ranked.find((r) => r !== best && !same(r.t.px, best.t.px))
   const conf = second ? Math.max(0, (second.d - best.d) / Math.max(second.d, 1)) : 1
-  return { id: best.t.id, dist: best.d, conf, twins }
+  return { id: best.t.id, dist: best.d, rel: best.rel, conf, twins }
 }
 
 // data/icon-features.json → 템플릿 목록 (브라우저·Node 둘 다)

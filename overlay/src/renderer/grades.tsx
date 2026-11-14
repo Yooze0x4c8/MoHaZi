@@ -9,8 +9,9 @@ export type CardGrade = {
   lowData?: boolean
 }
 
-// 1920×1080 기준 카드 왼쪽 x. ponytail: 가정값, M1에서 스크린샷으로 맞춘 비율 좌표로 교체
-export const CARD_X = [510, 820, 1130]
+// 1920×1080 기준 카드 왼쪽 x (인식과 같은 값)
+import { CARD_X } from '../capture/recognize'
+export { CARD_X }
 
 export function Stage({ children }: { children: ReactNode }) {
   return <div className="stage" style={{ zoom: window.innerWidth / 1920 }}>{children}</div>

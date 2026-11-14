@@ -4,7 +4,7 @@ import type { Game } from '../main'
 import { Stage } from './grades'
 import { Overlay } from './view'
 import { Preview } from './preview'
-import { startCapture } from '../capture'
+import { recognizer, startCapture } from '../capture'
 import './overlay.css'
 
 declare global {
@@ -16,7 +16,7 @@ declare global {
 function App() {
   const [game, setGame] = useState<Game>(null)
   const [f7Open, setF7Open] = useState(false)
-  const [cards] = useState<(number | null)[] | null>(null) // 떠 있는 증강 3장 (못 알아본 카드는 null). 1-5에서 인식 결과로 채운다
+  const [cards, setCards] = useState<(number | null)[] | null>(null) // 떠 있는 증강 3장 (못 알아본 카드는 null)
   const [picked] = useState<number[]>([]) // 고른 증강. 3-3에서 채운다
 
   useEffect(() => {
@@ -24,10 +24,13 @@ function App() {
     window.api?.onF7(() => setF7Open((o) => !o))
   }, [])
 
-  // 게임 중일 때만 캡처. 프레임 처리는 1-3(증강 화면 감지)에서 붙인다. #capture면 항상 캡처 (개발 확인용)
+  // 게임 중일 때만 캡처해 인식. #capture면 항상 캡처 (개발 확인용)
   const inGame = useRef(false)
   inGame.current = !!game || location.hash === '#capture'
-  useEffect(() => startCapture(() => inGame.current, () => {}), [])
+  useEffect(() => {
+    // 같은 결과면 상태를 바꾸지 않는다 (재렌더·검색 팝업 초기화 방지)
+    startCapture(() => inGame.current, recognizer((ids) => setCards((old) => (old?.join() === ids?.join() ? old : ids))))
+  }, [])
 
   if (!game) return null
   return (

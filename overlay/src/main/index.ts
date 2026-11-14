@@ -132,11 +132,14 @@ function createOverlay() {
   win.webContents.on('did-finish-load', () => {
     let last = ''
     setInterval(async () => {
-      const game = await detectGame()
+      // 증바람 판에서만 켠다 (다른 모드면 패널·캡처·인식 모두 쉼). 쉬는 이유는 트레이 툴팁에 보인다
+      const found = await detectGame()
+      const game = found?.gameMode === MODE ? found : null
       const key = JSON.stringify(game)
       if (key !== last) {
         last = key
         win.webContents.send('game', game)
+        tray.setToolTip(found && !game ? `MoHaZi: 증바람 판이 아니라 쉬는 중 (모드 ${found.gameMode})` : 'MoHaZi 증강 오버레이')
       }
     }, 2000)
   })
@@ -150,6 +153,10 @@ function createOverlay() {
 }
 
 let tray: Tray // 가비지 컬렉션으로 트레이가 사라지지 않게 잡아 둔다
+
+// 증바람(ARAM: Mayhem)의 gameMode. 일반 칼바람은 ARAM, 협곡은 CLASSIC (0-4 실측, 2026-11-13)
+// 모드 이름이 바뀌면 오버레이가 안 뜬다 → 트레이 툴팁의 모드 값을 보고 여기를 고친다
+const MODE = 'KIWI'
 
 // 두 번 실행하면 오버레이가 겹치고 단축키 등록도 실패하므로 하나만 띄운다
 if (!app.requestSingleInstanceLock()) app.quit()

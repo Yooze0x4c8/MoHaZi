@@ -16,7 +16,8 @@ const tags: Tags = {
   5: ['ms'],
   6: ['ult_haste', 'ability_haste'],
   7: ['tank'],
-  8: ['tank']
+  8: ['tank'],
+  9: ['ability_haste', 'crit']
 }
 
 test('등급: 핵심 태그 S, 보조 A, 무관 B, 반대 C', () => {
@@ -32,6 +33,8 @@ test('이유: 기여 큰 태그 순, 템플릿 문장', () => {
   assert.deepEqual(pick(rate(5, gp, tags, labels)), ['이동 속도', '빌드와 무관'])
   assert.deepEqual(pick(rate(4, gp, tags, labels)), ['치명타', '빌드와 반대'])
   assert.deepEqual(pick(rate(99, gp, tags, labels)), ['특징 없음', '빌드와 무관'])
+  // 좋은 태그가 섞여 있어도 C면 피할 태그를 보여준다
+  assert.deepEqual(pick(rate(9, gp, tags, labels)), ['치명타', '빌드와 반대'])
 })
 
 test('추천: 세 장 중 최고 점수 카드', () => {

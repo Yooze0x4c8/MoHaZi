@@ -44,9 +44,11 @@ export function rate(id: number, build: Build, tags: Tags, labels: Labels, picke
 
   const name = (t: string) => labels[t] ?? t
   const good = parts.filter((p) => p.v > 0).sort((a, b) => b.v - a.v).slice(0, 2).map((p) => name(p.t))
-  const bad = parts.filter((p) => p.v < 0).map((p) => name(p.t))
+  const bad = parts.filter((p) => p.v < 0).sort((a, b) => a.v - b.v).slice(0, 2).map((p) => name(p.t))
 
-  let reason = good.join(' · ') || bad.join(' · ') || (mine[0] ? name(mine[0]) : '특징 없음')
+  // C면 등급을 끌어내린 태그를, 아니면 도움 된 태그를 이유로 보여준다
+  const shown = grade === 'C' && bad.length ? bad : good.length ? good : bad
+  let reason = shown.join(' · ') || (mine[0] ? name(mine[0]) : '특징 없음')
   let detail =
     grade === 'C' ? '빌드와 반대'
     : !good.length ? '빌드와 무관'

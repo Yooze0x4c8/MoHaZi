@@ -22,7 +22,6 @@ function App() {
   const [game, setGame] = useState<Game>(null)
   const [f7, setF7] = useState(0) // F7 누른 횟수 (게임 중엔 안 먹히는 PC가 있어 마우스가 기본)
   const [cards, setCards] = useState<(number | null)[] | null>(null) // 떠 있는 증강 3장 (못 알아본 카드는 null)
-  const [picked] = useState<number[]>([]) // 고른 증강. 3-3에서 채운다
   const [saved, setSaved] = useState<number | null>(null) // 수집 모드: 방금 저장한 장 수 (1초 표시)
   const snap = useRef(false)
 
@@ -69,7 +68,7 @@ function App() {
   return (
     <Stage>
       {savedToast}
-      <Overlay key={game.alias} alias={game.alias} cards={cards} picked={picked} f7={f7} />
+      <Overlay key={game.alias} alias={game.alias} cards={cards} f7={f7} />
     </Stage>
   )
 }

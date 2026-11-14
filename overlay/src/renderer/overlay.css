@@ -216,3 +216,15 @@ button.chip:hover { background: rgba(30, 32, 38, .9); }
   transition: background-color 120ms var(--ease-out);
 }
 .accept:hover { background: rgba(110, 149, 255, .26); }
+
+/* 고른 증강 목록 (3-3): 화면에서 추정해 기록하므로 바꾸기·빼기·추가 */
+.picks { border-top: 1px solid rgba(242, 239, 232, .1); padding: 12px 20px; display: flex; flex-direction: column; gap: 6px; }
+.picks-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-muted); }
+.pick-row { display: flex; align-items: center; gap: 6px; font-size: 14px; }
+.pick-row span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mini {
+  border: 1px solid rgba(242, 239, 232, .28); background: transparent; border-radius: 3px; padding: 2px 8px;
+  font: inherit; font-size: 12px; color: var(--text-muted); cursor: pointer; transition: color 120ms var(--ease-out), border-color 120ms var(--ease-out);
+}
+.mini:hover { color: var(--text-primary); border-color: rgba(242, 239, 232, .5); }
+.mini:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

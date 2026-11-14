@@ -3,7 +3,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import { loadTemplates } from '../engine/match.ts'
-import { CARD_X, ICON, findCards, resolveCards, type Region } from './recognize.ts'
+import { CARD_X, ICON, cardAt, findCards, resolveCards, type Region } from './recognize.ts'
 
 const templates = loadTemplates(JSON.parse(fs.readFileSync(new URL('../../../data/icon-features.json', import.meta.url), 'utf8')))
 const px = (id: number) => templates.find((t) => t.id === id)!.px
@@ -52,4 +52,12 @@ test('인식: 이름 읽기가 실패해도 다른 카드 결과는 남는다', 
 
 test('인식: 아이콘이 없는 화면은 증강 화면이 아니다', () => {
   assert.equal(findCards(frame([]), templates), null)
+})
+
+test('고른 카드 추정: 마우스가 올라간 카드 번호, 카드 밖이면 null', () => {
+  assert.equal(cardAt({ x: CARD_X[0] + 160, y: 400 }), 0)
+  assert.equal(cardAt({ x: CARD_X[2] + 5, y: 700 }), 2)
+  assert.equal(cardAt({ x: CARD_X[1] - 20, y: 400 }), null) // 카드 사이 틈
+  assert.equal(cardAt({ x: CARD_X[1] + 160, y: 900 }), null) // 카드 아래 (리롤·파란 버튼)
+  assert.equal(cardAt(null), null)
 })

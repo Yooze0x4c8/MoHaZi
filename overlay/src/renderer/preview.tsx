@@ -81,7 +81,15 @@ function SwitchPreview() {
   return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, null, 2018]} picked={[1088, 2087, 1205]} f7={f7} /></>
 }
 
+// /#preview-pick: 3-3 확인용. window.__cards([...]) 로 증강 화면을 띄우고 null로 닫는다 (마우스가 올라간 카드를 기록)
+function PickPreview() {
+  const [cards, setCards] = useState<number[] | null>(null)
+  useEffect(() => { (window as any).__cards = setCards }, [])
+  return <><FakeGame /><Overlay alias="Gangplank" cards={cards} /></>
+}
+
 export function Preview({ screen }: { screen: string }) {
+  if (screen === 'pick') return <PickPreview />
   if (screen === '04') return <SwitchPreview />
   // 치명타 배럴에 거인의 결의, 대마법사, 사악한 정신 → 모두 B 이하라 리롤 권장 (고른 증강: 천상의 신체, 정신 변환)
   if (screen === '03') return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, 2087, 1097]} rerolls={1} picked={[1013, 1056]} /></>

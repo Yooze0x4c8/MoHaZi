@@ -13,11 +13,23 @@ export type CardGrade = {
 import { CARD_X, REROLL } from '../capture/recognize'
 export { CARD_X }
 
+// 무대(1920×1080) 배치: 화면 높이에 맞춘 zoom, 가로 가운데 정렬 시 무대 왼쪽 위치, 무대 밖으로 나간 폭(16:10)
+export function stageBox() {
+  const z = window.innerHeight / 1080, left = (window.innerWidth / z - 1920) / 2
+  return { z, left, edge: Math.max(0, -left) }
+}
+
+// 마우스 위치(화면 px) → 무대 좌표
+export const toStage = (clientX: number, clientY: number) => {
+  const { z, left } = stageBox()
+  return { x: clientX / z - left, y: clientY / z }
+}
+
 export function Stage({ children }: { children: ReactNode }) {
   // 게임 UI처럼 화면 높이에 맞춰 키우고 가로는 가운데 (16:10이면 양옆이 남는다)
   // --edge: 화면이 1920 기준보다 좁을 때(16:10) 무대 밖으로 나간 폭. 왼쪽에 붙는 칩·패널은 이만큼 안으로 들인다
-  const z = window.innerHeight / 1080, left = (window.innerWidth / z - 1920) / 2
-  return <div className="stage" style={{ zoom: z, left, '--edge': `${Math.max(0, -left)}px` } as CSSProperties}>{children}</div>
+  const { z, left, edge } = stageBox()
+  return <div className="stage" style={{ zoom: z, left, '--edge': `${edge}px` } as CSSProperties}>{children}</div>
 }
 
 const clickable = (on: boolean) => window.api?.setClickable(on)

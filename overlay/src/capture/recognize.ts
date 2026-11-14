@@ -44,3 +44,11 @@ export async function resolveCards(slots: Slot[], readName: (i: number) => Promi
     return s.conf >= CONF_MIN ? s.id : null
   }))
 }
+
+// 고른 카드 추정 (3-3): 증강 화면이 닫힐 때 마우스가 올라가 있던 카드 번호. 카드 밖이면 null
+// (화면을 잠깐 숨기는 등 고르지 않고 닫힌 경우를 걸러 낸다)
+export function cardAt(p: { x: number; y: number } | null) {
+  if (!p || p.y < CARD.y || p.y > CARD.y + CARD.h) return null
+  const i = CARD_X.findIndex((x) => p.x >= x && p.x <= x + CARD.w)
+  return i < 0 ? null : i
+}

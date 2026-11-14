@@ -26,10 +26,28 @@ function Row({ b, sel, onPick }: { b: Build; sel: boolean; onPick?: () => void }
   )
 }
 
+// 고른 증강 목록 (3-3). 화면에서 추정해 기록하므로 틀릴 수 있어 바꾸기·빼기·추가를 둔다
+export type PickEdit = { names: string[]; onEdit: (i: number) => void; onRemove: (i: number) => void; onAdd: () => void }
+
+function Picks({ names, onEdit, onRemove, onAdd }: PickEdit) {
+  return (
+    <div className="picks">
+      <div className="picks-head">고른 증강 {names.length}개<button type="button" className="mini" onClick={onAdd}>추가</button></div>
+      {names.map((n, i) => (
+        <div key={i} className="pick-row">
+          <span>{n}</span>
+          <button type="button" className="mini" onClick={() => onEdit(i)}>바꾸기</button>
+          <button type="button" className="mini" onClick={() => onRemove(i)} aria-label={`${n} 빼기`}>빼기</button>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 // 빌드 선택 패널. chosen: 사용자가 직접 고른 적 있는지 (안내 문구가 바뀐다), onClose: 칩으로 접기
 // (게임 중엔 전역 단축키가 안 먹혀서 접고 펴기는 마우스로 한다. 오버레이 위에선 클릭·스크롤이 된다)
-export function BuildPanel({ champion, builds, selected, chosen, onPick, onClose }: {
-  champion: string; builds: Build[]; selected: string; chosen: boolean; onPick: (id: string) => void; onClose: () => void
+export function BuildPanel({ champion, builds, selected, chosen, onPick, onClose, picks }: {
+  champion: string; builds: Build[]; selected: string; chosen: boolean; onPick: (id: string) => void; onClose: () => void; picks?: PickEdit
 }) {
   useEffect(() => () => clickable(false), []) // 마우스 아래에서 닫혀도 클릭 통과로 되돌린다
   const one = builds.length === 1
@@ -44,9 +62,11 @@ export function BuildPanel({ champion, builds, selected, chosen, onPick, onClose
       <div className="rows">
         {builds.map((b) => <Row key={b.id} b={b} sel={b.id === selected} onPick={one ? undefined : () => onPick(b.id)} />)}
       </div>
+      {picks && <Picks {...picks} />}
       <div className="p-foot">
         <div className="note">
           {one ? '알려진 빌드가 하나뿐이라 바로 적용했어요.'
+            : picks?.names.length ? '빌드는 언제든 바꿀 수 있어요. 고른 증강이 틀리게 기록됐으면 바꾸기로 고쳐 주세요.'
             : chosen ? <>첫 증강을 고르면 패널이 접혀요. 왼쪽 위 빌드 이름을 누르면 다시 펼쳐져요.</>
             : <>고르지 않으면 기본 빌드인 <b>{def.name}</b> 기준으로 추천해요. 첫 증강을 고르기 전까지 언제든 바꿀 수 있어요.</>}
         </div>

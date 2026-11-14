@@ -59,10 +59,11 @@ export function rate(id: number, build: Build, tags: Tags, labels: Labels, picke
   return { id, score, grade, reason, detail }
 }
 
-// 카드 3장 평가 + 최고 점수 카드 번호 (동점이면 왼쪽)
-export function rateCards(ids: number[], build: Build, tags: Tags, labels: Labels, picked: number[] = []) {
-  const cards = ids.map((id) => rate(id, build, tags, labels, picked))
-  const pick = cards.reduce((best, c, i) => (c.score > cards[best].score ? i : best), 0)
+// 카드 3장 평가 + 최고 점수 카드 번호 (동점이면 왼쪽). null은 못 알아본 카드 → 등급 없음, 추천 후보에서 빠짐
+export function rateCards(ids: (number | null)[], build: Build, tags: Tags, labels: Labels, picked: number[] = []) {
+  const cards = ids.map((id) => (id == null ? null : rate(id, build, tags, labels, picked)))
+  let pick: number | undefined
+  cards.forEach((c, i) => { if (c && (pick == null || c.score > cards[pick]!.score)) pick = i })
   return { cards, pick }
 }
 

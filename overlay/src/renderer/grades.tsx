@@ -16,10 +16,21 @@ export function Stage({ children }: { children: ReactNode }) {
   return <div className="stage" style={{ zoom: window.innerWidth / 1920 }}>{children}</div>
 }
 
-export function GradeStrip({ x, index, card }: { x: number; index: number; card: CardGrade }) {
+const clickable = (on: boolean) => window.api?.setClickable(on)
+
+// '?' 카드는 눌러서 직접 고르는 버튼 (클릭을 받는 몇 안 되는 곳)
+export function GradeStrip({ x, index, card, onOpen }: { x: number; index: number; card: CardGrade; onOpen?: () => void }) {
+  const style = { left: x, animationDelay: `${index * 40}ms` }
+  if (card.grade === '?') return (
+    <button type="button" className="strip glass btnreset" style={style} onClick={onOpen}
+      onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
+      <div className="tile Q">?</div>
+      <div className="why"><div className="r1">못 알아봤어요</div><div className="r2">눌러서 직접 고르기</div></div>
+    </button>
+  )
   return (
-    <div className={`strip glass${card.grade === 'C' ? ' dim' : ''}`} style={{ left: x, animationDelay: `${index * 40}ms` }}>
-      <div className={`tile ${card.grade === '?' ? 'Q' : card.grade}`}>{card.grade}</div>
+    <div className={`strip glass${card.grade === 'C' ? ' dim' : ''}`} style={style}>
+      <div className={`tile ${card.grade}`}>{card.grade}</div>
       <div className="why">
         <div className="r1">{card.reason}{card.detail && <span>{card.detail}</span>}</div>
         {card.lowData && <div className="r2 low">표본이 적어요</div>}
@@ -38,10 +49,10 @@ export function PickBrackets({ x }: { x: number }) {
 }
 
 // 카드 3장 등급 + 추천 꺾쇠. pick은 추천 카드 번호 (없으면 표시 안 함)
-export function AugmentGrades({ cards, pick }: { cards: CardGrade[]; pick?: number }) {
+export function AugmentGrades({ cards, pick, onOpen }: { cards: CardGrade[]; pick?: number; onOpen?: (i: number) => void }) {
   return (
     <>
-      {cards.map((c, i) => <GradeStrip key={i} x={CARD_X[i]} index={i} card={c} />)}
+      {cards.map((c, i) => <GradeStrip key={i} x={CARD_X[i]} index={i} card={c} onOpen={() => onOpen?.(i)} />)}
       {pick != null && <PickBrackets x={CARD_X[pick]} />}
     </>
   )

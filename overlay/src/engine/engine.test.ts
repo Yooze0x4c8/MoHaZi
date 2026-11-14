@@ -36,6 +36,10 @@ test('이유: 기여 큰 태그 순, 템플릿 문장', () => {
 
 test('추천: 세 장 중 최고 점수 카드', () => {
   assert.equal(rateCards([2, 1, 4], gp, tags, labels).pick, 1)
+  // 못 알아본 카드는 등급 없이 빠진다
+  const r = rateCards([2, null, 4], gp, tags, labels)
+  assert.equal(r.cards[1], null)
+  assert.equal(r.pick, 0)
 })
 
 test('필수 증강 보너스', () => {

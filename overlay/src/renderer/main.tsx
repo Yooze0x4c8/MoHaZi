@@ -9,14 +9,14 @@ import './overlay.css'
 
 declare global {
   interface Window {
-    api?: { onGame: (cb: (game: Game) => void) => void; onF7: (cb: () => void) => void; setClickable: (on: boolean) => void }
+    api?: { onGame: (cb: (game: Game) => void) => void; onF7: (cb: () => void) => void; setClickable: (on: boolean) => void; setFocus: (on: boolean) => void }
   }
 }
 
 function App() {
   const [game, setGame] = useState<Game>(null)
   const [f7Open, setF7Open] = useState(false)
-  const [cards] = useState<number[] | null>(null) // 떠 있는 증강 3장. 1-5에서 인식 결과로 채운다
+  const [cards] = useState<(number | null)[] | null>(null) // 떠 있는 증강 3장 (못 알아본 카드는 null). 1-5에서 인식 결과로 채운다
   const [picked] = useState<number[]>([]) // 고른 증강. 3-3에서 채운다
 
   useEffect(() => {

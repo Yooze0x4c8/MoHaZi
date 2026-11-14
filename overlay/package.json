@@ -6,7 +6,7 @@
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --no-warnings --test src/engine/engine.test.ts"
+    "test": "node --experimental-strip-types --no-warnings --test src/engine/engine.test.ts src/engine/search.test.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

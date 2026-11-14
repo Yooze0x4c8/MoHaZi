@@ -58,6 +58,11 @@ function createOverlay() {
   // 빌드 패널 위에서만 클릭을 받는다
   const clickThrough = (on: boolean) => win.setIgnoreMouseEvents(on, { forward: true })
   ipcMain.on('clickable', (_e, on: boolean) => clickThrough(!on))
+  // 증강 검색 팝업이 열린 동안만 키 입력을 받는다. 닫으면 포커스를 놓아 게임으로 돌려준다
+  ipcMain.on('focus', (_e, on: boolean) => {
+    if (on) { win.setFocusable(true); win.focus() }
+    else { win.blur(); win.setFocusable(false) }
+  })
 
   // F8 오버레이 숨기기/보이기, F7 빌드 바꾸기
   globalShortcut.register('F8', () => {

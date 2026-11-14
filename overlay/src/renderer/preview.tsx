@@ -1,5 +1,5 @@
 // 미리보기: npm run dev 후 브라우저에서 /#preview-02 (01, 06, 07도) → screens/의 같은 번호 PNG와 비교
-// /#preview-04: 치명타 배럴인데 AP 증강 3개를 고른 상태 → 전환 배너. F7을 누르면 AP 무한궁으로 바뀐다
+// /#preview-04: 치명타 배럴인데 AP 증강 3개를 고른 상태 → 전환 배너(F7로 AP 무한궁). 가운데 카드는 인식 실패 '?'
 // /#preview-02a: 실제 엔진·빌드 데이터로 갱플랭크 증강 화면. 패널에서 빌드를 누르면 다시 매긴다 (02a → 02b)
 import { useEffect, useState, type CSSProperties } from 'react'
 import type { Build } from '../engine'
@@ -66,7 +66,8 @@ function PanelPreview({ screen }: { screen: string }) {
   )
 }
 
-// 고른 증강: 궁극기 대변혁, 대마법사, 적응형 능력치 / 떠 있는 카드: 거인의 결의, 무한의 대검, 순수주의자 - 마법사
+// 고른 증강: 궁극기 대변혁, 대마법사, 적응형 능력치 / 떠 있는 카드: 거인의 결의, (못 알아봄), 순수주의자 - 마법사
+// 가운데 '?'를 누르면 초성 검색 (예: ㅁㅎㅇㄷ → 무한의 대검)
 function SwitchPreview() {
   const [f7, setF7] = useState(false)
   useEffect(() => {
@@ -74,7 +75,7 @@ function SwitchPreview() {
     addEventListener('keydown', on)
     return () => removeEventListener('keydown', on)
   }, [])
-  return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, 1336, 2018]} picked={[1088, 2087, 1205]} f7Open={f7} onBuildPicked={() => setF7(false)} /></>
+  return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, null, 2018]} picked={[1088, 2087, 1205]} f7Open={f7} onBuildPicked={() => setF7(false)} /></>
 }
 
 export function Preview({ screen }: { screen: string }) {

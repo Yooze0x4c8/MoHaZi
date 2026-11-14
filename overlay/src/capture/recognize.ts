@@ -13,7 +13,7 @@ export const NAME = { dx: 30, y: 420, w: 260, h: 48 } // 이름 영역 (OCR). �
 // 증강 화면은 가장 나쁜 카드가 0.04~0.32, 능력치 모루(같은 카드 모양, 증강 아님)는 0.43, 그 밖의 화면은 0.68 이상
 // ponytail: 증강과 모루 사이 여유가 작다. 샘플이 더 모이면 다시 본다
 const REL_MAX = 0.38
-const CONF_MIN = 0.15 // 아이콘이 이보다 자신 없으면 이름을 읽는다
+const CONF_MIN = 0.15 // 이름으로 못 찾았을 때 아이콘을 믿는 기준
 const NAME_MIN = 0.6 // 읽은 이름이 이보다 안 맞으면 '?' (3-6에서 직접 고르기)
 
 export type Region = (x: number, y: number, w: number, h: number) => Img
@@ -25,15 +25,22 @@ export function findCards(region: Region, templates: Template[]): Slot[] | null 
   return slots.every((s) => s.rel < REL_MAX) ? slots : null
 }
 
-// 슬롯 → 증강 ID. 아이콘이 확실하면 그대로, 같은 그림 후보가 있으면 이름으로 그중에서,
-// 아이콘이 자신 없으면(아이콘이 없는 증강, 챔피언 스킬 아이콘을 보여주는 증강 등) 이름으로 전체에서 찾는다
+// 능력치 모루 카드: 증강과 같은 카드 모양이고 아이콘(방패·칼 등)까지 증강과 같은 그림이 있어 아이콘으로는 못 가른다.
+// 이름이 모두 "○○ 파편"이라 이름으로 거른다 (증강 이름엔 "파편"이 없다)
+const ANVIL = /파\s*편/
+
+// 슬롯 → 증강 ID 3개, 증강 화면이 아니면(능력치 모루) null.
+// 이름을 먼저 본다: 실제 게임 이름 OCR은 거의 틀리지 않고(66장 중 66장), 아이콘은 비슷한 그림끼리 틀린다
+// (푸른 방어막 → 바람전달자의 축복, conf 0.18). 이름으로 못 찾으면 아이콘이 확실할 때만 아이콘, 아니면 '?'.
+// 이름 읽기가 실패하면 그 카드만 빈 글자로 본다 (세 장 결과를 통째로 버리지 않게)
 export async function resolveCards(slots: Slot[], readName: (i: number) => Promise<string>, names: Record<number, string>) {
+  const memo: Promise<string>[] = []
+  const read = (i: number) => (memo[i] ??= readName(i).catch(() => ''))
+  if (ANVIL.test(await read(0))) return null
   const all = Object.entries(names).map(([id, name]) => ({ id: Number(id), name }))
   return Promise.all(slots.map(async (s, i) => {
-    if (s.conf >= CONF_MIN && !s.twins.length) return s.id
-    const text = await readName(i)
-    if (s.conf >= CONF_MIN) return closestName(text, [s.id, ...s.twins].map((id) => ({ id, name: names[id] ?? '' }))).it.id
-    const best = closestName(text, all)
-    return best && best.score >= NAME_MIN ? best.it.id : null
+    const byName = closestName(await read(i), all)
+    if (byName && byName.score >= NAME_MIN) return byName.it.id
+    return s.conf >= CONF_MIN ? s.id : null
   }))
 }

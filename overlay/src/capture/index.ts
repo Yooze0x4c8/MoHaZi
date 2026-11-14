@@ -61,6 +61,8 @@ export function recognizer(onCards: (ids: (number | null)[] | null) => void) {
   const ctx = new OffscreenCanvas(1920, 1080).getContext('2d', { willReadFrequently: true })!
   const region: Region = (x, y, w, h) => ctx.getImageData(x, y, w, h)
   let misses = 0, busy = false
+  // 카드 구성(아이콘 매칭 결과)이 그대로면 이름을 다시 읽지 않는다 (OCR은 한 번에 0.3초쯤)
+  let lastKey = '', last: (number | null)[] | null = null
 
   const png = async (img: ImageData) => {
     const c = new OffscreenCanvas(img.width, img.height)
@@ -75,14 +77,16 @@ export function recognizer(onCards: (ids: (number | null)[] | null) => void) {
     const slots = findCards(region, TEMPLATES)
     if (import.meta.env.DEV) console.log(`[recognize] ${slots ? slots.map((s) => `${s.id}(${s.rel.toFixed(2)})`).join(' ') : '증강 화면 아님'} ${Math.round(performance.now() - t)}ms`)
     // 한 프레임 놓쳤다고 등급이 깜빡이지 않게 두 번 연속 못 찾을 때만 지운다
-    if (!slots) { if (++misses === 2) onCards(null); return false }
+    if (!slots) { if (++misses === 2) { onCards(null); lastKey = '' } return false }
     misses = 0
+    const key = slots.map((s) => s.id).join()
+    if (key === lastKey) { onCards(last); return last != null }
     if (busy) return true
     busy = true
     // 프레임은 onFrame이 끝나면 닫히므로 이름 영역은 지금 떼어 둔다 (OCR은 resolveCards가 필요한 카드만 부른다)
     const names = slots.map((_, i) => ctx.getImageData(CARD_X[i] + NAME.dx, NAME.y, NAME.w, NAME.h))
     resolveCards(slots, async (i) => (window.api ? window.api.ocr(await png(names[i])) : ''), NAMES)
-      .then(onCards)
+      .then((ids) => { lastKey = key; last = ids; onCards(ids) }) // ids가 null이면 능력치 모루 화면
       .catch((e) => console.error('[recognize]', e))
       .finally(() => (busy = false))
     return true

@@ -31,6 +31,28 @@ const LABELS = [
   ['gold', '골드', /골드%i/],
 ];
 
+// 아이템 업그레이드 증강 → 그 아이템을 사는 빌드의 태그 (증강 이름에 아이템 이름이 들어 있다)
+// 실제 게임: AP 이즈리얼에게 폭풍 쇄도 업그레이드가 B로 나왔다 (태그가 item·gold뿐이었음, 2026-11-13)
+const ITEMS = [
+  [/폭풍 쇄도/, ['ap', 'damage', 'ms']],
+  [/죽음불꽃 손아귀/, ['ap', 'damage']],
+  [/존야/, ['ap', 'resist']],
+  [/오만/, ['ad', 'pen']],
+  [/해적검/, ['ad', 'heal']],
+  [/징수의 총/, ['ad', 'crit']],
+  [/무한의 대검/, ['ad', 'crit']],
+  [/굶주린 히드라/, ['ad', 'heal']],
+  [/갈라진 하늘/, ['ad', 'tank', 'heal']],
+  [/죽음의 무도/, ['ad', 'tank']],
+  [/광휘의 검/, ['on_hit', 'ability_haste']],
+  [/가시 갑옷/, ['tank', 'resist']],
+  [/불사르기/, ['tank', 'burn']],
+  [/즈롯 차원문/, ['tank', 'resist', 'summon']],
+  [/미카엘/, ['support', 'heal']],
+  [/활력증진의 펜던트/, ['support', 'heal', 'shield']],
+  [/꽃피는 새벽의 검/, ['support', 'heal']],
+];
+
 const data = new URL('../data/', import.meta.url);
 const augments = JSON.parse(readFileSync(new URL('augments.json', data), 'utf8'));
 const manualFile = new URL('tags.manual.json', data);
@@ -38,10 +60,13 @@ const manual = existsSync(manualFile) ? JSON.parse(readFileSync(manualFile, 'utf
 const tags = {};
 for (const { id, name, desc } of augments.sort((a, b) => a.id - b.id)) {
   const text = name + ' ' + (desc ?? '');
-  tags[id] = Object.hasOwn(manual, id) ? manual[id] : LABELS
+  const found = LABELS
     .filter(([tag, , pattern]) => pattern.test(text)
       || ((tag === 'ap' || tag === 'ad') && text.includes('적응형 능력치')))
     .map(([tag]) => tag);
+  // 아이템 업그레이드 증강은 설명이 아이템 효과만 말해서 그 아이템이 어떤 빌드용인지 모른다 → 아이템 성격을 붙인다
+  const item = ITEMS.find(([pattern]) => pattern.test(name))?.[1] ?? [];
+  tags[id] = Object.hasOwn(manual, id) ? manual[id] : [...new Set([...found, ...item])];
 }
 const labels = Object.fromEntries(LABELS.map(([tag, label]) => [tag, label]));
 writeFileSync(new URL('tags.json', data), JSON.stringify({ labels, tags }, null, 2) + '\n');

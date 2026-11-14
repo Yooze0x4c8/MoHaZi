@@ -18,7 +18,10 @@ const [list, strings, arena] = await Promise.all([
 ])
 
 const clean = (s) => s.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+// 설명문 키: ARAM_ 증강은 kiwi_aram_*, 새 증강은 kiwi_*·kiwi_augment_*·augment_* (summary가 짧고 깔끔해서 먼저)
 const SUFFIX = ['kiwi_aram_%_tooltip', 'kiwi_aram_%_summary', 'kiwi_aram_%_desc', 'kiwi_aram_%_description',
+  'kiwi_%_summary', 'kiwi_augment_%_description', 'kiwi_%_description', 'kiwi_%_tooltip', 'kiwi_augment_%_tooltip',
+  'augment_%_summary', 'augment_%_tooltip',
   'cherry_%_tooltipdescription', 'cherry_%_tooltip', 'cherry_%_summary']
 
 const augments = list

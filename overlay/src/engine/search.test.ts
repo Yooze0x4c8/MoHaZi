@@ -14,8 +14,13 @@ test('초성 검색: 초성·완성 글자 섞기, 띄어쓰기 무시, 앞에�
 
 test('OCR 글자 → 가장 가까운 후보: 틀린 글자·띄어쓰기에 버틴다', () => {
   const twins = [{ name: '빵과 버터' }, { name: '빵과 잼' }, { name: '빵과 치즈' }, { name: '날쌘걸음' }, { name: '가속 추구' }]
-  assert.equal(closestName('빵과버타', twins).it.name, '빵과 버터')
-  assert.equal(closestName('빵과 짐', twins).it.name, '빵과 잼')
-  assert.equal(closestName('날샌 걸음.', twins).it.name, '날쌘걸음')
-  assert.equal(closestName('가속 추구', twins).score, 1)
+  assert.equal(closestName("빵과버타", twins)!.it.name, '빵과 버터')
+  assert.equal(closestName("빵과 짐", twins)!.it.name, '빵과 잼')
+  assert.equal(closestName("날샌 걸음.", twins)!.it.name, '날쌘걸음')
+  assert.equal(closestName("가속 추구", twins)!.score, 1)
+})
+
+test('OCR 글자가 비면 아무것도 고르지 않는다 (기호뿐인 이름 "???"와 맞지 않게)', () => {
+  assert.equal(closestName('', [{ name: '???' }, { name: '태풍' }]), undefined)
+  assert.equal(closestName('태풍', [{ name: '???' }, { name: '태풍' }])!.it.name, '태풍')
 })

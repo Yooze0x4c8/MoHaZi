@@ -38,6 +38,18 @@ test('인식: 카드 3장 아이콘 → ID, 같은 그림은 이름으로 가른
   assert.deepEqual(await resolveCards(slots, async (i) => read[i], names), [1088, 1150, 1336])
 })
 
+test('인식: 첫 카드 이름이 "파편"이면 능력치 모루 화면이라 증강 화면이 아니다', async () => {
+  const slots = findCards(frame([1088, 1150, 1336]), templates)!
+  assert.equal(await resolveCards(slots, async () => '공격력 파편', {}), null)
+})
+
+test('인식: 이름 읽기가 실패해도 다른 카드 결과는 남는다', async () => {
+  const slots = findCards(frame([1088, 1150, 1336]), templates)!
+  const got = await resolveCards(slots, async (i) => { if (i === 1) throw new Error('ocr'); return i === 2 ? '무한의 대검 업그레이드' : '' }, { 1092: '취약', 1336: '무한의 대검 업그레이드' })
+  assert.equal(got![0], 1088)
+  assert.equal(got![2], 1336)
+})
+
 test('인식: 아이콘이 없는 화면은 증강 화면이 아니다', () => {
   assert.equal(findCards(frame([]), templates), null)
 })

@@ -4,7 +4,7 @@
     "nameId": "ARAM_ImTheJuggernaut",
     "name": "거인의 결의",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "챔피언에게 피해를 입히거나 받으면 @Stack_Duration@초 동안 전쟁기계 출동 @StacksPerHit@중첩을 얻습니다. 전쟁기계 출동 @Stacks_Max@중첩마다 적응형 능력치를 @Calc_AF@, 방어력을 @Calc_Defenses@, 마법 저항력을 @Calc_Defenses@, 크기를 @Calc_Size@, 강인함을 @Calc_Tenacity@ 얻습니다. 중첩 수가 많을수록 중첩이 빠르게 사라집니다. 최대 전쟁기계 출동 레벨: @f1.0@",
     "icon": "1001.png"
   },
   {
@@ -36,7 +36,7 @@
     "nameId": "ARAM_BladeWaltz",
     "name": "검무",
     "rarity": "prismatic",
-    "desc": "적에게 돌진해 반복해서 @Damage@의 피해를 @TotalHits@회 입히는 동안 대상으로 지정되지 않습니다. (적중 시 피해량의 50%) 이 라운드에 입힌 피해량: @f1@ 입힌 피해량: 총 @f2@",
+    "desc": "검무 소환사 주문을 얻습니다.",
     "icon": "1006.png"
   },
   {
@@ -76,7 +76,7 @@
     "nameId": "ARAM_CircleofDeath",
     "name": "죽음의 순환",
     "rarity": "prismatic",
-    "desc": "체력을 회복하거나 체력을 재생하면 가장 가까운 적 챔피언에게 해당 수치의 @HealToDamageConversion*100@%만큼 마법 피해를 입힙니다.",
+    "desc": "체력을 회복하거나 체력을 재생하면 가장 가까운 적 챔피언에게 마법 피해를 입힙니다.",
     "icon": "1015.png"
   },
   {
@@ -100,7 +100,7 @@
     "nameId": "ARAM_DawnbringersResolve",
     "name": "빛의 인도자 결의",
     "rarity": "gold",
-    "desc": "{{Cherry_DawnbringersResolve_Summary}}",
+    "desc": "체력이 @HealthThreshold*100@% 아래로 떨어지면 3초 동안 최대 체력의 @HealAmount*100@%를 회복합니다. 사망 시 또는 @Cooldown@초마다 초기화됩니다.",
     "icon": "1020.png"
   },
   {
@@ -116,7 +116,7 @@
     "nameId": "ARAM_DemonsDance",
     "name": "악마의 춤",
     "rarity": "gold",
-    "desc": "기민한 발놀림과 착취의 손아귀 핵심 룬을 얻습니다. 기민한 발놀림 - 이동 및 공격 시 충전 중첩이 쌓입니다. 중첩이 100회 쌓이면 다음 기본 공격 시 추가 피해를 입히고 체력을 회복하며 이동 속도가 대폭 증가합니다. 착취의 손아귀 - 3초 동안 적과 전투 상태를 유지하면 해당 적에게 표식을 남깁니다. 기본 공격 시 표식을 소모해 추가 피해를 입히고 체력을 회복하며 영구히 최대 체력을 얻습니다.",
+    "desc": "기민한 발놀림과 착취의 손아귀 핵심 룬을 얻습니다. 기민한 발놀림: 공격 또는 이동 시 충전 중첩이 쌓입니다. 중첩이 100회 쌓이면 다음 기본 공격 시 체력을 회복하고 이동 속도가 증가합니다.착취의 손아귀: @GRTriggerTime@중첩마다 적 챔피언에게 기본 공격 시 추가 마법 피해를 입히고 체력을 회복하며 체력이 영구 증가합니다. 체력 회복량: 총 @f2@ 최대 체력 획득량: @f3@",
     "icon": "1023.png"
   },
   {
@@ -124,7 +124,7 @@
     "nameId": "ARAM_DiveBomber",
     "name": "폭격기",
     "rarity": "silver",
-    "desc": "라운드마다 처음으로 사망하는 아군이 폭발해 주변 적에게 대상 최대 체력의 @PercentMaxHPDamage*100@%에 해당하는 고정 피해를 입힙니다.",
+    "desc": "사망 시 폭발하여 막대한 고정 피해를 입힙니다.",
     "icon": "1025.png"
   },
   {
@@ -132,7 +132,7 @@
     "nameId": "ARAM_DontBlink",
     "name": "속전속결",
     "rarity": "silver",
-    "desc": "대상보다 이동 속도가 10 높을 때마다 추가 피해량이 @BonusDamagePerMSDifference*1000@% 증가합니다. 이번 라운드에 입힌 추가 피해량: @f1@ 총 추가 피해량: @f2@",
+    "desc": "대상보다 이동 속도가 10 높을 때마다 추가 피해량이 @BonusDamagePerMSDifference*1000@% 증가합니다. 추가 피해량: @f2@",
     "icon": "1026.png"
   },
   {
@@ -140,7 +140,7 @@
     "nameId": "ARAM_Earthwake",
     "name": "대지의 각성",
     "rarity": "prismatic",
-    "desc": "돌진, 도약, 점멸, 순간이동 스킬이 1초 후에 폭발하는 흔적을 남기고 @Damage@의 물리 피해를 입힙니다. 이 라운드에 입힌 피해량: @f1@ 입힌 총 피해량: @f2@",
+    "desc": "돌진, 점멸, 순간이동 스킬이 @ExplosionDelayTime@초 후에 폭발하는 흔적을 남깁니다.",
     "icon": "1027.png"
   },
   {
@@ -156,7 +156,7 @@
     "nameId": "ARAM_EtherealWeapon",
     "name": "환영 무기",
     "rarity": "gold",
-    "desc": "스킬 사용 시 {{ Item_Keyword_OnHit }} 효과를 적용합니다. 대상마다 1초의 재사용 대기시간이 적용됩니다.",
+    "desc": "스킬이 {{ Item_Keyword_OnHit }} 효과를 적용합니다. 대상마다 1초의 재사용 대기시간이 적용됩니다.",
     "icon": "1029.png"
   },
   {
@@ -180,7 +180,7 @@
     "nameId": "VeilOfWarding",
     "name": "감시의 장막",
     "rarity": "silver",
-    "desc": null,
+    "desc": "@Cooldown@초마다 적의 다음 스킬을 막아 주는 주문 방어막을 생성합니다.",
     "icon": "1034.png"
   },
   {
@@ -196,7 +196,7 @@
     "nameId": "ARAM_Firebrand",
     "name": "화염 낙인",
     "rarity": "gold",
-    "desc": "기본 공격 시 적에게 화상({{ Item_Keyword_OnHit }}) 효과를 적용해 @BleedDuration@초 동안 초당 최대 체력의 @PercentMaxHPDamagePer5Seconds*20@%에 해당하는 마법 피해를 입힙니다. 화상 효과는 무한히 중첩됩니다.",
+    "desc": "기본 공격 시 적에게 화상 효과를 적용해 @BleedDuration@초 동안 초당 최대 체력의 @PercentMaxHPDamagePer5Seconds*20@%에 해당하는 마법 피해를 입힙니다. 화상 효과는 무한히 중첩됩니다. 입힌 피해량: @f2@",
     "icon": "1036.png"
   },
   {
@@ -212,7 +212,7 @@
     "nameId": "ARAM_FromBeginningToEnd",
     "name": "시작부터 끝까지",
     "rarity": "gold",
-    "desc": "선제공격과 어둠의 수확 핵심 룬을 얻습니다. 선제공격 - 챔피언에게 피해를 입히면 3초 동안 해당 챔피언이 받는 피해가 증가합니다. 지속시간 종료 시 입힌 추가 피해량에 따라 +%i:goldCoins% 골드를 획득합니다. 어둠의 수확 - 체력이 50% 아래인 적에게 피해를 입히면 추가 피해를 입히고 해당 추가 피해량이 영구적으로 증가합니다.",
+    "desc": "선제공격과 어둠의 수확 핵심 룬을 얻습니다. 선제공격: 적 챔피언과 전투 개시 시 @AugDuration@초 동안 @DamageAmp*100@%의 추가 피해를 입히고 입힌 피해에 따라 골드를 획득합니다. 어둠의 수확: 체력이 낮은 챔피언에게 피해를 입히면 적응형 피해를 입히고 해당 챔피언의 영혼을 수확합니다. 입힌 피해량: @f2@ 획득한 골드: @f3@",
     "icon": "1038.png"
   },
   {
@@ -220,7 +220,7 @@
     "nameId": "ARAM_FrostWraith",
     "name": "서리 망령",
     "rarity": "silver",
-    "desc": "자동 사용 @Cooldown@초마다 주변 적을 @RootDuration@초 동안 속박합니다.",
+    "desc": "자동 사용 @Cooldown@초마다 주변 적을 @RootDuration@초 동안 속박합니다. 속박한 적 수: @f2@",
     "icon": "1039.png"
   },
   {
@@ -252,7 +252,7 @@
     "nameId": "ARAM_InfernalConduit",
     "name": "지옥의 전도체",
     "rarity": "prismatic",
-    "desc": "스킬 사용 시 무한히 중첩되는 화상 효과를 적용해 @BleedDuration@초 동안 매초 @BleedDamageTooltip@의 마법 피해를 입힙니다. 모든 화상 효과가 적에게 피해를 입힐 때마다 기본 스킬의 재사용 대기시간을 @FlatCooldownRefundPerTick@초 감소시킵니다.",
+    "desc": "스킬 사용 시 중첩되는 화상 효과를 적용해 지속적으로 피해를 입힙니다. 화상 효과가 기본 스킬의 재사용 대기시간을 감소시킵니다.",
     "icon": "1045.png"
   },
   {
@@ -276,7 +276,7 @@
     "nameId": "ARAM_JeweledGauntlet",
     "name": "보석 건틀릿",
     "rarity": "prismatic",
-    "desc": "스킬에 총 @CritDamage*100@%의 피해를 입히는 치명타가 적용될 수 있습니다. %i:scaleCrit% 치명타 확률을 @CritGranted@ 얻습니다.",
+    "desc": "스킬에 치명타가 적용되어 @CritDamageTooltip@% 증가한 피해를 입힐 수 있습니다. 치명타 확률%i:scaleCrit%을 @CritGranted@ 얻습니다. 챔피언에게 입힌 피해량: @f2@",
     "icon": "1048.png"
   },
   {
@@ -284,7 +284,7 @@
     "nameId": "ARAM_KeystoneConjurer",
     "name": "핵심 룬 요술사",
     "rarity": "gold",
-    "desc": "콩콩이 소환과 신비로운 유성 핵심 룬을 얻습니다. 콩콩이 소환 - 피해를 입힌 적 또는 체력을 회복하거나 보호막을 씌우거나 이로운 효과를 부여한 아군에게 콩콩이를 보내 적에게는 피해를 입히고 아군에게는 보호막을 부여합니다. 신비로운 유성 - 스킬 피해를 입히면 유성을 날려 범위 내 모든 적에게 피해를 입힙니다.",
+    "desc": "콩콩이 소환과 신비로운 유성 핵심 룬을 얻습니다. 콩콩이 소환: 공격 또는 스킬 사용 시 대상에 콩콩이를 보내 적에게 피해를 주거나 아군에게 보호막을 생성합니다.신비로운 유성: 챔피언에게 스킬로 피해를 주면 해당 위치에 피해를 가하는 유성을 소환합니다. 입힌 피해량: @f1@ 생성한 보호막: @f2@",
     "icon": "1050.png"
   },
   {
@@ -308,7 +308,7 @@
     "nameId": "ARAM_MadScientist",
     "name": "미친 과학자",
     "rarity": "prismatic",
-    "desc": "라운드 시작 시 크기가 커져 적응형 능력치가 @ADAmp*100@%, 체력이 @HealthAmp*100@% 증가하거나 크기가 작아져 @Haste@의 스킬 가속을 얻고 이동 속도가 @MovespeedAmp*100@% 증가합니다.",
+    "desc": "부활할 때마다 크기가 커져 적응형 능력치와 체력을 얻거나, 크기가 작아져 스킬 가속과 이동 속도를 얻습니다.",
     "icon": "1053.png"
   },
   {
@@ -316,7 +316,7 @@
     "nameId": "ARAM_MasterofDuality",
     "name": "결투의 대가",
     "rarity": "prismatic",
-    "desc": "라운드가 끝날 때까지, 기본 공격 시 @APGained@의 주문력({{ Item_Keyword_OnHit }})을, 스킬 사용 시 @ADGained@의 공격력을 얻습니다.",
+    "desc": "기본 공격 시 중첩되는 주문력을 얻고 스킬로 적에게 피해를 입히면 공격력을 얻습니다.",
     "icon": "1054.png"
   },
   {
@@ -356,7 +356,7 @@
     "nameId": "ARAM_OkBoomerang",
     "name": "부메랑 투척",
     "rarity": "gold",
-    "desc": "자동 사용 @Cooldown@초마다 근처 적에게 부메랑을 던져 적중한 적에게 @Damage@의 물리 피해를 입힙니다.",
+    "desc": "@BaseCooldown@초마다 근처 적에게 부메랑을 자동 사용하여 적중한 적에게 @Damage@의 적응형 피해를 입힙니다. 입힌 피해량: @f2@",
     "icon": "1061.png"
   },
   {
@@ -372,7 +372,7 @@
     "nameId": "ARAM_OutlawsGrit",
     "name": "무법자의 투지",
     "rarity": "gold",
-    "desc": "돌진, 도약, 점멸, 순간이동 스킬을 사용한 후 @ResistsPerStack@의 방어력 및 마법 저항력을 얻습니다. 최대 @MaxStacks@회 중첩되어 @MaxResistTooltipOnly@까지 증가합니다.",
+    "desc": "돌진, 점멸, 순간이동 스킬을 사용한 후 @ResistsPerStack@의 방어력 및 마법 저항력을 얻습니다. 최대 @MaxStacks@회 중첩됩니다.",
     "icon": "1063.png"
   },
   {
@@ -380,7 +380,7 @@
     "nameId": "ARAM_Perseverance",
     "name": "인내심",
     "rarity": "gold",
-    "desc": "기본 체력 재생이 @BaseRegen*100@% 증가합니다. 체력이 @AmpedHPThreshold*100@% 아래로 떨어지면 기본 체력 재생이 @AmpedRegen*100@%까지 증가합니다.",
+    "desc": "기본 체력 재생이 @BaseRegen*100@% 증가합니다. 체력이 25% 아래로 떨어지면 기본 체력 재생이 @AmpedRegen*100@%까지 증가합니다. 체력 회복량: 총 @f2@",
     "icon": "1064.png"
   },
   {
@@ -388,7 +388,7 @@
     "nameId": "ARAM_QuantumComputing",
     "name": "양자 연산",
     "rarity": "prismatic",
-    "desc": "@Cooldown@초마다 주변에 강력한 베기를 자동 사용하여 @BaseDamageTotal@의 물리 피해를 입힙니다. 바깥쪽 절반에 맞은 적은 @SlowPercentage@% 둔화된 후 @SlowDuration@초에 걸쳐 원래대로 돌아오며, 최대 체력의 @OuterEdgeTooltip@에 해당하는 물리 피해를 추가로 받습니다. 이때 입힌 추가 피해량의 @OuterConeHealingRatio@%만큼 체력을 회복합니다.",
+    "desc": "주기적으로 강력한 베기를 자동 사용합니다. 적중당한 적은 둔화되고 최대 체력에 비례한 피해를 추가로 받으며, 자신은 체력을 회복합니다.",
     "icon": "1066.png"
   },
   {
@@ -396,7 +396,7 @@
     "nameId": "ARAM_RabbleRousing",
     "name": "원기 회복",
     "rarity": "gold",
-    "desc": "스킬 사용 시 @HealAmount@의 체력을 회복합니다.",
+    "desc": "{{SpellName}} 스킬 사용 시 체력을 회복합니다.",
     "icon": "1067.png"
   },
   {
@@ -412,7 +412,7 @@
     "nameId": "ARAM_Repulsor",
     "name": "반발",
     "rarity": "silver",
-    "desc": "체력이 @HealthThreshold1*100@% 또는 @HealthThreshold2*100@% 이하로 내려가면 주변 적들을 뒤로 밀어냅니다.",
+    "desc": "체력이 @HealthThreshold*100@% 아래로 떨어지면 주변 적을 뒤로 밀어내고 @SlowAmount*100@% 둔화시킵니다.",
     "icon": "1069.png"
   },
   {
@@ -436,7 +436,7 @@
     "nameId": "ARAM_SearingDawn",
     "name": "타오르는 새벽",
     "rarity": "gold",
-    "desc": "스킬이 적에게 표식을 남깁니다. 적은 아군의 다음 기본 공격 또는 스킬로부터 @Damage@+최대 체력의 @MaxHPDamage*100@%에 해당하는 마법 피해를 추가로 입습니다.",
+    "desc": "스킬이 적에게 표식을 남깁니다. 적은 아군의 다음 기본 공격 또는 스킬로부터 추가로 @Damage@의 마법 피해를 입습니다. 입힌 피해량: 총 @f2@",
     "icon": "1072.png"
   },
   {
@@ -444,7 +444,7 @@
     "nameId": "ARAM_ShadowRunner",
     "name": "그림자 질주",
     "rarity": "silver",
-    "desc": "돌진, 도약, 점멸, 순간이동 스킬을 사용하거나 투명 상태에서 벗어난 후 @spell.Augment_ShadowRunner:BuffDuration@초 동안 이동 속도가 @spell.Augment_ShadowRunner:MSAmount@ 증가합니다.",
+    "desc": "돌진, 점멸, 순간이동 스킬을 사용하거나 은신 상태에서 벗어난 후 이동 속도가 증가합니다.",
     "icon": "1073.png"
   },
   {
@@ -452,7 +452,7 @@
     "nameId": "ARAM_ShrinkRay",
     "name": "감쇠 광선",
     "rarity": "gold",
-    "desc": "기본 공격 시 3초 동안 대상의 입히는 피해량과 크기를 @DamageReduction*100@% 감소시킵니다. ({{ Item_Keyword_OnHit }})",
+    "desc": "기본 공격 시 3초 동안 적의 피해량이 @DamageReduction*100@% 감소합니다. 감소한 피해량: @f2@",
     "icon": "1074.png"
   },
   {
@@ -460,7 +460,7 @@
     "nameId": "ARAM_SlowCooker",
     "name": "찜솥",
     "rarity": "prismatic",
-    "desc": "매초 주변 적 챔피언에게 무한히 중첩되는 화상 효과를 적용해 @BleedDuration@초 동안 매초 @BleedDamageTooltip@의 마법 피해를 입힙니다.",
+    "desc": "매초 주변 적 챔피언에게 무한히 중첩되는 화상 효과를 적용해 @BleedDuration@초 동안 매초 @BleedDamageTooltip@의 마법 피해를 입힙니다. 입힌 피해량: @f2@",
     "icon": "1075.png"
   },
   {
@@ -476,7 +476,7 @@
     "nameId": "ARAM_SoulSiphon",
     "name": "영혼 흡수",
     "rarity": "gold",
-    "desc": "{{Cherry_SoulSiphon_Summary}}",
+    "desc": "치명타 확률이 @CritChance*100@% 증가하고 치명타 적중 시 @HealPercentage*100@%의 생명력 흡수를 얻습니다. 체력 회복량: 총 @f2@",
     "icon": "1077.png"
   },
   {
@@ -484,7 +484,7 @@
     "nameId": "ARAM_SymphonyofWar",
     "name": "전장의 교향곡",
     "rarity": "prismatic",
-    "desc": "치명적 속도와 정복자 핵심 룬을 얻습니다. 치명적 속도 - 챔피언을 기본 공격하면 공격 속도가 증가합니다. 이 효과는 6회까지 중첩됩니다. 6회 중첩되면 기본 공격 시 투사체를 날려 추가 피해를 입힙니다. 정복자 - 챔피언에게 기본 공격 및 스킬 적중 시 적응형 능력치를 얻습니다. 이 효과는 12회까지 중첩됩니다. 12회 중첩되면 챔피언에게 입힌 피해의 일정 비율만큼 체력을 회복합니다.",
+    "desc": "치명적 속도와 정복자 핵심 룬을 얻습니다. 치명적 속도 - 챔피언을 기본 공격하면 공격 속도가 증가합니다. 이 효과는 6회까지 중첩됩니다. 6회 중첩되면 기본 공격 시 투사체를 날려 추가 피해를 입힙니다. 정복자: 적 챔피언 공격 시 적응형 능력치 중첩을 획득합니다. @MaxStacks@회 중첩 시 챔피언 대상 피해량의 일부만큼 체력을 회복합니다.",
     "icon": "1079.png"
   },
   {
@@ -500,7 +500,7 @@
     "nameId": "ARAM_TapDancer",
     "name": "탭 댄서",
     "rarity": "prismatic",
-    "desc": "기본 공격 시 @MSPerHit@의 이동 속도를 얻습니다. ({{ Item_Keyword_OnHit }}). @MSToASConversionCalc@의 공격 속도를 얻습니다.",
+    "desc": "기본 공격 시 이동 속도가 증가합니다. 이동 속도에 비례하여 공격 속도가 증가합니다.",
     "icon": "1081.png"
   },
   {
@@ -532,7 +532,7 @@
     "nameId": "ARAM_TrueshotProdigy",
     "name": "정조준 일격 신동",
     "rarity": "prismatic",
-    "desc": "@SnipeDistance@유닛 거리 이상 떨어진 대상에게 피해를 입히면 정조준 일격을 발사해 @Damage@의 마법 피해를 입힙니다. 대상별로 @Cooldown@초의 재사용 대기시간이 적용됩니다.",
+    "desc": "@SnipeDistance@유닛 거리 이상 떨어진 대상에게 피해를 입히면 정조준 일격을 발사해 @Damage@의 마법 피해를 입힙니다. (재사용 대기시간: @Cooldown@초) 챔피언에게 입힌 피해량: 총 @f2@",
     "icon": "1086.png"
   },
   {
@@ -540,7 +540,7 @@
     "nameId": "ARAM_Typhoon",
     "name": "태풍",
     "rarity": "silver",
-    "desc": "기본 공격 시 추가 대상에게 화살을 발사해 @ADRatio*100@%의 피해를 입히고 {{ Item_Keyword_OnHit }} 효과를 적용합니다.",
+    "desc": "기본 공격 시 추가 대상에게 투사체를 발사해 감소된 피해를 입히고 {{ Item_Keyword_OnHit }} 효과를 적용합니다.",
     "icon": "1087.png"
   },
   {
@@ -548,7 +548,7 @@
     "nameId": "ARAM_UltimateRevolution",
     "name": "궁극기 대변혁",
     "rarity": "prismatic",
-    "desc": "라운드마다 한 번 궁극기를 사용한 다음 초기화합니다.",
+    "desc": "궁극기를 사용한 다음 초기화합니다. (재사용 대기시간 @Cooldown@초 또는 사망 시 초기화)",
     "icon": "1088.png"
   },
   {
@@ -556,7 +556,7 @@
     "nameId": "ARAM_Vulnerability",
     "name": "취약",
     "rarity": "gold",
-    "desc": "아이템 및 지속 피해 효과에 @CritDamage*100@%의 추가 피해를 입히는 치명타가 적용될 수 있습니다. %i:scaleCrit% 치명타 확률이 @CritChance*100@% 증가합니다.",
+    "desc": "아이템 및 지속 피해 효과에 @CritDamage*100@%의 추가 피해를 입히는 치명타가 적용될 수 있습니다. %i:scaleCrit% 치명타 확률을 @CritChance*100@% 획득합니다. 입힌 피해량: @f2@",
     "icon": "1092.png"
   },
   {
@@ -588,7 +588,7 @@
     "nameId": "ARAM_BreadAndButter",
     "name": "빵과 버터",
     "rarity": "gold",
-    "desc": "@spell1KeyBind@ 스킬 가속을 @QAbilityHaste@ 얻습니다.",
+    "desc": "{{SpellName}} 스킬 가속을 @QAbilityHaste@ 얻습니다.",
     "icon": "1103.png"
   },
   {
@@ -620,7 +620,7 @@
     "nameId": "ARAM_SelfDestruct",
     "name": "자폭",
     "rarity": "silver",
-    "desc": "@BombDelay@초마다 자동 사용으로 자신에게 폭탄을 부착합니다. 폭탄은 폭발 시 주변 적에게 최대 체력의 @MaxHealthDamage*100@%에 해당하는 고정 피해를 입히고 @KnockupDuration@초 동안 공중으로 띄워 올립니다.",
+    "desc": "@BaseCooldown@초마다 자신에게 폭탄이 부착됩니다. @BombDelay@초 후에 폭탄이 폭발해 적에게 고정 피해를 입히고 공중으로 띄워 올립니다.",
     "icon": "1108.png"
   },
   {
@@ -636,7 +636,7 @@
     "nameId": "ARAM_SkilledSniper",
     "name": "노련한 저격수",
     "rarity": "gold",
-    "desc": "@SnipeDistance@ 거리 이상 떨어진 적에게 기본 스킬을 적중시키면 해당 스킬의 재사용 대기시간이 @ReducedCooldown@초로 감소합니다. 지속 스킬은 @PeriodicReductionAmount@초로 초기화됩니다.",
+    "desc": "기본 스킬로 적을 저격하면 해당 스킬 재사용 대기시간의 @ReducedCooldownPercent*100@%를 돌려받습니다. (지속 스킬의 경우 @PeriodicReductionAmount*100@%)",
     "icon": "1113.png"
   },
   {
@@ -652,7 +652,7 @@
     "nameId": "ARAM_Flashy",
     "name": "점멸 난사",
     "rarity": "gold",
-    "desc": "점멸 사용 가능 횟수가 @MaxAmmo@번, 재사용 대기시간이 @FlashCooldown@초가 됩니다.",
+    "desc": "점멸 사용 가능 횟수가 @FlashAmmoTooltip@번이 됩니다. @AmmoRechargeTime@초 후 횟수가 모두 충전됩니다.",
     "icon": "1116.png"
   },
   {
@@ -660,7 +660,7 @@
     "nameId": "ARAM_CriticalHealing",
     "name": "치명적 치유",
     "rarity": "gold",
-    "desc": "{{Cherry_CriticalHealing_Summary}}",
+    "desc": "체력 회복 및 보호막 효과에 치명타가 적용되어 @CritHeal*100@% 증폭될 수 있습니다. 치명타 확률%i:scaleCrit%이 @CritChance*100@% 증가합니다.",
     "icon": "1118.png"
   },
   {
@@ -668,7 +668,7 @@
     "nameId": "ARAM_Marksmage",
     "name": "마법 명사수",
     "rarity": "gold",
-    "desc": "기본 공격 시 @APDamage@의 물리 피해를 추가로 입힙니다.",
+    "desc": "기본 공격 시 @APDamage@의 물리 피해를 추가로 입힙니다. 입힌 피해량: 총 @f2@",
     "icon": "1129.png"
   },
   {
@@ -676,7 +676,7 @@
     "nameId": "ARAM_MagicMissile",
     "name": "마법 미사일",
     "rarity": "gold",
-    "desc": "스킬로 피해를 입히면 각 적중당한 적에게 마법 탄환 @NumberOfMissiles@발을 발사합니다. 마법 탄환은 이동한 거리에 따라 최대 최대 체력의 @MaxHealthDamageTooltip@%에 해당하는 고정 피해를 입힙니다.",
+    "desc": "스킬 피해를 입히면 투사체 @NumberOfMissiles@개를 발사해 이동한 거리에 따라 각각 최대 체력 비례 고정 피해를 입힙니다.",
     "icon": "1133.png"
   },
   {
@@ -684,7 +684,7 @@
     "nameId": "ARAM_DrawYourSword",
     "name": "검을 뽑아라",
     "rarity": "prismatic",
-    "desc": "이제 근접 챔피언으로 간주됩니다. @BonusAD*100@%의 공격력, @BonusHP*100@%의 체력, @BonusAS*100@%의 공격 속도, @BonusLifesteal*100@%의 생명력 흡수 효과, @BonusMS*100@%의 이동 속도를 얻습니다. 각 능력치는 잃은 공격 사거리에 따라 추가로 증가합니다.",
+    "desc": "이제 근접 챔피언으로 간주됩니다. 공격력, 체력, 공격 속도, 생명력 흡수 효과, 이동 속도를 얻습니다. 각 능력치는 잃은 공격 사거리에 따라 추가로 증가합니다.",
     "icon": "1134.png"
   },
   {
@@ -692,7 +692,7 @@
     "nameId": "ARAM_SlapAround",
     "name": "우당탕탕",
     "rarity": "silver",
-    "desc": "{{ Cherry_SlapAround_Summary }} 현재 적응형 능력치: @f1@",
+    "desc": "적을 이동 불가 상태로 만들거나 이동 스킬을 사용할 수 없게 하면 @AdaptiveForce@의 적응형 능력치를 얻습니다. 사망 시 @PercentOfStacksLost*100@%를 잃습니다.",
     "icon": "1136.png"
   },
   {
@@ -716,7 +716,7 @@
     "nameId": "ARAM_Impassable",
     "name": "넘을 수 없는 벽",
     "rarity": "gold",
-    "desc": "여진과 빙결 강화 핵심 룬을 얻습니다. 여진 - 적 챔피언을 이동 불가 상태로 만들면 @DelayBeforeBurst@초 동안 방어력과 마법 저항력이 증가하며, 이후 폭발이 일어나 주변 적에게 최대 체력에 비례한 피해를 입힙니다. 빙결 강화 - 챔피언을 이동 불가 상태로 만들면 대상 아래에 얼음을 생성해 범위 내 적을 둔화시키고 입히는 피해를 감소시킵니다.",
+    "desc": "여진과 빙결 강화 핵심 룬을 얻습니다. 여진: 적 챔피언을 이동 불가 상태로 만들면 방어력/마법 저항력이 증가하고 잠시 후 주변에 큰 마법 피해를 입힙니다.빙결 강화: 적 챔피언을 이동 불가 상태로 만들면 @RayCount@줄기의 빙결 광선이 뻗어 나와 근처 적들을 둔화하고 아군에게 입히는 피해를 감소시킵니다.",
     "icon": "1149.png"
   },
   {
@@ -724,7 +724,7 @@
     "nameId": "ARAM_BreadAndJam",
     "name": "빵과 잼",
     "rarity": "gold",
-    "desc": "W 스킬 가속을 @WAbilityHaste@ 얻습니다.",
+    "desc": "{{SpellName}} 스킬 가속을 @WAbilityHaste@ 얻습니다.",
     "icon": "1150.png"
   },
   {
@@ -732,7 +732,7 @@
     "nameId": "ARAM_BreadAndCheese",
     "name": "빵과 치즈",
     "rarity": "gold",
-    "desc": "E 스킬 가속을 @EAbilityHaste@ 얻습니다.",
+    "desc": "{{SpellName}} 스킬 가속을 @EAbilityHaste@ 얻습니다.",
     "icon": "1151.png"
   },
   {
@@ -740,7 +740,7 @@
     "nameId": "ARAM_Quest_SteelYourHeart",
     "name": "강철 같은 심장",
     "rarity": "gold",
-    "desc": "조건: 효과가 @StackThreshold@중첩 이상 적용된 강철심장을 보유해야 합니다. 보상: 강철심장 중첩이 @StackMultiplication@배가 됩니다. 체력 재생이 강철심장 중첩의 @StacktoRegenConversion*100@%만큼 증가합니다.",
+    "desc": "퀘스트: @StackThreshold@중첩 이상 적용된 강철심장을 보유해야 합니다. 보상: 강철심장 중첩이 @StackMultiplication@배가 됩니다.",
     "icon": "1152.png"
   },
   {
@@ -748,7 +748,7 @@
     "nameId": "ARAM_Quest_UrfsChampion",
     "name": "우르프의 챔피언",
     "rarity": "prismatic",
-    "desc": "{{Cherry_Quest_UrfsChampion_Summary}} 처치 관여: @f1@",
+    "desc": "퀘스트: 처치 관여를 @QuestRequirement@회 달성해야 합니다. 보상: 황금 뒤집개",
     "icon": "1154.png"
   },
   {
@@ -772,7 +772,7 @@
     "nameId": "ARAM_BigBrain",
     "name": "전술적 대비",
     "rarity": "gold",
-    "desc": "각 라운드 시작 시 @TotalShield@의 보호막을 얻습니다.",
+    "desc": "%i:scaleAP% 주문력 @AP@당 @ShieldBase@의 피해를 흡수하는 보호막을 얻습니다. 사망 시 또는 만료 70초 후 초기화됩니다.",
     "icon": "1180.png"
   },
   {
@@ -788,7 +788,7 @@
     "nameId": "ARAM_Flashbang",
     "name": "점멸탄",
     "rarity": "silver",
-    "desc": "점멸 사용 시 주변에 폭발을 일으켜 @ExplosiveDamage@의 마법 피해를 입히고 @SlowDuration@초 동안 @SlowAmount*100@% 둔화시킵니다. 추가로 점멸이 라운드마다 초기화됩니다. 이 라운드에 입힌 피해량: @f1@ 입힌 총 피해량: @f2@",
+    "desc": "점멸 시 폭발을 일으켜 피해를 입히고 둔화시킵니다. (사망 시 초기화)",
     "icon": "1187.png"
   },
   {
@@ -804,7 +804,7 @@
     "nameId": "ARAM_GiantSlayer",
     "name": "거인 학살자",
     "rarity": "prismatic",
-    "desc": "크기가 작아져 @MovespeedMod*100@%의 이동 속도를 얻으며, 상대가 자신보다 큰 정도에 비례해 챔피언에게 @SmallBonusDamage*100@%~@XLargeBonusDamage*100@%의 추가 피해를 입힙니다.",
+    "desc": "크기가 작아져 이동 속도가 증가하며 상대가 자신보다 큰 정도에 비례해 챔피언에게 추가 피해를 입힙니다.",
     "icon": "1195.png"
   },
   {
@@ -812,7 +812,7 @@
     "nameId": "ARAM_HolyFire",
     "name": "신성한 불길",
     "rarity": "gold",
-    "desc": "체력을 회복하거나 보호막을 씌울 때 주변 적에게 무한히 중첩되는 화상 효과를 적용해 @BurnDuration@초에 걸쳐 최대 최대 체력의 @BurnPercentMax*100@%에 해당하는 마법 피해를 입힙니다. (최소: @BurnPercentMin*100@%) 화상 피해는 도움을 받는 챔피언의 최대 체력 대비 체력 회복량 또는 보호막에 비례합니다.",
+    "desc": "체력을 회복하거나 보호막을 씌울 때 주변 적에게 무한히 중첩되는 화상 효과를 적용해 @BurnDuration@초에 걸쳐 최대 최대 체력의 @BurnPercentMax*100@%에 해당하는 마법 피해를 입힙니다. (최소: @BurnPercentMin*100@%) 화상 피해는 도움을 받는 챔피언의 최대 체력 대비 체력 회복량 또는 보호막에 비례합니다. 입힌 피해량: @f2@",
     "icon": "1198.png"
   },
   {
@@ -844,7 +844,7 @@
     "nameId": "ARAM_OrbitalLaser_Active",
     "name": "궤도형 레이저",
     "rarity": "prismatic",
-    "desc": "{{Cherry_OrbitalLaser_Summary}} 이 라운드에 입힌 피해량: @f1@ 입힌 총 피해량: @f2@",
+    "desc": "궤도형 레이저 소환사 주문을 얻습니다. 잠시 후 궤도형 레이저로 최대 체력의 @DamagetoChampions*100@%에 해당하는 고정 피해를 입히고, 추가로 @GroundDuration@초 동안 @TotalDamageOverTimeTooltip@의 마법 피해를 입힙니다.",
     "icon": "1208.png"
   },
   {
@@ -860,7 +860,7 @@
     "nameId": "ARAM_SpinToWin",
     "name": "승리를 위한 회전",
     "rarity": "silver",
-    "desc": "{{ Cherry_SpinToWin_Summary }} 이번 라운드 피해량: @f1@ 이번 게임 피해량: @f2@",
+    "desc": "회전 스킬의 %i:scaleAH% 스킬 가속이 @SpinHaste@, 피해량이 @SpinDamageAmp@ 증가합니다. 궁극기는 피해량이 @SpinDamageAmp_Ult@ 증가합니다.",
     "icon": "1214.png"
   },
   {
@@ -868,7 +868,7 @@
     "nameId": "ARAM_FanTheHammer",
     "name": "탄환 세례",
     "rarity": "prismatic",
-    "desc": "적 챔피언 공격 시 탄환을 @AdditionalBolts@개 발사해 각각 @DamagePerBolt@의 물리 피해를 입힙니다. 방향마다 @Cooldown@초의 재사용 대기시간이 적용됩니다. 각 탄환은 치명타를 입힐 수 있고 {{ Item_Keyword_OnHit }} 효과가 @OnHitRatio*100@%로 적용됩니다.",
+    "desc": "적 챔피언 공격 시 이동한 거리에 비례해 피해량이 증가하는 투사체 @AdditionalBolts@개를 발사합니다. 방향마다 재사용 대기시간이 따로 적용됩니다.",
     "icon": "1220.png"
   },
   {
@@ -876,7 +876,7 @@
     "nameId": "ARAM_DualWield",
     "name": "양손잡이",
     "rarity": "prismatic",
-    "desc": "기본 공격 시 @AttackReduction*100@%의 피해를 입히고 {{ Item_Keyword_OnHit }} 효과를 @OnHitMod*100@%만큼 적용하는 투사체를 발사합니다. 총 공격 속도가 @AttackSpeed*100@% 증가합니다.",
+    "desc": "기본 공격 시 감소한 {{ Item_Keyword_OnHit }} 효과를 적용하는 투사체를 발사합니다. 총 공격 속도가 @AttackSpeed*100@% 증가합니다.",
     "icon": "1225.png"
   },
   {
@@ -908,7 +908,7 @@
     "nameId": "ARAM_SlowAndSteady",
     "name": "천천히, 꾸준히",
     "rarity": "gold",
-    "desc": "공격 속도는 @StaticRatio@보다 높아질 수 없습니다. 모든 추가 공격 속도가 공격력으로 전환됩니다. (공격 속도 1%당 @ADPerAS@의 공격력) 현재 부여 중인 능력치: @f1@의 공격력",
+    "desc": "공격 속도가 @StaticRatio@의 수치로 고정됩니다. 모든 추가 공격 속도가 공격력으로 전환됩니다. (공격 속도 1%당 @ADPerAS@의 공격력+@BaseAD@)",
     "icon": "1250.png"
   },
   {
@@ -916,7 +916,7 @@
     "nameId": "ARAM_DivineIntervention",
     "name": "신성한 중재",
     "rarity": "gold",
-    "desc": "전투 시작 @InitalDelay@초 후 보호의 별이 천천히 내려옵니다. 별이 착지하면 자신과 주변 아군이 @InvulnerabilityDuration@초 동안 무적 상태가 됩니다. 이후 @BaseCD@초마다 자동 사용합니다.",
+    "desc": "@BaseCD@초마다 보호의 별을 자동 사용해 자신에게 서서히 내려오게 합니다. 별이 착지하면 자신과 주변 아군이 @InvulnerabilityDuration@초 동안 무적 상태가 됩니다.",
     "icon": "1301.png"
   },
   {
@@ -932,7 +932,7 @@
     "nameId": "ARAM_Firefox",
     "name": "불여우",
     "rarity": "silver",
-    "desc": "자동 사용: 이동 속도가 @MovementSpeed*100@% 증가하고 @Cooldown@초마다 주위를 빙빙 도는 불꽃 3개를 생성합니다. 불꽃은 시야에 들어오는 가장 가까운 적을 대상으로 지정해 @SingleFireDamage@의 마법 피해를 입힙니다. 연달아 적중하면 @RepeatDamageMod*100@%의 피해를 입힙니다.",
+    "desc": "자동 사용: 이동 속도가 @MovementSpeed*100@% 증가하고 @Cooldown@초마다 주위를 빙빙 도는 불꽃 3개를 생성합니다. 불꽃은 시야에 들어오는 가장 가까운 적을 대상으로 지정해 @SingleFireDamage@의 적응형 피해를 입힙니다. 연달아 적중하면 @RepeatDamageMod*100@%의 피해를 입힙니다. 입힌 피해량: 총 @f1@",
     "icon": "1308.png"
   },
   {
@@ -940,7 +940,7 @@
     "nameId": "ARAM_ClownCollege",
     "name": "광대 대학",
     "rarity": "prismatic",
-    "desc": "속임수 소환사 주문을 얻습니다. 암습 지속 효과를 얻습니다. 사망 시, 폭발하는 상자를 생성하여 엄청난 고정 피해를 입히고 주변 적을 공포에 빠뜨립니다.",
+    "desc": "암습: 뒤에서 공격 시 @BasicAttackDamage@의 추가 물리 피해를 입힙니다. 속임수: 근처로 순간이동해 @StealthDuration@초 동안 투명 상태가 됩니다. 투명 상태에서 다음 기본 공격 시 @TotalDamage@의 물리 피해를 추가로 입힙니다. 뒤에서 기본 공격 시 치명타가 적용되어 @QCritDamageMod@의 피해를 입힙니다. 환각: 죽음: 사망 시 최대 체력의 @FearDamage*100@%에 해당하는 고정 피해를 입히고 주변을 @FearDuration@초 동안 공포에 빠뜨립니다.",
     "icon": "1310.png"
   },
   {
@@ -956,7 +956,7 @@
     "nameId": "ARAM_Recall",
     "name": "부정 행위",
     "rarity": "gold",
-    "desc": null,
+    "desc": "귀환 버튼을 눌러 기지로 복귀해, 아이템을 구매하고, 증강을 획득할 수 있습니다.",
     "icon": "1313.png"
   },
   {
@@ -964,7 +964,7 @@
     "nameId": "MightyShield",
     "name": "강력한 방패",
     "rarity": "silver",
-    "desc": null,
+    "desc": "보호막을 얻으면 @ShieldDuration@초 동안 @AdaptiveAmp@의 적응형 능력치%i:miniAdaptiveForce%를 얻습니다. (재사용 대기시간 @Cooldown@초)",
     "icon": "1314.png"
   },
   {
@@ -972,7 +972,7 @@
     "nameId": "SwiftAndSafe",
     "name": "빠르고 안전하게",
     "rarity": "silver",
-    "desc": null,
+    "desc": "돌진하거나 점멸한 후에 @ShieldDuration@초 동안 @ShieldAmount@의 보호막을 얻습니다. (재사용 대기시간 @Cooldown@초)",
     "icon": "1315.png"
   },
   {
@@ -980,7 +980,7 @@
     "nameId": "WindBeneathBlade",
     "name": "칼날 아래 바람",
     "rarity": "silver",
-    "desc": null,
+    "desc": "방어구 관통력 및 마법 관통력이 높을수록 이동 속도가 빨라집니다.",
     "icon": "1316.png"
   },
   {
@@ -988,7 +988,7 @@
     "nameId": "ARAM_Upgrade_Cutlass",
     "name": "해적검 업그레이드",
     "rarity": "silver",
-    "desc": null,
+    "desc": "망령 해적검 및 생명선의 재사용 대기시간이 @UpgradeCD@초로 감소합니다. 사용 시 피해량이 @DamageAmp*100@% 증폭됩니다. 250골드를 획득합니다.",
     "icon": "1317.png"
   },
   {
@@ -996,7 +996,7 @@
     "nameId": "ARAM_Upgrade_ZH",
     "name": "존야 업그레이드",
     "rarity": "silver",
-    "desc": null,
+    "desc": "존야의 모래시계 재사용 대기시간이 @UpgradeCD@초로 감소합니다. 이제 존야의 모래시계, 추적자의 팔목 보호대 또는 우글렛의 마녀모자 경직 상태에서 이동할 수 있으며 이동 속도가 증가합니다. 250골드를 획득합니다.",
     "icon": "1318.png"
   },
   {
@@ -1004,7 +1004,7 @@
     "nameId": "ARAM_Upgrade_Immolate",
     "name": "불사르기 업그레이드",
     "rarity": "silver",
-    "desc": null,
+    "desc": "공허한 광휘 및 태양불꽃 방패가 불사르기 효과가 적용된 대상 수에 비례하여 @GoldPerTick@골드를 제공합니다. 250골드를 획득합니다.",
     "icon": "1319.png"
   },
   {
@@ -1012,7 +1012,7 @@
     "nameId": "ARAM_Upgrade_Collector",
     "name": "징수의 총 업그레이드",
     "rarity": "silver",
-    "desc": null,
+    "desc": "징수의 총 기본 지속 효과로 적을 처형하면 처형 기준치가 높아지며 추가 골드를 얻습니다. 250골드를 획득합니다.",
     "icon": "1320.png"
   },
   {
@@ -1020,7 +1020,7 @@
     "nameId": "Gash",
     "name": "깊은 상처",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "공격 속도가 @AS*100@% 증가합니다. 방어력%i:scaleArmor%에 비례해 적중 시%i:OnHit% 고정 피해를 입힙니다.",
     "icon": "1321.png"
   },
   {
@@ -1028,7 +1028,7 @@
     "nameId": "ARAM_GetExcited",
     "name": "신난다!",
     "rarity": "gold",
-    "desc": null,
+    "desc": "처치 관여 시 @BuffDuration@초 동안 이동 속도 및 공격 속도를 얻습니다.",
     "icon": "1322.png"
   },
   {
@@ -1036,7 +1036,7 @@
     "nameId": "ARAM_Cruelty",
     "name": "잔혹 행위",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "챔피언을 이동 불가 상태로 만들거나 이동 스킬을 사용할 수 없게 하면 혜성을 소환합니다. 혜성은 잠시 후 떨어지며, 주변 적에게 마법 피해를 입힙니다.",
     "icon": "1323.png"
   },
   {
@@ -1044,7 +1044,7 @@
     "nameId": "ARAM_ProteinShake",
     "name": "프로틴 음료",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "추가 방어력 및 마법 저항력에 비례하여 %i:scaleHealShield%@BonusHSPower@%의 체력 회복 및 보호막 효과를 얻습니다.",
     "icon": "1324.png"
   },
   {
@@ -1052,7 +1052,7 @@
     "nameId": "GlassCannon",
     "name": "유리 대포",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "최대 체력이 @HPReductionPerc*100@% 감소합니다. 피해량의 @TrueDamagePercSplit@만큼 추가 고정 피해를 입힙니다.",
     "icon": "1325.png"
   },
   {
@@ -1060,7 +1060,7 @@
     "nameId": "Nightstalking",
     "name": "밤의 추적",
     "rarity": "gold",
-    "desc": null,
+    "desc": "자신이 피해를 입힌 챔피언이 @TakedownWindow@초 안에 죽으면 이동 속도가 증가하고 투명 상태가 됩니다.",
     "icon": "1326.png"
   },
   {
@@ -1068,7 +1068,7 @@
     "nameId": "Adamant",
     "name": "단호함",
     "rarity": "silver",
-    "desc": null,
+    "desc": "적을 이동 불가 상태로 만들거나 이동 스킬을 사용할 수 없게 할 때마다 방어력 및 마법 저항력을 얻습니다.",
     "icon": "1327.png"
   },
   {
@@ -1076,7 +1076,7 @@
     "nameId": "CriticalRhythm",
     "name": "치명적 리듬",
     "rarity": "gold",
-    "desc": null,
+    "desc": "기본 공격 시 치명타가 발동하면 공격 속도 중첩을 획득합니다. %i:scaleCrit% 치명타 확률을 @CritChance*100@% 획득합니다.",
     "icon": "1328.png"
   },
   {
@@ -1084,7 +1084,7 @@
     "nameId": "BiggestSnowballEver",
     "name": "데굴데굴 눈덩이!",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "눈덩이의 스킬 가속이 @Haste@만큼 증가합니다. 눈덩이가 거대해지고 미니언을 관통합니다. 눈덩이는 챔피언을 둔화시키고, 공중에 띄우며, 피해를 추가로 입힙니다. 눈덩이를 보유하지 않은 경우 눈덩이를 얻습니다.",
     "icon": "1329.png"
   },
   {
@@ -1092,7 +1092,7 @@
     "nameId": "ReEnergize",
     "name": "재충전",
     "rarity": "silver",
-    "desc": null,
+    "desc": "충전 상태 공격을 얻어 대상 현재 체력의 @TargetCurrentHealthRatio*100@%에 해당하는 피해를 입힙니다. 대상이 이전 대상과 다르면 충전을 모두 돌려받습니다.",
     "icon": "1330.png"
   },
   {
@@ -1100,7 +1100,7 @@
     "nameId": "EmpyreanPromise",
     "name": "창공의 서약",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "체력 회복 및 보호막 효과%i:scaleHealShield%가 @HSAmp*100@% 증가합니다. 창공의 서약 소환사 주문을 얻습니다. 경계 아군에게 순간이동하고, 착지 후 @ShieldDuration@초 동안 @ShieldAmount@의 피해를 흡수하는 보호막을 부여합니다.",
     "icon": "1331.png"
   },
   {
@@ -1108,7 +1108,7 @@
     "nameId": "OminousPact",
     "name": "불길한 서약",
     "rarity": "prismatic",
-    "desc": "지금 1레벨이 증가하고 두 라운드마다 추가로 1레벨이 증가합니다. 레벨 제한이 사라집니다. @RoundCounterForBonus@라운드 이후 이 증강을 선택할 경우, @BonusForLatePick@레벨이 추가로 증가합니다. 이 증강을 레벨 업하면 즉시 레벨이 오릅니다.",
+    "desc": "잃은 체력에 비례하여 주문력, 이동 속도, 모든 피해 흡혈을 얻지만, 스킬을 사용할 때마다 피해를 입습니다.",
     "icon": "1332.png"
   },
   {
@@ -1116,7 +1116,7 @@
     "nameId": "EscapePlan",
     "name": "도주 계획",
     "rarity": "silver",
-    "desc": null,
+    "desc": "체력이 @HealthThreshold*100@%가 되면 막대한 보호막, 이동 속도, 축소 효과를 얻습니다. 이러한 효과는 시간이 지나면 점차 사라집니다.",
     "icon": "1333.png"
   },
   {
@@ -1124,7 +1124,7 @@
     "nameId": "SnowballUpgrade",
     "name": "눈덩이 업그레이드",
     "rarity": "gold",
-    "desc": null,
+    "desc": "눈덩이의 스킬 가속이 @AbilityHaste@만큼 증가합니다. 적에게 눈덩이가 적중하면 눈이 내려 주변 적에게 광역 피해를 입히고 둔화시킵니다. 눈덩이를 보유하지 않은 경우 눈덩이를 얻습니다.",
     "icon": "1334.png"
   },
   {
@@ -1132,7 +1132,7 @@
     "nameId": "Goldrend",
     "name": "골드 강탈",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "기본 공격이나 스킬로 챔피언에게 피해를 입히면 추가 마법 피해를 입히고 골드를 획득하며 이동 속도가 증가합니다.",
     "icon": "1335.png"
   },
   {
@@ -1140,7 +1140,7 @@
     "nameId": "ARAM_Upgrade_IE",
     "name": "무한의 대검 업그레이드",
     "rarity": "gold",
-    "desc": null,
+    "desc": "500골드를 얻습니다. 무한의 대검을 보유하고 있으면 치명타 확률%i:scaleCrit%이 기본 공격 시 무작위로 치명타 피해량%i:scaleCritMult%을 부여합니다.",
     "icon": "1336.png"
   },
   {
@@ -1148,7 +1148,7 @@
     "nameId": "KingMe",
     "name": "나는 왕이다",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "전설급 아이템을 소지하고 처음으로 적 이동 수단을 사용하면 왕이 되어 아이템이 업그레이드되며, 무작위 프리즘 증강을 얻습니다.",
     "icon": "1337.png"
   },
   {
@@ -1156,7 +1156,7 @@
     "nameId": "ARAM_Upgrade_Hubris",
     "name": "오만 업그레이드",
     "rarity": "gold",
-    "desc": null,
+    "desc": "처치 관여 시, 오만이 체력을 회복시키고 이동 속도를 부여합니다. 두 효과 모두 명성 중첩에 비례하여 증가합니다. +%i:goldCoins% 250골드를 획득합니다.",
     "icon": "1338.png"
   },
   {
@@ -1164,7 +1164,7 @@
     "nameId": "LaserHeal",
     "name": "체력 회복 광선",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "2.5초 동안 광선을 발사해 아군에게는 체력을 회복시키고, 적에게는 마법 피해를 입히며 둔화시킵니다.",
     "icon": "1339.png"
   },
   {
@@ -1172,7 +1172,7 @@
     "nameId": "Upgrade_MikaelsBlessing",
     "name": "미카엘의 축복 업그레이드",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "미카엘의 축복을 획득합니다. 미카엘의 축복 재사용 대기시간이 @Cooldown@초로 감소합니다. 미카엘의 축복 사용 시 주변 아군 챔피언에게 파동을 발산하여 방해 및 이동 불가 효과를 정화하고 @HealCalc@의 체력을 회복시키며 @TenacityDuration@초 동안 @TenacityAmount*100@%의 강인함을 부여합니다.",
     "icon": "1340.png"
   },
   {
@@ -1180,7 +1180,7 @@
     "nameId": "HatOnAHat",
     "name": "모자 겹쳐쓰기",
     "rarity": "silver",
-    "desc": null,
+    "desc": "머리에 착용하는 아이템과 모자가 추가로 주문력 및 마법 저항력을 제공합니다.",
     "icon": "1341.png"
   },
   {
@@ -1188,7 +1188,7 @@
     "nameId": "SnowballRoulette",
     "name": "눈덩이 룰렛",
     "rarity": "gold",
-    "desc": null,
+    "desc": "눈덩이의 스킬 가속이 @AbilityHaste@만큼 증가합니다. 적을 맞추면 자신에게 무작위 이로운 소환사 주문을, 대상에게 해로운 소환사 주문을 사용합니다. 돌진하면 자신에게 이로운 소환사 주문을 재사용합니다. 눈덩이를 보유하지 않은 경우 눈덩이를 얻습니다.",
     "icon": "1342.png"
   },
   {
@@ -1196,7 +1196,7 @@
     "nameId": "Quest_Sneakerhead",
     "name": "신발 수집가",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "즉시: 한 쌍의 무작위 업그레이드 장화를 얻습니다. 조건: 해당 장화의 퀘스트를 완료하여 다음 퀘스트를 받으세요. 보상: 자르반 1세의 장화",
     "icon": "1343.png"
   },
   {
@@ -1204,7 +1204,7 @@
     "nameId": "FinalForm",
     "name": "최종 형태",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "궁극기를 사용하면 @AugDuration@초 동안 최대 체력 비례 보호막, 모든 피해 흡혈, 이동 속도를 얻습니다.",
     "icon": "1344.png"
   },
   {
@@ -1212,7 +1212,7 @@
     "nameId": "ARAM_SpiritualPurification",
     "name": "영혼의 정화",
     "rarity": "gold",
-    "desc": null,
+    "desc": "처치 관여 시 폭발을 일으켜 주변 다른 적을 @SlowAmount*100@% 둔화시키고 적 현재 체력에 비례하는 피해를 입힙니다.",
     "icon": "1345.png"
   },
   {
@@ -1220,7 +1220,7 @@
     "nameId": "Vampirism",
     "name": "흡혈병",
     "rarity": "gold",
-    "desc": null,
+    "desc": "아군이 자신의 체력을 회복시키거나 자신이 체력 재생을 얻을 수 없습니다. @OmniVamp*100@%의 모든 피해 흡혈 효과를 얻습니다.",
     "icon": "1346.png"
   },
   {
@@ -1228,7 +1228,7 @@
     "nameId": "Poltergeist",
     "name": "폴터가이스트",
     "rarity": "silver",
-    "desc": null,
+    "desc": "폴터가이스트 소환사 주문을 얻습니다. 폴터가이스트는 방어막과 유체화를 동시에 사용합니다.",
     "icon": "1347.png"
   },
   {
@@ -1236,7 +1236,7 @@
     "nameId": "Flash2",
     "name": "점멸 2",
     "rarity": "silver",
-    "desc": null,
+    "desc": "두 번째 점멸 소환사 주문을 얻고 소환사 주문 가속이 @SummonerHaste@ 증가합니다.",
     "icon": "1348.png"
   },
   {
@@ -1244,7 +1244,7 @@
     "nameId": "UltimateAwakening",
     "name": "궁극의 각성",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "궁극기 가속이 @AH@ 증가합니다. 궁극기 사용 시 기본 스킬이 초기화되고 @BuffDuration@초 동안 기본 스킬 가속이 @AdditionalHaste@ 증가합니다. (재사용 대기시간 @Cooldown@초)",
     "icon": "1349.png"
   },
   {
@@ -1252,7 +1252,7 @@
     "nameId": "ARAM_TankEngine",
     "name": "탱크 엔진",
     "rarity": "gold",
-    "desc": "크기가 @SizeIncrement*100@% 커지고 @f2@의 추가 체력을 얻습니다. (처치 관여당 @MaxHPIncrement*100@% (@f1@))",
+    "desc": "처치 관여 시 중첩을 얻어 크기가 커지고 최대 체력이 증가합니다. 사망 시 중첩을 잃습니다.",
     "icon": "1353.png"
   },
   {
@@ -1260,7 +1260,7 @@
     "nameId": "CriticalMissile",
     "name": "치명적 미사일",
     "rarity": "gold",
-    "desc": null,
+    "desc": "치명타 적중 시 미사일을 발사해 마법 피해를 입힙니다. %i:scaleCrit% 치명타 확률이 @CrtiChance*100@% 증가합니다.",
     "icon": "1356.png"
   },
   {
@@ -1268,7 +1268,7 @@
     "nameId": "PinballSnowball",
     "name": "핀볼",
     "rarity": "gold",
-    "desc": null,
+    "desc": "눈덩이의 스킬 가속이 증가하고 추가 고정 피해를 입힙니다. 눈덩이가 벽에 튕기면 크기와 피해량이 증가하고 재사용 대기시간이 감소합니다.",
     "icon": "1358.png"
   },
   {
@@ -1284,7 +1284,7 @@
     "nameId": "BabyKitty",
     "name": "엄마 찾는 아기 고양이",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "아군 옆에 서 있으면 해당 아군에게 자신의 엄마라는 표식을 남깁니다. 엄마를 향해 이동할 때 이동 속도를 얻습니다. 엄마 주위에 있으면 이동 속도, 체력 회복 및 보호막 효과를 얻습니다.",
     "icon": "1372.png"
   },
   {
@@ -1292,7 +1292,7 @@
     "nameId": "ShrinkEngine",
     "name": "축소 엔진",
     "rarity": "gold",
-    "desc": null,
+    "desc": "처치 관여 시 크기가 작아지고 스킬 가속 및 이동 속도를 얻습니다. 사망 시 중첩을 @PercentOfStacksLost*100@% 잃습니다.",
     "icon": "1373.png"
   },
   {
@@ -1300,7 +1300,7 @@
     "nameId": "SoulEater",
     "name": "영혼의 포식자",
     "rarity": "gold",
-    "desc": null,
+    "desc": "적 챔피언을 이동 불가 상태로 만들면 최대 체력을 @HealthGainPerStack@ 얻습니다. 두 번째 증강일 경우 @StartingHPIfSecondAugmentTT@의 체력으로 시작합니다.",
     "icon": "1375.png"
   },
   {
@@ -1308,7 +1308,7 @@
     "nameId": "Upgrade_SwordOfBlossom",
     "name": "꽃피는 새벽의 검 업그레이드",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "공격 속도를 @AttackSpeed*100@% 획득합니다. 적 챔피언 공격 시 꽃피는 새벽의 검 체력 회복량이 @PercentInc*100@%로 증가합니다.",
     "icon": "1379.png"
   },
   {
@@ -1316,7 +1316,7 @@
     "nameId": "Donation",
     "name": "후원",
     "rarity": "gold",
-    "desc": null,
+    "desc": "@GoldAmount@골드를 획득합니다. 묻지도 따지지도 않습니다.",
     "icon": "1384.png"
   },
   {
@@ -1332,7 +1332,7 @@
     "nameId": "InfiniteRecursion",
     "name": "무한 반복",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "스킬 가속을 @StartingHaste@+처치 관여당 @HastePerStack@ 얻습니다.",
     "icon": "1388.png"
   },
   {
@@ -1356,7 +1356,7 @@
     "nameId": "RedEnvelopes",
     "name": "붉은 봉투",
     "rarity": "gold",
-    "desc": null,
+    "desc": "붉은 봉투가 주변에 무작위로 나타납니다. 붉은 봉투를 주우면 골드를 획득하고 소량의 무작위 능력치를 얻습니다.",
     "icon": "1391.png"
   },
   {
@@ -1364,7 +1364,7 @@
     "nameId": "GoldenSnowball",
     "name": "신성한 눈덩이",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "눈덩이의 스킬 가속이 @Haste@만큼 증가합니다. 눈덩이로 돌진하면 잠시 무적 상태가 됩니다. 눈덩이를 보유하지 않은 경우 눈덩이를 얻습니다.",
     "icon": "1392.png"
   },
   {
@@ -1380,7 +1380,7 @@
     "nameId": "TrainOfTheDead",
     "name": "최후의 도시 대중교통",
     "rarity": "gold",
-    "desc": null,
+    "desc": "사망하면 처치자를 향해 열차를 발사합니다. 열차에 적중당한 적은 @Damage@의 물리 피해를 입습니다. 열차는 멈추지 않습니다.",
     "icon": "1400.png"
   },
   {
@@ -1388,7 +1388,7 @@
     "nameId": "GrowthSpurt",
     "name": "급속 성장",
     "rarity": "gold",
-    "desc": null,
+    "desc": "급속 성장 소환사 주문을 얻습니다. 급속 성장으로 급격히 크기가 커져 주변 적을 공중으로 띄워 올리고, 최대 체력을 얻습니다.",
     "icon": "1401.png"
   },
   {
@@ -1428,7 +1428,7 @@
     "nameId": "GrandmasChiliOil",
     "name": "할머니의 고추기름",
     "rarity": "gold",
-    "desc": null,
+    "desc": "적에게 기본 공격 및 스킬 적중 시 화상을 적용하고, 주변에 고추기름 웅덩이를 생성합니다. 고추기름은 체력을 회복시키고 적에게 화상을 적용합니다. 고추기름의 효과는 적용한 화상의 수에 비례해 강력해집니다.",
     "icon": "1406.png"
   },
   {
@@ -1444,7 +1444,7 @@
     "nameId": "Upgrade_Thornmail",
     "name": "가시 갑옷 업그레이드",
     "rarity": "silver",
-    "desc": null,
+    "desc": "전투에서 벗어나고 @ThornshieldCooldown@초 후 가시 갑옷 또는 덤불 조끼가 기본 공격 피해량을 추가로 반사하는 껍질을 생성합니다.",
     "icon": "1411.png"
   },
   {
@@ -1452,7 +1452,7 @@
     "nameId": "ARAM_StuckInHereWithMe",
     "name": "도망갈 수 없어",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "궁극기를 사용하면 주변 적을 도발하고 피해량 감소를 얻습니다. 궁극기 스킬 가속이 @UltimateHaste@ 증가합니다.",
     "icon": "1413.png"
   },
   {
@@ -1460,7 +1460,7 @@
     "nameId": "Dropybara_Active",
     "name": "카피바라 폭격",
     "rarity": "prismatic",
-    "desc": "{{Cherry_OrbitalLaser_Summary}} 이 라운드에 입힌 피해량: @f1@ 입힌 총 피해량: @f2@",
+    "desc": "궤도형 레이저 소환사 주문을 얻습니다. 잠시 후 궤도형 레이저로 최대 체력의 @DamagetoChampions*100@%에 해당하는 고정 피해를 입히고, 추가로 @GroundDuration@초 동안 @TotalDamageOverTimeTooltip@의 마법 피해를 입힙니다.",
     "icon": "1414.png"
   },
   {
@@ -1468,7 +1468,7 @@
     "nameId": "Twinfire",
     "name": "쌍둥이 불꽃",
     "rarity": "silver",
-    "desc": null,
+    "desc": "스킬 피해를 입히면 투사체 1+@AdditionalMis@개를 발사해 각각 @Damage@의 마법 피해를 입힙니다. %i:scaleCrit% 치명타 확률이 @CrtiChance*100@% 증가합니다.",
     "icon": "1415.png"
   },
   {
@@ -1476,7 +1476,7 @@
     "nameId": "HextechSoul",
     "name": "마법공학의 영혼",
     "rarity": "silver",
-    "desc": "스킬 또는 기본 공격으로 적을 공격할 때마다 추가 피해를 입히는 지옥불 영혼을 얻습니다.",
+    "desc": "주기적으로 스킬 또는 기본 공격으로 피해를 입히면 번개를 발사해 적에게 연쇄적으로 피해를 입히고 둔화시킵니다.",
     "icon": "1416.png"
   },
   {
@@ -1484,7 +1484,7 @@
     "nameId": "ARAM_CrackOpenThatEgg",
     "name": "알 깨기",
     "rarity": "silver",
-    "desc": null,
+    "desc": "보호막이 사라질 때 폭발합니다.",
     "icon": "1418.png"
   },
   {
@@ -1508,7 +1508,7 @@
     "nameId": "ARAM_MissingPingAugment",
     "name": "???",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "사라짐 신호를 보내면 신호 위치에 미사일을 발사해 적에게는 @BaseDmgCalc@+잃은 체력의 @DamageHPRatio*100@%만큼 마법 피해를 입히고 아군에게는 @BaseHealingCalc@+잃은 체력의 @HealingHPRatio*100@%만큼 체력을 회복시킵니다.",
     "icon": "1424.png"
   },
   {
@@ -1516,7 +1516,7 @@
     "nameId": "ARAM_Upgrade_Sheen",
     "name": "광휘의 검 업그레이드",
     "rarity": "gold",
-    "desc": null,
+    "desc": "주문 검 효과가 추가 피해를 입히고 대상 체력의 일정 비율만큼 자신의 체력을 회복시킵니다. 추가로 250골드를 획득합니다.",
     "icon": "1996.png"
   },
   {
@@ -1548,7 +1548,7 @@
     "nameId": "ARAM_EmpoweredByTheFaithful",
     "name": "신념을 통한 강화",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "아군을 상대로 체력을 회복시키거나 보호막을 씌우면 대상을 @Buff_Duration@초 동안 축복합니다. 축복받은 아군이 적 챔피언에게 피해를 입히면 헌신 중첩을 얻습니다. 헌신이 @Devotion_Threshold@중첩이 되면 충격파를 내보내 @Calc_Damage@의 마법 피해를 입히고 체력이 @Calc_Execute_Threshold@ 아래인 적을 처형합니다. 입힌 피해량: @f1.0@ 처치한 불신자: @f2.0@",
     "icon": "2004.png"
   },
   {
@@ -1556,7 +1556,7 @@
     "nameId": "ARAM_InfernoTriggered",
     "name": "지옥불 난사 발동",
     "rarity": "prismatic",
-    "desc": "라운드 시작 시 크기가 커져 적응형 능력치가 @ADAmp*100@%, 체력이 @HealthAmp*100@% 증가하거나 크기가 작아져 @Haste@의 스킬 가속을 얻고 이동 속도가 @MovespeedAmp*100@% 증가합니다.",
+    "desc": "이전 공격과 다른 기본 공격 또는 스킬로 적 챔피언에게 피해를 입히면 스타일(F~S)을 얻습니다. 스타일 등급마다 이동 속도를 @Calc_Style_MS_Per_Stack@ 얻습니다. 스타일이 S등급에 도달하면 스타일을 소모하고 총을 난사해 2초 동안 10회에 걸쳐 주변의 모든 적에게 공격을 퍼붓습니다. 각 사격은 @Calc_Damage_Per_Shot@의 물리 피해를 입힙니다. 체력이 @Calc_Crit_Threshold@ 아래인 적에게는 치명타가 적용되어 @Calc_Crit_Damage_Per_Shot@의 물리 피해를 입힙니다. 이 효과는 @Cooldown@초의 재사용 대기시간이 적용됩니다. 사격에는 생명력 흡수가 적용되며, 미니언을 대상으로 @MinionDamageMod*100@%의 피해를 입힙니다. 입힌 피해량: @f1.0@ 지옥불 난사 발동: @f2.0@",
     "icon": "2005.png"
   },
   {
@@ -1564,7 +1564,7 @@
     "nameId": "ARAM_Dropkick",
     "name": "드롭킥",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "기본 공격 및 스킬이 체력이 최대 체력의 @Calc_Execute_Threshold@ 아래인 적 챔피언을 처형하고, 체력을 @Calc_Heal@ 회복하며 대상을 뒤로 밀어냅니다. 대상이 적 또는 지형과 충돌하거나 한계에 도달하면 밀려난 적이 폭발해 주변 적에게 @Calc_Damage@의 마법 피해를 입힙니다. 이 폭발은 연쇄적으로 일어날 수 있습니다. 드롭킥에 맞은 적: @f3.0@ 체력 획득량: 총 @f2.0@ 입힌 피해량: @f1.0@",
     "icon": "2006.png"
   },
   {
@@ -1572,7 +1572,7 @@
     "nameId": "ARAM_LittleDevil",
     "name": "어깨 위의 악마",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "작은 악마와 직접 계약을 맺었습니다. 작은 악마는 매초 현재 체력의 @Calc_Drain_Per_Second_Non_Combat@만큼 체력을 흡수하며, 주변에 적이 있을 경우 흡수량은 @Calc_Drain_Per_Second@까지 증가합니다. 이에 대한 보상으로 작은 악마는 기본 공격 및 스킬을 강화해, 추가로 @Calc_Damage_Amp@의 고정 피해를 입히고 주변에 @Remnant_Duration@초 동안 생명의 파편을 생성합니다. 생명의 파편을 흡수하면 @Calc_Remnant_Healing@의 체력을 회복하고 @Move_Speed_Duration@초 동안 이동 속도가 @Calc_Move_Speed@ 증가합니다. 체력 흡수: @f1.0@ 입힌 피해량: @f2.0@ 획득한 파편: @f4.0@ 체력 회복량: @f5.0@ 지속 피해는 @DotDamageCooldown@초에 한 번씩만 효과를 발동시킵니다.",
     "icon": "2007.png"
   },
   {
@@ -1580,7 +1580,7 @@
     "nameId": "ARAM_WeightedPopoffs",
     "name": "중량 폭주",
     "rarity": "silver",
-    "desc": null,
+    "desc": "스킬로 적 챔피언을 타격하면 @Stack_Duration@초 동안 폭주 중첩을 얻습니다. (최대 @Stacks_Max@) 폭주 중첩당 기본 스킬 재사용 대기시간이 @Calc_Cooldown_Acceleration@ 감소하며 이 감소량은 @Stacks_Max@중첩일 때 @Calc_Cooldown_Acceleration_Maximum@까지 증가합니다. 재사용 대기시간 가속: @f1.1@",
     "icon": "2008.png"
   },
   {
@@ -1588,7 +1588,7 @@
     "nameId": "ARAM_Zealot",
     "name": "광신자",
     "rarity": "silver",
-    "desc": null,
+    "desc": "치명타 확률을 @Calc_Crit_Chance@, 공격 속도를 @Calc_AS@ 얻습니다.",
     "icon": "2009.png"
   },
   {
@@ -1596,7 +1596,7 @@
     "nameId": "ARAM_DoubleTap",
     "name": "한 발에 두 놈",
     "rarity": "prismatic",
-    "desc": "기본 공격 시 @AttackReduction*100@%의 피해를 입히고 {{ Item_Keyword_OnHit }} 효과를 @OnHitMod*100@%만큼 적용하는 투사체를 발사합니다. 총 공격 속도가 @AttackSpeed*100@% 증가합니다.",
+    "desc": "치명타 발동 시 %i:OnHit% 적중 시 효과를 한 번 더 적용합니다. %i:scaleCrit% 치명타 확률을 @Calc_Crit_Chance@ 획득합니다.",
     "icon": "2010.png"
   },
   {
@@ -1604,7 +1604,7 @@
     "nameId": "ARAM_Juiced",
     "name": "도취",
     "rarity": "silver",
-    "desc": null,
+    "desc": "%i:OnHit% 적중 시 @Calc_Damage@의 마법 피해를 입힙니다. 이 피해에는 치명타가 적용될 수 있습니다.",
     "icon": "2016.png"
   },
   {
@@ -1612,7 +1612,7 @@
     "nameId": "ARAM_Purist_Caster",
     "name": "순수주의자 - 마법사",
     "rarity": "silver",
-    "desc": null,
+    "desc": "백분율 기반 재사용 대기시간 감소를 얻고 모든 공격 속도를 스킬 가속으로 전환합니다.",
     "icon": "2018.png"
   },
   {
@@ -1620,7 +1620,7 @@
     "nameId": "CritNCast",
     "name": "치명적 가속",
     "rarity": "silver",
-    "desc": null,
+    "desc": "%i:scaleCrit% 치명타 확률의 @CritToHasteConversion*100@%에 해당하는 스킬 가속을 얻습니다.",
     "icon": "2024.png"
   },
   {
@@ -1636,7 +1636,7 @@
     "nameId": "ARAM_DropBear",
     "name": "곰 투하",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "사망 시, 플레이어의 증강을 모두 지닌 거대 티버가 하늘에서 떨어져 주변 적에게 피해를 입힙니다.",
     "icon": "2031.png"
   },
   {
@@ -1644,7 +1644,7 @@
     "nameId": "FishBait",
     "name": "상어 미끼",
     "rarity": "gold",
-    "desc": null,
+    "desc": "사망 몇 초 후 상어가 주변 모든 적을 물어뜯습니다. 사망 후에도 이동하여 상어 공격의 대상을 정할 수 있습니다.",
     "icon": "2032.png"
   },
   {
@@ -1652,7 +1652,7 @@
     "nameId": "SharkTempest",
     "name": "상어 폭풍",
     "rarity": "gold",
-    "desc": null,
+    "desc": "상어가 눈덩이 주위를 돌며 통과하는 적을 둔화시키고 @BaseDamageTotal@의 마법 피해를 입힙니다. 눈덩이가 챔피언에게 적중하면 상어가 대상에게 고정되어 상어 폭풍을 일으킵니다. 상어 폭풍은 매초 @AttachedDamagePerSecond@의 마법 피해를 입히고 주변 적을 @AttachedSlowDuration@초 동안 @SlowStrengthTT*100@% 둔화시킵니다.",
     "icon": "2034.png"
   },
   {
@@ -1660,7 +1660,7 @@
     "nameId": "BrushPower",
     "name": "Hide on bush",
     "rarity": "gold",
-    "desc": null,
+    "desc": "수풀에 들어가면 @BuffDuration@초 동안 수풀의 힘을 얻습니다. 수풀의 힘이 활성화된 동안 피해량이 @DamageAmplification*100@% 증가합니다. 입힌 피해량: @f1@ 수풀에 있으면 수풀의 힘이 초기화됩니다.",
     "icon": "2042.png"
   },
   {
@@ -1668,7 +1668,7 @@
     "nameId": "NatureIsHealing",
     "name": "자연의 회복",
     "rarity": "gold",
-    "desc": null,
+    "desc": "수풀에 들어가면 @FlatHeal@+잃은 체력의 @MissingHealthHeal@만큼 체력을 회복합니다. 수풀마다 @BrushCooldown@초의 재사용 대기시간이 적용됩니다. 체력 회복량: 총 @f1.0@",
     "icon": "2043.png"
   },
   {
@@ -1684,7 +1684,7 @@
     "nameId": "SpellVolley",
     "name": "3연발",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬이 전방에 있는 적 2명을 추가로 대상 지정합니다.",
     "icon": "2054.png"
   },
   {
@@ -1700,7 +1700,7 @@
     "nameId": "Ability_SelfAOE_DoubleCast",
     "name": "메아리 시전",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬을 사용하면 마우스 커서 위치로 분신을 보내고 스킬을 재사용합니다.",
     "icon": "2062.png"
   },
   {
@@ -1732,7 +1732,7 @@
     "nameId": "Missile_Split",
     "name": "주문 분산",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "{{SpellName}} 투사체가 적중하거나 최대 사거리에 도달하거나 재사용 시 두 개로 나뉩니다.",
     "icon": "2072.png"
   },
   {
@@ -1748,7 +1748,7 @@
     "nameId": "TitansPulse",
     "name": "확고한 의지로",
     "rarity": "silver",
-    "desc": null,
+    "desc": "{{Spellname}} 스킬로 적 챔피언에게 피해를 입히면 방어력 및 마법 저항력이 @ARMR_Inc@ 증가합니다.",
     "icon": "2076.png"
   },
   {
@@ -1756,7 +1756,7 @@
     "nameId": "DarkWind",
     "name": "굶주린 속박",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 적 챔피언을 이동 불가 상태로 만들거나 이동 스킬을 사용할 수 없게 하면 추가로 @Damage@의 마법 피해를 입히고 @f3@의 체력을 회복합니다. 피해량: 총 @f2@ 최소 체력 회복량: @Heal@ 체력 회복량: 총 @f1@ 체력 회복량은 스킬 재사용 대기시간에 비례해 @BonusHealingPercent_Max*100@%까지 증가합니다.",
     "icon": "2077.png"
   },
   {
@@ -1764,7 +1764,7 @@
     "nameId": "ChainReaction",
     "name": "연쇄 반응",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 뒤로 밀어낸 대상이 다른 챔피언과 부딪히면 둘 다 공중에 뜨고 피해를 입습니다. 지형에 충돌하면 공중에 뜨는 시간이 길어지고 추가 피해를 입습니다.",
     "icon": "2078.png"
   },
   {
@@ -1780,7 +1780,7 @@
     "nameId": "Equilibrium",
     "name": "우리의 치유",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{Kiwi_Augment_Equilibrium_Summary}}",
     "icon": "2082.png"
   },
   {
@@ -1788,7 +1788,7 @@
     "nameId": "BurstingTeeth",
     "name": "이빨 요정",
     "rarity": "gold",
-    "desc": null,
+    "desc": "@BurstDurationCheck@초 안에 적 챔피언 체력의 @BurstRequirement@ 이상 피해를 입히면 해당 적이 이빨을 떨어뜨립니다. @f1@개의 이빨 수집품이 현재 물리 관통력을 @LethalityPerTooth@, 마법 관통력을 @MPenPerTooth@ 부여합니다. 대상당 @PerTargetCooldown@초의 재사용 대기시간이 적용됩니다.",
     "icon": "2083.png"
   },
   {
@@ -1796,7 +1796,7 @@
     "nameId": "ARAM_Archmage",
     "name": "대마법사",
     "rarity": "prismatic",
-    "desc": "스킬 가속이 @APToHasteConversionCalc@ 증가합니다.",
+    "desc": "스킬을 사용하면 사용한 스킬 재사용 대기시간의 @RefundPercent*100@%만큼 다른 무작위 스킬의 재사용 대기시간을 반환합니다.",
     "icon": "2087.png"
   },
   {
@@ -1804,7 +1804,7 @@
     "nameId": "ARAM_Snowday",
     "name": "눈 오는 날",
     "rarity": "silver",
-    "desc": null,
+    "desc": "눈덩이 스킬 가속이 100 증가합니다. 적 적중 시 마법 피해를 추가로 입힙니다. 눈덩이를 보유하지 않은 경우 눈덩이를 얻습니다.",
     "icon": "2088.png"
   },
   {
@@ -1820,7 +1820,7 @@
     "nameId": "EndlessDecimation",
     "name": "끝없는 학살",
     "rarity": "gold",
-    "desc": null,
+    "desc": "전투 중 자동 사용으로 도끼를 원형으로 휘둘러 물리 피해를 입힙니다. 바깥쪽 칼날에 적 적중 시 추가 피해를 입히고 체력을 회복합니다.",
     "icon": "2091.png"
   },
   {
@@ -1828,7 +1828,7 @@
     "nameId": "ARAM_HighRoller",
     "name": "도박꾼",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "주변 적이 죽을 때 일정 확률로 능력치 모루를 떨어뜨립니다.",
     "icon": "2095.png"
   },
   {
@@ -1836,7 +1836,7 @@
     "nameId": "LittleExtraHelp",
     "name": "작은 도움",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 지속시간 동안 공격 사거리가 @RangeIncrease@, 공격 속도가 @ExtraAttackSpeed@ 증가합니다.",
     "icon": "2096.png"
   },
   {
@@ -1844,7 +1844,7 @@
     "nameId": "VoidDash",
     "name": "공허 돌진",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{Spellname}} 스킬로 돌진 시 적 챔피언을 둔화시키고 마법 피해를 입히는 공허 지대를 생성합니다.",
     "icon": "2097.png"
   },
   {
@@ -1860,7 +1860,7 @@
     "nameId": "ARAM_DivineDomain",
     "name": "초월 의식",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "적 챔피언에게 피해를 입힌 후 @Kill_Track_Duration@초 안에 해당 챔피언 처치에 관여하면 @Soul_Duration@초 동안 정수를 남깁니다. 정수를 공격하면 소모됩니다. 정수를 소모하면 해당 위치로 순간적으로 이동하며 대상 지정 불가 및 저지 불가 상태가 되고, 이동 속도가 @Calc_Move_Speed@ 증가했다가 @Move_Speed_Duration@초에 걸쳐 원래대로 돌아오며, 잃은 체력에 비례해 @Calc_Heal_Min@~@Calc_Heal_Max@의 체력을 회복합니다. 또한 기본 스킬의 재사용 대기시간이 초기화됩니다. 체력 회복량: @f1.0@ 돌려받은 재사용 대기시간: @f3.0@ 오늘, 경들은 초월의 힘을 목도하게 될 것이네! - 사막의 황제 아지르",
     "icon": "2099.png"
   },
   {
@@ -1884,7 +1884,7 @@
     "nameId": "ARAM_BangBang",
     "name": "초장거리 저격",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{Augment_BangBang_Tooltip@f3@}} 빵야! 빵야! 멋진 사격이군요!",
     "icon": "2103.png"
   },
   {
@@ -1892,7 +1892,7 @@
     "nameId": "ARAM_SpiritBomb",
     "name": "영혼 폭탄",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "체력을 회복시키거나 보호막을 씌우면 영혼 폭탄이 중첩됩니다. 최대 중첩 시 체력이 가장 낮은 아군에게 영혼 폭탄을 던집니다. 폭탄이 대상에게 도달하면 주변 아군 체력을 잃은 체력의 @Calc_Heal@만큼 회복시키고 @Shield_Duration@초 동안 현재 체력의 @Calc_Shield@에 해당하는 보호막을 부여합니다. 던진 영혼 폭탄: @f1.0@ 체력 회복량: @f2.0@ 보호막 흡수량: @f3.0@",
     "icon": "2104.png"
   },
   {
@@ -1900,7 +1900,7 @@
     "nameId": "ARAM_Hellbent",
     "name": "열의",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "기본 공격 또는 스킬로 적 챔피언을 타격하면 @Stacks_Duration@초 동안 부활 극대화 중첩을 얻습니다. 최대 @Stacks_Max@회 중첩되며, 최대 중첩 시 열의 상태가 됩니다. 열의: 사망 시 @Revive_Duration@초에 걸쳐 @Calc_Revive_Max_Health@의 최대 체력으로 부활합니다. 이후 @Buff_Duration@초 동안 적응형 능력치를 @Calc_AdaptiveForce@ 얻고 적 챔피언을 향해 이동 시 이동 속도가 @Calc_MoveSpeed@ 증가하며 모든 피해 흡혈을 @Calc_Omnivamp@ 얻습니다. @Cooldown@초의 재사용 대기시간이 적용됩니다.",
     "icon": "2107.png"
   },
   {
@@ -1908,7 +1908,7 @@
     "nameId": "SupportMain",
     "name": "서포터 주력",
     "rarity": "silver",
-    "desc": null,
+    "desc": "퀘스트: 아군 챔피언의 체력을 @QuestRequirement@ 회복시켜야 합니다. 보상: 이제 내 모든 체력 회복 효과가 @HealDuration@초 동안 최초 체력 회복량의 @HealPercent@%에 해당하는 지속 체력 회복 효과를 부여합니다. 체력 회복량: @QuestProgress@/@QuestRequirement@",
     "icon": "2108.png"
   },
   {
@@ -1916,7 +1916,7 @@
     "nameId": "SnapBack",
     "name": "원상복구",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 재사용 시 폭발하며 원래 위치로 돌아갑니다.",
     "icon": "2109.png"
   },
   {
@@ -1924,7 +1924,7 @@
     "nameId": "Bonk",
     "name": "꽁!",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 효과로 강화된 기본 공격과 스킬이 대상 및 주변 적에게 추가로 피해를 입힙니다.",
     "icon": "2111.png"
   },
   {
@@ -1932,7 +1932,7 @@
     "nameId": "SquishySlappyGrab",
     "name": "말랑 찰싹 손",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "때때로 주변 모든 적 챔피언에게 말랑 찰싹 손을 내보내 연결합니다. 다음 기본 공격 시 연결된 모든 적을 끌어당깁니다.",
     "icon": "2115.png"
   },
   {
@@ -1940,7 +1940,7 @@
     "nameId": "SpecializedEmpowerment",
     "name": "위력 추구",
     "rarity": "gold",
-    "desc": "기본 공격 시 @APDamage@의 물리 피해를 추가로 입힙니다.",
+    "desc": "{{Augment_SpecializedEmpowerment_Tooltip@f6@}}",
     "icon": "2116.png"
   },
   {
@@ -1956,7 +1956,7 @@
     "nameId": "Overextender",
     "name": "무리한 진입",
     "rarity": "gold",
-    "desc": null,
+    "desc": "귀환하여 대포 발사기에 탑승하세요. 발사기의 사거리, 이동 속도, 피해량이 대폭 증가했습니다.",
     "icon": "2119.png"
   },
   {
@@ -1964,7 +1964,7 @@
     "nameId": "Overloaded",
     "name": "과충전",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "다른 스킬 사용 시 {{SpellName}} 재사용 대기시간이 초기화됩니다.",
     "icon": "2123.png"
   },
   {
@@ -1972,7 +1972,7 @@
     "nameId": "ItsGoTime",
     "name": "출발할 시간",
     "rarity": "silver",
-    "desc": null,
+    "desc": "{{SpellName}} 사용 시 지속시간 동안 이동 속도가 증가합니다.",
     "icon": "2125.png"
   },
   {
@@ -1980,7 +1980,7 @@
     "nameId": "KeepGoing",
     "name": "재장전",
     "rarity": "gold",
-    "desc": "총 공격 속도가 @TotalASValue*100@% 증가합니다. 초당 공격 횟수 @Breakpoint1@회에서 마법 피해({{ Item_Keyword_OnHit }})가 @OnHitDamage@ 증가합니다. 총 공격 속도가 추가 공격 속도의 증가율로 계산됩니다. 적에게 입힌 적중 시 마법 피해: @f1@",
+    "desc": "{{SpellName}} 지속시간 동안 기본 공격 {{ Item_Keyword_OnHit }} 재사용 대기시간이 감소합니다.",
     "icon": "2126.png"
   },
   {
@@ -1988,7 +1988,7 @@
     "nameId": "ForgedByTheMaster",
     "name": "장인의 솜씨",
     "rarity": "silver",
-    "desc": null,
+    "desc": "아이템 및 증강으로 입히는 피해량이 @Calc_Damage_Amp@ 증가합니다.",
     "icon": "2127.png"
   },
   {
@@ -1996,7 +1996,7 @@
     "nameId": "BloodMoneyBurn",
     "name": "타오르는 이자",
     "rarity": "gold",
-    "desc": null,
+    "desc": "챔피언에게 적용한 화상 및 지속 피해 효과가 골드를 생성합니다.",
     "icon": "2128.png"
   },
   {
@@ -2004,7 +2004,7 @@
     "nameId": "Terraind",
     "name": "지형 생성됨",
     "rarity": "gold",
-    "desc": "총 공격 속도가 @TotalASValue*100@% 증가합니다. 초당 공격 횟수 @Breakpoint1@회에서 마법 피해({{ Item_Keyword_OnHit }})가 @OnHitDamage@ 증가합니다. 총 공격 속도가 추가 공격 속도의 증가율로 계산됩니다. 적에게 입힌 적중 시 마법 피해: @f1@",
+    "desc": "{{SpellName}} 스킬이 주변 지역에 피해를 입힙니다.",
     "icon": "2129.png"
   },
   {
@@ -2012,7 +2012,7 @@
     "nameId": "DontChangeTheChannel",
     "name": "채널 고정",
     "rarity": "silver",
-    "desc": null,
+    "desc": "정신 집중 시 매초 보호막을 얻습니다.",
     "icon": "2131.png"
   },
   {
@@ -2020,7 +2020,7 @@
     "nameId": "WarlockJuicebox",
     "name": "마도사의 주스 상자",
     "rarity": "gold",
-    "desc": null,
+    "desc": "모든 피해 흡혈을 @Calc_Vamp@ 얻습니다.",
     "icon": "2132.png"
   },
   {
@@ -2028,7 +2028,7 @@
     "nameId": "MercysStrike",
     "name": "자비의 일격",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 아군의 체력을 회복시키거나 보호막을 부여하면 다음 기본 공격 시 공격 사거리와 공격 속도가 증가하고 추가로 최대 체력 비례 마법 피해를 입힙니다.",
     "icon": "2133.png"
   },
   {
@@ -2036,7 +2036,7 @@
     "nameId": "SurgeField",
     "name": "방출 역장",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "궁극기 사용 시 스킬 가속과 이동 속도를 부여하는 영역을 생성합니다. 영역 내부에 있는 동안 투사체를 발사해 피해량의 @MissileDamagePercent*100@%만큼 피해를 입힙니다.",
     "icon": "2134.png"
   },
   {
@@ -2044,7 +2044,7 @@
     "nameId": "Overkill",
     "name": "바늘꽂이",
     "rarity": "prismatic",
-    "desc": "치명적 속도와 정복자 핵심 룬을 얻습니다. 치명적 속도 - 챔피언을 기본 공격하면 공격 속도가 증가합니다. 이 효과는 6회까지 중첩됩니다. 6회 중첩되면 기본 공격 시 투사체를 날려 추가 피해를 입힙니다. 정복자 - 챔피언에게 기본 공격 및 스킬 적중 시 적응형 능력치를 얻습니다. 이 효과는 12회까지 중첩됩니다. 12회 중첩되면 챔피언에게 입힌 피해의 일정 비율만큼 체력을 회복합니다.",
+    "desc": "{{SpellName}} 지속시간 동안 기본 공격 시 대상에게 대못을 박습니다. 대못은 피해량을 축적하고 처형하며 만료 시 이동 속도를 부여합니다.",
     "icon": "2135.png"
   },
   {
@@ -2052,7 +2052,7 @@
     "nameId": "TrustyWeapon",
     "name": "믿음직한 무기",
     "rarity": "silver",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 적 챔피언을 타격하면 우정의 결속이 형성됩니다. 우정 레벨에 따라 {{SpellName}} 피해량이 일시적으로 증가합니다.",
     "icon": "2136.png"
   },
   {
@@ -2060,7 +2060,7 @@
     "nameId": "PatOnTheBack",
     "name": "격려하기",
     "rarity": "gold",
-    "desc": null,
+    "desc": "근처를 지나갈 때 아군이 격려하며 보호막과 이동 속도를 부여합니다.",
     "icon": "2137.png"
   },
   {
@@ -2068,7 +2068,7 @@
     "nameId": "WardingWeapon",
     "name": "적응형 와드",
     "rarity": "silver",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 적 챔피언을 타격하면 대상의 피해 유형에 따라 @Buff_Duration@초 동안 방어력 또는 마법 저항력이 @Calc_Resists@ 증가합니다. 이 효과는 중첩될 수 있습니다.",
     "icon": "2138.png"
   },
   {
@@ -2076,7 +2076,7 @@
     "nameId": "PinCushion",
     "name": "고슴도치",
     "rarity": "gold",
-    "desc": null,
+    "desc": "챔피언에게 피해를 입으면 바늘 폭발이 축적되며, 이후 바늘이 튀어 나가 주변 적에게 피해를 입히고 둔화시킵니다.",
     "icon": "2139.png"
   },
   {
@@ -2108,7 +2108,7 @@
     "nameId": "DoubleDefense",
     "name": "보강",
     "rarity": "silver",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 부여되는 보호막이 더 강력해지며, 효과가 대상 잃은 체력에 비례합니다.",
     "icon": "2144.png"
   },
   {
@@ -2116,7 +2116,7 @@
     "nameId": "DoubleStrike",
     "name": "2연속 공격",
     "rarity": "silver",
-    "desc": null,
+    "desc": "적을 이동 불가 상태로 만들거나 이동 스킬을 사용할 수 없게 할 때마다 방어력 및 마법 저항력을 얻습니다.",
     "icon": "2148.png"
   },
   {
@@ -2132,7 +2132,7 @@
     "nameId": "GetJinxed",
     "name": "떴다, 징크스",
     "rarity": "gold",
-    "desc": null,
+    "desc": "소환사 주문이 떴다, 징크스!로 변경됩니다. 떴다, 징크스!: 적 챔피언, 구조물 또는 벽에 부딪히면 폭발하는 로켓에 올라탑니다. 폭발 반경 내의 적은 물리 피해를 입습니다.",
     "icon": "3004.png"
   },
   {
@@ -2140,7 +2140,7 @@
     "nameId": "ThirdTimesTheHarm",
     "name": "해악의 숫자 3",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "적 챔피언에게 연속해서 3회 기본 공격할 때마다 고정 피해를 입히고 이 효과의 피해량이 영구적으로 증가합니다.",
     "icon": "3016.png"
   },
   {
@@ -2148,7 +2148,7 @@
     "nameId": "BigShot",
     "name": "묵직한 한 방",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "치명타 피해량을 @Calc_Bonus_Crit_Damage@, 추가 공격력을 @Calc_Bonus_AD@ 얻습니다. 공격 속도의 @Calc_Percent_AS_To_Convert@에 해당하는 수치가 치명타 피해량으로 전환됩니다.",
     "icon": "3018.png"
   },
   {
@@ -2156,7 +2156,7 @@
     "nameId": "Sound_Barrier",
     "name": "음속 장벽",
     "rarity": "silver",
-    "desc": null,
+    "desc": "아군에게 보호막을 씌우면 @BurstDecayDuration@초에 걸쳐 점차 원래대로 돌아오는 이동 속도 및 유체화 효과를 얻습니다.",
     "icon": "3025.png"
   },
   {
@@ -2164,7 +2164,7 @@
     "nameId": "DoubleTime",
     "name": "더블 타임",
     "rarity": "gold",
-    "desc": null,
+    "desc": "적 챔피언에게 서로 다른 스킬 2개를 연달아 빠르게 사용해 피해를 입히면 마법 피해를 입히고 최대 마나를 얻습니다.",
     "icon": "3036.png"
   },
   {
@@ -2172,7 +2172,7 @@
     "nameId": "Salvation",
     "name": "구원",
     "rarity": "gold",
-    "desc": null,
+    "desc": "체력이 @HealthThresholdTooltipPercent@% 아래로 떨어질 만큼 피해를 입으면 충격파를 방출해 주변 적에게 피해를 입히고 뒤로 밀어내며, 주변 넓은 범위 내 모든 아군 챔피언의 체력을 회복시킵니다.",
     "icon": "3039.png"
   },
   {
@@ -2188,7 +2188,7 @@
     "nameId": "ArmoredImpact",
     "name": "장갑 충격",
     "rarity": "gold",
-    "desc": null,
+    "desc": "스킬 사용 후 다음 기본 공격 시 주변 적에게 @ArmorDamage@의 추가 물리 피해를 입힙니다.",
     "icon": "3049.png"
   },
   {
@@ -2196,7 +2196,7 @@
     "nameId": "BlueBarrier",
     "name": "푸른 방어막",
     "rarity": "silver",
-    "desc": null,
+    "desc": "사용한 마나%i:scaleMana%의 @ManaToShieldPercent@만큼 @ShieldDuration@초 동안 보호막을 얻습니다.",
     "icon": "3051.png"
   },
   {
@@ -2204,7 +2204,7 @@
     "nameId": "HandsOffTheTalent",
     "name": "아티스트 보호",
     "rarity": "silver",
-    "desc": null,
+    "desc": "최대 공격 사거리에 근접한 기본 공격은 적중 시 추가 물리 피해를 입힙니다.",
     "icon": "3052.png"
   },
   {
@@ -2212,7 +2212,7 @@
     "nameId": "MoshMonster",
     "name": "모시핏 괴물",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "{{SpellName}} 사용 시 {{SpellName}} 지속시간 동안 @InitialHPGain@의 추가 체력을 얻고 주변 적을 둔화시킵니다. 처치 관여 시 이 효과가 영구적으로 강화됩니다.",
     "icon": "3053.png"
   },
   {
@@ -2220,7 +2220,7 @@
     "nameId": "UltimateRecursion",
     "name": "궁극의 반복",
     "rarity": "silver",
-    "desc": null,
+    "desc": "궁극기 가속이 @UltimateHaste@ 증가합니다.",
     "icon": "3055.png"
   },
   {
@@ -2228,7 +2228,7 @@
     "nameId": "TickleMonster",
     "name": "간지럼 괴물",
     "rarity": "gold",
-    "desc": null,
+    "desc": "공격력%i:scaleAD%이 공격 속도%i:scaleAS%로 전환됩니다. 기본 공격 적중 시%i:OnHit% 추가 마법 피해를 입힙니다.",
     "icon": "3058.png"
   },
   {
@@ -2236,7 +2236,7 @@
     "nameId": "NoManaNoProblem",
     "name": "마나 없음, 상관없음",
     "rarity": "silver",
-    "desc": null,
+    "desc": "아이템으로 얻는 마나%i:scaleMana%가 주문력%i:scaleAP%으로 전환됩니다. 총주문력이 @APAmp*100@% 증가합니다.",
     "icon": "3059.png"
   },
   {
@@ -2244,7 +2244,7 @@
     "nameId": "OneHitWonder",
     "name": "원 히트 원더",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 피해량이 스킬 가속%i:scaleCooldown% @AHMultiplier@당 @Calc_AbilityDamagetoAH@% 증가하지만, 더 이상 스킬 가속%i:scaleCooldown% 효과를 받지 않습니다. 추가 피해량: @f1.1*100@%",
     "icon": "3060.png"
   },
   {
@@ -2252,7 +2252,7 @@
     "nameId": "GiftoftheDrowned",
     "name": "가라앉은 자의 축복",
     "rarity": "silver",
-    "desc": null,
+    "desc": "추가 체력%i:scaleHealth%이 물리 관통력%i:scaleAPen%으로 전환됩니다. 물리 관통력을 @Calc_BonusLethality@ 얻습니다.",
     "icon": "3063.png"
   },
   {
@@ -2260,7 +2260,7 @@
     "nameId": "BrassBlast",
     "name": "트럼펫 폭발",
     "rarity": "gold",
-    "desc": null,
+    "desc": "소환사 주문이 트럼펫 폭발로 변경됩니다. 트럼펫 폭발: 거대한 트럼펫에 힘을 모아 적을 뒤로 밀어내고 마법 피해를 입힙니다.",
     "icon": "3071.png"
   },
   {
@@ -2268,7 +2268,7 @@
     "nameId": "Recoil",
     "name": "고반동",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 피해량이 증가하고 사용 시 플레이어를 뒤로 밀어냅니다.",
     "icon": "3075.png"
   },
   {
@@ -2276,7 +2276,7 @@
     "nameId": "TheBoomAndTheBass",
     "name": "붐 앤 베이스",
     "rarity": "gold",
-    "desc": null,
+    "desc": "스킬을 사용하고 나면 다음 기본 공격이 빨라지고 추가 마법 피해를 입히며 점차 원래대로 돌아오는 이동 속도를 얻습니다.",
     "icon": "3078.png"
   },
   {
@@ -2284,7 +2284,7 @@
     "nameId": "Totentanz",
     "name": "죽음의 춤",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "소환사 주문이 {{Kiwi_Augment_Totentanz_Summoner_Name}}으로 변경됩니다. {{Kiwi_Augment_Totentanz_Summoner_Name}}: 전방으로 순간적으로 이동하여 불사 상태가 됩니다. @Buff_Duration@초 이내에 처치 관여를 달성하지 않으면 사망합니다.",
     "icon": "3079.png"
   },
   {
@@ -2292,7 +2292,7 @@
     "nameId": "WeaponOfDestiny",
     "name": "운명의 무기",
     "rarity": "gold",
-    "desc": null,
+    "desc": "첫 번째 전설급 아이템이 운명의 무기가 되어 챔피언 처치 관여마다 능력치가 증가합니다.",
     "icon": "3081.png"
   },
   {
@@ -2300,7 +2300,7 @@
     "nameId": "FlowOfSpirit",
     "name": "영혼의 흐름",
     "rarity": "silver",
-    "desc": null,
+    "desc": "{{SpellName}} 사용 시 지속시간 동안 공격 속도%i:scaleAS%를 얻습니다.",
     "icon": "3085.png"
   },
   {
@@ -2308,7 +2308,7 @@
     "nameId": "BEES",
     "name": "벌이다!!!",
     "rarity": "gold",
-    "desc": null,
+    "desc": "주기적으로 적 챔피언에게 적중하는 다음 스킬이 벌집을 날립니다. 벌집은 폭발하여 잠시 대상을 둔화시키고 마법 피해를 입힙니다. 벌은 적중 시%i:OnHit% 효과를 적용합니다.",
     "icon": "3086.png"
   },
   {
@@ -2316,7 +2316,7 @@
     "nameId": "CrimsonCobalt",
     "name": "핏빛 코발트",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬 피해를 입은 적 챔피언에게 표식이 남습니다. 표식이 있는 적 기본 공격 시 추가 마법 피해를 입히고 {{SpellName}} 재사용 대기시간이 감소합니다.",
     "icon": "3088.png"
   },
   {
@@ -2324,7 +2324,7 @@
     "nameId": "LichBrain",
     "name": "리치 두뇌",
     "rarity": "silver",
-    "desc": null,
+    "desc": "주문력을 @Calc_AP@ 얻습니다.",
     "icon": "3094.png"
   },
   {
@@ -2332,7 +2332,7 @@
     "nameId": "TakeemDownDownDown",
     "name": "전부 다 무너뜨려",
     "rarity": "gold",
-    "desc": null,
+    "desc": "기본 공격 및 스킬이 적 챔피언에게 추가 마법 피해를 입히고 중첩을 적용합니다. 최대 중첩 시 중첩을 모두 소모하여 잃은 체력에 비례한 마법 피해를 입히고, 입힌 피해량에 비례해 체력을 회복합니다.",
     "icon": "3116.png"
   },
   {
@@ -2340,7 +2340,7 @@
     "nameId": "ArcaneAxiom",
     "name": "비전 원칙",
     "rarity": "gold",
-    "desc": null,
+    "desc": "자신이 피해를 입힌 챔피언이 @ResetWindow@초 안에 죽으면 궁극기 전체 재사용 대기시간의 일부를 돌려받습니다.",
     "icon": "3118.png"
   },
   {
@@ -2348,7 +2348,7 @@
     "nameId": "Fruitify",
     "name": "과일화",
     "rarity": "silver",
-    "desc": null,
+    "desc": "처치 관여 시 과일이 폭발합니다. 과일은 체력 및 마나를 회복시킵니다.",
     "icon": "3121.png"
   },
   {
@@ -2356,7 +2356,7 @@
     "nameId": "JeweledBracelet",
     "name": "보석 팔찌",
     "rarity": "gold",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬에 치명타가 적용될 수 있습니다. 치명타 확률%i:scaleCrit%을 @CritChance@ 얻습니다.",
     "icon": "3123.png"
   },
   {
@@ -2364,7 +2364,7 @@
     "nameId": "SapMagic",
     "name": "마법 흡수",
     "rarity": "gold",
-    "desc": null,
+    "desc": "@TimeLockout@초마다 다음 기본 공격 {{ Item_Keyword_OnHit }} 추가 물리 피해를 입히고 체력을 회복합니다. 스킬을 사용하면 이 효과의 재사용 대기시간이 감소합니다.",
     "icon": "3129.png"
   },
   {
@@ -2372,7 +2372,7 @@
     "nameId": "StillHere",
     "name": "죽지 않아",
     "rarity": "gold",
-    "desc": null,
+    "desc": "잃은 체력%i:scaleHealth%에 비례해 공격 속도%i:scaleAS% 및 생명력 흡수%i:scaleLS%를 얻습니다.",
     "icon": "3131.png"
   },
   {
@@ -2380,7 +2380,7 @@
     "nameId": "HeavyIsTheCrown",
     "name": "왕관의 무게",
     "rarity": "gold",
-    "desc": null,
+    "desc": "공격력%i:scaleAD%, 주문력%i:scaleAP%, 공격 속도%i:scaleAS%가 증가하지만, 이동 속도가 감소합니다. 처치 관여 시 부담 중첩을 얻고 효과가 증가합니다. 사망 시 중첩의 절반을 잃습니다.",
     "icon": "3132.png"
   },
   {
@@ -2388,7 +2388,7 @@
     "nameId": "LonelyWarrior",
     "name": "고독한 전사",
     "rarity": "silver",
-    "desc": null,
+    "desc": "주변에 있는 적 챔피언 한 명당 공격 속도%i:scaleAS%, 방어력%i:scaleAR%, 마법 저항력%i:scaleMR%을 얻습니다.",
     "icon": "3134.png"
   },
   {
@@ -2396,7 +2396,7 @@
     "nameId": "GroupHug",
     "name": "단체 포옹",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "{{SpellName}} 스킬로 아군 챔피언의 체력을 회복시키거나 보호막을 씌우면 추가로 주변 다른 아군 챔피언 @TargetToPick@명에게 동일한 스킬을 사용합니다.",
     "icon": "3149.png"
   },
   {
@@ -2404,7 +2404,7 @@
     "nameId": "Upgrade_Stormsurge",
     "name": "폭풍 쇄도 업그레이드",
     "rarity": "gold",
-    "desc": null,
+    "desc": "이제 폭풍 쇄도의 질풍이 항상 폭발하여 범위 내에 최대 체력에 비례한 마법 피해를 입힙니다. 최초 폭발에 휩쓸린 적 챔피언은 질풍 표식이 남습니다. @Gold@골드%i:goldCoins%를 획득합니다.",
     "icon": "3150.png"
   },
   {
@@ -2420,7 +2420,7 @@
     "nameId": "EnchantingButterflies",
     "name": "황홀한 나비",
     "rarity": "gold",
-    "desc": null,
+    "desc": "아군 챔피언의 체력을 회복시키거나 보호막을 씌우면 나비가 모입니다. 나비 @MaxButterfly@마리를 모은 후, 적 챔피언에게 피해를 입히면 모든 나비가 날아가 마법 피해를 입힙니다.",
     "icon": "3163.png"
   },
   {
@@ -2428,7 +2428,7 @@
     "nameId": "Upgrade_ZzRotPortal",
     "name": "업그레이드: 즈롯 차원문",
     "rarity": "silver",
-    "desc": null,
+    "desc": "즈롯 차원문이 미니언을 @BaseMinionAdd@마리 및 @LevelsPerMinion@레벨당 1마리 추가로 소환합니다. 또한 차원문이 파괴될 때 미니언을 소환합니다.",
     "icon": "7001.png"
   },
   {
@@ -2436,7 +2436,7 @@
     "nameId": "DontStopCleavin",
     "name": "끝없는 양날 베기",
     "rarity": "gold",
-    "desc": null,
+    "desc": "칠흑의 양날도끼를 수량 제한 없이 구매할 수 있습니다. 구매 시 칠흑의 양날도끼 능력치가 해당 아이템 보유 개수에 따라 증가합니다. 즉시 야수화를 획득합니다.",
     "icon": "7002.png"
   },
   {
@@ -2444,7 +2444,7 @@
     "nameId": "DoOrDie",
     "name": "모 아니면 도",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "메자이의 영혼약탈자, 레비아탄 갑옷, 비술의 검 최대 중첩이 두 배가 됩니다.",
     "icon": "7003.png"
   },
   {
@@ -2452,7 +2452,7 @@
     "nameId": "DrinkUp",
     "name": "들이켜",
     "rarity": "silver",
-    "desc": null,
+    "desc": "팀원 모두가 즉시 체력 물약 @InitalHealthPots@개를 획득합니다. 처치 관여 @TakeDownCount@회마다 체력 물약 @HealthPotsPerEvent@개를 획득합니다.",
     "icon": "7004.png"
   },
   {
@@ -2460,7 +2460,7 @@
     "nameId": "HasteMakesWaste",
     "name": "급할수록 돌아가라",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "%i:scaleCooldown% 재사용 대기시간 감소를 @AddedCDR*100@% 얻습니다. %i:scaleCooldown% 재사용 대기시간 감소 상한이 @IncCapCDR*100@% 증가합니다.",
     "icon": "7005.png"
   },
   {
@@ -2468,7 +2468,7 @@
     "nameId": "StabbyStabby",
     "name": "심술쟁이",
     "rarity": "silver",
-    "desc": null,
+    "desc": "물리 관통력에 비례해 %i:scaleCooldown% 재사용 대기시간 감소를 얻습니다. 재사용 대기시간 감소 상한이 @CDRCapIncrease*100@% 증가합니다.",
     "icon": "7006.png"
   },
   {
@@ -2476,7 +2476,7 @@
     "nameId": "Upgrade_DeathFireGrasp",
     "name": "업그레이드: 죽음불꽃 손아귀",
     "rarity": "gold",
-    "desc": null,
+    "desc": "죽음불꽃 손아귀 피해 증폭 효과가 @NewDamageAmpOverwriteItem*100@%로 증가하고 재사용 대기시간이 @CooldownMod*100@% 감소합니다. 죽음불꽃 손아귀가 이제 대상 반경 @TargetAoE@ 거리 내 모든 적 챔피언을 대상으로 합니다.",
     "icon": "7007.png"
   },
   {
@@ -2484,7 +2484,7 @@
     "nameId": "DoransBiggestFan",
     "name": "도란 열혈 팬",
     "rarity": "prismatic",
-    "desc": null,
+    "desc": "도란의 검, 반지, 방패 첫 구매 후 추가로 구매할 때마다 기존 아이템에 중첩이 쌓입니다. 중첩당 아이템 능력치의 @EffectivenessMod*100@%를 부여합니다.",
     "icon": "7008.png"
   },
   {
@@ -2492,7 +2492,7 @@
     "nameId": "Upgrade_InnervatingLocket",
     "name": "업그레이드: 활력증진의 펜던트",
     "rarity": "gold",
-    "desc": null,
+    "desc": "활력증진의 펜던트의 체력 및 마나 회복량이 @RestoreMultiplier*100@% 증가합니다. 활력증진의 펜던트가 대상 주변 모든 아군 챔피언의 체력과 마나를 회복시킵니다.",
     "icon": "7009.png"
   },
   {
@@ -2500,7 +2500,7 @@
     "nameId": "FutureSightHeartsteel",
     "name": "시간 왜곡: 강철심장",
     "rarity": "gold",
-    "desc": null,
+    "desc": "추가 체력을 @BonusHealthRequirement@ 얻으면 미래로 손을 뻗어 강철심장을 획득합니다.",
     "icon": "7010.png"
   },
   {
@@ -2524,7 +2524,7 @@
     "nameId": "SpiritOfTheJungleMain",
     "name": "정글 장인의 영혼",
     "rarity": "gold",
-    "desc": null,
+    "desc": "처치 관여 시 폭발을 일으켜 주변 다른 적을 @SlowAmount*100@% 둔화시키고 적 현재 체력에 비례하는 피해를 입힙니다.",
     "icon": "7013.png"
   },
   {

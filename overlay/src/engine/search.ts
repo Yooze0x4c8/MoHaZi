@@ -36,9 +36,13 @@ function edits(a: string, b: string) {
   }
   return prev[b.length]
 }
+// 읽은 글자가 비었으면(OCR 실패) 아무것도 고르지 않는다. 기호뿐인 이름("???")은 비교에서 뺀다 — 둘 다 빈 문자열이라 "완전 일치"가 된다
 export function closestName<T extends { name: string }>(text: string, items: T[]) {
   const t = bare(text)
+  if (!t) return undefined
   return items
-    .map((it) => { const n = bare(it.name); return { it, score: 1 - edits(t, n) / Math.max(t.length, n.length, 1) } })
+    .map((it) => ({ it, n: bare(it.name) }))
+    .filter((x) => x.n)
+    .map(({ it, n }) => ({ it, score: 1 - edits(t, n) / Math.max(t.length, n.length) }))
     .sort((a, b) => b.score - a.score)[0]
 }

@@ -65,3 +65,36 @@ export function rateCards(ids: number[], build: Build, tags: Tags, labels: Label
   const pick = cards.reduce((best, c, i) => (c.score > cards[best].score ? i : best), 0)
   return { cards, pick }
 }
+
+// 빌드 적합도 0~100: 고른 증강의 평균 점수(시너지 제외)를 0~1로 자른 값
+export function fitOf(picked: number[], build: Build, tags: Tags, labels: Labels) {
+  if (!picked.length) return 0
+  const avg = picked.reduce((s, id) => s + rate(id, build, tags, labels).score, 0) / picked.length
+  return Math.round(Math.min(1, Math.max(0, avg)) * 100)
+}
+
+// ponytail: 임계값·최소 증강 수 임시값, 플레이하며 조정
+const SWITCH_GAP = 20
+const SWITCH_MIN_PICKED = 2
+
+export type Switch = { to: Build; fromFit: number; toFit: number; why: string }
+
+// 고른 증강이 다른 빌드에 SWITCH_GAP 이상 더 맞으면 그 빌드를 제안 (가장 높은 것 하나)
+export function suggestSwitch(picked: number[], current: Build, builds: Build[], tags: Tags, labels: Labels): Switch | null {
+  if (picked.length < SWITCH_MIN_PICKED) return null
+  const fromFit = fitOf(picked, current, tags, labels)
+  const best = builds
+    .filter((b) => b.id !== current.id)
+    .map((b) => ({ b, fit: fitOf(picked, b, tags, labels) }))
+    .sort((x, y) => y.fit - x.fit)[0]
+  if (!best || best.fit - fromFit < SWITCH_GAP) return null
+
+  // 이유: 제안 빌드에 맞는 증강 수 + 가장 많이 기여한 태그 2개
+  const fits = picked.filter((id) => rate(id, best.b, tags, labels).score > 0)
+  const sum: Record<string, number> = {}
+  for (const id of fits) for (const t of tags[id] ?? []) sum[t] = (sum[t] ?? 0) + (best.b.wantTags[t] ?? 0)
+  const top = Object.entries(sum).filter(([, v]) => v > 0).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([t]) => labels[t] ?? t)
+  const n = picked.length
+  const who = fits.length === n ? `고른 증강 ${n}개가 모두` : `고른 증강 ${n}개 중 ${fits.length}개가`
+  return { to: best.b, fromFit, toFit: best.fit, why: `${who} ${top.join(' · ')} 쪽이에요.` }
+}

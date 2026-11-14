@@ -1,7 +1,7 @@
 // 실행: npm test (Node 내장 테스트, 갱플 예시 빌드 기준)
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { rate, rateCards, type Build, type Tags } from './index.ts'
+import { rate, rateCards, suggestSwitch, type Build, type Tags } from './index.ts'
 
 const gp: Build = {
   id: 'gp-ap-ult', name: 'AP 무한궁 갱플', style: 'fun',
@@ -52,3 +52,14 @@ test('시너지: 고른 증강과 태그가 겹치면 점수가 오르고 이유
 })
 
 const pick = (r: { reason: string; detail: string }) => [r.reason, r.detail]
+
+test('전환 제안: 고른 증강이 다른 빌드에 훨씬 맞으면 제안', () => {
+  const crit: Build = { id: 'crit', name: '치명타', style: 'meta', wantTags: { crit: 1 }, mustHave: [], avoidTags: ['ap'] }
+  const s = suggestSwitch([1, 2], crit, [crit, gp], tags, labels)
+  assert.equal(s?.to.id, gp.id)
+  assert.ok(s!.toFit - s!.fromFit >= 20)
+  assert.equal(s!.why, '고른 증강 2개가 모두 궁 쿨감 · AP 쪽이에요.')
+  // 지금 빌드가 이미 제일 맞으면, 또는 고른 증강이 1개면 제안하지 않는다
+  assert.equal(suggestSwitch([1, 2], gp, [crit, gp], tags, labels), null)
+  assert.equal(suggestSwitch([1], crit, [crit, gp], tags, labels), null)
+})

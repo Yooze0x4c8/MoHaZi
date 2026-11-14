@@ -78,7 +78,7 @@
 @keyframes settle { from { opacity: 0; transform: scale(1.03); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .strip, .pick, .panel, .toast { animation-name: fade; }
+  .strip, .pick, .panel, .toast, .switch { animation-name: fade; }
   @keyframes fade { from { opacity: 0; } }
 }
 
@@ -143,3 +143,23 @@
 }
 .toast .tick { width: 2px; height: 16px; background: var(--accent); }
 @keyframes toast-in { from { opacity: 0; transform: translate(-50%, -4px); } }
+
+/* SwitchBanner: 너비 760, 위 32 가운데 */
+.switch {
+  position: absolute; left: 50%; top: 32px; transform: translateX(-50%); width: 760px; border-radius: 6px;
+  padding: 18px 22px; display: flex; gap: 28px; align-items: center; animation: toast-in 180ms var(--ease-out) both;
+}
+.switch .t { flex: 1; min-width: 0; }
+.switch .t b { font-size: 17px; font-weight: 600; display: block; }
+.switch .t p { font-size: 13px; color: var(--text-muted); margin: 3px 0 0; line-height: 1.5; }
+.fits { display: flex; flex-direction: column; gap: 8px; width: 220px; flex: none; }
+.fit { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text-muted); }
+.fit .lab { width: 62px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fit .track { flex: 1; height: 3px; background: var(--line); }
+.fit .track i { display: block; height: 3px; background: rgba(242, 239, 232, .45); }
+.fit .v { width: 22px; text-align: right; font-size: 15px; }
+.fit.on .lab, .fit.on .v { color: var(--text-primary); }
+.fit.on .track i { background: var(--accent); }
+.act { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; padding-left: 24px; border-left: 1px solid rgba(242, 239, 232, .1); }
+.act div { display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 600; }
+.act span { font-size: 12px; color: var(--text-muted); }

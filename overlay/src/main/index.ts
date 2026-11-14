@@ -1,6 +1,7 @@
 import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, Menu, nativeImage, screen, Tray } from 'electron'
 import { join } from 'node:path'
 import https from 'node:https'
+import { readText } from './ocr'
 
 // alias: data/builds.json 키 (rawChampionName = 'game_character_displayname_<alias>')
 export type Game = { champion: string; alias: string; gameMode: string } | null
@@ -58,6 +59,8 @@ function createOverlay() {
   // 빌드 패널 위에서만 클릭을 받는다
   const clickThrough = (on: boolean) => win.setIgnoreMouseEvents(on, { forward: true })
   ipcMain.on('clickable', (_e, on: boolean) => clickThrough(!on))
+  // 이름 영역 PNG → 글자 (같은 그림 증강 가르기)
+  ipcMain.handle('ocr', (_e, png: Uint8Array) => readText(png))
   // 증강 검색 팝업이 열린 동안만 키 입력을 받는다. 닫으면 포커스를 놓아 게임으로 돌려준다
   ipcMain.on('focus', (_e, on: boolean) => {
     if (on) { win.setFocusable(true); win.focus() }

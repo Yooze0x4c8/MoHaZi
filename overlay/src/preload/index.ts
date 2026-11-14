@@ -6,5 +6,6 @@ contextBridge.exposeInMainWorld('api', {
   onGame: (cb: (game: Game) => void) => ipcRenderer.on('game', (_e, game: Game) => cb(game)),
   onF7: (cb: () => void) => ipcRenderer.on('f7', () => cb()),
   setClickable: (on: boolean) => ipcRenderer.send('clickable', on),
-  setFocus: (on: boolean) => ipcRenderer.send('focus', on)
+  setFocus: (on: boolean) => ipcRenderer.send('focus', on),
+  ocr: (png: Uint8Array): Promise<string> => ipcRenderer.invoke('ocr', png)
 })

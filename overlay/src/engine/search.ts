@@ -23,3 +23,22 @@ export function search<T extends { name: string }>(items: T[], query: string, li
     .slice(0, limit)
     .map((m) => m.it)
 }
+
+// OCR로 읽은 글자와 가장 가까운 후보 (같은 그림을 쓰는 증강 2~5개 중에서 고를 때).
+// 띄어쓰기·기호를 빼고 편집 거리로 비교. score 0~1 (1이면 같은 글자)
+const bare = (s: string) => s.replace(/[^0-9a-zA-Z가-힣]/g, '').toLowerCase()
+function edits(a: string, b: string) {
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j)
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i]
+    for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1))
+    prev = cur
+  }
+  return prev[b.length]
+}
+export function closestName<T extends { name: string }>(text: string, items: T[]) {
+  const t = bare(text)
+  return items
+    .map((it) => { const n = bare(it.name); return { it, score: 1 - edits(t, n) / Math.max(t.length, n.length, 1) } })
+    .sort((a, b) => b.score - a.score)[0]
+}

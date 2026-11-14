@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useState, type KeyboardEvent } from 'react'
-import { rateCards, suggestSwitch, type Build, type Labels, type Switch, type Tags } from '../engine'
+import { rateCards, shouldReroll, suggestSwitch, type Build, type Labels, type Switch, type Tags } from '../engine'
 import { search } from '../engine/search'
-import { AugmentGrades, CARD_X } from './grades'
+import { AugmentGrades, CARD_X, RerollCallout } from './grades'
 import { BuildChip, BuildPanel } from './build'
 import BUILDS_JSON from '../../../data/builds.json'
 import TAGS_JSON from '../../../data/tags.json'
@@ -85,14 +85,15 @@ function SwitchBanner({ from, s }: { from: Build; s: Switch }) {
 // 한 챔피언의 오버레이: 빌드 패널/칩 + 카드 등급 + 재계산 알림.
 // 챔피언이 바뀌면 key로 새로 만들어 고른 빌드를 기본으로 되돌린다.
 // cards: 지금 떠 있는 증강 3장의 ID (못 알아본 카드는 null, 증강 화면이 아니면 null), picked: 고른 증강
-type Props = { alias: string; cards: (number | null)[] | null; picked: number[]; f7Open: boolean; onBuildPicked?: () => void }
+// rerolls: 남은 리롤 횟수 (null = 모름)
+type Props = { alias: string; cards: (number | null)[] | null; rerolls?: number | null; picked: number[]; f7Open: boolean; onBuildPicked?: () => void }
 
 export function Overlay(props: Props) {
   const champ = BUILDS[props.alias]
   return champ ? <ChampOverlay champ={champ} {...props} /> : <BuildChip picked={0} />
 }
 
-function ChampOverlay({ champ, cards, picked, f7Open, onBuildPicked }: Props & { champ: { name: string; builds: Build[] } }) {
+function ChampOverlay({ champ, cards, rerolls = null, picked, f7Open, onBuildPicked }: Props & { champ: { name: string; builds: Build[] } }) {
   const [choice, setChoice] = useState<string | null>(null)
   const [toast, setToast] = useState<{ name: string; n: number } | null>(null)
 
@@ -110,6 +111,7 @@ function ChampOverlay({ champ, cards, picked, f7Open, onBuildPicked }: Props & {
 
   const build = champ.builds.find((b) => b.id === choice) ?? champ.builds.find((b) => b.default) ?? champ.builds[0]
   const rated = cards && rateCards(cards.map((id, i) => id ?? fixed[i] ?? null), build, TAGS, LABELS, picked)
+  const reroll = !!rated && shouldReroll(rated.cards, rerolls)
   // 첫 증강을 고르기 전까지는 패널, 그 뒤엔 칩 (F7로 다시 연다)
   const panelOpen = picked.length === 0 || f7Open
 
@@ -132,8 +134,9 @@ function ChampOverlay({ champ, cards, picked, f7Open, onBuildPicked }: Props & {
         ? <BuildPanel champion={champ.name} builds={champ.builds} selected={build.id} chosen={choice != null} onPick={pick} />
         : <BuildChip build={build} picked={picked.length} />}
       {/* key에 빌드를 넣어 다시 매길 때 등장 애니메이션을 다시 보여준다 */}
-      {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => c ?? { grade: '?', reason: '' })} pick={rated.pick}
+      {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => c ?? { grade: '?', reason: '' })} pick={reroll ? undefined : rated.pick}
         onOpen={(i) => setSearching((s) => (s === i ? null : i))} />}
+      {reroll && <RerollCallout rerolls={rerolls} />}
       {searching != null && (
         <UnknownSearch key={searching} x={CARD_X[searching]}
           onPick={(id) => { setFixed((f) => ({ ...f, [searching]: id })); setSearching(null) }}

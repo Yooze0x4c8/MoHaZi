@@ -48,6 +48,26 @@ export function PickBrackets({ x }: { x: number }) {
   )
 }
 
+// 리롤 권장: 게임 리롤 버튼마다 14px 꺾쇠 + 카드 아래 가운데 안내. rerolls null = 남은 횟수 모름
+export function RerollCallout({ rerolls }: { rerolls: number | null }) {
+  return (
+    <>
+      {CARD_X.map((x) => (
+        <div key={x} className="rr" style={{ left: x + 68 }}>
+          <div className="br tl" /><div className="br tr" /><div className="br bl" /><div className="br brr" />
+        </div>
+      ))}
+      <div className="callout glass">
+        <span className="tick" />
+        <div>
+          <div className="t">리롤을 권장해요</div>
+          <div className="s">세 장 모두 B 이하예요.{rerolls != null && ` 리롤 ${rerolls}번 남음`}</div>
+        </div>
+      </div>
+    </>
+  )
+}
+
 // 카드 3장 등급 + 추천 꺾쇠. pick은 추천 카드 번호 (없으면 표시 안 함)
 export function AugmentGrades({ cards, pick, onOpen }: { cards: CardGrade[]; pick?: number; onOpen?: (i: number) => void }) {
   return (

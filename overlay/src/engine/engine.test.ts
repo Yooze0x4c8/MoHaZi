@@ -1,7 +1,7 @@
 // 실행: npm test (Node 내장 테스트, 갱플 예시 빌드 기준)
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { rate, rateCards, suggestSwitch, type Build, type Tags } from './index.ts'
+import { rate, rateCards, shouldReroll, suggestSwitch, type Build, type Tags } from './index.ts'
 
 const gp: Build = {
   id: 'gp-ap-ult', name: 'AP 무한궁 갱플', style: 'fun',
@@ -40,6 +40,15 @@ test('추천: 세 장 중 최고 점수 카드', () => {
   const r = rateCards([2, null, 4], gp, tags, labels)
   assert.equal(r.cards[1], null)
   assert.equal(r.pick, 0)
+})
+
+test('리롤 권장: 세 장 모두 B 이하이고 리롤이 남았을 때만', () => {
+  const low = rateCards([5, 4, 7], gp, tags, labels).cards
+  assert.equal(shouldReroll(low, 1), true)
+  assert.equal(shouldReroll(low, null), true)
+  assert.equal(shouldReroll(low, 0), false)
+  assert.equal(shouldReroll(rateCards([5, 4, 2], gp, tags, labels).cards, 1), false) // A가 하나 있음
+  assert.equal(shouldReroll(rateCards([5, 4, null], gp, tags, labels).cards, 1), false) // 못 알아본 카드
 })
 
 test('필수 증강 보너스', () => {

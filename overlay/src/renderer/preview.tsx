@@ -1,4 +1,5 @@
 // 미리보기: npm run dev 후 브라우저에서 /#preview-02 (01, 06, 07도) → screens/의 같은 번호 PNG와 비교
+// /#preview-03: 리롤 권장 (실제 엔진·빌드 데이터)
 // /#preview-04: 치명타 배럴인데 AP 증강 3개를 고른 상태 → 전환 배너(F7로 AP 무한궁). 가운데 카드는 인식 실패 '?'
 // /#preview-02a: 실제 엔진·빌드 데이터로 갱플랭크 증강 화면. 패널에서 빌드를 누르면 다시 매긴다 (02a → 02b)
 import { useEffect, useState, type CSSProperties } from 'react'
@@ -80,6 +81,8 @@ function SwitchPreview() {
 
 export function Preview({ screen }: { screen: string }) {
   if (screen === '04') return <SwitchPreview />
+  // 치명타 배럴에 거인의 결의, 대마법사, 사악한 정신 → 모두 B 이하라 리롤 권장 (고른 증강: 천상의 신체, 정신 변환)
+  if (screen === '03') return <><FakeGame /><Overlay alias="Gangplank" cards={[1001, 2087, 1097]} rerolls={1} picked={[1013, 1056]} f7Open={false} /></>
   if (MOCK_BUILDS[screen]) return <PanelPreview screen={screen} />
   // 궁극기 대변혁, 대마법사, 무한의 대검 업그레이드
   if (screen === '02a') return <><FakeGame /><Overlay alias="Gangplank" cards={[1088, 2087, 1336]} picked={[]} f7Open={false} /></>

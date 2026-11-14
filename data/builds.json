@@ -38,6 +38,26 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Annie-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -81,6 +101,24 @@
     "mustHave": [],
     "avoidTags": [
      "crit"
+    ]
+   },
+   {
+    "id": "Olaf-fighter",
+    "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -167,6 +205,23 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "TwistedFate-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -187,6 +242,43 @@
      "damage": 0.4,
      "dash": 0.3,
      "attack_speed": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "XinZhao-fighter",
+    "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "XinZhao-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -216,6 +308,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Urgot-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -234,6 +345,26 @@
      "pen": 0.6,
      "damage": 0.6,
      "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Leblanc-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -267,6 +398,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Vladimir-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -292,6 +442,43 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "FiddleSticks-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "FiddleSticks-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -314,6 +501,24 @@
     "mustHave": [],
     "avoidTags": [
      "crit"
+    ]
+   },
+   {
+    "id": "Kayle-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -358,6 +563,24 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "MasterYi-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -378,6 +601,24 @@
      "shield": 0.3,
      "ms": 0.3,
      "heal": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Alistar-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -407,6 +648,24 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Ryze-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -477,6 +736,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Sivir-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -496,6 +774,26 @@
      "ability_haste": 0.7,
      "ap": 0.5,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Soraka-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -543,6 +841,26 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Teemo-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -566,6 +884,44 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Tristana-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Tristana-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
     ]
    }
   ]
@@ -763,6 +1119,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Tryndamere-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -802,6 +1177,25 @@
     "mustHave": [],
     "avoidTags": [
      "crit"
+    ]
+   },
+   {
+    "id": "Jax-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -845,6 +1239,25 @@
     },
     "mustHave": [],
     "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Morgana-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
      "crit"
     ]
    }
@@ -891,6 +1304,26 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Zilean-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -915,6 +1348,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Singed-apbruiser",
+    "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -933,6 +1385,25 @@
      "pen": 0.6,
      "damage": 0.6,
      "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Evelynn-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -981,6 +1452,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Twitch-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -1005,6 +1495,43 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Karthus-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Karthus-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -1052,6 +1579,24 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Chogath-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1075,6 +1620,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Amumu-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -1095,6 +1659,24 @@
      "heal": 0.4,
      "ability_haste": 0.4,
      "ms": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Rammus-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -1123,6 +1705,24 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Anivia-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -1170,6 +1770,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Shaco-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -1193,6 +1812,25 @@
     "mustHave": [],
     "avoidTags": [
      "crit"
+    ]
+   },
+   {
+    "id": "DrMundo-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -1219,6 +1857,43 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Sona-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Sona-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1238,6 +1913,26 @@
      "damage": 0.6,
      "ms": 0.4,
      "ability_haste": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Kassadin-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -1268,6 +1963,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Irelia-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -1287,6 +2001,26 @@
      "ability_haste": 0.7,
      "ap": 0.5,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Janna-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -1335,6 +2069,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Gangplank-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -1377,6 +2130,25 @@
     "avoidTags": [
      "ad",
      "crit"
+    ]
+   },
+   {
+    "id": "Corki-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -1448,6 +2220,26 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Taric-enchanter",
+    "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -1471,6 +2263,44 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Veigar-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Veigar-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -1497,6 +2327,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Trundle-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1516,6 +2365,44 @@
      "tank": 0.6,
      "damage": 0.4,
      "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Swain-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Swain-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -1544,6 +2431,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Caitlyn-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -1585,6 +2491,25 @@
     },
     "mustHave": [],
     "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Blitzcrank-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
      "crit"
     ]
    }
@@ -1630,6 +2555,24 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Malphite-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1655,6 +2598,42 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Katarina-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Katarina-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -1675,6 +2654,43 @@
      "damage": 0.4,
      "dash": 0.3,
      "attack_speed": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Nocturne-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Nocturne-fighter",
+    "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -1746,6 +2762,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Renekton-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -1790,6 +2825,25 @@
      "ap",
      "crit"
     ]
+   },
+   {
+    "id": "JarvanIV-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1808,6 +2862,44 @@
      "pen": 0.6,
      "damage": 0.6,
      "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Elise-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Elise-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -1840,6 +2932,45 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Orianna-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Orianna-enchanter",
+    "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -1865,6 +2996,44 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "MonkeyKing-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "MonkeyKing-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1884,6 +3053,25 @@
      "damage": 0.4,
      "cc": 0.4,
      "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Brand-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -1914,6 +3102,44 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "LeeSin-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "LeeSin-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -1939,6 +3165,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Vayne-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -1958,6 +3203,43 @@
      "tank": 0.4,
      "damage": 0.4,
      "burn": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Rumble-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Rumble-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -1989,6 +3271,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Cassiopeia-apbruiser",
+    "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2013,6 +3314,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Skarner-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -2033,6 +3353,25 @@
      "cc": 0.4,
      "range": 0.4,
      "summon": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Heimerdinger-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -2064,6 +3403,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Nasus-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2083,6 +3441,26 @@
      "ability_haste": 0.6,
      "burn": 0.3,
      "range": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Nidalee-enchanter",
+    "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -2127,6 +3505,24 @@
      "shield": 0.4,
      "heal": 0.4,
      "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Udyr-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -2219,6 +3615,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Gragas-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -2242,6 +3657,25 @@
     "avoidTags": [
      "ap",
      "crit"
+    ]
+   },
+   {
+    "id": "Pantheon-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -2286,6 +3720,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Ezreal-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -2306,6 +3759,24 @@
      "damage": 0.4,
      "burn": 0.3,
      "shield": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Mordekaiser-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -2336,6 +3807,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Yorick-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2358,6 +3848,25 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Akali-apbruiser",
+    "name": "AP 브루저",
+    "desc": "주문력과 회복으로 버티며 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 0.9,
+     "heal": 0.6,
+     "ability_haste": 0.6,
+     "tank": 0.4,
+     "damage": 0.4,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -2383,6 +3892,41 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Kennen-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Kennen-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -2411,6 +3955,44 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Garen-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Garen-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2430,6 +4012,24 @@
      "support": 0.6,
      "shield": 0.3,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Leona-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -2461,6 +4061,24 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Malzahar-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2484,6 +4102,25 @@
     "avoidTags": [
      "ap",
      "crit"
+    ]
+   },
+   {
+    "id": "Talon-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -2509,6 +4146,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Riven-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -2552,6 +4208,23 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "KogMaw-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2576,6 +4249,25 @@
     "mustHave": [],
     "avoidTags": [
      "crit"
+    ]
+   },
+   {
+    "id": "Shen-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -2621,6 +4313,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Lux-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -2638,6 +4349,25 @@
      "range": 1,
      "ability_haste": 0.6,
      "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Xerath-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -2711,6 +4441,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Ahri-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -2733,6 +4482,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Graves-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -2774,6 +4542,25 @@
     },
     "mustHave": [],
     "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Fizz-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
      "crit"
     ]
    }
@@ -2861,6 +4648,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Rengar-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -2943,6 +4749,24 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Nautilus-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2962,6 +4786,43 @@
      "damage": 0.4,
      "cc": 0.4,
      "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Viktor-artillery",
+    "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Viktor-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -2992,6 +4853,24 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Sejuani-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -3016,6 +4895,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Fiora-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3033,6 +4931,45 @@
      "range": 1,
      "ability_haste": 0.6,
      "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Ziggs-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Ziggs-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -3065,6 +5002,43 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Lulu-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Lulu-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -3088,6 +5062,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Draven-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -3114,6 +5107,44 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Hecarim-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Hecarim-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -3137,6 +5168,25 @@
     "avoidTags": [
      "ap",
      "crit"
+    ]
+   },
+   {
+    "id": "Khazix-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -3163,6 +5213,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Darius-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -3185,6 +5254,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Jayce-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -3209,6 +5297,43 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Lissandra-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Lissandra-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -3249,6 +5374,23 @@
      "tank": 0.4,
      "damage": 0.4,
      "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Diana-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -3298,6 +5440,24 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Quinn-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3316,6 +5476,26 @@
      "damage": 0.6,
      "ability_haste": 0.6,
      "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Syndra-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -3342,6 +5522,25 @@
      "cc": 0.4,
      "range": 0.4,
      "stack": 1
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "AurelionSol-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -3416,6 +5615,24 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Zoe-artillery",
+    "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -3436,6 +5653,25 @@
      "cc": 0.4,
      "range": 0.4,
      "summon": 0.8
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Zyra-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -3483,6 +5719,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Kaisa-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3528,6 +5783,24 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Seraphine-artillery",
+    "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -3552,6 +5825,43 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Gnar-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Gnar-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -3571,6 +5881,24 @@
      "shield": 0.4,
      "heal": 0.6,
      "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Zac-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -3600,6 +5928,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Yasuo-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3618,6 +5965,45 @@
      "ability_haste": 0.6,
      "damage": 0.4,
      "true_dmg": 0.6
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Velkoz-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Velkoz-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -3649,6 +6035,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Taliyah-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -3674,6 +6079,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Camille-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -3694,6 +6118,43 @@
      "damage": 0.4,
      "item": 0.3,
      "on_hit": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Akshan-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Akshan-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -3723,6 +6184,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Belveth-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3742,6 +6222,25 @@
      "support": 0.6,
      "shield": 0.7,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Braum-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -3770,6 +6269,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Jhin-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -3796,6 +6314,43 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Kindred-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Kindred-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -3821,6 +6376,24 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Zeri-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3838,6 +6411,24 @@
      "ad": 0.8,
      "attack_speed": 0.7,
      "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Jinx-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
      "damage": 0.4,
      "item": 0.3
     },
@@ -3869,6 +6460,24 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "TahmKench-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -3894,6 +6503,43 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Briar-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Briar-fighter",
+    "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -3913,6 +6559,25 @@
      "heal": 0.5,
      "damage": 0.3,
      "crit": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Viego-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -3963,6 +6628,25 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Senna-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -3983,6 +6667,43 @@
      "damage": 0.4,
      "item": 0.3,
      "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Lucian-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
+   },
+   {
+    "id": "Lucian-onhit",
+    "name": "적중",
+    "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 1,
+     "ad": 0.5,
+     "damage": 0.4,
+     "item": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -4012,6 +6733,25 @@
      "ap",
      "crit"
     ]
+   },
+   {
+    "id": "Zed-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -4035,6 +6775,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Kled-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -4079,6 +6838,23 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Ekko-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -4102,6 +6878,25 @@
     "avoidTags": [
      "ap",
      "crit"
+    ]
+   },
+   {
+    "id": "Qiyana-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]
@@ -4127,6 +6922,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Vi-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -4151,6 +6965,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Aatrox-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -4170,6 +7003,26 @@
      "ability_haste": 0.7,
      "ap": 0.5,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Nami-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -4203,6 +7056,23 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Azir-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -4222,6 +7092,26 @@
      "ability_haste": 0.7,
      "ap": 0.5,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Yuumi-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -4254,6 +7144,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Samira-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -4276,6 +7185,44 @@
     },
     "mustHave": [],
     "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Thresh-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Thresh-enchanter",
+    "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
      "crit"
     ]
    }
@@ -4302,6 +7249,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Illaoi-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -4325,6 +7291,25 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "RekSai-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
     ]
    }
   ]
@@ -4352,6 +7337,44 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Ivern-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Ivern-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -4371,6 +7394,25 @@
      "damage": 0.4,
      "item": 0.3,
      "dash": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Kalista-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -4403,6 +7445,41 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Bard-aponhit",
+    "name": "AP 적중",
+    "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "on_hit": 1,
+     "attack_speed": 0.9,
+     "ap": 0.8,
+     "damage": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Bard-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -4426,6 +7503,45 @@
     },
     "mustHave": [],
     "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Rakan-enchanter",
+    "name": "보호 서폿",
+    "desc": "회복과 보호막으로 아군을 지켜요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "support": 1,
+     "heal": 0.9,
+     "shield": 0.9,
+     "ability_haste": 0.7,
+     "ap": 0.5,
+     "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Rakan-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
      "crit"
     ]
    }
@@ -4452,6 +7568,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Xayah-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -4472,6 +7607,24 @@
      "heal": 0.4,
      "ability_haste": 0.4,
      "item": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Ornn-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -4502,6 +7655,43 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Sylas-apassassin",
+    "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Sylas-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -4524,6 +7714,44 @@
     "mustHave": [],
     "avoidTags": [
      "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Neeko-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Neeko-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
      "crit"
     ]
    }
@@ -4550,6 +7778,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Aphelios-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -4569,6 +7816,24 @@
      "support": 0.6,
      "shield": 0.3,
      "ms": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Rell-aptank",
+    "name": "AP 탱커",
+    "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 0.9,
+     "ap": 0.6,
+     "burn": 0.6,
+     "resist": 0.5,
+     "cc": 0.5
     },
     "mustHave": [],
     "avoidTags": [
@@ -4599,6 +7864,25 @@
      "ap",
      "crit"
     ]
+   },
+   {
+    "id": "Pyke-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -4617,6 +7901,26 @@
      "damage": 0.6,
      "ability_haste": 0.6,
      "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Vex-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -4647,6 +7951,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Yone-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -4671,6 +7994,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Ambessa-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -4690,6 +8032,43 @@
      "damage": 0.4,
      "cc": 0.4,
      "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Mel-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Mel-artillery",
+    "name": "AP 포킹",
+    "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "range": 1,
+     "ability_haste": 0.6,
+     "damage": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -4720,6 +8099,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Yunara-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -4738,6 +8136,25 @@
      "pen": 0.6,
      "damage": 0.6,
      "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Locke-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -4768,6 +8185,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Sett-tank",
+    "name": "탱커",
+    "desc": "체력과 방어 증강으로 앞을 막아요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "tank": 1,
+     "resist": 0.8,
+     "cc": 0.7,
+     "shield": 0.4,
+     "heal": 0.4,
+     "ability_haste": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -4791,6 +8227,45 @@
     },
     "mustHave": [],
     "avoidTags": [
+     "crit"
+    ]
+   },
+   {
+    "id": "Lillia-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Lillia-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
      "crit"
     ]
    }
@@ -4818,6 +8293,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "Gwen-apassassin",
+    "name": "AP 암살",
+    "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "dash": 0.6,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ms": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -4838,6 +8332,26 @@
      "ap": 0.5,
      "ms": 0.3,
      "cc": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Renata-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
     },
     "mustHave": [],
     "avoidTags": [
@@ -4868,6 +8382,26 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Aurora-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -4887,6 +8421,24 @@
      "damage": 0.4,
      "item": 0.3,
      "heal": 0.5
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Nilah-fighter",
+    "name": "평타 전사",
+    "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "attack_speed": 0.8,
+     "on_hit": 0.8,
+     "ad": 0.7,
+     "heal": 0.5,
+     "damage": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -4916,6 +8468,25 @@
     "avoidTags": [
      "crit"
     ]
+   },
+   {
+    "id": "KSante-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
    }
   ]
  },
@@ -4936,6 +8507,25 @@
      "damage": 0.4,
      "stack": 1,
      "burn": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
+    ]
+   },
+   {
+    "id": "Smolder-crit",
+    "name": "치명타",
+    "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "crit": 1,
+     "ad": 0.8,
+     "attack_speed": 0.7,
+     "range": 0.5,
+     "damage": 0.4,
+     "item": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -4966,6 +8556,26 @@
      "ad",
      "crit"
     ]
+   },
+   {
+    "id": "Milio-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
    }
   ]
  },
@@ -4990,6 +8600,25 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Zaahen-lethality",
+    "name": "물리 관통",
+    "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 1,
+     "pen": 0.8,
+     "ability_haste": 0.7,
+     "damage": 0.5,
+     "dash": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap",
+     "crit"
+    ]
    }
   ]
  },
@@ -5007,6 +8636,45 @@
      "range": 1,
      "ability_haste": 0.6,
      "damage": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Hwei-mage",
+    "name": "AP 마법사",
+    "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "ability_haste": 0.8,
+     "burn": 0.5,
+     "damage": 0.4,
+     "cc": 0.4,
+     "range": 0.4
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ad",
+     "crit"
+    ]
+   },
+   {
+    "id": "Hwei-burst",
+    "name": "AP 폭딜",
+    "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ap": 1,
+     "pen": 0.6,
+     "damage": 0.6,
+     "ability_haste": 0.6,
+     "burn": 0.3
     },
     "mustHave": [],
     "avoidTags": [
@@ -5036,6 +8704,25 @@
     "avoidTags": [
      "ap",
      "crit"
+    ]
+   },
+   {
+    "id": "Naafiri-bruiser",
+    "name": "브루저",
+    "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ad": 0.8,
+     "heal": 0.7,
+     "tank": 0.6,
+     "ability_haste": 0.6,
+     "damage": 0.4,
+     "dash": 0.3
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "ap"
     ]
    }
   ]

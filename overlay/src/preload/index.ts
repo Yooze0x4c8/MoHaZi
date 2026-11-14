@@ -7,5 +7,8 @@ contextBridge.exposeInMainWorld('api', {
   onF7: (cb: () => void) => ipcRenderer.on('f7', () => cb()),
   setClickable: (on: boolean) => ipcRenderer.send('clickable', on),
   setFocus: (on: boolean) => ipcRenderer.send('focus', on),
-  ocr: (png: Uint8Array): Promise<string> => ipcRenderer.invoke('ocr', png)
+  ocr: (png: Uint8Array): Promise<string> => ipcRenderer.invoke('ocr', png),
+  // 수집 모드 (COLLECT=1)에서만 쓰인다
+  onSnap: (cb: () => void) => ipcRenderer.on('snap', () => cb()),
+  saveFrame: (png: Uint8Array): Promise<number> => ipcRenderer.invoke('save-frame', png)
 })

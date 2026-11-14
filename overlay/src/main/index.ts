@@ -1,5 +1,6 @@
 import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, Menu, nativeImage, screen, Tray } from 'electron'
 import { join } from 'node:path'
+import { mkdir, writeFile } from 'node:fs/promises'
 import https from 'node:https'
 import { readText } from './ocr'
 
@@ -53,7 +54,8 @@ function createOverlay() {
   // 화면 캡처에 오버레이 자신이 찍히지 않게 (Win10 2004+). 녹화·방송에도 안 보인다.
   win.setContentProtection(true)
 
-  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(process.env.ELECTRON_RENDERER_URL + (process.env.CAPTURE_ALWAYS ? '#capture' : ''))
+  const COLLECT = !!process.env.COLLECT
+  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(process.env.ELECTRON_RENDERER_URL + (process.env.CAPTURE_ALWAYS || COLLECT ? '#capture' : ''))
   else win.loadFile(join(__dirname, '../renderer/index.html'))
 
   // 빌드 패널 위에서만 클릭을 받는다
@@ -87,6 +89,32 @@ function createOverlay() {
     { type: 'separator' },
     { label: '종료', click: () => app.quit() }
   ]))
+
+  // 수집 모드 (0-4): COLLECT=1 npm run dev. F9 → 지금 프레임 PNG + allgamedata 저장, 30초마다 allgamedata 자동 저장.
+  // 저장 위치: 저장소의 samples/ (git 제외)
+  if (COLLECT) {
+    const dir = join(app.getAppPath(), '..', 'samples')
+    // 파일 이름: 현지 시각 YYYYMMDDHHmmss (플레이한 시각과 맞춰 보기 쉽게)
+    const stamp = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60_000).toISOString().slice(0, 19).replace(/[-:T]/g, '')
+    const saveGameData = async (name: string) => {
+      const d = await getAllGameData().catch(() => null)
+      if (!d) return
+      await mkdir(join(dir, 'allgamedata'), { recursive: true })
+      await writeFile(join(dir, 'allgamedata', `${name}.json`), JSON.stringify(d, null, 2))
+    }
+    let shots = 0
+    globalShortcut.register('F9', () => win.webContents.send('snap'))
+    ipcMain.handle('save-frame', async (_e, png: Uint8Array) => {
+      const name = stamp()
+      await mkdir(join(dir, 'screens'), { recursive: true })
+      await writeFile(join(dir, 'screens', `${name}.png`), png)
+      await saveGameData(name)
+      console.log(`[collect] ${name}.png`)
+      return ++shots
+    })
+    setInterval(() => saveGameData(`auto-${stamp()}`), 30_000)
+    console.log(`[collect] F9로 스크린샷, 30초마다 allgamedata → ${dir}`)
+  }
 
   // 2초마다 게임 상태 확인, 바뀌었을 때만 렌더러에 알림
   win.webContents.on('did-finish-load', () => {

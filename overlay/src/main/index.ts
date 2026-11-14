@@ -1,4 +1,4 @@
-import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, screen } from 'electron'
+import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, Menu, nativeImage, screen, Tray } from 'electron'
 import { join } from 'node:path'
 import https from 'node:https'
 
@@ -65,12 +65,25 @@ function createOverlay() {
   })
 
   // F8 오버레이 숨기기/보이기, F7 빌드 바꾸기
-  globalShortcut.register('F8', () => {
+  const toggle = () => {
     if (!win.isVisible()) return win.showInactive()
     win.hide()
     clickThrough(true) // 패널 위에서 숨겨도 다시 보일 때 게임 클릭을 막지 않게
-  })
+  }
+  globalShortcut.register('F8', toggle)
   globalShortcut.register('F7', () => win.webContents.send('f7'))
+
+  // 작업 표시줄에도 없고 포커스도 안 받는 창이라, 끄는 길은 트레이뿐이다
+  // ponytail: 아이콘은 파란 사각형 하나. 앱 아이콘을 만들면 그 파일로 바꾼다
+  const px = Buffer.alloc(16 * 16 * 4)
+  for (let i = 0; i < px.length; i += 4) px.set([0xff, 0x95, 0x6e, 0xff], i) // BGRA #6E95FF
+  tray = new Tray(nativeImage.createFromBitmap(px, { width: 16, height: 16 }))
+  tray.setToolTip('MoHaZi 증강 오버레이')
+  tray.setContextMenu(Menu.buildFromTemplate([
+    { label: '숨기기 / 보이기 (F8)', click: toggle },
+    { type: 'separator' },
+    { label: '종료', click: () => app.quit() }
+  ]))
 
   // 2초마다 게임 상태 확인, 바뀌었을 때만 렌더러에 알림
   win.webContents.on('did-finish-load', () => {
@@ -93,5 +106,9 @@ function createOverlay() {
   })
 }
 
-app.whenReady().then(createOverlay)
+let tray: Tray // 가비지 컬렉션으로 트레이가 사라지지 않게 잡아 둔다
+
+// 두 번 실행하면 오버레이가 겹치고 단축키 등록도 실패하므로 하나만 띄운다
+if (!app.requestSingleInstanceLock()) app.quit()
+else app.whenReady().then(createOverlay)
 app.on('will-quit', () => globalShortcut.unregisterAll())

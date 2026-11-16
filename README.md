@@ -5,6 +5,8 @@
   </picture>
 </p>
 
+<p align="center">한국어 · <a href="#english">English</a></p>
+
 증바람(롤 무작위 총력전: 아수라장) 증강 추천 오버레이.
 
 증강 선택 화면의 카드마다 **등급과 한 줄 이유**를 띄워, 게임 시작 때 고른 빌드에 맞는 증강을 몇 초 안에 고르게 돕습니다.
@@ -132,5 +134,124 @@ tools/              증강·아이콘 받기, 태그 추출, 빌드 생성
 - 이 프로젝트는 Riot Games와 관련이 없으며, Riot Games가 보증하지 않습니다.
 
 ## 라이선스
+
+[Apache License 2.0](./LICENSE)
+
+---
+
+## English
+
+Augment recommendation overlay for League of Legends **ARAM: Mayhem**.
+
+On the augment selection screen it shows a **grade and a one-line reason** on each card, so you can pick the augment that fits the build you chose at game start within seconds.
+
+> Built for personal use (me and friends) first. Public distribution will be decided after checking Riot's policies. The app UI is in Korean.
+
+### Install
+
+#### Windows
+
+**[Download the latest installer](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → under **🪟 윈도우 사용자용 (Windows)**, download and run `MoHaZi-Setup-<version>.exe`.
+
+1. If "Windows protected your PC" appears, click **More info → Run anyway** (the app is not code-signed).
+2. It starts right after install and a three-card icon appears in the system tray. Nothing shows on screen outside a game; that is normal.
+3. Set League to **borderless window mode** and start **ARAM: Mayhem**. The screen must be 16:9 or 16:10.
+4. To quit, right-click the tray icon → **종료 (Quit)**.
+
+New versions download automatically and apply the next time you start the app (or use "지금 재시작해서 업데이트" (restart and update now) in the tray menu).
+
+#### macOS
+
+**[Download the latest installer](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → under **🍎 맥북 사용자용 (macOS)**, pick the file for your Mac (Apple menu → About This Mac → Chip).
+
+- Apple silicon (M1, M2, M3, M4...): `MoHaZi-<version>-arm64.dmg`
+- Intel Mac: `MoHaZi-<version>-x64.dmg`
+
+1. Open the dmg and drag MoHaZi into **Applications**.
+2. If an "unidentified developer" warning appears on first launch, click **Open Anyway** at the bottom of **System Settings → Privacy & Security** (the app is not Apple-signed).
+3. Allow **Screen Recording** when asked, then restart the app. (To enable it later: System Settings → Privacy & Security → Screen & System Audio Recording → MoHaZi.) Without it the app cannot read the augment cards.
+4. A three-card icon appears in the menu bar. To quit, click it → **종료 (Quit)**.
+
+There is no auto-update on macOS. Download the new dmg and replace the app.
+
+#### Usage
+
+- When a game starts, a **build panel** appears in the top-left. Click to choose a build, and `접기` (collapse) to fold it. Click the folded chip to expand it again.
+- On the augment selection screen, each card shows a **grade (S/A/B/C) and a reason**, and the recommended card gets a blue bracket. Changing the build re-grades instantly.
+- Picked augments are recorded automatically (`○○ 기록했어요`). If one was recorded wrong, change, remove or add it in the panel's `고른 증강` (picked augments).
+- If a `?` shows instead of a grade, click it and search by Korean initial consonants.
+- Some PCs ignore hotkeys (F7, F8) during a game, so everything also works with the mouse.
+
+### How it works
+
+1. **Game detection**: Riot's Live Client Data API (`127.0.0.1:2999`) tells when a game starts and which champion you play.
+2. **Build choice**: a per-champion build list appears in a corner (e.g. AP infinite-ult Gangplank / bruiser Gangplank). If you don't pick one, a safe default is used.
+3. **Augment recognition**: on the augment selection screen, the icons of the three cards are recognized.
+4. **Grades**: a badge like `S — ult haste · core for infinite ult` is shown on top of each card.
+5. **Reroll / build switch hints**: if all three cards are B or lower it suggests a reroll, and if your picked augments fit another build better a small banner says so. You make the call.
+
+#### Recommendation score
+
+```
+score = w_b·build fit + w_s·win rate (Bayesian adjusted) + w_p·synergy with current augments
+```
+
+| Build type | Build fit | Stats | Synergy |
+| --- | --- | --- | --- |
+| Win rate first | 0.5 | 0.4 | 0.1 |
+| Fun / meme | 0.8 | 0.1 | 0.1 |
+
+### Development
+
+Node.js 22+, Windows. The game must be in borderless window mode on a 16:9 or 16:10 screen (UI scales with screen height).
+
+```bash
+cd overlay
+npm install
+npm run dev        # run in dev mode
+npm run typecheck  # type check
+npm test           # engine and recognition tests
+npm run dist       # build installer (overlay/release/)
+```
+
+- Data collection mode: `$env:COLLECT=1; npm run dev` → saves the screen to `samples/screens/` every 3 seconds during a game (for recognition tuning)
+- Previews: after `npm run dev`, open `/#preview-02a`, `-03`, `-04`, `-pick`, etc. in a browser
+
+#### Releasing a new version
+
+1. Bump `version` in `overlay/package.json`.
+2. In `overlay`, run `$env:GH_TOKEN = (gh auth token); npm run release` → published as a GitHub release, and installed apps pick it up automatically.
+
+### Structure
+
+```
+overlay/            Electron + TypeScript + React overlay app
+└─ src/
+   ├─ main/         windows, game detection, name OCR, auto-update
+   ├─ capture/      screen capture + augment recognition
+   ├─ engine/       recommendation engine, icon matching, initial-consonant search (pure functions)
+   ├─ preload/      IPC bridge
+   └─ renderer/     overlay UI
+data/               augment list, tags, builds, icon feature JSON
+pipeline/           stats batch scripts (M4)
+tools/              augment/icon download, tag extraction, build generation
+```
+
+### Writing builds
+
+Edit the `BUILDS` table in `tools/make-builds.mjs` and run `node tools/make-builds.mjs` to generate `data/builds.json` (all champions). A build looks like the example in the Korean section above.
+
+- `style`: `fun` (fun/meme) or `meta` (win rate first). Changes the score weights. The first build is the default.
+- `wantTags`: augment tags the build wants, with weights
+- `mustHave`: required augment IDs that get a bonus
+- `avoidTags`: tags to avoid
+
+### Notes
+
+- Uses screen capture only. It never reads game memory or sends input to the game. The overlay window does not show up in recordings or streams.
+- Riot revised its overlay policy in 2025, and showing augment win rates is banned in TFT. Whether this is allowed will be checked on the Riot Developer Portal before any public release.
+- This project is not affiliated with or endorsed by Riot Games.
+
+### License
 
 [Apache License 2.0](./LICENSE)

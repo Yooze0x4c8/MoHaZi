@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; font-src 'self'">
+<title>MoHaZi</title>
+<!--
+  MoHaZi 시작 모션 B — "M, Z, H가 올라오고, H를 고른다"
+  한 번만 재생(2.2초) → 0.8초 머문 뒤 페이드 아웃(3.0–3.3초). 창은 메인 프로세스가 3.4초에 닫는다.
+  마크 좌표계: 120×120, 중심 (60,60). 카드 35×49, r=6.
+-->
+<style>
+  :root { --ink: #0E0F12; --paper: #F2EFE8; --muted: #A9A59B; --accent: #6E95FF; }
+  html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; user-select: none; cursor: default; }
+  body { display: flex; align-items: stretch; justify-content: stretch; padding: 8px; box-sizing: border-box;
+         font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif; }
+  .panel { flex: 1; display: flex; align-items: center; gap: 14px; padding: 0 22px 0 10px; border-radius: 22px;
+           background: var(--ink); border: 1px solid #2A2C33; box-shadow: 0 10px 28px rgba(0,0,0,.35);
+           animation: panelIn .25s ease-out both, panelOut .3s ease-in 3s forwards; }
+  .text { display: flex; flex-direction: column; gap: 4px; animation: textIn .4s cubic-bezier(.2,.8,.2,1) 1.35s both; }
+  .title { color: var(--paper); font-size: 20px; font-weight: 700; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+  .m .l, .m .r, .m .c, .m .ring, .m .chev { transform-box: view-box; transform-origin: 0 0; }
+  .m .l    { animation: L 2.2s linear both; }
+  .m .r    { animation: R 2.2s linear both; }
+  .m .c    { animation: C 2.2s linear both; }
+  .m .cr   { animation: Fill 2.2s linear both; }
+  .m .h    { stroke: var(--ink); stroke-dasharray: 1; stroke-dashoffset: 1; animation: Draw 2.2s linear both; }
+  .m .ring { animation: Ring 2.2s linear both; }
+  .m .chev { animation: Chev 2.2s linear both; }
+
+  /* 1. M(0–0.5s) → Z(0.25–0.75s)가 아래에서 올라오며 ∓14°로 기울어 자리잡음
+     2. 빈 카드가 같은 높이로 올라옴(0.5–1.0s)  3. 눌림(1.0–1.15s)
+     4. 선택(1.15–1.6s): 파랗게 채워지며 112%로 튀어 오름, H 글자 그리기, 파동, M·Z 밀려나며 흐려짐
+     5. 꺾쇠가 H 위로 떨어졌다 사라지고 M·Z 복귀(1.2–2.2s) */
+  @keyframes L { 0% { transform: translate(32px,132px) rotate(0deg); opacity: 0; animation-timing-function: cubic-bezier(.22,1.3,.36,1) }
+                 22.73%, 52.27% { transform: translate(32px,62.5px) rotate(-14deg); opacity: 1; animation-timing-function: cubic-bezier(.2,.9,.3,1) }
+                 60% { transform: translate(28px,65px) rotate(-18deg); opacity: .4; animation-timing-function: cubic-bezier(.4,0,.2,1) }
+                 86.36%, 100% { transform: translate(32px,62.5px) rotate(-14deg); opacity: 1 } }
+  @keyframes R { 0%, 11.36% { transform: translate(88px,132px) rotate(0deg); opacity: 0; animation-timing-function: cubic-bezier(.22,1.3,.36,1) }
+                 34.09%, 52.27% { transform: translate(88px,62.5px) rotate(14deg); opacity: 1; animation-timing-function: cubic-bezier(.2,.9,.3,1) }
+                 60% { transform: translate(92px,65px) rotate(18deg); opacity: .4; animation-timing-function: cubic-bezier(.4,0,.2,1) }
+                 86.36%, 100% { transform: translate(88px,62.5px) rotate(14deg); opacity: 1 } }
+  @keyframes C { 0%, 22.73% { transform: translate(60px,132px) scale(1); opacity: 0; animation-timing-function: cubic-bezier(.22,1.2,.36,1) }
+                 45.45% { transform: translate(60px,62.5px) scale(1); opacity: 1; animation-timing-function: ease-in }
+                 52.27% { transform: translate(60px,65px) scale(.95); opacity: 1; animation-timing-function: cubic-bezier(.2,1.6,.4,1) }
+                 65.91% { transform: translate(60px,52.5px) scale(1.12); opacity: 1; animation-timing-function: cubic-bezier(.4,0,.2,1) }
+                 72.73%, 100% { transform: translate(60px,54.5px) scale(1); opacity: 1 } }
+  @keyframes Fill { 0%, 52.27% { fill: var(--ink); stroke: var(--paper); stroke-width: 4.2px }
+                    56.82%, 100% { fill: var(--accent); stroke: var(--ink); stroke-width: 3px } }
+  @keyframes Draw { 0%, 54.55% { stroke-dashoffset: 1; animation-timing-function: cubic-bezier(.3,.7,.3,1) }
+                    72.73%, 100% { stroke-dashoffset: 0 } }
+  @keyframes Ring { 0%, 52.27% { transform: translate(60px,54.5px) scale(1); opacity: 0 }
+                    53.64% { transform: translate(60px,54.5px) scale(1.04); opacity: .9; animation-timing-function: cubic-bezier(.1,.6,.3,1) }
+                    81.82%, 100% { transform: translate(60px,54.5px) scale(1.6); opacity: 0 } }
+  @keyframes Chev { 0%, 54.55% { transform: translate(60px,10px); opacity: 0; animation-timing-function: cubic-bezier(.2,1.5,.4,1) }
+                    68.18%, 90.91% { transform: translate(60px,19px); opacity: 1; animation-timing-function: ease-in }
+                    100% { transform: translate(60px,16px); opacity: 0 } }
+  @keyframes panelIn  { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+  @keyframes panelOut { to { opacity: 0; transform: translateY(6px) } }
+  @keyframes textIn   { from { opacity: 0; transform: translateX(-6px) } to { opacity: 1; transform: none } }
+
+  /* 운영체제 '동작 줄이기': 움직임 없이 마지막 장면만 */
+  @media (prefers-reduced-motion: reduce) {
+    .m *, .text { animation-duration: 1ms !important; animation-delay: 0s !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="panel" role="status" aria-label="MoHaZi 실행 중">
+    <svg class="m" width="104" height="104" viewBox="-20 -20 160 160" aria-hidden="true">
+      <g class="l" fill="none" stroke="#F2EFE8" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="-17.5" y="-24.5" width="35" height="49" rx="6" fill="#0E0F12"/>
+        <path d="M-8 11 V-11 L0 1.5 L8 -11 V11"/>
+      </g>
+      <g class="r" fill="none" stroke="#F2EFE8" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="-17.5" y="-24.5" width="35" height="49" rx="6" fill="#0E0F12"/>
+        <path d="M-8 -11 H8 L-8 11 H8"/>
+      </g>
+      <g class="ring"><rect x="-17.5" y="-24.5" width="35" height="49" rx="6" fill="none" stroke="#6E95FF" stroke-width="2.8"/></g>
+      <g class="c">
+        <rect class="cr" x="-17.5" y="-24.5" width="35" height="49" rx="6"/>
+        <path class="h" pathLength="1" d="M-8.5 -11 V11 M-8.5 0 H8.5 M8.5 -11 V11" fill="none" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g class="chev"><path d="M-6 -3 L0 3 L6 -3" fill="none" stroke="#6E95FF" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    </svg>
+    <div class="text">
+      <div class="title">MoHaZi 실행 중</div>
+      <div class="sub">증바람 판에 들어가면 오버레이가 떠요</div>
+    </div>
+  </div>
+</body>
+</html>

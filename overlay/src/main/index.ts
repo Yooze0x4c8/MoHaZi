@@ -45,6 +45,28 @@ function key(accel: string, fn: () => void) {
   return ok
 }
 
+// 패키지에선 extraResources(resources/), 개발 모드에선 overlay/resources/
+const resDir = (...p: string[]) => app.isPackaged ? join(process.resourcesPath, ...p) : join(app.getAppPath(), 'resources', ...p)
+
+// 시작 모션: 오른쪽 아래 작은 창에서 한 번 재생하고 닫는다. 클릭·포커스를 가져가지 않는다
+function showIntro() {
+  const W = 380, H = 140, M = 16
+  const { workArea } = screen.getPrimaryDisplay()
+  const intro = new BrowserWindow({
+    width: W, height: H,
+    x: Math.round(workArea.x + workArea.width - W - M),
+    y: Math.round(workArea.y + workArea.height - H - M),
+    frame: false, transparent: true, resizable: false, movable: false,
+    focusable: false, skipTaskbar: true, alwaysOnTop: true, hasShadow: false,
+    show: false, backgroundColor: '#00000000',
+    webPreferences: { sandbox: true, contextIsolation: true, nodeIntegration: false }
+  })
+  intro.setIgnoreMouseEvents(true)
+  intro.once('ready-to-show', () => intro.showInactive())
+  intro.loadFile(resDir('intro', 'intro.html'))
+  setTimeout(() => { if (!intro.isDestroyed()) intro.close() }, 3400)
+}
+
 // M0: 게임 위에 투명·클릭 통과·항상 위 창
 function createOverlay() {
   const { bounds } = screen.getPrimaryDisplay()
@@ -89,10 +111,11 @@ function createOverlay() {
   key('F7', () => win.webContents.send('f7'))
 
   // 작업 표시줄에도 없고 포커스도 안 받는 창이라, 끄는 길은 트레이뿐이다
-  // ponytail: 아이콘은 파란 사각형 하나. 앱 아이콘을 만들면 그 파일로 바꾼다
-  const px = Buffer.alloc(16 * 16 * 4)
-  for (let i = 0; i < px.length; i += 4) px.set([0xff, 0x95, 0x6e, 0xff], i) // BGRA #6E95FF
-  tray = new Tray(nativeImage.createFromBitmap(px, { width: 16, height: 16 }))
+  // 트레이 아이콘: 윈도우는 컬러 타일, 맥은 템플릿(검정+알파, 다크 모드에서 자동 반전). @1.5x/@2x는 알아서 쓴다
+  const isMac = process.platform === 'darwin'
+  const trayIcon = nativeImage.createFromPath(resDir('tray', isMac ? 'trayTemplate.png' : 'tray.png'))
+  if (isMac) trayIcon.setTemplateImage(true)
+  tray = new Tray(trayIcon)
   tray.setToolTip('MoHaZi 증강 오버레이')
   const menu = (updateReady: boolean) => Menu.buildFromTemplate([
     { label: '숨기기 / 보이기 (F8)', click: toggle },
@@ -101,8 +124,8 @@ function createOverlay() {
     { label: '종료', click: () => app.quit() }
   ])
   tray.setContextMenu(menu(false))
-  // 창 없이 트레이에만 뜨는 앱이라, 켜졌다는 걸 한 번 알려 준다
-  tray.displayBalloon({ title: 'MoHaZi 실행 중', content: '증바람 판에 들어가면 오버레이가 떠요. 끄기는 트레이 아이콘 우클릭.' })
+  // 창 없이 트레이에만 뜨는 앱이라, 켜졌다는 걸 한 번 알려 준다. 이미 게임 중이면 게임 화면을 가리지 않게 건너뛴다
+  detectGame().then((g) => { if (!g) showIntro() })
 
   // 자동 업데이트: GitHub Releases(package.json build.publish)에서 새 버전을 받아 두고 앱을 끌 때 설치한다.
   // 설치된 앱에서만 (개발 모드엔 app-update.yml이 없다). 서명이 없어도 된다 (publisherName을 안 두면 서명 검사 안 함)

@@ -71,6 +71,10 @@
       "category": "public.app-category.games",
       "artifactName": "${productName}-${version}-${arch}.${ext}"
     },
+    "extraResources": [
+      { "from": "resources/tray", "to": "tray" },
+      { "from": "resources/intro", "to": "intro" }
+    ],
     "afterPack": "build/adhoc-sign.cjs"
   }
 }

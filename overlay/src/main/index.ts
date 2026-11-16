@@ -1,4 +1,4 @@
-import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, Menu, nativeImage, screen, Tray } from 'electron'
+import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, Menu, nativeImage, screen, systemPreferences, Tray } from 'electron'
 import { join } from 'node:path'
 import { mkdir, writeFile } from 'node:fs/promises'
 import https from 'node:https'
@@ -58,6 +58,8 @@ function createOverlay() {
     webPreferences: { preload: join(__dirname, '../preload/index.js') }
   })
   win.setAlwaysOnTop(true, 'screen-saver')
+  // 맥: 전체 화면 게임(별도 Space) 위에도 뜨게
+  if (process.platform === 'darwin') win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true })
   win.setIgnoreMouseEvents(true, { forward: true })
   // 화면 캡처에 오버레이 자신이 찍히지 않게 (Win10 2004+). 녹화·방송에도 안 보인다.
   win.setContentProtection(true)
@@ -104,7 +106,8 @@ function createOverlay() {
 
   // 자동 업데이트: GitHub Releases(package.json build.publish)에서 새 버전을 받아 두고 앱을 끌 때 설치한다.
   // 설치된 앱에서만 (개발 모드엔 app-update.yml이 없다). 서명이 없어도 된다 (publisherName을 안 두면 서명 검사 안 함)
-  if (app.isPackaged) {
+  // ponytail: Windows만. 맥 자동 업데이트는 Apple 서명이 있어야 돼서, 맥은 새 dmg를 받아 덮어쓴다
+  if (app.isPackaged && process.platform === 'win32') {
     autoUpdater.on('update-downloaded', ({ version }) => {
       tray.setContextMenu(menu(true))
       tray.displayBalloon({ title: 'MoHaZi 업데이트', content: `${version} 버전을 받았어요. 다음에 켤 때 적용돼요.` })
@@ -178,5 +181,12 @@ const MODE = 'KIWI'
 
 // 두 번 실행하면 오버레이가 겹치고 단축키 등록도 실패하므로 하나만 띄운다
 if (!app.requestSingleInstanceLock()) app.quit()
-else app.whenReady().then(createOverlay)
+else app.whenReady().then(() => {
+  if (process.platform === 'darwin') {
+    app.dock?.hide() // 메뉴 막대 아이콘만 쓰는 앱
+    // 화면 기록 권한 요청 창을 게임 밖(지금)에 띄운다. 게임 중에 처음 뜨면 전체 화면에 가려진다
+    if (systemPreferences.getMediaAccessStatus('screen') !== 'granted') desktopCapturer.getSources({ types: ['screen'] }).catch(() => {})
+  }
+  createOverlay()
+})
 app.on('will-quit', () => globalShortcut.unregisterAll())

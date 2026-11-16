@@ -1,0 +1,33 @@
+# 맥 설치 파일(.dmg)은 macOS에서만 만들 수 있어 GitHub Actions에서 빌드한다.
+# Windows 쪽 `npm run release`로 GitHub Release가 올라오면 같은 릴리스에 dmg를 덧붙인다.
+# 수동 실행(workflow_dispatch)은 최신 릴리스에 덧붙인다.
+name: mac
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  dmg:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: overlay/package-lock.json
+      - run: npm ci
+        working-directory: overlay
+      - run: npm run dist:mac
+        working-directory: overlay
+      - name: 릴리스에 dmg 올리기
+        working-directory: overlay
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh release upload "${TAG:-$(gh release view --json tagName -q .tagName)}" release/*.dmg --clobber

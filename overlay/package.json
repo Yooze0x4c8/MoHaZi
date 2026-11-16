@@ -8,7 +8,8 @@
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --no-warnings --test src/engine/engine.test.ts src/engine/search.test.ts src/engine/match.test.ts src/capture/recognize.test.ts",
     "dist": "electron-vite build && electron-builder --win nsis --publish never",
-    "release": "electron-vite build && electron-builder --win nsis --publish always"
+    "release": "electron-vite build && electron-builder --win nsis --publish always",
+    "dist:mac": "electron-vite build && electron-builder --mac --publish never"
   },
   "dependencies": {
     "@tesseract.js-data/kor": "^1.0.0",
@@ -55,6 +56,21 @@
         "repo": "MoHaZi",
         "releaseType": "release"
       }
-    ]
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "identity": null,
+      "category": "public.app-category.games",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "afterPack": "build/adhoc-sign.cjs"
   }
 }

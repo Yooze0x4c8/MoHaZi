@@ -1095,6 +1095,23 @@
     "avoidTags": [
      "ap"
     ]
+   },
+   {
+    "id": "Ashe-apult",
+    "name": "AP 무한궁",
+    "desc": "궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ult_haste": 1,
+     "ap": 0.8,
+     "ult": 0.7,
+     "ability_haste": 0.7
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
+    ]
    }
   ]
  },
@@ -2056,7 +2073,7 @@
    {
     "id": "Gangplank-apult",
     "name": "AP 무한궁",
-    "desc": "궁 쿨감을 쌓아 궁을 쉬지 않고 깔아요",
+    "desc": "궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3738,6 +3755,23 @@
     "mustHave": [],
     "avoidTags": [
      "ap"
+    ]
+   },
+   {
+    "id": "Ezreal-apult",
+    "name": "AP 무한궁",
+    "desc": "궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요",
+    "style": "fun",
+    "default": false,
+    "wantTags": {
+     "ult_haste": 1,
+     "ap": 0.8,
+     "ult": 0.7,
+     "ability_haste": 0.7
+    },
+    "mustHave": [],
+    "avoidTags": [
+     "crit"
     ]
    }
   ]

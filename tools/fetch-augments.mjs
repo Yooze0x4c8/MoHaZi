@@ -24,10 +24,13 @@ const SUFFIX = ['kiwi_aram_%_tooltip', 'kiwi_aram_%_summary', 'kiwi_aram_%_desc'
   'augment_%_summary', 'augment_%_tooltip',
   'cherry_%_tooltipdescription', 'cherry_%_tooltip', 'cherry_%_summary']
 
+// 게임에서 빠졌지만 CommunityDragon 목록엔 남은 증강 (26.12 특성 삭제 40종, 26.21 13종. 공식 패치노트 대조, 2026-11-16)
+const REMOVED = new Set([1009,1023,1032,1035,1039,1050,1052,1067,1069,1070,1082,1085,1086,1107,1108,1198,1208,1220,1250,1313,1316,1317,1321,1338,1339,1340,1341,1342,1345,1356,1372,1391,1397,1405,1406,1409,1411,1418,1424,2001,2002,2003,2006,2008,2024,2031,2042,2046,2063,2082,2095,2118,2128])
+
 const augments = list
   // 증바람 증강 = ID 1000 이상 (아레나는 1000 미만). ARAM_ 접두사만 보면 실제 게임에 나오는 증강이 빠진다
   // (2026-11-13 실제 게임 13종 중 7종 누락: 불길한 서약=OminousPact 등). GoH_는 다른 모드, 이름 빈 것도 뺀다
-  .filter((x) => x.id >= 1000 && !x.augmentNameId.startsWith('GoH') && x.nameTRA.trim())
+  .filter((x) => x.id >= 1000 && !x.augmentNameId.startsWith('GoH') && x.nameTRA.trim() && !REMOVED.has(x.id))
   .map((x) => {
     const icon = x.augmentSmallIconPath.toLowerCase().replace('/lol-game-data/assets/', 'game/')
     const bases = [x.augmentNameId.replace(/^ARAM_/, '').toLowerCase(), icon.split('/').pop().replace('_small.png', '')]

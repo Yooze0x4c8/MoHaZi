@@ -1,7 +1,7 @@
 // 실행: npm test (Node 내장 테스트, 갱플 예시 빌드 기준)
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { rate, rateCards, shouldReroll, suggestSwitch, type Build, type Tags } from './index.ts'
+import { rate, rateCards, tipFor, shouldReroll, suggestSwitch, type Build, type Tags } from './index.ts'
 
 const gp: Build = {
   id: 'gp-ap-ult', name: 'AP 무한궁 갱플', style: 'fun',
@@ -43,6 +43,16 @@ test('추천: 세 장 중 최고 점수 카드', () => {
   const r = rateCards([2, null, 4], gp, tags, labels)
   assert.equal(r.cards[1], null)
   assert.equal(r.pick, 0)
+  // 순위: 점수 순, 못 알아본 카드는 순위 없음
+  assert.deepEqual(rateCards([2, 1, 4], gp, tags, labels).cards.map((c) => c?.rank), [2, 1, 3])
+})
+
+test('증강 팁: 챔피언·빌드 조건이 맞는 것 중 더 구체적인 팁', () => {
+  const tips = { 7: [{ tip: '공통' }, { champs: ['Ekko'], tip: '에코용' }, { champs: ['Ekko'], builds: ['apult'], tip: '에코 무한궁' }] }
+  assert.equal(tipFor(7, 'Ekko', 'Ekko-burst', tips), '에코용')
+  assert.equal(tipFor(7, 'Ekko', 'Ekko-apult', tips), '에코 무한궁')
+  assert.equal(tipFor(7, 'Annie', 'Annie-apult', tips), '공통')
+  assert.equal(tipFor(8, 'Ekko', 'Ekko-burst', tips), undefined)
 })
 
 test('리롤 권장: 세 장 모두 B 이하이고 리롤이 남았을 때만', () => {

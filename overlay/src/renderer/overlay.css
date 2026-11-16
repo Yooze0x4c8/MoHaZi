@@ -56,12 +56,15 @@
 .tile.A { box-shadow: inset 0 0 0 2px var(--text-primary); color: var(--text-primary); }
 .tile.B { box-shadow: inset 0 0 0 1px var(--grade-b-ring); color: var(--grade-b-fg); }
 .tile.C { color: var(--grade-c-fg); }
+.tile { position: relative; }
+.tile i { position: absolute; right: 4px; bottom: 3px; font-size: 11px; font-weight: 600; font-style: normal; opacity: .7; }
 .tile.Q { box-shadow: inset 0 0 0 1px var(--grade-b-ring); color: var(--text-primary); }
 
 .why { flex: 1; min-width: 0; padding: 0 14px; display: flex; flex-direction: column; justify-content: center; gap: 3px; }
 .why .r1 { font-size: 15px; font-weight: 600; line-height: 1.3; display: flex; gap: 8px; align-items: baseline; white-space: nowrap; }
 .why .r1 span { font-size: 14px; font-weight: 400; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; }
 .why .r2 { font-size: 12px; color: var(--text-muted); }
+.why .tip { color: var(--accent); line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } /* 두 줄까지 (띠 높이 56 안) */
 .why .low { color: var(--warn-data); }
 .strip.dim .r1 { color: rgba(242, 239, 232, .6); }
 
@@ -219,6 +222,7 @@ button.chip:hover { background: rgba(30, 32, 38, .9); }
 
 /* 고른 증강 목록 (3-3): 화면에서 추정해 기록하므로 바꾸기·빼기·추가 */
 .picks { border-top: 1px solid rgba(242, 239, 232, .1); padding: 12px 20px; display: flex; flex-direction: column; gap: 6px; }
+.pick-row small { display: block; font-size: 11px; color: var(--accent); }
 .picks-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-muted); }
 .pick-row { display: flex; align-items: center; gap: 6px; font-size: 14px; }
 .pick-row span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

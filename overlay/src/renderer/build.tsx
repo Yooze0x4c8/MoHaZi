@@ -27,15 +27,15 @@ function Row({ b, sel, onPick }: { b: Build; sel: boolean; onPick?: () => void }
 }
 
 // 고른 증강 목록 (3-3). 화면에서 추정해 기록하므로 틀릴 수 있어 바꾸기·빼기·추가를 둔다
-export type PickEdit = { names: string[]; onEdit: (i: number) => void; onRemove: (i: number) => void; onAdd: () => void }
+export type PickEdit = { names: string[]; tips?: (string | undefined)[]; onEdit: (i: number) => void; onRemove: (i: number) => void; onAdd: () => void }
 
-function Picks({ names, onEdit, onRemove, onAdd }: PickEdit) {
+function Picks({ names, tips, onEdit, onRemove, onAdd }: PickEdit) {
   return (
     <div className="picks">
       <div className="picks-head">고른 증강 {names.length}개<button type="button" className="mini" onClick={onAdd}>추가</button></div>
       {names.map((n, i) => (
         <div key={i} className="pick-row">
-          <span>{n}</span>
+          <span>{n}{tips?.[i] && <small>{tips[i]}</small>}</span>
           <button type="button" className="mini" onClick={() => onEdit(i)}>바꾸기</button>
           <button type="button" className="mini" onClick={() => onRemove(i)} aria-label={`${n} 빼기`}>빼기</button>
         </div>

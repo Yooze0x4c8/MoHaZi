@@ -49,7 +49,7 @@ const DESC = {
   enchanter: '회복과 보호막으로 아군을 지켜요'
 }
 
-// 챔피언: [프리셋, 덧붙임 태그?, 이름?] 목록. 첫 번째가 기본(meta) 빌드, 나머지는 재미(fun) 빌드.
+// 챔피언: [프리셋, 덧붙임 태그?, 이름?, 설명?] 목록. 첫 번째가 기본(meta) 빌드, 나머지는 재미(fun) 빌드.
 // 덧붙임에 같은 태그가 있으면 덮어쓰고, 프리셋의 피할 태그에서도 뺀다.
 const BUILDS = {
   Aatrox: [['bruiser', { heal: 1 }], ['lethality']],
@@ -62,7 +62,7 @@ const BUILDS = {
   Anivia: [['mage', { cc: 0.6 }], ['aptank']],
   Annie: [['burst'], ['aptank', { cc: 0.7 }], ['mage']],
   Aphelios: [['crit'], ['lethality']],
-  Ashe: [['crit', { cc: 0.5 }], ['onhit']],
+  Ashe: [['crit', { cc: 0.5 }], ['onhit'], ['apult', { ap: 0.8 }, undefined, '궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요']],
   AurelionSol: [['mage', { stack: 1 }], ['burst']],
   Aurora: [['apassassin', { dash: 0.5 }], ['mage']],
   Azir: [['mage', { summon: 0.6, attack_speed: 0.5 }], ['aponhit']],
@@ -84,12 +84,12 @@ const BUILDS = {
   Ekko: [['apassassin'], ['apbruiser'], ['aponhit']],
   Elise: [['apassassin'], ['aptank'], ['mage']],
   Evelynn: [['apassassin'], ['burst']],
-  Ezreal: [['adcaster', { on_hit: 0.5 }], ['burst', {}, 'AP 이즈리얼'], ['crit']],
+  Ezreal: [['adcaster', { on_hit: 0.5 }], ['burst', {}, 'AP 이즈리얼'], ['crit'], ['apult', { ap: 0.8 }, undefined, '궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요']],
   FiddleSticks: [['mage', { cc: 0.6 }], ['burst'], ['aptank']],
   Fiora: [['fighter', { true_dmg: 0.6, heal: 0.6 }], ['bruiser']],
   Fizz: [['apassassin'], ['aptank'], ['burst']],
   Galio: [['aptank'], ['burst']],
-  Gangplank: [['crit', { ability_haste: 0.4 }, '치명타 배럴'], ['apult', { ap: 0.8 }], ['lethality']],
+  Gangplank: [['crit', { ability_haste: 0.4 }, '치명타 배럴'], ['apult', { ap: 0.8 }, undefined, '궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요'], ['lethality']],
   Garen: [['bruiser', { crit: 0.4, ms: 0.4 }], ['crit'], ['tank']],
   Gnar: [['bruiser', { tank: 0.7 }], ['onhit'], ['tank']],
   Gragas: [['apbruiser', { cc: 0.5 }], ['tank'], ['burst']],
@@ -243,7 +243,7 @@ for (const c of champs) {
     rows = [[BY_ROLE[c.roles?.[0]] ?? 'bruiser']]
     guessed.push(c.alias)
   }
-  const builds = rows.map(([preset, extra = {}, name], i) => {
+  const builds = rows.map(([preset, extra = {}, name, desc], i) => {
     const p = P[preset]
     if (!p) throw new Error(`${c.alias}: 없는 프리셋 ${preset}`)
     const wantTags = Object.fromEntries(Object.entries({ ...p.want, ...extra }).filter(([, v]) => v > 0))
@@ -251,7 +251,7 @@ for (const c of champs) {
     return {
       id: `${c.alias}-${preset}`,
       name: name ?? NAME[preset],
-      desc: DESC[preset],
+      desc: desc ?? DESC[preset],
       style: i === 0 ? 'meta' : 'fun',
       default: i === 0,
       wantTags,

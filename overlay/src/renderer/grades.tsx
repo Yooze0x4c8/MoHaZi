@@ -7,6 +7,8 @@ export type CardGrade = {
   reason: string   // 주 태그 (예: 궁 쿨감)
   detail?: string  // 보조 설명 (예: 무한궁 핵심)
   lowData?: boolean
+  rank?: number    // 세 장 중 순위 (같은 등급끼리도 차이를 보여준다)
+  tip?: string     // 이 증강을 골랐을 때 팁 (아이템·플레이)
 }
 
 // 1920×1080 기준 카드 왼쪽 x (인식과 같은 값)
@@ -46,10 +48,10 @@ export function GradeStrip({ x, index, card, onOpen }: { x: number; index: numbe
   )
   return (
     <div className={`strip glass${card.grade === 'C' ? ' dim' : ''}`} style={style}>
-      <div className={`tile ${card.grade}`}>{card.grade}</div>
+      <div className={`tile ${card.grade}`}>{card.grade}{card.rank != null && <i aria-label={`${card.rank}위`}>{card.rank}</i>}</div>
       <div className="why">
         <div className="r1">{card.reason}{card.detail && <span>{card.detail}</span>}</div>
-        {card.lowData && <div className="r2 low">표본이 적어요</div>}
+        {card.lowData ? <div className="r2 low">표본이 적어요</div> : card.tip && <div className="r2 tip" title={card.tip}>{card.tip}</div>}
       </div>
     </div>
   )

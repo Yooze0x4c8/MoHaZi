@@ -15,7 +15,7 @@ export type Build = {
 export type Tags = Record<number, string[]>   // 증강 ID → 태그 (data/tags.json)
 export type Labels = Record<string, string>   // 태그 → 한글 표시명
 
-export type Rated = { id: number; score: number; grade: Grade; reason: string; detail: string }
+export type Rated = { id: number; score: number; grade: Grade; reason: string; detail: string; rank?: number }
 
 // 기획서 출발값. stat은 M4 전까지 없으므로 그 몫을 fit·syn 비율대로 나눠 준다
 const WEIGHTS = { fun: { fit: 0.8, syn: 0.1 }, meta: { fit: 0.5, syn: 0.1 } }
@@ -66,6 +66,8 @@ export function rateCards(ids: (number | null)[], build: Build, tags: Tags, labe
   const cards = ids.map((id) => (id == null ? null : rate(id, build, tags, labels, picked)))
   let pick: number | undefined
   cards.forEach((c, i) => { if (c && (pick == null || c.score > cards[pick]!.score)) pick = i })
+  // 같은 등급이어도 점수로 순위를 매긴다 (1 = 가장 좋음, 동점은 같은 순위)
+  for (const c of cards) if (c) c.rank = 1 + cards.filter((o) => o && o.score > c.score).length
   return { cards, pick }
 }
 
@@ -106,4 +108,14 @@ export function suggestSwitch(picked: number[], current: Build, builds: Build[],
   const n = picked.length
   const who = fits.length === n ? `고른 증강 ${n}개가 모두` : `고른 증강 ${n}개 중 ${fits.length}개가`
   return { to: best.b, fromFit, toFit: best.fit, why: `${who} ${top.join(' · ')} 쪽이에요.` }
+}
+
+// 증강 팁 (data/tips.json): 증강 ID → 팁 목록. champs·builds(빌드 종류 = 빌드 ID의 '-' 뒤, 예: apult)가 있으면
+// 그 챔피언·빌드일 때만. 맞는 팁 중 조건이 많은(더 구체적인) 것을 보여준다
+export type Tip = { champs?: string[]; builds?: string[]; tip: string }
+export function tipFor(id: number, champ: string, buildId: string, tips: Record<string, Tip[]>) {
+  const kind = buildId.slice(buildId.indexOf('-') + 1)
+  const fits = (tips[id] ?? []).filter((t) => (!t.champs || t.champs.includes(champ)) && (!t.builds || t.builds.includes(kind)))
+  const n = (t: Tip) => +!!t.champs + +!!t.builds
+  return fits.sort((a, b) => n(b) - n(a))[0]?.tip
 }

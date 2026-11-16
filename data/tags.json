@@ -54,11 +54,6 @@
     "1007": [
       "ad"
     ],
-    "1009": [
-      "ability_haste",
-      "burn",
-      "cc"
-    ],
     "1011": [
       "ult"
     ],
@@ -84,10 +79,6 @@
     "1022": [
       "attack_speed"
     ],
-    "1023": [
-      "heal",
-      "ms"
-    ],
     "1025": [
       "true_dmg"
     ],
@@ -107,17 +98,9 @@
     "1030": [
       "ability_haste"
     ],
-    "1032": [
-      "damage",
-      "ability_haste"
-    ],
     "1034": [
       "shield",
       "resist"
-    ],
-    "1035": [
-      "burn",
-      "cc"
     ],
     "1036": [
       "burn"
@@ -128,10 +111,6 @@
     ],
     "1038": [
       "damage"
-    ],
-    "1039": [
-      "cc",
-      "auto_cast"
     ],
     "1041": [
       "tank",
@@ -159,17 +138,9 @@
     "1048": [
       "crit"
     ],
-    "1050": [
-      "support",
-      "ap"
-    ],
     "1051": [
       "attack_speed",
       "damage"
-    ],
-    "1052": [
-      "attack_speed",
-      "on_hit"
     ],
     "1053": [
       "ap",
@@ -212,17 +183,8 @@
       "auto_cast",
       "cc"
     ],
-    "1067": [
-      "heal"
-    ],
     "1068": [
       "ability_haste"
-    ],
-    "1069": [
-      "cc"
-    ],
-    "1070": [
-      "heal"
     ],
     "1071": [
       "range"
@@ -267,21 +229,8 @@
       "attack_speed",
       "ms"
     ],
-    "1082": [
-      "ad",
-      "ability_haste",
-      "pen"
-    ],
     "1084": [
       "pen"
-    ],
-    "1085": [
-      "burn",
-      "cc"
-    ],
-    "1086": [
-      "range",
-      "damage"
     ],
     "1087": [
       "attack_speed",
@@ -315,13 +264,6 @@
     ],
     "1105": [
       "ms"
-    ],
-    "1107": [
-      "on_hit"
-    ],
-    "1108": [
-      "true_dmg",
-      "cc"
     ],
     "1112": [
       "ult"
@@ -415,11 +357,6 @@
       "ms",
       "damage"
     ],
-    "1198": [
-      "shield",
-      "heal",
-      "burn"
-    ],
     "1204": [
       "stack"
     ],
@@ -429,17 +366,11 @@
     "1206": [
       "ad"
     ],
-    "1208": [
-      "true_dmg"
-    ],
     "1211": [
       "ult"
     ],
     "1214": [
       "ability_haste",
-      "damage"
-    ],
-    "1220": [
       "damage"
     ],
     "1225": [
@@ -454,9 +385,6 @@
     ],
     "1243": [
       "random"
-    ],
-    "1250": [
-      "ad"
     ],
     "1301": [
       "support",
@@ -480,9 +408,6 @@
       "heal",
       "damage"
     ],
-    "1313": [
-      "heal"
-    ],
     "1314": [
       "ap",
       "ad",
@@ -491,14 +416,6 @@
     "1315": [
       "shield",
       "dash"
-    ],
-    "1316": [
-      "ms",
-      "pen"
-    ],
-    "1317": [
-      "item",
-      "ad"
     ],
     "1318": [
       "item",
@@ -513,12 +430,6 @@
       "item",
       "ad",
       "crit"
-    ],
-    "1321": [
-      "attack_speed",
-      "on_hit",
-      "resist",
-      "true_dmg"
     ],
     "1322": [
       "attack_speed",
@@ -586,31 +497,6 @@
       "item",
       "random"
     ],
-    "1338": [
-      "item",
-      "ad"
-    ],
-    "1339": [
-      "heal",
-      "support",
-      "cc"
-    ],
-    "1340": [
-      "heal",
-      "support",
-      "cc",
-      "item"
-    ],
-    "1341": [
-      "ap",
-      "resist",
-      "item"
-    ],
-    "1342": [
-      "ability_haste",
-      "dash",
-      "random"
-    ],
     "1343": [
       "item",
       "random"
@@ -620,10 +506,6 @@
       "shield",
       "heal",
       "ms"
-    ],
-    "1345": [
-      "support",
-      "heal"
     ],
     "1346": [
       "heal",
@@ -644,10 +526,6 @@
     "1353": [
       "tank"
     ],
-    "1356": [
-      "crit",
-      "on_hit"
-    ],
     "1358": [
       "ability_haste",
       "true_dmg",
@@ -657,12 +535,6 @@
       "item",
       "tank",
       "burn"
-    ],
-    "1372": [
-      "shield",
-      "heal",
-      "support",
-      "ms"
     ],
     "1373": [
       "ability_haste",
@@ -696,16 +568,9 @@
       "ap",
       "stack"
     ],
-    "1391": [
-      "random"
-    ],
     "1392": [
       "ability_haste",
       "dash"
-    ],
-    "1397": [
-      "attack_speed",
-      "damage"
     ],
     "1400": [
       "damage"
@@ -723,22 +588,6 @@
     "1404": [
       "stats"
     ],
-    "1405": [
-      "ms"
-    ],
-    "1406": [
-      "on_hit",
-      "heal",
-      "burn"
-    ],
-    "1409": [
-      "damage"
-    ],
-    "1411": [
-      "item",
-      "tank",
-      "resist"
-    ],
     "1413": [
       "cc",
       "tank"
@@ -752,9 +601,6 @@
     "1416": [
       "cc"
     ],
-    "1418": [
-      "random"
-    ],
     "1420": [
       "shield",
       "heal",
@@ -766,24 +612,9 @@
       "ult",
       "auto_cast"
     ],
-    "1424": [
-      "random"
-    ],
     "1996": [
       "item",
       "on_hit"
-    ],
-    "2001": [
-      "heal",
-      "support",
-      "gold"
-    ],
-    "2002": [
-      "damage"
-    ],
-    "2003": [
-      "ms",
-      "tank"
     ],
     "2004": [
       "support"
@@ -792,15 +623,8 @@
       "burn",
       "damage"
     ],
-    "2006": [
-      "cc",
-      "dash"
-    ],
     "2007": [
       "damage"
-    ],
-    "2008": [
-      "tank"
     ],
     "2009": [
       "attack_speed",
@@ -816,16 +640,8 @@
       "ap",
       "ability_haste"
     ],
-    "2024": [
-      "crit",
-      "ability_haste"
-    ],
     "2026": [
       "ms"
-    ],
-    "2031": [
-      "cc",
-      "summon"
     ],
     "2032": [
       "damage"
@@ -833,15 +649,8 @@
     "2034": [
       "cc"
     ],
-    "2042": [
-      "damage"
-    ],
     "2043": [
       "heal"
-    ],
-    "2046": [
-      "dash",
-      "cc"
     ],
     "2054": [
       "damage"
@@ -851,9 +660,6 @@
     ],
     "2062": [
       "damage"
-    ],
-    "2063": [
-      "dash"
     ],
     "2064": [
       "dash",
@@ -883,10 +689,6 @@
     "2080": [
       "damage"
     ],
-    "2082": [
-      "heal",
-      "support"
-    ],
     "2083": [
       "pen"
     ],
@@ -905,10 +707,6 @@
       "heal",
       "auto_cast",
       "damage"
-    ],
-    "2095": [
-      "random",
-      "gold"
     ],
     "2096": [
       "attack_speed",
@@ -961,10 +759,6 @@
     "2116": [
       "damage"
     ],
-    "2118": [
-      "ability_haste",
-      "ult"
-    ],
     "2119": [
       "ms",
       "range"
@@ -980,9 +774,6 @@
     ],
     "2127": [
       "item"
-    ],
-    "2128": [
-      "burn"
     ],
     "2129": [
       "damage"

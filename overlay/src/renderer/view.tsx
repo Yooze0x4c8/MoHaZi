@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
-import { rateCards, shouldReroll, suggestSwitch, type Build, type Labels, type Switch, type Tags } from '../engine'
+import { rateCards, shouldReroll, suggestSwitch, tipFor, type Build, type Tip, type Labels, type Switch, type Tags } from '../engine'
 import { search } from '../engine/search'
 import { cardAt } from '../capture/recognize'
 import { AugmentGrades, CARD_X, RerollCallout, stageBox, toStage } from './grades'
@@ -7,11 +7,13 @@ import { BuildChip, BuildPanel } from './build'
 import BUILDS_JSON from '../../../data/builds.json'
 import TAGS_JSON from '../../../data/tags.json'
 import AUGMENTS_JSON from '../../../data/augments.json'
+import TIPS_JSON from '../../../data/tips.json'
 
 export const BUILDS = BUILDS_JSON as unknown as Record<string, { name: string; builds: Build[] }>
 const TAGS = TAGS_JSON.tags as unknown as Tags
 const LABELS = TAGS_JSON.labels as Labels
 const AUGMENTS = AUGMENTS_JSON as { id: number; name: string; rarity: string }[]
+const TIPS = TIPS_JSON as Record<string, Tip[]>
 const RARITY: Record<string, string> = { silver: '실버', gold: '골드', prismatic: '프리즈마틱' }
 const NAME: Record<number, string> = Object.fromEntries(AUGMENTS.map((a) => [a.id, a.name]))
 const clickable = (on: boolean) => window.api?.setClickable(on)
@@ -102,7 +104,7 @@ export function Overlay(props: Props) {
   return champ ? <ChampOverlay champ={champ} {...props} /> : <BuildChip picked={0} />
 }
 
-function ChampOverlay({ champ, cards, rerolls = null, picked: initial = [], f7 = 0 }: Props & { champ: { name: string; builds: Build[] } }) {
+function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [], f7 = 0 }: Props & { champ: { name: string; builds: Build[] } }) {
   const [choice, setChoice] = useState<string | null>(null)
   const [toast, setToast] = useState<{ text: string; n: number } | null>(null)
 
@@ -197,11 +199,11 @@ function ChampOverlay({ champ, cards, rerolls = null, picked: initial = [], f7 =
       {panelOpen
         ? <BuildPanel champion={champ.name} builds={champ.builds} selected={build.id} chosen={choice != null} onPick={pick}
             onClose={() => { setPanelOpen(false); setEditing(null) }}
-            picks={{ names: picked.map((id) => NAME[id] ?? String(id)), onEdit: setEditing, onAdd: () => setEditing('add'),
+            picks={{ names: picked.map((id) => NAME[id] ?? String(id)), tips: picked.map((id) => tipFor(id, alias, build.id, TIPS)), onEdit: setEditing, onAdd: () => setEditing('add'),
               onRemove: (i) => setPicked((p) => p.filter((_, j) => j !== i)) }} />
         : <BuildChip build={build} picked={picked.length} onOpen={() => setPanelOpen(true)} />}
       {/* key에 빌드를 넣어 다시 매길 때 등장 애니메이션을 다시 보여준다 */}
-      {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => c ?? { grade: '?', reason: '' })} pick={reroll ? undefined : rated.pick}
+      {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => (c ? { ...c, tip: tipFor(c.id, alias, build.id, TIPS) } : { grade: '?', reason: '' }))} pick={reroll ? undefined : rated.pick}
         onOpen={(i) => setSearching((s) => (s === i ? null : i))} />}
       {reroll && <RerollCallout avail={rerolls} />}
       {searching != null && (

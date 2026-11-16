@@ -37,7 +37,9 @@ function readPng(file) {
 }
 
 const icons = {}, imgs = {}
-for (const f of fs.readdirSync(DIR).filter((f) => f.endsWith('.png'))) {
+// 지금 증강 목록(data/augments.json)에 있는 것만 (캐시엔 게임에서 빠진 증강 아이콘도 남아 있다)
+const LIVE = new Set(JSON.parse(fs.readFileSync('data/augments.json', 'utf8')).map((a) => `${a.id}.png`))
+for (const f of fs.readdirSync(DIR).filter((f) => LIVE.has(f))) {
   const id = f.slice(0, -4), img = readPng(DIR + f)
   imgs[id] = img
   icons[id] = Buffer.from(shrink(img)).toString('base64')

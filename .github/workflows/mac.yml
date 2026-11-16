@@ -30,4 +30,19 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
-        run: gh release upload "${TAG:-$(gh release view --json tagName -q .tagName)}" release/*.dmg --clobber
+        run: |
+          TAG="${TAG:-$(gh release view --json tagName -q .tagName)}"
+          gh release upload "$TAG" release/*.dmg --clobber
+          # 릴리스 설명에 윈도우용·맥용 다운로드 링크를 나눠 적는다
+          V="${TAG#v}"
+          D="https://github.com/${{ github.repository }}/releases/download/$TAG"
+          gh release edit "$TAG" --notes "## 🪟 윈도우 사용자용
+          **[MoHaZi-Setup-$V.exe 받기]($D/MoHaZi-Setup-$V.exe)** → 받아서 실행합니다.
+
+          ## 🍎 맥북 사용자용
+          - Apple 칩 (M1·M2·M3·M4): **[MoHaZi-$V-arm64.dmg 받기]($D/MoHaZi-$V-arm64.dmg)**
+          - 인텔 맥: **[MoHaZi-$V-x64.dmg 받기]($D/MoHaZi-$V-x64.dmg)**
+
+          내 맥 칩 확인: 왼쪽 위 Apple 메뉴 → 이 Mac에 관하여 → '칩' 또는 '프로세서'.
+
+          설치 방법은 [README](https://github.com/${{ github.repository }}#설치)를 보세요."

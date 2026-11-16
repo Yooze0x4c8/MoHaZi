@@ -9,7 +9,7 @@
 ## 설치
 ### 윈도우 사용자용
 
-**[최신 설치 파일 받기](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → `MoHaZi-Setup-<버전>.exe`를 받아 실행합니다.
+**[최신 설치 파일 받기](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → 페이지의 **🪟 윈도우 사용자용**에서 `MoHaZi-Setup-<버전>.exe`를 받아 실행합니다.
 
 1. "Windows의 PC 보호" 경고가 뜨면 **추가 정보 → 실행**을 누릅니다 (코드 서명이 없어서 뜨는 경고입니다).
 2. 설치되면 바로 켜지고, 작업 표시줄 오른쪽 트레이에 파란 사각형 아이콘이 생깁니다. 게임 밖에선 화면에 아무것도 안 보이는 게 정상입니다.
@@ -20,7 +20,7 @@
 
 ### macOS (맥북) 사용자용
 
-같은 릴리스 페이지에서 맥에 맞는 파일을 받습니다.
+**[최신 설치 파일 받기](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → 페이지의 **🍎 맥북 사용자용**에서 내 맥에 맞는 파일을 받습니다 (왼쪽 위 Apple 메뉴 → 이 Mac에 관하여 → '칩'으로 확인).
 
 - M1·M2·M3·M4 등 Apple 칩: `MoHaZi-<버전>-arm64.dmg`
 - 인텔 맥: `MoHaZi-<버전>-x64.dmg`

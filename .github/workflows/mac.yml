@@ -36,13 +36,14 @@ jobs:
           # 릴리스 설명에 윈도우용·맥용 다운로드 링크를 나눠 적는다
           V="${TAG#v}"
           D="https://github.com/${{ github.repository }}/releases/download/$TAG"
-          gh release edit "$TAG" --notes "## 🪟 윈도우 사용자용
-          **[MoHaZi-Setup-$V.exe 받기]($D/MoHaZi-Setup-$V.exe)** → 받아서 실행합니다.
+          gh release edit "$TAG" --notes "## 🪟 윈도우 사용자용 · Windows
+          **[MoHaZi-Setup-$V.exe 받기 · Download]($D/MoHaZi-Setup-$V.exe)** → 받아서 실행합니다. Download and run it.
 
-          ## 🍎 맥북 사용자용
-          - Apple 칩 (M1·M2·M3·M4): **[MoHaZi-$V-arm64.dmg 받기]($D/MoHaZi-$V-arm64.dmg)**
-          - 인텔 맥: **[MoHaZi-$V-x64.dmg 받기]($D/MoHaZi-$V-x64.dmg)**
+          ## 🍎 맥북 사용자용 · macOS
+          - Apple 칩 · Apple silicon (M1·M2·M3·M4): **[MoHaZi-$V-arm64.dmg 받기 · Download]($D/MoHaZi-$V-arm64.dmg)**
+          - 인텔 맥 · Intel Mac: **[MoHaZi-$V-x64.dmg 받기 · Download]($D/MoHaZi-$V-x64.dmg)**
 
           내 맥 칩 확인: 왼쪽 위 Apple 메뉴 → 이 Mac에 관하여 → '칩' 또는 '프로세서'.
+          Check your chip: Apple menu → About This Mac → Chip or Processor.
 
-          설치 방법은 [README](https://github.com/${{ github.repository }}#설치)를 보세요."
+          설치 방법은 [README](https://github.com/${{ github.repository }}#설치)를 보세요. Install guide: [README (English)](https://github.com/${{ github.repository }}#english)."

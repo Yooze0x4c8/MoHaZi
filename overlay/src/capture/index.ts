@@ -5,6 +5,7 @@ import { CARD_X, NAME, findCards, rerollsLeft, resolveCards, type Region } from 
 import { loadTemplates } from '../engine/match'
 import ICONS_JSON from '../../../data/icon-features.json'
 import AUGMENTS_JSON from '../../../data/augments.json'
+import { LANG } from '../renderer/i18n'
 
 const SLOW_MS = 700 // 평소 (초당 1~2회)
 const FAST_MS = 250 // 증강 화면일 때
@@ -53,7 +54,8 @@ export function startCapture(active: () => boolean, onFrame: (f: ImageBitmap, vi
 }
 
 const TEMPLATES = loadTemplates(ICONS_JSON)
-const NAMES: Record<number, string> = Object.fromEntries(AUGMENTS_JSON.map((a) => [a.id, a.name]))
+// 카드 이름을 읽어 맞춰 볼 이름: 롤 클라이언트 언어
+const NAMES: Record<number, string> = Object.fromEntries(AUGMENTS_JSON.map((a) => [a.id, LANG === 'en' ? a.nameEn : a.name]))
 
 // 프레임 → 떠 있는 증강 3장 (1-5). 결과는 onCards로, 증강 화면이 아니면 null.
 // 반환 함수는 startCapture의 onFrame: 증강 화면이면 true(다음 캡처를 빨리)

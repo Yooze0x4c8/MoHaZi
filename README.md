@@ -5,6 +5,10 @@
   </picture>
 </p>
 
+<p align="center">
+  <a href="https://github.com/Yooze0x4c8/MoHaZi/releases"><img src="https://img.shields.io/github/downloads/Yooze0x4c8/MoHaZi/total?label=downloads" alt="Downloads"></a>
+</p>
+
 <p align="center">한국어 · <a href="#english">English</a></p>
 
 증바람(롤 무작위 총력전: 아수라장) 증강 추천 오버레이.
@@ -12,6 +16,8 @@
 증강 선택 화면의 카드마다 **등급과 한 줄 이유**를 띄워, 게임 시작 때 고른 빌드에 맞는 증강을 몇 초 안에 고르게 돕습니다.
 
 > 개인용(본인·친구)으로 먼저 만들고 있습니다. 공개 배포는 라이엇 정책을 확인한 뒤 결정합니다.
+
+앱 화면은 **롤 클라이언트 언어**를 따라 한국어 또는 영어로 나옵니다. 한국어가 아니면 영어입니다. 롤 언어를 바꿨으면 앱을 다시 켜 주세요.
 
 ## 설치
 ### 윈도우 사용자용
@@ -44,12 +50,12 @@
 - 게임이 시작되면 왼쪽 위에 **빌드 패널**이 뜹니다. 클릭해서 빌드를 고르고 `접기`로 접습니다. 접힌 칩을 누르면 다시 펼쳐집니다.
 - 증강 선택 화면에서 카드 위에 **등급(S/A/B/C)과 이유**, 추천 카드에 파란 꺾쇠가 뜹니다. 빌드를 바꾸면 바로 다시 매깁니다.
 - 고른 증강은 자동으로 기록됩니다 (`○○ 기록했어요`). 틀리게 기록됐으면 패널의 `고른 증강`에서 바꾸기·빼기·추가.
-- 등급 자리에 `?`가 뜨면 눌러서 초성으로 검색해 고릅니다.
+- 등급 자리에 `?`가 뜨면 눌러서 초성으로 검색해 고릅니다 (영어 화면에선 이름 일부로 검색).
 - 게임 중엔 단축키(F7·F8)가 안 먹히는 PC가 있어 모든 조작은 마우스로 됩니다.
 
 ## 어떻게 동작하나
 
-1. **게임 시작 감지**: 라이엇 Live Client Data API(`127.0.0.1:2999`)로 게임 시작과 내 챔피언을 알아냅니다.
+1. **게임 시작 감지**: 라이엇 Live Client Data API(`127.0.0.1:2999`)로 게임 시작과 내 챔피언을 알아냅니다. 화면 언어는 Riot Client 설정 파일(`league_of_legends.live.product_settings.yaml`의 `locale`)에서 읽습니다.
 2. **빌드 선택**: 화면 구석에 챔피언별 빌드 목록이 뜹니다(예: AP 무한궁 갱플 / 브루저 갱플). 고르지 않으면 무난한 빌드가 기본값입니다.
 3. **증강 인식**: 증강 선택 화면이 뜨면 카드 3장의 아이콘을 인식합니다.
 4. **등급 표시**: 카드 상단에 `S — 궁 쿨감 · 무한궁 핵심` 같은 배지를 띄웁니다.
@@ -80,7 +86,7 @@ npm run dist       # 설치 파일 만들기 (overlay/release/)
 ```
 
 - 데이터 수집 모드: `$env:COLLECT=1; npm run dev` → 게임 중 3초마다 화면을 `samples/screens/`에 저장 (인식 보정용)
-- 미리보기: `npm run dev` 후 브라우저에서 `/#preview-02a`, `-03`, `-04`, `-pick` 등
+- 미리보기: `npm run dev` 후 브라우저에서 `/#preview-02a`, `-03`, `-04`, `-pick` 등. 영어 화면은 `/?lang=en#preview-02a`
 
 ### 새 버전 배포
 
@@ -145,24 +151,26 @@ Augment recommendation overlay for League of Legends **ARAM: Mayhem**.
 
 On the augment selection screen it shows a **grade and a one-line reason** on each card, so you can pick the augment that fits the build you chose at game start within seconds.
 
-> Built for personal use (me and friends) first. Public distribution will be decided after checking Riot's policies. The app UI is in Korean.
+> Built for personal use (me and friends) first. Public distribution will be decided after checking Riot's policies.
+
+The app follows your **League client language**: Korean if the client is Korean, English otherwise. Restart the app after changing the client language.
 
 ### Install
 
 #### Windows
 
-**[Download the latest installer](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → under **🪟 윈도우 사용자용 (Windows)**, download and run `MoHaZi-Setup-<version>.exe`.
+**[Download the latest installer](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → under **🪟 Windows**, download and run `MoHaZi-Setup-<version>.exe`.
 
 1. If "Windows protected your PC" appears, click **More info → Run anyway** (the app is not code-signed).
 2. It starts right after install and a three-card icon appears in the system tray. Nothing shows on screen outside a game; that is normal.
 3. Set League to **borderless window mode** and start **ARAM: Mayhem**. The screen must be 16:9 or 16:10.
-4. To quit, right-click the tray icon → **종료 (Quit)**.
+4. To quit, right-click the tray icon → **Quit**.
 
-New versions download automatically and apply the next time you start the app (or use "지금 재시작해서 업데이트" (restart and update now) in the tray menu).
+New versions download automatically and apply the next time you start the app (or use **Restart now to update** in the tray menu).
 
 #### macOS
 
-**[Download the latest installer](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → under **🍎 맥북 사용자용 (macOS)**, pick the file for your Mac (Apple menu → About This Mac → Chip).
+**[Download the latest installer](https://github.com/Yooze0x4c8/MoHaZi/releases/latest)** → under **🍎 macOS**, pick the file for your Mac (Apple menu → About This Mac → Chip).
 
 - Apple silicon (M1, M2, M3, M4...): `MoHaZi-<version>-arm64.dmg`
 - Intel Mac: `MoHaZi-<version>-x64.dmg`
@@ -170,21 +178,21 @@ New versions download automatically and apply the next time you start the app (o
 1. Open the dmg and drag MoHaZi into **Applications**.
 2. If an "unidentified developer" warning appears on first launch, click **Open Anyway** at the bottom of **System Settings → Privacy & Security** (the app is not Apple-signed).
 3. Allow **Screen Recording** when asked, then restart the app. (To enable it later: System Settings → Privacy & Security → Screen & System Audio Recording → MoHaZi.) Without it the app cannot read the augment cards.
-4. A three-card icon appears in the menu bar. To quit, click it → **종료 (Quit)**.
+4. A three-card icon appears in the menu bar. To quit, click it → **Quit**.
 
 There is no auto-update on macOS. Download the new dmg and replace the app.
 
 #### Usage
 
-- When a game starts, a **build panel** appears in the top-left. Click to choose a build, and `접기` (collapse) to fold it. Click the folded chip to expand it again.
+- When a game starts, a **build panel** appears in the top-left. Click to choose a build, and **Collapse** to fold it. Click the folded chip to expand it again.
 - On the augment selection screen, each card shows a **grade (S/A/B/C) and a reason**, and the recommended card gets a blue bracket. Changing the build re-grades instantly.
-- Picked augments are recorded automatically (`○○ 기록했어요`). If one was recorded wrong, change, remove or add it in the panel's `고른 증강` (picked augments).
-- If a `?` shows instead of a grade, click it and search by Korean initial consonants.
+- Picked augments are recorded automatically (`Recorded ○○`). If one was recorded wrong, use **Change**, **Remove** or **Add** under **Picked augments** in the panel.
+- If a `?` shows instead of a grade, click it and search by part of the name.
 - Some PCs ignore hotkeys (F7, F8) during a game, so everything also works with the mouse.
 
 ### How it works
 
-1. **Game detection**: Riot's Live Client Data API (`127.0.0.1:2999`) tells when a game starts and which champion you play.
+1. **Game detection**: Riot's Live Client Data API (`127.0.0.1:2999`) tells when a game starts and which champion you play. The UI language comes from the Riot Client settings file (`locale` in `league_of_legends.live.product_settings.yaml`).
 2. **Build choice**: a per-champion build list appears in a corner (e.g. AP infinite-ult Gangplank / bruiser Gangplank). If you don't pick one, a safe default is used.
 3. **Augment recognition**: on the augment selection screen, the icons of the three cards are recognized.
 4. **Grades**: a badge like `S — ult haste · core for infinite ult` is shown on top of each card.
@@ -215,7 +223,7 @@ npm run dist       # build installer (overlay/release/)
 ```
 
 - Data collection mode: `$env:COLLECT=1; npm run dev` → saves the screen to `samples/screens/` every 3 seconds during a game (for recognition tuning)
-- Previews: after `npm run dev`, open `/#preview-02a`, `-03`, `-04`, `-pick`, etc. in a browser
+- Previews: after `npm run dev`, open `/#preview-02a`, `-03`, `-04`, `-pick`, etc. in a browser. For English, use `/?lang=en#preview-02a`
 
 #### Releasing a new version
 
@@ -239,7 +247,7 @@ tools/              augment/icon download, tag extraction, build generation
 
 ### Writing builds
 
-Edit the `BUILDS` table in `tools/make-builds.mjs` and run `node tools/make-builds.mjs` to generate `data/builds.json` (all champions). A build looks like the example in the Korean section above.
+Edit the `BUILDS` table in `tools/make-builds.mjs` and run `node tools/make-builds.mjs` to generate `data/builds.json` (all champions). A build looks like the example in the Korean section above; `nameEn`/`descEn` are filled from the `NAME_EN`, `DESC_EN` and `CUSTOM_EN` tables.
 
 - `style`: `fun` (fun/meme) or `meta` (win rate first). Changes the score weights. The first build is the default.
 - `wantTags`: augment tags the build wants, with weights

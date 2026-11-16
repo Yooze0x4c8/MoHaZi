@@ -1,34 +1,34 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 const LABELS = [
-  ['ap', '주문력', /주문력/],
-  ['ad', '공격력', /공격력/],
-  ['attack_speed', '공격 속도', /공격 속도/],
-  ['crit', '치명타', /치명타/],
-  ['on_hit', '적중 시 효과', /Item_Keyword_OnHit|적중 시/],
-  ['ability_haste', '스킬 가속', /스킬 가속/],
-  ['ult_haste', '궁 쿨감', /궁극기.{0,20}(초기화|재사용 대기시간)/],
-  ['ult', '궁극기 강화', /궁극기/],
-  ['tank', '체력', /체력이 [#\d%() ]*증가|체력을 얻|추가 체력/],
-  ['resist', '방어력·마저', /방어력|마법 저항력/],
-  ['shield', '보호막', /보호막/],
-  ['heal', '회복', /체력을? 회복|흡혈|생명력 흡수|체력 재생/],
-  ['support', '아군 지원', /아군/],
-  ['ms', '이동 속도', /이동 속도/],
-  ['dash', '돌진', /돌진|도약|점멸/],
-  ['range', '사거리', /사거리/],
-  ['burn', '화상', /화상/],
-  ['true_dmg', '고정 피해', /고정 피해/],
-  ['cc', '군중 제어', /둔화|속박|기절|이동 불가|띄워|공포|변이|밀어/],
-  ['pen', '관통력', /관통력/],
-  ['auto_cast', '자동 공격', /자동 사용/],
-  ['summon', '소환물', /소환물/],
-  ['item', '아이템', /아이템|업그레이드/],
-  ['random', '무작위', /무작위/],
-  ['damage', '피해 증가', /피해량이 [#\d%() ]*증가|추가 피해/],
-  ['stack', '중첩', /영구적으로/],
-  ['stats', '능력치', /능력치 모루/],
-  ['gold', '골드', /골드%i/],
+  ['ap', '주문력', /주문력/, 'AP'],
+  ['ad', '공격력', /공격력/, 'AD'],
+  ['attack_speed', '공격 속도', /공격 속도/, 'Attack speed'],
+  ['crit', '치명타', /치명타/, 'Crit'],
+  ['on_hit', '적중 시 효과', /Item_Keyword_OnHit|적중 시/, 'On-hit'],
+  ['ability_haste', '스킬 가속', /스킬 가속/, 'Ability haste'],
+  ['ult_haste', '궁 쿨감', /궁극기.{0,20}(초기화|재사용 대기시간)/, 'Ult haste'],
+  ['ult', '궁극기 강화', /궁극기/, 'Ult power'],
+  ['tank', '체력', /체력이 [#\d%() ]*증가|체력을 얻|추가 체력/, 'Health'],
+  ['resist', '방어력·마저', /방어력|마법 저항력/, 'Armor·MR'],
+  ['shield', '보호막', /보호막/, 'Shield'],
+  ['heal', '회복', /체력을? 회복|흡혈|생명력 흡수|체력 재생/, 'Healing'],
+  ['support', '아군 지원', /아군/, 'Ally support'],
+  ['ms', '이동 속도', /이동 속도/, 'Move speed'],
+  ['dash', '돌진', /돌진|도약|점멸/, 'Dash'],
+  ['range', '사거리', /사거리/, 'Range'],
+  ['burn', '화상', /화상/, 'Burn'],
+  ['true_dmg', '고정 피해', /고정 피해/, 'True damage'],
+  ['cc', '군중 제어', /둔화|속박|기절|이동 불가|띄워|공포|변이|밀어/, 'Crowd control'],
+  ['pen', '관통력', /관통력/, 'Penetration'],
+  ['auto_cast', '자동 공격', /자동 사용/, 'Auto-cast'],
+  ['summon', '소환물', /소환물/, 'Summons'],
+  ['item', '아이템', /아이템|업그레이드/, 'Item'],
+  ['random', '무작위', /무작위/, 'Random'],
+  ['damage', '피해 증가', /피해량이 [#\d%() ]*증가|추가 피해/, 'Damage amp'],
+  ['stack', '중첩', /영구적으로/, 'Stacking'],
+  ['stats', '능력치', /능력치 모루/, 'Stats'],
+  ['gold', '골드', /골드%i/, 'Gold'],
 ];
 
 // 아이템 업그레이드 증강 → 그 아이템을 사는 빌드의 태그 (증강 이름에 아이템 이름이 들어 있다)
@@ -69,7 +69,8 @@ for (const { id, name, desc } of augments.sort((a, b) => a.id - b.id)) {
   tags[id] = Object.hasOwn(manual, id) ? manual[id] : [...new Set([...found, ...item])];
 }
 const labels = Object.fromEntries(LABELS.map(([tag, label]) => [tag, label]));
-writeFileSync(new URL('tags.json', data), JSON.stringify({ labels, tags }, null, 2) + '\n');
+const labelsEn = Object.fromEntries(LABELS.map(([tag, , , en]) => [tag, en])); // 롤 클라이언트가 영어일 때
+writeFileSync(new URL('tags.json', data), JSON.stringify({ labels, labelsEn, tags }, null, 2) + '\n');
 
 const untagged = augments.filter(({ id }) => tags[id].length === 0);
 console.log(`총 개수: ${augments.length}`);

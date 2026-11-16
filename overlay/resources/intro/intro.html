@@ -65,9 +65,12 @@
   @media (prefers-reduced-motion: reduce) {
     .m *, .text { animation-duration: 1ms !important; animation-delay: 0s !important; }
   }
+  .en, #en:target ~ .panel .ko { display: none; }
+  #en:target ~ .panel .en { display: inline; }
 </style>
 </head>
 <body>
+  <i id="en" hidden></i><!-- 영어: main이 intro.html#en으로 연다 (스크립트 없이 :target으로 문구를 바꾼다) -->
   <div class="panel" role="status" aria-label="MoHaZi 실행 중">
     <svg class="m" width="104" height="104" viewBox="-20 -20 160 160" aria-hidden="true">
       <g class="l" fill="none" stroke="#F2EFE8" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
@@ -86,8 +89,8 @@
       <g class="chev"><path d="M-6 -3 L0 3 L6 -3" fill="none" stroke="#6E95FF" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/></g>
     </svg>
     <div class="text">
-      <div class="title">MoHaZi 실행 중</div>
-      <div class="sub">증바람 판에 들어가면 오버레이가 떠요</div>
+      <div class="title"><span class="ko">MoHaZi 실행 중</span><span class="en">MoHaZi is running</span></div>
+      <div class="sub"><span class="ko">증바람 판에 들어가면 오버레이가 떠요</span><span class="en">Shows up in ARAM: Mayhem games</span></div>
     </div>
   </div>
 </body>

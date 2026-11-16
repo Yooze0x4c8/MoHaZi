@@ -13,7 +13,8 @@ export type Build = {
 }
 
 export type Tags = Record<number, string[]>   // 증강 ID → 태그 (data/tags.json)
-export type Labels = Record<string, string>   // 태그 → 한글 표시명
+export type Labels = Record<string, string>   // 태그 → 표시명 (한국어 또는 영어)
+export type Lang = 'ko' | 'en'
 
 export type Rated = { id: number; score: number; grade: Grade; reason: string; detail: string; rank?: number }
 
@@ -25,7 +26,8 @@ const SYN_PER_TAG = 0.5
 // ponytail: 등급 구간 임시값, 플레이하며 조정
 const CUTS: [Grade, number][] = [['S', 0.8], ['A', 0.4], ['B', 0]]
 
-export function rate(id: number, build: Build, tags: Tags, labels: Labels, picked: number[] = []): Rated {
+export function rate(id: number, build: Build, tags: Tags, labels: Labels, picked: number[] = [], lang: Lang = 'ko'): Rated {
+  const t = (ko: string, en: string) => (lang === 'en' ? en : ko)
   const w = WEIGHTS[build.style]
   const wf = w.fit / (w.fit + w.syn)
   const ws = w.syn / (w.fit + w.syn)
@@ -48,22 +50,23 @@ export function rate(id: number, build: Build, tags: Tags, labels: Labels, picke
 
   // C면 등급을 끌어내린 태그를, 아니면 도움 된 태그를 이유로 보여준다
   const shown = grade === 'C' && bad.length ? bad : good.length ? good : bad
-  let reason = shown.join(' · ') || (mine[0] ? name(mine[0]) : '특징 없음')
+  const core = t(`${build.name} 핵심`, `Core for ${build.name}`)
+  let reason = shown.join(' · ') || (mine[0] ? name(mine[0]) : t('특징 없음', 'Nothing notable'))
   let detail =
-    grade === 'C' ? '빌드와 반대'
-    : !good.length ? '빌드와 무관'
-    : grade === 'S' ? `${build.name} 핵심`
-    : grade === 'A' ? '빌드에 도움'
-    : '효과 작음'
-  if (must) [reason, detail] = ['필수 증강', `${build.name} 핵심`]
-  else if (syn > Math.max(0, ...parts.map((p) => p.v)) && grade !== 'C') detail = '고른 증강과 시너지'
+    grade === 'C' ? t('빌드와 반대', 'Against build')
+    : !good.length ? t('빌드와 무관', 'Off-build')
+    : grade === 'S' ? core
+    : grade === 'A' ? t('빌드에 도움', 'Helps build')
+    : t('효과 작음', 'Minor effect')
+  if (must) [reason, detail] = [t('필수 증강', 'Must-have'), core]
+  else if (syn > Math.max(0, ...parts.map((p) => p.v)) && grade !== 'C') detail = t('고른 증강과 시너지', 'Synergy with picks')
 
   return { id, score, grade, reason, detail }
 }
 
 // 카드 3장 평가 + 최고 점수 카드 번호 (동점이면 왼쪽). null은 못 알아본 카드 → 등급 없음, 추천 후보에서 빠짐
-export function rateCards(ids: (number | null)[], build: Build, tags: Tags, labels: Labels, picked: number[] = []) {
-  const cards = ids.map((id) => (id == null ? null : rate(id, build, tags, labels, picked)))
+export function rateCards(ids: (number | null)[], build: Build, tags: Tags, labels: Labels, picked: number[] = [], lang: Lang = 'ko') {
+  const cards = ids.map((id) => (id == null ? null : rate(id, build, tags, labels, picked, lang)))
   let pick: number | undefined
   cards.forEach((c, i) => { if (c && (pick == null || c.score > cards[pick]!.score)) pick = i })
   // 같은 등급이어도 점수로 순위를 매긴다 (1 = 가장 좋음, 동점은 같은 순위)
@@ -91,7 +94,7 @@ const SWITCH_MIN_PICKED = 2
 export type Switch = { to: Build; fromFit: number; toFit: number; why: string }
 
 // 고른 증강이 다른 빌드에 SWITCH_GAP 이상 더 맞으면 그 빌드를 제안 (가장 높은 것 하나)
-export function suggestSwitch(picked: number[], current: Build, builds: Build[], tags: Tags, labels: Labels): Switch | null {
+export function suggestSwitch(picked: number[], current: Build, builds: Build[], tags: Tags, labels: Labels, lang: Lang = 'ko'): Switch | null {
   if (picked.length < SWITCH_MIN_PICKED) return null
   const fromFit = fitOf(picked, current, tags, labels)
   const best = builds
@@ -106,16 +109,19 @@ export function suggestSwitch(picked: number[], current: Build, builds: Build[],
   for (const id of fits) for (const t of tags[id] ?? []) sum[t] = (sum[t] ?? 0) + (best.b.wantTags[t] ?? 0)
   const top = Object.entries(sum).filter(([, v]) => v > 0).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([t]) => labels[t] ?? t)
   const n = picked.length
-  const who = fits.length === n ? `고른 증강 ${n}개가 모두` : `고른 증강 ${n}개 중 ${fits.length}개가`
-  return { to: best.b, fromFit, toFit: best.fit, why: `${who} ${top.join(' · ')} 쪽이에요.` }
+  const why = lang === 'en'
+    ? `${fits.length === n ? `All ${n}` : `${fits.length} of ${n}`} picked augments lean ${top.join(' · ')}.`
+    : `${fits.length === n ? `고른 증강 ${n}개가 모두` : `고른 증강 ${n}개 중 ${fits.length}개가`} ${top.join(' · ')} 쪽이에요.`
+  return { to: best.b, fromFit, toFit: best.fit, why }
 }
 
 // 증강 팁 (data/tips.json): 증강 ID → 팁 목록. champs·builds(빌드 종류 = 빌드 ID의 '-' 뒤, 예: apult)가 있으면
 // 그 챔피언·빌드일 때만. 맞는 팁 중 조건이 많은(더 구체적인) 것을 보여준다
-export type Tip = { champs?: string[]; builds?: string[]; tip: string }
-export function tipFor(id: number, champ: string, buildId: string, tips: Record<string, Tip[]>) {
+export type Tip = { champs?: string[]; builds?: string[]; tip: string; tipEn?: string }
+export function tipFor(id: number, champ: string, buildId: string, tips: Record<string, Tip[]>, lang: Lang = 'ko') {
   const kind = buildId.slice(buildId.indexOf('-') + 1)
   const fits = (tips[id] ?? []).filter((t) => (!t.champs || t.champs.includes(champ)) && (!t.builds || t.builds.includes(kind)))
   const n = (t: Tip) => +!!t.champs + +!!t.builds
-  return fits.sort((a, b) => n(b) - n(a))[0]?.tip
+  const best = fits.sort((a, b) => n(b) - n(a))[0]
+  return lang === 'en' ? best?.tipEn ?? best?.tip : best?.tip
 }

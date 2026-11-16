@@ -1,11 +1,14 @@
 {
  "Annie": {
   "name": "애니",
+  "nameEn": "Annie",
   "builds": [
    {
     "id": "Annie-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -25,6 +28,8 @@
     "id": "Annie-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -43,6 +48,8 @@
     "id": "Annie-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -63,11 +70,14 @@
  },
  "Olaf": {
   "name": "올라프",
+  "nameEn": "Olaf",
   "builds": [
    {
     "id": "Olaf-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -88,6 +98,8 @@
     "id": "Olaf-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -107,6 +119,8 @@
     "id": "Olaf-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -125,11 +139,14 @@
  },
  "Galio": {
   "name": "갈리오",
+  "nameEn": "Galio",
   "builds": [
    {
     "id": "Galio-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -148,6 +165,8 @@
     "id": "Galio-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -167,11 +186,14 @@
  },
  "TwistedFate": {
   "name": "트위스티드 페이트",
+  "nameEn": "Twisted Fate",
   "builds": [
    {
     "id": "TwistedFate-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -192,6 +214,8 @@
     "id": "TwistedFate-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -210,6 +234,8 @@
     "id": "TwistedFate-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -227,11 +253,14 @@
  },
  "XinZhao": {
   "name": "신 짜오",
+  "nameEn": "Xin Zhao",
   "builds": [
    {
     "id": "XinZhao-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -252,6 +281,8 @@
     "id": "XinZhao-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -270,6 +301,8 @@
     "id": "XinZhao-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -289,11 +322,14 @@
  },
  "Urgot": {
   "name": "우르곳",
+  "nameEn": "Urgot",
   "builds": [
    {
     "id": "Urgot-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -313,6 +349,8 @@
     "id": "Urgot-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -332,11 +370,14 @@
  },
  "Leblanc": {
   "name": "르블랑",
+  "nameEn": "LeBlanc",
   "builds": [
    {
     "id": "Leblanc-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -356,6 +397,8 @@
     "id": "Leblanc-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -376,11 +419,14 @@
  },
  "Vladimir": {
   "name": "블라디미르",
+  "nameEn": "Vladimir",
   "builds": [
    {
     "id": "Vladimir-mage",
     "name": "흡혈 AP",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "Sustain AP",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -403,6 +449,8 @@
     "id": "Vladimir-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -422,11 +470,14 @@
  },
  "FiddleSticks": {
   "name": "피들스틱",
+  "nameEn": "Fiddlesticks",
   "builds": [
    {
     "id": "FiddleSticks-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -447,6 +498,8 @@
     "id": "FiddleSticks-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -466,6 +519,8 @@
     "id": "FiddleSticks-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -484,11 +539,14 @@
  },
  "Kayle": {
   "name": "케일",
+  "nameEn": "Kayle",
   "builds": [
    {
     "id": "Kayle-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -507,6 +565,8 @@
     "id": "Kayle-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -525,11 +585,14 @@
  },
  "MasterYi": {
   "name": "마스터 이",
+  "nameEn": "Master Yi",
   "builds": [
    {
     "id": "MasterYi-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -549,6 +612,8 @@
     "id": "MasterYi-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -568,6 +633,8 @@
     "id": "MasterYi-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -586,11 +653,14 @@
  },
  "Alistar": {
   "name": "알리스타",
+  "nameEn": "Alistar",
   "builds": [
    {
     "id": "Alistar-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -611,6 +681,8 @@
     "id": "Alistar-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -629,11 +701,14 @@
  },
  "Ryze": {
   "name": "라이즈",
+  "nameEn": "Ryze",
   "builds": [
    {
     "id": "Ryze-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -655,6 +730,8 @@
     "id": "Ryze-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -673,11 +750,14 @@
  },
  "Sion": {
   "name": "사이온",
+  "nameEn": "Sion",
   "builds": [
    {
     "id": "Sion-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -697,6 +777,8 @@
     "id": "Sion-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -716,11 +798,14 @@
  },
  "Sivir": {
   "name": "시비르",
+  "nameEn": "Sivir",
   "builds": [
    {
     "id": "Sivir-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -741,6 +826,8 @@
     "id": "Sivir-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -760,11 +847,14 @@
  },
  "Soraka": {
   "name": "소라카",
+  "nameEn": "Soraka",
   "builds": [
    {
     "id": "Soraka-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -785,6 +875,8 @@
     "id": "Soraka-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -805,11 +897,14 @@
  },
  "Teemo": {
   "name": "티모",
+  "nameEn": "Teemo",
   "builds": [
    {
     "id": "Teemo-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -828,6 +923,8 @@
     "id": "Teemo-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -846,6 +943,8 @@
     "id": "Teemo-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -866,11 +965,14 @@
  },
  "Tristana": {
   "name": "트리스타나",
+  "nameEn": "Tristana",
   "builds": [
    {
     "id": "Tristana-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -890,6 +992,8 @@
     "id": "Tristana-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -909,6 +1013,8 @@
     "id": "Tristana-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -928,11 +1034,14 @@
  },
  "Warwick": {
   "name": "워윅",
+  "nameEn": "Warwick",
   "builds": [
    {
     "id": "Warwick-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -951,6 +1060,8 @@
     "id": "Warwick-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -970,11 +1081,14 @@
  },
  "Nunu": {
   "name": "누누와 윌럼프",
+  "nameEn": "Nunu & Willump",
   "builds": [
    {
     "id": "Nunu-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -993,6 +1107,8 @@
     "id": "Nunu-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1012,11 +1128,14 @@
  },
  "MissFortune": {
   "name": "미스 포츈",
+  "nameEn": "Miss Fortune",
   "builds": [
    {
     "id": "MissFortune-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1037,6 +1156,8 @@
     "id": "MissFortune-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1057,11 +1178,14 @@
  },
  "Ashe": {
   "name": "애쉬",
+  "nameEn": "Ashe",
   "builds": [
    {
     "id": "Ashe-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1082,6 +1206,8 @@
     "id": "Ashe-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1100,6 +1226,8 @@
     "id": "Ashe-apult",
     "name": "AP 무한궁",
     "desc": "궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요",
+    "nameEn": "AP Infinite Ult",
+    "descEn": "Stack ult haste and keep casting your ult. Going for Archmage? Keep E at level 1",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1117,11 +1245,14 @@
  },
  "Tryndamere": {
   "name": "트린다미어",
+  "nameEn": "Tryndamere",
   "builds": [
    {
     "id": "Tryndamere-fighter",
     "name": "치명타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Crit Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1141,6 +1272,8 @@
     "id": "Tryndamere-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1160,11 +1293,14 @@
  },
  "Jax": {
   "name": "잭스",
+  "nameEn": "Jax",
   "builds": [
    {
     "id": "Jax-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1183,6 +1319,8 @@
     "id": "Jax-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1200,6 +1338,8 @@
     "id": "Jax-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1219,11 +1359,14 @@
  },
  "Morgana": {
   "name": "모르가나",
+  "nameEn": "Morgana",
   "builds": [
    {
     "id": "Morgana-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1245,6 +1388,8 @@
     "id": "Morgana-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1263,6 +1408,8 @@
     "id": "Morgana-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1282,11 +1429,14 @@
  },
  "Zilean": {
   "name": "질리언",
+  "nameEn": "Zilean",
   "builds": [
    {
     "id": "Zilean-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1307,6 +1457,8 @@
     "id": "Zilean-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1326,6 +1478,8 @@
     "id": "Zilean-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1346,11 +1500,14 @@
  },
  "Singed": {
   "name": "신지드",
+  "nameEn": "Singed",
   "builds": [
    {
     "id": "Singed-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1370,6 +1527,8 @@
     "id": "Singed-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1389,11 +1548,14 @@
  },
  "Evelynn": {
   "name": "이블린",
+  "nameEn": "Evelynn",
   "builds": [
    {
     "id": "Evelynn-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1413,6 +1575,8 @@
     "id": "Evelynn-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1432,11 +1596,14 @@
  },
  "Twitch": {
   "name": "트위치",
+  "nameEn": "Twitch",
   "builds": [
    {
     "id": "Twitch-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1457,6 +1624,8 @@
     "id": "Twitch-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1474,6 +1643,8 @@
     "id": "Twitch-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1493,11 +1664,14 @@
  },
  "Karthus": {
   "name": "카서스",
+  "nameEn": "Karthus",
   "builds": [
    {
     "id": "Karthus-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1519,6 +1693,8 @@
     "id": "Karthus-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1538,6 +1714,8 @@
     "id": "Karthus-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1556,11 +1734,14 @@
  },
  "Chogath": {
   "name": "초가스",
+  "nameEn": "Cho'Gath",
   "builds": [
    {
     "id": "Chogath-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1582,6 +1763,8 @@
     "id": "Chogath-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1601,6 +1784,8 @@
     "id": "Chogath-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1619,11 +1804,14 @@
  },
  "Amumu": {
   "name": "아무무",
+  "nameEn": "Amumu",
   "builds": [
    {
     "id": "Amumu-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1642,6 +1830,8 @@
     "id": "Amumu-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1661,11 +1851,14 @@
  },
  "Rammus": {
   "name": "람머스",
+  "nameEn": "Rammus",
   "builds": [
    {
     "id": "Rammus-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1686,6 +1879,8 @@
     "id": "Rammus-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1704,11 +1899,14 @@
  },
  "Anivia": {
   "name": "애니비아",
+  "nameEn": "Anivia",
   "builds": [
    {
     "id": "Anivia-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1729,6 +1927,8 @@
     "id": "Anivia-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1747,11 +1947,14 @@
  },
  "Shaco": {
   "name": "샤코",
+  "nameEn": "Shaco",
   "builds": [
    {
     "id": "Shaco-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1771,6 +1974,8 @@
     "id": "Shaco-mage",
     "name": "AP 상자",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Boxes",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1792,6 +1997,8 @@
     "id": "Shaco-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1811,11 +2018,14 @@
  },
  "DrMundo": {
   "name": "문도 박사",
+  "nameEn": "Dr. Mundo",
   "builds": [
    {
     "id": "DrMundo-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1835,6 +2045,8 @@
     "id": "DrMundo-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1854,11 +2066,14 @@
  },
  "Sona": {
   "name": "소나",
+  "nameEn": "Sona",
   "builds": [
    {
     "id": "Sona-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1879,6 +2094,8 @@
     "id": "Sona-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1899,6 +2116,8 @@
     "id": "Sona-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1916,11 +2135,14 @@
  },
  "Kassadin": {
   "name": "카사딘",
+  "nameEn": "Kassadin",
   "builds": [
    {
     "id": "Kassadin-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1941,6 +2163,8 @@
     "id": "Kassadin-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -1961,11 +2185,14 @@
  },
  "Irelia": {
   "name": "이렐리아",
+  "nameEn": "Irelia",
   "builds": [
    {
     "id": "Irelia-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -1985,6 +2212,8 @@
     "id": "Irelia-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2004,11 +2233,14 @@
  },
  "Janna": {
   "name": "잔나",
+  "nameEn": "Janna",
   "builds": [
    {
     "id": "Janna-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2029,6 +2261,8 @@
     "id": "Janna-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2049,11 +2283,14 @@
  },
  "Gangplank": {
   "name": "갱플랭크",
+  "nameEn": "Gangplank",
   "builds": [
    {
     "id": "Gangplank-crit",
     "name": "치명타 배럴",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit Barrel",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2074,6 +2311,8 @@
     "id": "Gangplank-apult",
     "name": "AP 무한궁",
     "desc": "궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요",
+    "nameEn": "AP Infinite Ult",
+    "descEn": "Stack ult haste and keep casting your ult. Going for Archmage? Keep E at level 1",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2091,6 +2330,8 @@
     "id": "Gangplank-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2110,11 +2351,14 @@
  },
  "Corki": {
   "name": "코르키",
+  "nameEn": "Corki",
   "builds": [
    {
     "id": "Corki-adcaster",
     "name": "스킬 물리",
     "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
+    "nameEn": "AD Caster",
+    "descEn": "Ability haste and AD to cast often",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2134,6 +2378,8 @@
     "id": "Corki-burst",
     "name": "AP 코르키",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Corki",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2153,6 +2399,8 @@
     "id": "Corki-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2172,11 +2420,14 @@
  },
  "Karma": {
   "name": "카르마",
+  "nameEn": "Karma",
   "builds": [
    {
     "id": "Karma-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2197,6 +2448,8 @@
     "id": "Karma-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2217,11 +2470,14 @@
  },
  "Taric": {
   "name": "타릭",
+  "nameEn": "Taric",
   "builds": [
    {
     "id": "Taric-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2242,6 +2498,8 @@
     "id": "Taric-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2262,11 +2520,14 @@
  },
  "Veigar": {
   "name": "베이가",
+  "nameEn": "Veigar",
   "builds": [
    {
     "id": "Veigar-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2287,6 +2548,8 @@
     "id": "Veigar-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2307,6 +2570,8 @@
     "id": "Veigar-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2325,11 +2590,14 @@
  },
  "Trundle": {
   "name": "트런들",
+  "nameEn": "Trundle",
   "builds": [
    {
     "id": "Trundle-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2349,6 +2617,8 @@
     "id": "Trundle-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2368,11 +2638,14 @@
  },
  "Swain": {
   "name": "스웨인",
+  "nameEn": "Swain",
   "builds": [
    {
     "id": "Swain-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2392,6 +2665,8 @@
     "id": "Swain-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2412,6 +2687,8 @@
     "id": "Swain-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2430,11 +2707,14 @@
  },
  "Caitlyn": {
   "name": "케이틀린",
+  "nameEn": "Caitlyn",
   "builds": [
    {
     "id": "Caitlyn-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2454,6 +2734,8 @@
     "id": "Caitlyn-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2473,11 +2755,14 @@
  },
  "Blitzcrank": {
   "name": "블리츠크랭크",
+  "nameEn": "Blitzcrank",
   "builds": [
    {
     "id": "Blitzcrank-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2497,6 +2782,8 @@
     "id": "Blitzcrank-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2515,6 +2802,8 @@
     "id": "Blitzcrank-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2534,11 +2823,14 @@
  },
  "Malphite": {
   "name": "말파이트",
+  "nameEn": "Malphite",
   "builds": [
    {
     "id": "Malphite-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2558,6 +2850,8 @@
     "id": "Malphite-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2577,6 +2871,8 @@
     "id": "Malphite-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2595,11 +2891,14 @@
  },
  "Katarina": {
   "name": "카타리나",
+  "nameEn": "Katarina",
   "builds": [
    {
     "id": "Katarina-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2620,6 +2919,8 @@
     "id": "Katarina-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2637,6 +2938,8 @@
     "id": "Katarina-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2656,11 +2959,14 @@
  },
  "Nocturne": {
   "name": "녹턴",
+  "nameEn": "Nocturne",
   "builds": [
    {
     "id": "Nocturne-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2681,6 +2987,8 @@
     "id": "Nocturne-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2700,6 +3008,8 @@
     "id": "Nocturne-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2718,11 +3028,14 @@
  },
  "Maokai": {
   "name": "마오카이",
+  "nameEn": "Maokai",
   "builds": [
    {
     "id": "Maokai-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2742,6 +3055,8 @@
     "id": "Maokai-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2760,11 +3075,14 @@
  },
  "Renekton": {
   "name": "레넥톤",
+  "nameEn": "Renekton",
   "builds": [
    {
     "id": "Renekton-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2784,6 +3102,8 @@
     "id": "Renekton-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2803,11 +3123,14 @@
  },
  "JarvanIV": {
   "name": "자르반 4세",
+  "nameEn": "Jarvan IV",
   "builds": [
    {
     "id": "JarvanIV-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2828,6 +3151,8 @@
     "id": "JarvanIV-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2847,6 +3172,8 @@
     "id": "JarvanIV-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2866,11 +3193,14 @@
  },
  "Elise": {
   "name": "엘리스",
+  "nameEn": "Elise",
   "builds": [
    {
     "id": "Elise-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2890,6 +3220,8 @@
     "id": "Elise-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2908,6 +3240,8 @@
     "id": "Elise-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2928,11 +3262,14 @@
  },
  "Orianna": {
   "name": "오리아나",
+  "nameEn": "Orianna",
   "builds": [
    {
     "id": "Orianna-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -2954,6 +3291,8 @@
     "id": "Orianna-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2973,6 +3312,8 @@
     "id": "Orianna-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -2993,11 +3334,14 @@
  },
  "MonkeyKing": {
   "name": "오공",
+  "nameEn": "Wukong",
   "builds": [
    {
     "id": "MonkeyKing-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3018,6 +3362,8 @@
     "id": "MonkeyKing-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3037,6 +3383,8 @@
     "id": "MonkeyKing-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3056,11 +3404,14 @@
  },
  "Brand": {
   "name": "브랜드",
+  "nameEn": "Brand",
   "builds": [
    {
     "id": "Brand-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3081,6 +3432,8 @@
     "id": "Brand-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3100,11 +3453,14 @@
  },
  "LeeSin": {
   "name": "리 신",
+  "nameEn": "Lee Sin",
   "builds": [
    {
     "id": "LeeSin-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3124,6 +3480,8 @@
     "id": "LeeSin-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3143,6 +3501,8 @@
     "id": "LeeSin-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3162,11 +3522,14 @@
  },
  "Vayne": {
   "name": "베인",
+  "nameEn": "Vayne",
   "builds": [
    {
     "id": "Vayne-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3187,6 +3550,8 @@
     "id": "Vayne-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3206,11 +3571,14 @@
  },
  "Rumble": {
   "name": "럼블",
+  "nameEn": "Rumble",
   "builds": [
    {
     "id": "Rumble-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3230,6 +3598,8 @@
     "id": "Rumble-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3249,6 +3619,8 @@
     "id": "Rumble-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3267,11 +3639,14 @@
  },
  "Cassiopeia": {
   "name": "카시오페아",
+  "nameEn": "Cassiopeia",
   "builds": [
    {
     "id": "Cassiopeia-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3293,6 +3668,8 @@
     "id": "Cassiopeia-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3312,11 +3689,14 @@
  },
  "Skarner": {
   "name": "스카너",
+  "nameEn": "Skarner",
   "builds": [
    {
     "id": "Skarner-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3336,6 +3716,8 @@
     "id": "Skarner-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3355,11 +3737,14 @@
  },
  "Heimerdinger": {
   "name": "하이머딩거",
+  "nameEn": "Heimerdinger",
   "builds": [
    {
     "id": "Heimerdinger-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3381,6 +3766,8 @@
     "id": "Heimerdinger-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3400,11 +3787,14 @@
  },
  "Nasus": {
   "name": "나서스",
+  "nameEn": "Nasus",
   "builds": [
    {
     "id": "Nasus-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3425,6 +3815,8 @@
     "id": "Nasus-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3444,11 +3836,14 @@
  },
  "Nidalee": {
   "name": "니달리",
+  "nameEn": "Nidalee",
   "builds": [
    {
     "id": "Nidalee-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3469,6 +3864,8 @@
     "id": "Nidalee-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3489,11 +3886,14 @@
  },
  "Udyr": {
   "name": "우디르",
+  "nameEn": "Udyr",
   "builds": [
    {
     "id": "Udyr-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3513,6 +3913,8 @@
     "id": "Udyr-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3532,6 +3934,8 @@
     "id": "Udyr-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3550,11 +3954,14 @@
  },
  "Poppy": {
   "name": "뽀삐",
+  "nameEn": "Poppy",
   "builds": [
    {
     "id": "Poppy-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3574,6 +3981,8 @@
     "id": "Poppy-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3593,11 +4002,14 @@
  },
  "Gragas": {
   "name": "그라가스",
+  "nameEn": "Gragas",
   "builds": [
    {
     "id": "Gragas-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3618,6 +4030,8 @@
     "id": "Gragas-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3637,6 +4051,8 @@
     "id": "Gragas-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3656,11 +4072,14 @@
  },
  "Pantheon": {
   "name": "판테온",
+  "nameEn": "Pantheon",
   "builds": [
    {
     "id": "Pantheon-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3680,6 +4099,8 @@
     "id": "Pantheon-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3699,11 +4120,14 @@
  },
  "Ezreal": {
   "name": "이즈리얼",
+  "nameEn": "Ezreal",
   "builds": [
    {
     "id": "Ezreal-adcaster",
     "name": "스킬 물리",
     "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
+    "nameEn": "AD Caster",
+    "descEn": "Ability haste and AD to cast often",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3723,6 +4147,8 @@
     "id": "Ezreal-burst",
     "name": "AP 이즈리얼",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Ezreal",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3742,6 +4168,8 @@
     "id": "Ezreal-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3761,6 +4189,8 @@
     "id": "Ezreal-apult",
     "name": "AP 무한궁",
     "desc": "궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요",
+    "nameEn": "AP Infinite Ult",
+    "descEn": "Stack ult haste and keep casting your ult. Going for Archmage? Keep E at level 1",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3778,11 +4208,14 @@
  },
  "Mordekaiser": {
   "name": "모데카이저",
+  "nameEn": "Mordekaiser",
   "builds": [
    {
     "id": "Mordekaiser-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3803,6 +4236,8 @@
     "id": "Mordekaiser-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3821,11 +4256,14 @@
  },
  "Yorick": {
   "name": "요릭",
+  "nameEn": "Yorick",
   "builds": [
    {
     "id": "Yorick-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3846,6 +4284,8 @@
     "id": "Yorick-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3865,11 +4305,14 @@
  },
  "Akali": {
   "name": "아칼리",
+  "nameEn": "Akali",
   "builds": [
    {
     "id": "Akali-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3889,6 +4332,8 @@
     "id": "Akali-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3908,11 +4353,14 @@
  },
  "Kennen": {
   "name": "케넨",
+  "nameEn": "Kennen",
   "builds": [
    {
     "id": "Kennen-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3933,6 +4381,8 @@
     "id": "Kennen-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3951,6 +4401,8 @@
     "id": "Kennen-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -3968,11 +4420,14 @@
  },
  "Garen": {
   "name": "가렌",
+  "nameEn": "Garen",
   "builds": [
    {
     "id": "Garen-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -3994,6 +4449,8 @@
     "id": "Garen-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4013,6 +4470,8 @@
     "id": "Garen-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4032,11 +4491,14 @@
  },
  "Leona": {
   "name": "레오나",
+  "nameEn": "Leona",
   "builds": [
    {
     "id": "Leona-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4056,6 +4518,8 @@
     "id": "Leona-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4074,11 +4538,14 @@
  },
  "Malzahar": {
   "name": "말자하",
+  "nameEn": "Malzahar",
   "builds": [
    {
     "id": "Malzahar-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4100,6 +4567,8 @@
     "id": "Malzahar-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4118,11 +4587,14 @@
  },
  "Talon": {
   "name": "탈론",
+  "nameEn": "Talon",
   "builds": [
    {
     "id": "Talon-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4142,6 +4614,8 @@
     "id": "Talon-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4161,11 +4635,14 @@
  },
  "Riven": {
   "name": "리븐",
+  "nameEn": "Riven",
   "builds": [
    {
     "id": "Riven-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4186,6 +4663,8 @@
     "id": "Riven-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4205,11 +4684,14 @@
  },
  "KogMaw": {
   "name": "코그모",
+  "nameEn": "Kog'Maw",
   "builds": [
    {
     "id": "KogMaw-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4229,6 +4711,8 @@
     "id": "KogMaw-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4247,6 +4731,8 @@
     "id": "KogMaw-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4264,11 +4750,14 @@
  },
  "Shen": {
   "name": "쉔",
+  "nameEn": "Shen",
   "builds": [
    {
     "id": "Shen-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4289,6 +4778,8 @@
     "id": "Shen-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4308,11 +4799,14 @@
  },
  "Lux": {
   "name": "럭스",
+  "nameEn": "Lux",
   "builds": [
    {
     "id": "Lux-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4332,6 +4826,8 @@
     "id": "Lux-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4352,6 +4848,8 @@
     "id": "Lux-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4371,11 +4869,14 @@
  },
  "Xerath": {
   "name": "제라스",
+  "nameEn": "Xerath",
   "builds": [
    {
     "id": "Xerath-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4394,6 +4895,8 @@
     "id": "Xerath-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4413,11 +4916,14 @@
  },
  "Shyvana": {
   "name": "쉬바나",
+  "nameEn": "Shyvana",
   "builds": [
    {
     "id": "Shyvana-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4436,6 +4942,8 @@
     "id": "Shyvana-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4455,11 +4963,14 @@
  },
  "Ahri": {
   "name": "아리",
+  "nameEn": "Ahri",
   "builds": [
    {
     "id": "Ahri-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4480,6 +4991,8 @@
     "id": "Ahri-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4499,11 +5012,14 @@
  },
  "Graves": {
   "name": "그레이브즈",
+  "nameEn": "Graves",
   "builds": [
    {
     "id": "Graves-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4522,6 +5038,8 @@
     "id": "Graves-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4541,11 +5059,14 @@
  },
  "Fizz": {
   "name": "피즈",
+  "nameEn": "Fizz",
   "builds": [
    {
     "id": "Fizz-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4565,6 +5086,8 @@
     "id": "Fizz-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4583,6 +5106,8 @@
     "id": "Fizz-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4602,11 +5127,14 @@
  },
  "Volibear": {
   "name": "볼리베어",
+  "nameEn": "Volibear",
   "builds": [
    {
     "id": "Volibear-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4626,6 +5154,8 @@
     "id": "Volibear-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4644,11 +5174,14 @@
  },
  "Rengar": {
   "name": "렝가",
+  "nameEn": "Rengar",
   "builds": [
    {
     "id": "Rengar-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4668,6 +5201,8 @@
     "id": "Rengar-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4687,6 +5222,8 @@
     "id": "Rengar-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4706,11 +5243,14 @@
  },
  "Varus": {
   "name": "바루스",
+  "nameEn": "Varus",
   "builds": [
    {
     "id": "Varus-adcaster",
     "name": "스킬 물리",
     "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
+    "nameEn": "AD Caster",
+    "descEn": "Ability haste and AD to cast often",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4729,6 +5269,8 @@
     "id": "Varus-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4747,6 +5289,8 @@
     "id": "Varus-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4764,11 +5308,14 @@
  },
  "Nautilus": {
   "name": "노틸러스",
+  "nameEn": "Nautilus",
   "builds": [
    {
     "id": "Nautilus-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4788,6 +5335,8 @@
     "id": "Nautilus-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4806,11 +5355,14 @@
  },
  "Viktor": {
   "name": "빅토르",
+  "nameEn": "Viktor",
   "builds": [
    {
     "id": "Viktor-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4831,6 +5383,8 @@
     "id": "Viktor-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4849,6 +5403,8 @@
     "id": "Viktor-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4868,11 +5424,14 @@
  },
  "Sejuani": {
   "name": "세주아니",
+  "nameEn": "Sejuani",
   "builds": [
    {
     "id": "Sejuani-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4892,6 +5451,8 @@
     "id": "Sejuani-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4910,11 +5471,14 @@
  },
  "Fiora": {
   "name": "피오라",
+  "nameEn": "Fiora",
   "builds": [
    {
     "id": "Fiora-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4934,6 +5498,8 @@
     "id": "Fiora-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4953,11 +5519,14 @@
  },
  "Ziggs": {
   "name": "직스",
+  "nameEn": "Ziggs",
   "builds": [
    {
     "id": "Ziggs-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -4976,6 +5545,8 @@
     "id": "Ziggs-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -4995,6 +5566,8 @@
     "id": "Ziggs-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5015,11 +5588,14 @@
  },
  "Lulu": {
   "name": "룰루",
+  "nameEn": "Lulu",
   "builds": [
    {
     "id": "Lulu-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5041,6 +5617,8 @@
     "id": "Lulu-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5061,6 +5639,8 @@
     "id": "Lulu-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5078,11 +5658,14 @@
  },
  "Draven": {
   "name": "드레이븐",
+  "nameEn": "Draven",
   "builds": [
    {
     "id": "Draven-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5102,6 +5685,8 @@
     "id": "Draven-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5121,11 +5706,14 @@
  },
  "Hecarim": {
   "name": "헤카림",
+  "nameEn": "Hecarim",
   "builds": [
    {
     "id": "Hecarim-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5146,6 +5734,8 @@
     "id": "Hecarim-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5165,6 +5755,8 @@
     "id": "Hecarim-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5184,11 +5776,14 @@
  },
  "Khazix": {
   "name": "카직스",
+  "nameEn": "Kha'Zix",
   "builds": [
    {
     "id": "Khazix-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5208,6 +5803,8 @@
     "id": "Khazix-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5227,11 +5824,14 @@
  },
  "Darius": {
   "name": "다리우스",
+  "nameEn": "Darius",
   "builds": [
    {
     "id": "Darius-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5252,6 +5852,8 @@
     "id": "Darius-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5271,11 +5873,14 @@
  },
  "Jayce": {
   "name": "제이스",
+  "nameEn": "Jayce",
   "builds": [
    {
     "id": "Jayce-adcaster",
     "name": "스킬 물리",
     "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
+    "nameEn": "AD Caster",
+    "descEn": "Ability haste and AD to cast often",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5294,6 +5899,8 @@
     "id": "Jayce-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5313,11 +5920,14 @@
  },
  "Lissandra": {
   "name": "리산드라",
+  "nameEn": "Lissandra",
   "builds": [
    {
     "id": "Lissandra-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5338,6 +5948,8 @@
     "id": "Lissandra-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5357,6 +5969,8 @@
     "id": "Lissandra-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5375,11 +5989,14 @@
  },
  "Diana": {
   "name": "다이애나",
+  "nameEn": "Diana",
   "builds": [
    {
     "id": "Diana-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5399,6 +6016,8 @@
     "id": "Diana-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5418,6 +6037,8 @@
     "id": "Diana-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5435,11 +6056,14 @@
  },
  "Quinn": {
   "name": "퀸",
+  "nameEn": "Quinn",
   "builds": [
    {
     "id": "Quinn-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5460,6 +6084,8 @@
     "id": "Quinn-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5479,6 +6105,8 @@
     "id": "Quinn-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5497,11 +6125,14 @@
  },
  "Syndra": {
   "name": "신드라",
+  "nameEn": "Syndra",
   "builds": [
    {
     "id": "Syndra-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5521,6 +6152,8 @@
     "id": "Syndra-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5541,11 +6174,14 @@
  },
  "AurelionSol": {
   "name": "아우렐리온 솔",
+  "nameEn": "Aurelion Sol",
   "builds": [
    {
     "id": "AurelionSol-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5567,6 +6203,8 @@
     "id": "AurelionSol-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5586,11 +6224,14 @@
  },
  "Kayn": {
   "name": "케인",
+  "nameEn": "Kayn",
   "builds": [
    {
     "id": "Kayn-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5610,6 +6251,8 @@
     "id": "Kayn-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5629,11 +6272,14 @@
  },
  "Zoe": {
   "name": "조이",
+  "nameEn": "Zoe",
   "builds": [
    {
     "id": "Zoe-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5654,6 +6300,8 @@
     "id": "Zoe-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5672,11 +6320,14 @@
  },
  "Zyra": {
   "name": "자이라",
+  "nameEn": "Zyra",
   "builds": [
    {
     "id": "Zyra-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5698,6 +6349,8 @@
     "id": "Zyra-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5717,11 +6370,14 @@
  },
  "Kaisa": {
   "name": "카이사",
+  "nameEn": "Kai'Sa",
   "builds": [
    {
     "id": "Kaisa-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5741,6 +6397,8 @@
     "id": "Kaisa-aponhit",
     "name": "AP 카이사",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP Kai'Sa",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5758,6 +6416,8 @@
     "id": "Kaisa-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5777,11 +6437,14 @@
  },
  "Seraphine": {
   "name": "세라핀",
+  "nameEn": "Seraphine",
   "builds": [
    {
     "id": "Seraphine-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5802,6 +6465,8 @@
     "id": "Seraphine-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5822,6 +6487,8 @@
     "id": "Seraphine-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5840,11 +6507,14 @@
  },
  "Gnar": {
   "name": "나르",
+  "nameEn": "Gnar",
   "builds": [
    {
     "id": "Gnar-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5864,6 +6534,8 @@
     "id": "Gnar-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5882,6 +6554,8 @@
     "id": "Gnar-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5901,11 +6575,14 @@
  },
  "Zac": {
   "name": "자크",
+  "nameEn": "Zac",
   "builds": [
    {
     "id": "Zac-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5925,6 +6602,8 @@
     "id": "Zac-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5943,11 +6622,14 @@
  },
  "Yasuo": {
   "name": "야스오",
+  "nameEn": "Yasuo",
   "builds": [
    {
     "id": "Yasuo-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -5967,6 +6649,8 @@
     "id": "Yasuo-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -5986,11 +6670,14 @@
  },
  "Velkoz": {
   "name": "벨코즈",
+  "nameEn": "Vel'Koz",
   "builds": [
    {
     "id": "Velkoz-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6010,6 +6697,8 @@
     "id": "Velkoz-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6029,6 +6718,8 @@
     "id": "Velkoz-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6049,11 +6740,14 @@
  },
  "Taliyah": {
   "name": "탈리야",
+  "nameEn": "Taliyah",
   "builds": [
    {
     "id": "Taliyah-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6074,6 +6768,8 @@
     "id": "Taliyah-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6093,11 +6789,14 @@
  },
  "Camille": {
   "name": "카밀",
+  "nameEn": "Camille",
   "builds": [
    {
     "id": "Camille-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6118,6 +6817,8 @@
     "id": "Camille-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6137,11 +6838,14 @@
  },
  "Akshan": {
   "name": "아크샨",
+  "nameEn": "Akshan",
   "builds": [
    {
     "id": "Akshan-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6162,6 +6866,8 @@
     "id": "Akshan-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6181,6 +6887,8 @@
     "id": "Akshan-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6199,11 +6907,14 @@
  },
  "Belveth": {
   "name": "벨베스",
+  "nameEn": "Bel'Veth",
   "builds": [
    {
     "id": "Belveth-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6223,6 +6934,8 @@
     "id": "Belveth-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6242,11 +6955,14 @@
  },
  "Braum": {
   "name": "브라움",
+  "nameEn": "Braum",
   "builds": [
    {
     "id": "Braum-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6266,6 +6982,8 @@
     "id": "Braum-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6285,11 +7003,14 @@
  },
  "Jhin": {
   "name": "진",
+  "nameEn": "Jhin",
   "builds": [
    {
     "id": "Jhin-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6308,6 +7029,8 @@
     "id": "Jhin-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6327,11 +7050,14 @@
  },
  "Kindred": {
   "name": "킨드레드",
+  "nameEn": "Kindred",
   "builds": [
    {
     "id": "Kindred-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6353,6 +7079,8 @@
     "id": "Kindred-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6371,6 +7099,8 @@
     "id": "Kindred-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6390,11 +7120,14 @@
  },
  "Zeri": {
   "name": "제리",
+  "nameEn": "Zeri",
   "builds": [
    {
     "id": "Zeri-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6415,6 +7148,8 @@
     "id": "Zeri-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6433,11 +7168,14 @@
  },
  "Jinx": {
   "name": "징크스",
+  "nameEn": "Jinx",
   "builds": [
    {
     "id": "Jinx-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6457,6 +7195,8 @@
     "id": "Jinx-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6475,11 +7215,14 @@
  },
  "TahmKench": {
   "name": "탐 켄치",
+  "nameEn": "Tahm Kench",
   "builds": [
    {
     "id": "TahmKench-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6499,6 +7242,8 @@
     "id": "TahmKench-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6517,11 +7262,14 @@
  },
  "Briar": {
   "name": "브라이어",
+  "nameEn": "Briar",
   "builds": [
    {
     "id": "Briar-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6542,6 +7290,8 @@
     "id": "Briar-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6561,6 +7311,8 @@
     "id": "Briar-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6579,11 +7331,14 @@
  },
  "Viego": {
   "name": "비에고",
+  "nameEn": "Viego",
   "builds": [
    {
     "id": "Viego-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6603,6 +7358,8 @@
     "id": "Viego-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6622,11 +7379,14 @@
  },
  "Senna": {
   "name": "세나",
+  "nameEn": "Senna",
   "builds": [
    {
     "id": "Senna-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6647,6 +7407,8 @@
     "id": "Senna-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6667,6 +7429,8 @@
     "id": "Senna-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6686,11 +7450,14 @@
  },
  "Lucian": {
   "name": "루시안",
+  "nameEn": "Lucian",
   "builds": [
    {
     "id": "Lucian-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6711,6 +7478,8 @@
     "id": "Lucian-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6730,6 +7499,8 @@
     "id": "Lucian-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6748,11 +7519,14 @@
  },
  "Zed": {
   "name": "제드",
+  "nameEn": "Zed",
   "builds": [
    {
     "id": "Zed-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6772,6 +7546,8 @@
     "id": "Zed-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6791,11 +7567,14 @@
  },
  "Kled": {
   "name": "클레드",
+  "nameEn": "Kled",
   "builds": [
    {
     "id": "Kled-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6815,6 +7594,8 @@
     "id": "Kled-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6834,11 +7615,14 @@
  },
  "Ekko": {
   "name": "에코",
+  "nameEn": "Ekko",
   "builds": [
    {
     "id": "Ekko-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6858,6 +7642,8 @@
     "id": "Ekko-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6877,6 +7663,8 @@
     "id": "Ekko-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6894,11 +7682,14 @@
  },
  "Qiyana": {
   "name": "키아나",
+  "nameEn": "Qiyana",
   "builds": [
    {
     "id": "Qiyana-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6918,6 +7709,8 @@
     "id": "Qiyana-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6937,11 +7730,14 @@
  },
  "Vi": {
   "name": "바이",
+  "nameEn": "Vi",
   "builds": [
    {
     "id": "Vi-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -6961,6 +7757,8 @@
     "id": "Vi-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -6980,11 +7778,14 @@
  },
  "Aatrox": {
   "name": "아트록스",
+  "nameEn": "Aatrox",
   "builds": [
    {
     "id": "Aatrox-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7004,6 +7805,8 @@
     "id": "Aatrox-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7023,11 +7826,14 @@
  },
  "Nami": {
   "name": "나미",
+  "nameEn": "Nami",
   "builds": [
    {
     "id": "Nami-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7048,6 +7854,8 @@
     "id": "Nami-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7068,11 +7876,14 @@
  },
  "Azir": {
   "name": "아지르",
+  "nameEn": "Azir",
   "builds": [
    {
     "id": "Azir-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7095,6 +7906,8 @@
     "id": "Azir-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7112,11 +7925,14 @@
  },
  "Yuumi": {
   "name": "유미",
+  "nameEn": "Yuumi",
   "builds": [
    {
     "id": "Yuumi-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7137,6 +7953,8 @@
     "id": "Yuumi-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7157,11 +7975,14 @@
  },
  "Samira": {
   "name": "사미라",
+  "nameEn": "Samira",
   "builds": [
    {
     "id": "Samira-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7183,6 +8004,8 @@
     "id": "Samira-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7202,11 +8025,14 @@
  },
  "Thresh": {
   "name": "쓰레쉬",
+  "nameEn": "Thresh",
   "builds": [
    {
     "id": "Thresh-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7226,6 +8052,8 @@
     "id": "Thresh-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7244,6 +8072,8 @@
     "id": "Thresh-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7264,11 +8094,14 @@
  },
  "Illaoi": {
   "name": "일라오이",
+  "nameEn": "Illaoi",
   "builds": [
    {
     "id": "Illaoi-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7288,6 +8121,8 @@
     "id": "Illaoi-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7307,11 +8142,14 @@
  },
  "RekSai": {
   "name": "렉사이",
+  "nameEn": "Rek'Sai",
   "builds": [
    {
     "id": "RekSai-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7331,6 +8169,8 @@
     "id": "RekSai-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7350,11 +8190,14 @@
  },
  "Ivern": {
   "name": "아이번",
+  "nameEn": "Ivern",
   "builds": [
    {
     "id": "Ivern-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7376,6 +8219,8 @@
     "id": "Ivern-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7394,6 +8239,8 @@
     "id": "Ivern-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7414,11 +8261,14 @@
  },
  "Kalista": {
   "name": "칼리스타",
+  "nameEn": "Kalista",
   "builds": [
    {
     "id": "Kalista-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7438,6 +8288,8 @@
     "id": "Kalista-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7457,11 +8309,14 @@
  },
  "Bard": {
   "name": "바드",
+  "nameEn": "Bard",
   "builds": [
    {
     "id": "Bard-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7484,6 +8339,8 @@
     "id": "Bard-aponhit",
     "name": "AP 적중",
     "desc": "주문력과 적중 효과로 평타에 마법 피해를 얹어요",
+    "nameEn": "AP On-hit",
+    "descEn": "AP and on-hit add magic damage to autos",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7501,6 +8358,8 @@
     "id": "Bard-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7519,11 +8378,14 @@
  },
  "Rakan": {
   "name": "라칸",
+  "nameEn": "Rakan",
   "builds": [
    {
     "id": "Rakan-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7544,6 +8406,8 @@
     "id": "Rakan-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7564,6 +8428,8 @@
     "id": "Rakan-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7583,11 +8449,14 @@
  },
  "Xayah": {
   "name": "자야",
+  "nameEn": "Xayah",
   "builds": [
    {
     "id": "Xayah-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7607,6 +8476,8 @@
     "id": "Xayah-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7626,11 +8497,14 @@
  },
  "Ornn": {
   "name": "오른",
+  "nameEn": "Ornn",
   "builds": [
    {
     "id": "Ornn-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7651,6 +8525,8 @@
     "id": "Ornn-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7669,11 +8545,14 @@
  },
  "Sylas": {
   "name": "사일러스",
+  "nameEn": "Sylas",
   "builds": [
    {
     "id": "Sylas-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7694,6 +8573,8 @@
     "id": "Sylas-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7713,6 +8594,8 @@
     "id": "Sylas-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7731,11 +8614,14 @@
  },
  "Neeko": {
   "name": "니코",
+  "nameEn": "Neeko",
   "builds": [
    {
     "id": "Neeko-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7755,6 +8641,8 @@
     "id": "Neeko-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7775,6 +8663,8 @@
     "id": "Neeko-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7793,11 +8683,14 @@
  },
  "Aphelios": {
   "name": "아펠리오스",
+  "nameEn": "Aphelios",
   "builds": [
    {
     "id": "Aphelios-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7817,6 +8710,8 @@
     "id": "Aphelios-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7836,11 +8731,14 @@
  },
  "Rell": {
   "name": "렐",
+  "nameEn": "Rell",
   "builds": [
    {
     "id": "Rell-engage",
     "name": "이니시 서폿",
     "desc": "군중 제어와 체력으로 싸움을 열어요",
+    "nameEn": "Engage Support",
+    "descEn": "Crowd control and health to start fights",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7860,6 +8758,8 @@
     "id": "Rell-aptank",
     "name": "AP 탱커",
     "desc": "체력에 주문력을 더해 버티며 피해를 줘요",
+    "nameEn": "AP Tank",
+    "descEn": "Health plus AP to tank and deal damage",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7878,11 +8778,14 @@
  },
  "Pyke": {
   "name": "파이크",
+  "nameEn": "Pyke",
   "builds": [
    {
     "id": "Pyke-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7903,6 +8806,8 @@
     "id": "Pyke-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7922,11 +8827,14 @@
  },
  "Vex": {
   "name": "벡스",
+  "nameEn": "Vex",
   "builds": [
    {
     "id": "Vex-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7946,6 +8854,8 @@
     "id": "Vex-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -7966,11 +8876,14 @@
  },
  "Yone": {
   "name": "요네",
+  "nameEn": "Yone",
   "builds": [
    {
     "id": "Yone-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -7990,6 +8903,8 @@
     "id": "Yone-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8009,11 +8924,14 @@
  },
  "Ambessa": {
   "name": "암베사",
+  "nameEn": "Ambessa",
   "builds": [
    {
     "id": "Ambessa-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8033,6 +8951,8 @@
     "id": "Ambessa-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8052,11 +8972,14 @@
  },
  "Mel": {
   "name": "멜",
+  "nameEn": "Mel",
   "builds": [
    {
     "id": "Mel-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8077,6 +9000,8 @@
     "id": "Mel-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8096,6 +9021,8 @@
     "id": "Mel-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8114,11 +9041,14 @@
  },
  "Yunara": {
   "name": "유나라",
+  "nameEn": "Yunara",
   "builds": [
    {
     "id": "Yunara-onhit",
     "name": "적중",
     "desc": "공격 속도와 적중 효과로 평타를 키워요",
+    "nameEn": "On-hit",
+    "descEn": "Attack speed and on-hit power up your autos",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8138,6 +9068,8 @@
     "id": "Yunara-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8157,11 +9089,14 @@
  },
  "Locke": {
   "name": "로크",
+  "nameEn": "Locke",
   "builds": [
    {
     "id": "Locke-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8181,6 +9116,8 @@
     "id": "Locke-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8200,11 +9137,14 @@
  },
  "Sett": {
   "name": "세트",
+  "nameEn": "Sett",
   "builds": [
    {
     "id": "Sett-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8224,6 +9164,8 @@
     "id": "Sett-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8243,11 +9185,14 @@
  },
  "Lillia": {
   "name": "릴리아",
+  "nameEn": "Lillia",
   "builds": [
    {
     "id": "Lillia-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8268,6 +9213,8 @@
     "id": "Lillia-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8288,6 +9235,8 @@
     "id": "Lillia-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8307,11 +9256,14 @@
  },
  "Gwen": {
   "name": "그웬",
+  "nameEn": "Gwen",
   "builds": [
    {
     "id": "Gwen-apbruiser",
     "name": "AP 브루저",
     "desc": "주문력과 회복으로 버티며 싸워요",
+    "nameEn": "AP Bruiser",
+    "descEn": "AP and healing to fight while tanking",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8332,6 +9284,8 @@
     "id": "Gwen-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8351,11 +9305,14 @@
  },
  "Renata": {
   "name": "레나타 글라스크",
+  "nameEn": "Renata Glasc",
   "builds": [
    {
     "id": "Renata-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8377,6 +9334,8 @@
     "id": "Renata-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8397,11 +9356,14 @@
  },
  "Aurora": {
   "name": "오로라",
+  "nameEn": "Aurora",
   "builds": [
    {
     "id": "Aurora-apassassin",
     "name": "AP 암살",
     "desc": "주문력과 돌진으로 파고들어 끊어요",
+    "nameEn": "AP Assassin",
+    "descEn": "AP and dashes to dive and pick off",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8421,6 +9383,8 @@
     "id": "Aurora-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8441,11 +9405,14 @@
  },
  "Nilah": {
   "name": "닐라",
+  "nameEn": "Nilah",
   "builds": [
    {
     "id": "Nilah-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8465,6 +9432,8 @@
     "id": "Nilah-fighter",
     "name": "평타 전사",
     "desc": "공격 속도와 흡혈로 평타 싸움을 이겨요",
+    "nameEn": "Auto Fighter",
+    "descEn": "Attack speed and lifesteal to win auto trades",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8483,11 +9452,14 @@
  },
  "KSante": {
   "name": "크산테",
+  "nameEn": "K'Sante",
   "builds": [
    {
     "id": "KSante-tank",
     "name": "탱커",
     "desc": "체력과 방어 증강으로 앞을 막아요",
+    "nameEn": "Tank",
+    "descEn": "Health and defensive augments to hold the front",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8507,6 +9479,8 @@
     "id": "KSante-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8526,11 +9500,14 @@
  },
  "Smolder": {
   "name": "스몰더",
+  "nameEn": "Smolder",
   "builds": [
    {
     "id": "Smolder-adcaster",
     "name": "스킬 물리",
     "desc": "스킬 가속과 공격력으로 스킬을 자주 써요",
+    "nameEn": "AD Caster",
+    "descEn": "Ability haste and AD to cast often",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8551,6 +9528,8 @@
     "id": "Smolder-crit",
     "name": "치명타",
     "desc": "치명타 증강으로 평타 한 방을 키워요",
+    "nameEn": "Crit",
+    "descEn": "Crit augments make every auto hit hard",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8570,11 +9549,14 @@
  },
  "Milio": {
   "name": "밀리오",
+  "nameEn": "Milio",
   "builds": [
    {
     "id": "Milio-enchanter",
     "name": "보호 서폿",
     "desc": "회복과 보호막으로 아군을 지켜요",
+    "nameEn": "Enchanter",
+    "descEn": "Heals and shields to protect allies",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8595,6 +9577,8 @@
     "id": "Milio-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8615,11 +9599,14 @@
  },
  "Zaahen": {
   "name": "자헨",
+  "nameEn": "Zaahen",
   "builds": [
    {
     "id": "Zaahen-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8639,6 +9626,8 @@
     "id": "Zaahen-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8658,11 +9647,14 @@
  },
  "Hwei": {
   "name": "흐웨이",
+  "nameEn": "Hwei",
   "builds": [
    {
     "id": "Hwei-artillery",
     "name": "AP 포킹",
     "desc": "사거리와 주문력으로 멀리서 깎아요",
+    "nameEn": "AP Poke",
+    "descEn": "Range and AP to whittle from afar",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8681,6 +9673,8 @@
     "id": "Hwei-mage",
     "name": "AP 마법사",
     "desc": "주문력과 스킬 가속으로 스킬을 계속 돌려요",
+    "nameEn": "AP Mage",
+    "descEn": "AP and ability haste to keep casting",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8701,6 +9695,8 @@
     "id": "Hwei-burst",
     "name": "AP 폭딜",
     "desc": "주문력과 관통으로 콤보 한 번에 터뜨려요",
+    "nameEn": "AP Burst",
+    "descEn": "AP and penetration to burst in one combo",
     "style": "fun",
     "default": false,
     "wantTags": {
@@ -8720,11 +9716,14 @@
  },
  "Naafiri": {
   "name": "나피리",
+  "nameEn": "Naafiri",
   "builds": [
    {
     "id": "Naafiri-lethality",
     "name": "물리 관통",
     "desc": "물리 관통으로 스킬 한 번에 끝내요",
+    "nameEn": "Lethality",
+    "descEn": "Lethality ends fights in one combo",
     "style": "meta",
     "default": true,
     "wantTags": {
@@ -8744,6 +9743,8 @@
     "id": "Naafiri-bruiser",
     "name": "브루저",
     "desc": "체력과 회복으로 앞에서 오래 싸워요",
+    "nameEn": "Bruiser",
+    "descEn": "Health and healing to fight up front for long",
     "style": "fun",
     "default": false,
     "wantTags": {

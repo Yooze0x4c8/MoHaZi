@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
+import { t } from './i18n'
 
 export type Grade = 'S' | 'A' | 'B' | 'C' | '?'
 
@@ -43,15 +44,15 @@ export function GradeStrip({ x, index, card, onOpen }: { x: number; index: numbe
     <button type="button" className="strip glass btnreset" style={style} onClick={onOpen}
       onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
       <div className="tile Q">?</div>
-      <div className="why"><div className="r1">못 알아봤어요</div><div className="r2">눌러서 직접 고르기</div></div>
+      <div className="why"><div className="r1">{t('못 알아봤어요', 'Not recognized')}</div><div className="r2">{t('눌러서 직접 고르기', 'Click to pick it')}</div></div>
     </button>
   )
   return (
     <div className={`strip glass${card.grade === 'C' ? ' dim' : ''}`} style={style}>
-      <div className={`tile ${card.grade}`}>{card.grade}{card.rank != null && <i aria-label={`${card.rank}위`}>{card.rank}</i>}</div>
+      <div className={`tile ${card.grade}`}>{card.grade}{card.rank != null && <i aria-label={t(`${card.rank}위`, `Rank ${card.rank}`)}>{card.rank}</i>}</div>
       <div className="why">
         <div className="r1">{card.reason}{card.detail && <span>{card.detail}</span>}</div>
-        {card.lowData ? <div className="r2 low">표본이 적어요</div> : card.tip && <div className="r2 tip" title={card.tip}>{card.tip}</div>}
+        {card.lowData ? <div className="r2 low">{t('표본이 적어요', 'Few samples')}</div> : card.tip && <div className="r2 tip" title={card.tip}>{card.tip}</div>}
       </div>
     </div>
   )
@@ -60,7 +61,7 @@ export function GradeStrip({ x, index, card, onOpen }: { x: number; index: numbe
 export function PickBrackets({ x }: { x: number }) {
   return (
     <div className="pick" style={{ left: x - 12 }}>
-      <div className="pick-label">추천</div>
+      <div className="pick-label">{t('추천', 'Pick')}</div>
       <div className="br tl" /><div className="br tr" /><div className="br bl" /><div className="br brr" />
     </div>
   )
@@ -79,8 +80,8 @@ export function RerollCallout({ avail }: { avail: boolean[] | null }) {
       <div className="callout glass">
         <span className="tick" />
         <div>
-          <div className="t">리롤을 권장해요</div>
-          <div className="s">세 장 모두 B 이하예요.{left != null && ` 리롤 ${left}번 남음`}</div>
+          <div className="t">{t('리롤을 권장해요', 'Reroll recommended')}</div>
+          <div className="s">{t('세 장 모두 B 이하예요.', 'All three are B or lower.')}{left != null && t(` 리롤 ${left}번 남음`, ` ${left} reroll${left === 1 ? '' : 's'} left`)}</div>
         </div>
       </div>
     </>

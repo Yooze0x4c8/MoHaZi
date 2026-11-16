@@ -8,13 +8,21 @@ import BUILDS_JSON from '../../../data/builds.json'
 import TAGS_JSON from '../../../data/tags.json'
 import AUGMENTS_JSON from '../../../data/augments.json'
 import TIPS_JSON from '../../../data/tips.json'
+import { LANG, t } from './i18n'
 
-export const BUILDS = BUILDS_JSON as unknown as Record<string, { name: string; builds: Build[] }>
+// 데이터는 두 언어를 함께 들고 있다 (nameEn 등). 여기서 롤 클라이언트 언어 쪽으로 골라 둔다
+const en = LANG === 'en'
+type RawBuild = Build & { nameEn?: string; descEn?: string }
+export const BUILDS: Record<string, { name: string; builds: Build[] }> = Object.fromEntries(
+  Object.entries(BUILDS_JSON as unknown as Record<string, { name: string; nameEn?: string; builds: RawBuild[] }>).map(([alias, c]) => [alias, {
+    name: en ? c.nameEn ?? c.name : c.name,
+    builds: c.builds.map(({ nameEn, descEn, ...b }) => (en ? { ...b, name: nameEn ?? b.name, desc: descEn ?? b.desc } : b))
+  }]))
 const TAGS = TAGS_JSON.tags as unknown as Tags
-const LABELS = TAGS_JSON.labels as Labels
-const AUGMENTS = AUGMENTS_JSON as { id: number; name: string; rarity: string }[]
+const LABELS = (en ? TAGS_JSON.labelsEn : TAGS_JSON.labels) as Labels
+const AUGMENTS = (AUGMENTS_JSON as { id: number; name: string; nameEn: string; rarity: string }[]).map((a) => ({ ...a, name: en ? a.nameEn : a.name }))
 const TIPS = TIPS_JSON as Record<string, Tip[]>
-const RARITY: Record<string, string> = { silver: '실버', gold: '골드', prismatic: '프리즈마틱' }
+const RARITY: Record<string, string> = en ? { silver: 'Silver', gold: 'Gold', prismatic: 'Prismatic' } : { silver: '실버', gold: '골드', prismatic: '프리즈마틱' }
 const NAME: Record<number, string> = Object.fromEntries(AUGMENTS.map((a) => [a.id, a.name]))
 const clickable = (on: boolean) => window.api?.setClickable(on)
 
@@ -40,7 +48,7 @@ function UnknownSearch({ left, top, onPick, onClose }: { left: number; top?: num
 
   return (
     <div className="pop glass" style={{ left, top }} onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
-      <label className="srlab" htmlFor="aug-search">증강 이름 검색</label>
+      <label className="srlab" htmlFor="aug-search">{t('증강 이름 검색', 'Search augment name')}</label>
       <input id="aug-search" className="inp" autoFocus autoComplete="off" spellCheck={false} value={q}
         onChange={(e) => { setQ(e.target.value); setSel(0) }} onKeyDown={onKey} />
       {res.length > 0 && (
@@ -52,7 +60,7 @@ function UnknownSearch({ left, top, onPick, onClose }: { left: number; top?: num
           ))}
         </div>
       )}
-      <div className="help">{q && !res.length ? '맞는 증강이 없어요. ' : ''}초성으로 찾을 수 있어요. Enter로 고르기, Esc로 닫기</div>
+      <div className="help">{q && !res.length ? t('맞는 증강이 없어요. ', 'No matching augment. ') : ''}{t('초성으로 찾을 수 있어요. Enter로 고르기, Esc로 닫기', 'Type part of the name. Enter to pick, Esc to close')}</div>
     </div>
   )
 }
@@ -80,13 +88,13 @@ function SwitchBanner({ from, s, onAccept }: { from: Build; s: Switch; onAccept:
   )
   return (
     <div className="switch glass">
-      <div className="t"><b>{s.to.name} 빌드가 더 맞아요</b><p>{s.why}</p></div>
+      <div className="t"><b>{t(`${s.to.name} 빌드가 더 맞아요`, `${s.to.name} fits better`)}</b><p>{s.why}</p></div>
       <div className="fits">{fit(from.name, s.fromFit, false)}{fit(s.to.name, s.toFit, true)}</div>
       <div className="act">
         <button type="button" className="accept btnreset" onClick={onAccept} onMouseEnter={() => clickable(true)} onMouseLeave={() => clickable(false)}>
-          {s.to.name}{ro(s.to.name)} 바꾸기
+          {t(`${s.to.name}${ro(s.to.name)} 바꾸기`, `Switch to ${s.to.name}`)}
         </button>
-        <span>그대로 두려면 무시하세요</span>
+        <span>{t('그대로 두려면 무시하세요', 'Ignore to keep your build')}</span>
       </div>
     </div>
   )
@@ -110,8 +118,8 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
 
   useEffect(() => {
     if (!toast) return
-    const t = setTimeout(() => setToast(null), 2000)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => setToast(null), 2000)
+    return () => clearTimeout(timer)
   }, [toast])
 
   // 못 알아본 카드를 직접 고른 결과 (카드 번호 → 증강 ID). 새 증강 화면이 뜨면 비운다
@@ -126,9 +134,9 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
   const mouse = useRef<{ t: number; x: number; y: number }[]>([])
   useEffect(() => {
     const on = (e: MouseEvent) => {
-      const h = mouse.current, t = performance.now()
-      h.push({ t, ...toStage(e.clientX, e.clientY) })
-      while (h.length && h[0].t < t - 3000) h.shift()
+      const h = mouse.current, now = performance.now()
+      h.push({ t: now, ...toStage(e.clientX, e.clientY) })
+      while (h.length && h[0].t < now - 3000) h.shift()
     }
     addEventListener('mousemove', on) // 클릭 통과 창도 마우스 이동은 받는다 (forward)
     return () => removeEventListener('mousemove', on)
@@ -141,7 +149,7 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
     const prev = shown.current
     if (cards && resolved) {
       // 방금 기록한 화면이 다시 뜨면 고른 게 아니었다 (화면을 숨겼다 다시 연 것) → 기록 취소
-      if (cardsKey === lastPick.current) { setPicked((p) => p.slice(0, -1)); setToast({ text: '방금 기록을 취소했어요', n: Date.now() }) }
+      if (cardsKey === lastPick.current) { setPicked((p) => p.slice(0, -1)); setToast({ text: t('방금 기록을 취소했어요', 'Undid the last record'), n: Date.now() }) }
       lastPick.current = null
       shown.current = { key: cardsKey!, ids: resolved }
       return
@@ -150,13 +158,13 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
     shown.current = null
     // 화면이 닫힌 걸 아는 건 두 프레임 뒤라(약 0.5~1초) 그만큼 앞의 마우스 위치를 본다
     // ponytail: 시간으로 고른 근사값. 닫힌 순간 마우스를 크게 움직이면 틀릴 수 있다 → 패널에서 고친다
-    const t = performance.now() - 700, h = mouse.current
-    const at = [...h].reverse().find((m) => m.t <= t) ?? h[0] ?? null
+    const before = performance.now() - 700, h = mouse.current
+    const at = [...h].reverse().find((m) => m.t <= before) ?? h[0] ?? null
     const i = cardAt(at), id = i == null ? null : prev.ids[i]
     if (id == null) return
     setPicked((p) => [...p, id])
     lastPick.current = prev.key
-    setToast({ text: `${NAME[id]} 기록했어요`, n: Date.now() })
+    setToast({ text: t(`${NAME[id]} 기록했어요`, `Recorded ${NAME[id]}`), n: Date.now() })
   }, [cardsKey])
 
   // 떠 있는 동안 '?' 카드를 직접 고치면 기록용 값에도 반영
@@ -169,7 +177,7 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
   }
 
   const build = champ.builds.find((b) => b.id === choice) ?? champ.builds.find((b) => b.default) ?? champ.builds[0]
-  const rated = resolved && rateCards(resolved, build, TAGS, LABELS, picked)
+  const rated = resolved && rateCards(resolved, build, TAGS, LABELS, picked, LANG)
   const reroll = !!rated && shouldReroll(rated.cards, rerolls ? rerolls.filter(Boolean).length : null)
   // 패널: 처음엔 펼침, 첫 증강을 고르면 접힘. 칩·접기 버튼(또는 F7)으로 언제든 접고 편다
   const hadPick = picked.length > 0
@@ -181,11 +189,12 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
     if (id === build.id) return
     setChoice(id)
     // 떠 있는 카드가 있을 때만 알림. 등급은 다음 렌더에서 새 빌드로 다시 계산된다
-    if (cards) setToast({ text: `${champ.builds.find((b) => b.id === id)!.name} 기준으로 다시 매겼어요`, n: Date.now() })
+    const name = champ.builds.find((b) => b.id === id)!.name
+    if (cards) setToast({ text: t(`${name} 기준으로 다시 매겼어요`, `Re-graded for ${name}`), n: Date.now() })
   }
 
   // 전환 제안은 증강 화면에서만 (평소엔 위쪽 게임 UI를 가리지 않게). 이때 F7은 패널 대신 제안 빌드로 바로 바꾼다
-  const sw = cards ? suggestSwitch(picked, build, champ.builds, TAGS, LABELS) : null
+  const sw = cards ? suggestSwitch(picked, build, champ.builds, TAGS, LABELS, LANG) : null
   const lastF7 = useRef(f7)
   useEffect(() => {
     if (f7 === lastF7.current) return
@@ -199,11 +208,11 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
       {panelOpen
         ? <BuildPanel champion={champ.name} builds={champ.builds} selected={build.id} chosen={choice != null} onPick={pick}
             onClose={() => { setPanelOpen(false); setEditing(null) }}
-            picks={{ names: picked.map((id) => NAME[id] ?? String(id)), tips: picked.map((id) => tipFor(id, alias, build.id, TIPS)), onEdit: setEditing, onAdd: () => setEditing('add'),
+            picks={{ names: picked.map((id) => NAME[id] ?? String(id)), tips: picked.map((id) => tipFor(id, alias, build.id, TIPS, LANG)), onEdit: setEditing, onAdd: () => setEditing('add'),
               onRemove: (i) => setPicked((p) => p.filter((_, j) => j !== i)) }} />
         : <BuildChip build={build} picked={picked.length} onOpen={() => setPanelOpen(true)} />}
       {/* key에 빌드를 넣어 다시 매길 때 등장 애니메이션을 다시 보여준다 */}
-      {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => (c ? { ...c, tip: tipFor(c.id, alias, build.id, TIPS) } : { grade: '?', reason: '' }))} pick={reroll ? undefined : rated.pick}
+      {rated && <AugmentGrades key={build.id} cards={rated.cards.map((c) => (c ? { ...c, tip: tipFor(c.id, alias, build.id, TIPS, LANG) } : { grade: '?', reason: '' }))} pick={reroll ? undefined : rated.pick}
         onOpen={(i) => setSearching((s) => (s === i ? null : i))} />}
       {reroll && <RerollCallout avail={rerolls} />}
       {searching != null && (

@@ -49,6 +49,32 @@ const DESC = {
   enchanter: '회복과 보호막으로 아군을 지켜요'
 }
 
+// 영어판 (롤 클라이언트가 영어일 때). 위 NAME·DESC와 같은 키
+const NAME_EN = {
+  crit: 'Crit', onhit: 'On-hit', aponhit: 'AP On-hit', lethality: 'Lethality', adcaster: 'AD Caster',
+  bruiser: 'Bruiser', fighter: 'Auto Fighter', burst: 'AP Burst', mage: 'AP Mage', artillery: 'AP Poke',
+  apassassin: 'AP Assassin', apbruiser: 'AP Bruiser', apult: 'AP Infinite Ult', tank: 'Tank', aptank: 'AP Tank',
+  engage: 'Engage Support', enchanter: 'Enchanter'
+}
+const DESC_EN = {
+  crit: 'Crit augments make every auto hit hard', onhit: 'Attack speed and on-hit power up your autos',
+  aponhit: 'AP and on-hit add magic damage to autos', lethality: 'Lethality ends fights in one combo',
+  adcaster: 'Ability haste and AD to cast often', bruiser: 'Health and healing to fight up front for long',
+  fighter: 'Attack speed and lifesteal to win auto trades', burst: 'AP and penetration to burst in one combo',
+  mage: 'AP and ability haste to keep casting', artillery: 'Range and AP to whittle from afar',
+  apassassin: 'AP and dashes to dive and pick off', apbruiser: 'AP and healing to fight while tanking',
+  apult: 'Stack ult haste and keep casting your ult', tank: 'Health and defensive augments to hold the front',
+  aptank: 'Health plus AP to tank and deal damage', engage: 'Crowd control and health to start fights',
+  enchanter: 'Heals and shields to protect allies'
+}
+// 표에 직접 쓴 이름·설명의 영어판
+const CUSTOM_EN = {
+  '궁 쿨감을 쌓아 궁을 계속 깔아요. 대마법사를 노리면 E는 1레벨만 찍어 두세요': 'Stack ult haste and keep casting your ult. Going for Archmage? Keep E at level 1',
+  'AP 코르키': 'AP Corki', 'AP 이즈리얼': 'AP Ezreal', '치명타 배럴': 'Crit Barrel', 'AP 카이사': "AP Kai'Sa",
+  'AP 상자': 'AP Boxes', '치명타 전사': 'Crit Fighter', '흡혈 AP': 'Sustain AP'
+}
+const en = (ko) => { if (!CUSTOM_EN[ko]) throw new Error(`영어판 없음: ${ko}`); return CUSTOM_EN[ko] }
+
 // 챔피언: [프리셋, 덧붙임 태그?, 이름?, 설명?] 목록. 첫 번째가 기본(meta) 빌드, 나머지는 재미(fun) 빌드.
 // 덧붙임에 같은 태그가 있으면 덮어쓰고, 프리셋의 피할 태그에서도 뺀다.
 const BUILDS = {
@@ -231,8 +257,10 @@ const BUILDS = {
 // 표에 없는 새 챔피언은 역할군으로 기본 빌드 하나
 const BY_ROLE = { marksman: 'crit', mage: 'mage', assassin: 'lethality', fighter: 'bruiser', tank: 'tank', support: 'enchanter' }
 
-const res = await fetch('https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/ko_kr/v1/champion-summary.json')
-const champs = (await res.json()).filter((c) => c.id > 0 && !c.alias.includes('_')) // Jade_* 등 특수 모드 제외
+const summary = (l) => fetch(`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/${l}/v1/champion-summary.json`).then((r) => r.json())
+const [ko, enList] = await Promise.all([summary('ko_kr'), summary('default')])
+const nameEn = new Map(enList.map((c) => [c.id, c.name]))
+const champs = ko.filter((c) => c.id > 0 && !c.alias.includes('_')) // Jade_* 등 특수 모드 제외
 const labels = JSON.parse(readFileSync(new URL('../data/tags.json', import.meta.url), 'utf8')).labels
 
 const out = {}
@@ -252,6 +280,8 @@ for (const c of champs) {
       id: `${c.alias}-${preset}`,
       name: name ?? NAME[preset],
       desc: desc ?? DESC[preset],
+      nameEn: name ? en(name) : NAME_EN[preset],
+      descEn: desc ? en(desc) : DESC_EN[preset],
       style: i === 0 ? 'meta' : 'fun',
       default: i === 0,
       wantTags,
@@ -259,7 +289,7 @@ for (const c of champs) {
       avoidTags: p.avoid.filter((t) => !(t in extra))
     }
   })
-  out[c.alias] = { name: c.name, builds }
+  out[c.alias] = { name: c.name, nameEn: nameEn.get(c.id) ?? c.alias, builds }
 }
 const unknown = Object.keys(BUILDS).filter((a) => !out[a])
 if (unknown.length) throw new Error(`표에만 있고 챔피언 목록에 없음: ${unknown.join(', ')}`)

@@ -11,12 +11,14 @@ const get = async (p) => {
 }
 const json = async (p) => (await get(p)).json()
 
-const [list, strings, arena] = await Promise.all([
+const [list, listEn, strings, arena] = await Promise.all([
   json('plugins/rcp-be-lol-game-data/global/ko_kr/v1/cherry-augments.json'),
+  json('plugins/rcp-be-lol-game-data/global/default/v1/cherry-augments.json'), // 영어 이름 (롤 클라이언트가 영어일 때)
   json('game/ko_kr/data/menu/en_us/lol.stringtable.json').then((s) => s.entries),
   json('cdragon/arena/ko_kr.json').then((a) => new Map(a.augments.map((x) => [x.name, x.desc])))
 ])
 
+const nameEn = new Map(listEn.map((x) => [x.id, x.nameTRA.trim()]))
 const clean = (s) => s.replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
 // 설명문 키: ARAM_ 증강은 kiwi_aram_*, 새 증강은 kiwi_*·kiwi_augment_*·augment_* (summary가 짧고 깔끔해서 먼저)
 const SUFFIX = ['kiwi_aram_%_tooltip', 'kiwi_aram_%_summary', 'kiwi_aram_%_desc', 'kiwi_aram_%_description',
@@ -39,6 +41,7 @@ const augments = list
       id: x.id,
       nameId: x.augmentNameId,
       name: x.nameTRA,
+      nameEn: nameEn.get(x.id) ?? x.nameTRA,
       rarity: x.rarity.slice(1).toLowerCase(),
       desc: raw == null ? null : clean(raw),
       icon: `${x.id}.png`,

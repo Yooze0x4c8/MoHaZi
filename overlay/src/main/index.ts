@@ -1,6 +1,7 @@
 import { app, BrowserWindow, desktopCapturer, globalShortcut, ipcMain, Menu, nativeImage, screen, systemPreferences, Tray } from 'electron'
 import { join } from 'node:path'
 import { mkdir, writeFile } from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
 import https from 'node:https'
 import { readText } from './ocr'
 import { autoUpdater } from 'electron-updater'
@@ -38,6 +39,18 @@ async function detectGame(): Promise<Game> {
   }
 }
 
+// 롤 클라이언트 언어 (Riot Client 설정의 settings.locale). 한국어가 아니면 영어로 보여준다.
+// 파일이 없으면(롤 미설치·다른 경로) 운영체제 언어. 앱을 켤 때 한 번 읽는다 → 롤 언어를 바꾸면 앱을 다시 켜야 한다
+function clientLang(): 'ko' | 'en' {
+  const file = join(process.platform === 'darwin' ? '/Users/Shared' : process.env.PROGRAMDATA ?? 'C:/ProgramData',
+    'Riot Games/Metadata/league_of_legends.live/league_of_legends.live.product_settings.yaml')
+  let locale = app.getLocale()
+  try { locale = /^\s+locale:\s*"?([\w-]+)/m.exec(readFileSync(file, 'utf8'))?.[1] ?? locale } catch {}
+  return locale.toLowerCase().startsWith('ko') ? 'ko' : 'en'
+}
+let LANG: 'ko' | 'en' = 'ko'
+const t = (ko: string, en: string) => (LANG === 'en' ? en : ko)
+
 // 전역 단축키 등록. 다른 프로그램이 먼저 잡은 키면 실패하므로 터미널에 알린다
 function key(accel: string, fn: () => void) {
   const ok = globalShortcut.register(accel, fn)
@@ -63,7 +76,7 @@ function showIntro() {
   })
   intro.setIgnoreMouseEvents(true)
   intro.once('ready-to-show', () => intro.showInactive())
-  intro.loadFile(resDir('intro', 'intro.html'))
+  intro.loadFile(resDir('intro', 'intro.html'), { hash: LANG === 'en' ? 'en' : '' })
   setTimeout(() => { if (!intro.isDestroyed()) intro.close() }, 3400)
 }
 
@@ -87,14 +100,15 @@ function createOverlay() {
   win.setContentProtection(true)
 
   const COLLECT = !!process.env.COLLECT
-  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(process.env.ELECTRON_RENDERER_URL + (COLLECT ? '#collect' : process.env.CAPTURE_ALWAYS ? '#capture' : ''))
-  else win.loadFile(join(__dirname, '../renderer/index.html'))
+  // 화면 언어는 ?lang=로 넘긴다 (renderer/i18n.ts)
+  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(`${process.env.ELECTRON_RENDERER_URL}?lang=${LANG}` + (COLLECT ? '#collect' : process.env.CAPTURE_ALWAYS ? '#capture' : ''))
+  else win.loadFile(join(__dirname, '../renderer/index.html'), { query: { lang: LANG } })
 
   // 빌드 패널 위에서만 클릭을 받는다
   const clickThrough = (on: boolean) => win.setIgnoreMouseEvents(on, { forward: true })
   ipcMain.on('clickable', (_e, on: boolean) => clickThrough(!on))
   // 이름 영역 PNG → 글자 (같은 그림 증강 가르기)
-  ipcMain.handle('ocr', (_e, png: Uint8Array) => readText(png))
+  ipcMain.handle('ocr', (_e, png: Uint8Array) => readText(png, LANG))
   // 증강 검색 팝업이 열린 동안만 키 입력을 받는다. 닫으면 포커스를 놓아 게임으로 돌려준다
   ipcMain.on('focus', (_e, on: boolean) => {
     if (on) { win.setFocusable(true); win.focus() }
@@ -116,12 +130,13 @@ function createOverlay() {
   const trayIcon = nativeImage.createFromPath(resDir('tray', isMac ? 'trayTemplate.png' : 'tray.png'))
   if (isMac) trayIcon.setTemplateImage(true)
   tray = new Tray(trayIcon)
-  tray.setToolTip('MoHaZi 증강 오버레이')
+  const tip = t('MoHaZi 증강 오버레이', 'MoHaZi augment overlay')
+  tray.setToolTip(tip)
   const menu = (updateReady: boolean) => Menu.buildFromTemplate([
-    { label: '숨기기 / 보이기 (F8)', click: toggle },
-    ...(updateReady ? [{ label: '지금 재시작해서 업데이트', click: () => autoUpdater.quitAndInstall() }] : []),
+    { label: t('숨기기 / 보이기 (F8)', 'Hide / Show (F8)'), click: toggle },
+    ...(updateReady ? [{ label: t('지금 재시작해서 업데이트', 'Restart now to update'), click: () => autoUpdater.quitAndInstall() }] : []),
     { type: 'separator' },
-    { label: '종료', click: () => app.quit() }
+    { label: t('종료', 'Quit'), click: () => app.quit() }
   ])
   tray.setContextMenu(menu(false))
   // 창 없이 트레이에만 뜨는 앱이라, 켜졌다는 걸 한 번 알려 준다. 이미 게임 중이면 게임 화면을 가리지 않게 건너뛴다
@@ -133,7 +148,7 @@ function createOverlay() {
   if (app.isPackaged && process.platform === 'win32') {
     autoUpdater.on('update-downloaded', ({ version }) => {
       tray.setContextMenu(menu(true))
-      tray.displayBalloon({ title: 'MoHaZi 업데이트', content: `${version} 버전을 받았어요. 다음에 켤 때 적용돼요.` })
+      tray.displayBalloon({ title: t('MoHaZi 업데이트', 'MoHaZi update'), content: t(`${version} 버전을 받았어요. 다음에 켤 때 적용돼요.`, `Version ${version} downloaded. It applies next time you start the app.`) })
     })
     autoUpdater.on('error', (e) => console.error('[update]', e)) // 인터넷이 없거나 GitHub이 안 될 때. 앱은 그대로 쓴다
     const check = () => autoUpdater.checkForUpdates().catch(() => {})
@@ -183,7 +198,7 @@ function createOverlay() {
       if (key !== last) {
         last = key
         win.webContents.send('game', game)
-        tray.setToolTip(found && !game ? `MoHaZi: 증바람 판이 아니라 쉬는 중 (모드 ${found.gameMode})` : 'MoHaZi 증강 오버레이')
+        tray.setToolTip(found && !game ? t(`MoHaZi: 증바람 판이 아니라 쉬는 중 (모드 ${found.gameMode})`, `MoHaZi: idle, not an ARAM: Mayhem game (mode ${found.gameMode})`) : tip)
       }
     }, 2000)
   })
@@ -210,6 +225,7 @@ else app.whenReady().then(() => {
     // 화면 기록 권한 요청 창을 게임 밖(지금)에 띄운다. 게임 중에 처음 뜨면 전체 화면에 가려진다
     if (systemPreferences.getMediaAccessStatus('screen') !== 'granted') desktopCapturer.getSources({ types: ['screen'] }).catch(() => {})
   }
+  LANG = clientLang()
   createOverlay()
 })
 app.on('will-quit', () => globalShortcut.unregisterAll())

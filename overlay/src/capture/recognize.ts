@@ -27,7 +27,8 @@ export function findCards(region: Region, templates: Template[]): Slot[] | null 
 
 // 능력치 모루 카드: 증강과 같은 카드 모양이고 아이콘(방패·칼 등)까지 증강과 같은 그림이 있어 아이콘으로는 못 가른다.
 // 이름이 모두 "○○ 파편"이라 이름으로 거른다 (증강 이름엔 "파편"이 없다)
-const ANVIL = /파\s*편/
+// ponytail: 영어 이름 "Shard"는 추정값. 영어 클라이언트 화면으로 확인하면 고친다
+const ANVIL = /파\s*편|shard/i
 
 // 슬롯 → 증강 ID 3개, 증강 화면이 아니면(능력치 모루) null.
 // 이름을 먼저 본다: 실제 게임 이름 OCR은 거의 틀리지 않고(66장 중 66장), 아이콘은 비슷한 그림끼리 틀린다

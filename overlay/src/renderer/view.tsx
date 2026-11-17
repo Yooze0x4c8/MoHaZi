@@ -10,7 +10,7 @@ import AUGMENTS_JSON from '../../../data/augments.json'
 import TIPS_JSON from '../../../data/tips.json'
 import { LANG, t } from './i18n'
 
-// 데이터는 두 언어를 함께 들고 있다 (nameEn 등). 여기서 롤 클라이언트 언어 쪽으로 골라 둔다
+// 데이터는 두 언어를 함께 들고 있다 (nameEn 등). 여기서 화면 언어 쪽으로 골라 둔다
 const en = LANG === 'en'
 type RawBuild = Build & { nameEn?: string; descEn?: string }
 export const BUILDS: Record<string, { name: string; builds: Build[] }> = Object.fromEntries(

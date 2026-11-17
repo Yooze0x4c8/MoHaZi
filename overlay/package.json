@@ -15,6 +15,7 @@
     "@tesseract.js-data/eng": "^1.0.0",
     "@tesseract.js-data/kor": "^1.0.0",
     "electron-updater": "^6.8.11",
+    "koffi": "^3.3.8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tesseract.js": "^7.0.0",
@@ -31,7 +32,7 @@
     "typescript": "^5.6.3",
     "vite": "^5.4.11"
   },
-  "version": "0.2.2",
+  "version": "0.3.0",
   "build": {
     "appId": "com.mohazi.overlay",
     "productName": "MoHaZi",
@@ -50,7 +51,13 @@
       "oneClick": false,
       "include": "build/installer.nsh",
       "perMachine": false,
-      "shortcutName": "MoHaZi"
+      "shortcutName": "MoHaZi",
+      "multiLanguageInstaller": true,
+      "installerLanguages": [
+        "ko_KR",
+        "en_US"
+      ],
+      "displayLanguageSelector": true
     },
     "publish": [
       {

@@ -19,10 +19,15 @@ const NAME_MIN = 0.6 // 읽은 이름이 이보다 안 맞으면 '?' (3-6에서 
 export type Region = (x: number, y: number, w: number, h: number) => Img
 export type Slot = ReturnType<typeof match>
 
-// 세 장 모두 아이콘과 닮았을 때만 증강 화면. 아니면 null
+// 세 장 모두 아이콘과 닮았을 때만 증강 화면. 아니면 null (게임 대부분은 첫 장에서 끝난다)
 export function findCards(region: Region, templates: Template[]): Slot[] | null {
-  const slots = CARD_X.map((x) => match(region(x + ICON.dx, ICON.y, ICON.size, ICON.size), templates))
-  return slots.every((s) => s.rel < REL_MAX) ? slots : null
+  const slots: Slot[] = []
+  for (const x of CARD_X) {
+    const s = match(region(x + ICON.dx, ICON.y, ICON.size, ICON.size), templates)
+    if (s.rel >= REL_MAX) return null
+    slots.push(s)
+  }
+  return slots
 }
 
 // 능력치 모루 카드: 증강과 같은 카드 모양이고 아이콘(방패·칼 등)까지 증강과 같은 그림이 있어 아이콘으로는 못 가른다.

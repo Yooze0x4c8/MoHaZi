@@ -4,12 +4,12 @@ import type { Game } from '../main'
 import { Stage } from './grades'
 import { Overlay } from './view'
 import { Preview } from './preview'
-import { recognizer, startCapture } from '../capture'
+import { recognizer, startCapture, type Area } from '../capture'
 import './overlay.css'
 
 declare global {
   interface Window {
-    api?: { onGame: (cb: (game: Game) => void) => void; onF7: (cb: () => void) => void; onGameClick: (cb: (p: { x: number; y: number }) => void) => () => void; setClickable: (on: boolean) => void; setFocus: (on: boolean) => void; ocr: (png: Uint8Array) => Promise<string>
+    api?: { onGame: (cb: (game: Game) => void) => void; onGameArea: (cb: (a: Area) => void) => void; onF7: (cb: () => void) => void; onGameClick: (cb: (p: { x: number; y: number }) => void) => () => void; setClickable: (on: boolean) => void; setFocus: (on: boolean) => void; ocr: (png: Uint8Array) => Promise<string>
       onSnap: (cb: () => void) => void; saveFrame: (img: Uint8Array, auto: boolean) => Promise<number> }
   }
 }
@@ -25,9 +25,14 @@ function App() {
   const [rerolls, setRerolls] = useState<boolean[] | null>(null) // 카드별 리롤 버튼을 쓸 수 있는지
   const [saved, setSaved] = useState<number | null>(null) // 수집 모드: 방금 저장한 장 수 (1초 표시)
   const snap = useRef(false)
+  const area = useRef<Area | null>(null) // 게임 화면 영역 (main이 롤 창 위치로 알려 준다)
+  const [, setResized] = useState(0) // 창 크기가 바뀌면(게임 창에 맞춤) 무대 zoom을 다시 계산
 
   useEffect(() => {
     window.api?.onGame(setGame)
+    window.api?.onGameArea((a) => { area.current = a })
+    const onResize = () => setResized((n) => n + 1)
+    addEventListener('resize', onResize)
     window.api?.onF7(() => setF7((n) => n + 1))
     window.api?.onSnap(() => { console.log('[collect] 다음 프레임 저장'); snap.current = true })
   }, [])
@@ -58,7 +63,7 @@ function App() {
         .catch((e) => console.error('[collect]', e))
     }
     let lastAuto = 0
-    startCapture(() => inGame.current, (f, video) => {
+    startCapture(() => inGame.current, () => area.current, (f, video) => {
       if (snap.current) { snap.current = false; save(video, false) }
       if (COLLECT && playing.current && performance.now() - lastAuto >= AUTO_MS) { lastAuto = performance.now(); save(video, true) }
       return recognize(f)

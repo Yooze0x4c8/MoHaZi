@@ -18,7 +18,7 @@
 
 > 개인용으로 먼저 만들고 있습니다. 공개 배포는 라이엇 정책을 확인한 뒤 결정합니다.
 
-앱 화면은 **롤 클라이언트 언어**를 따라 한국어 또는 영어로 나옵니다. 한국어가 아니면 영어입니다. 롤 언어를 바꿨으면 앱을 다시 켜 주세요.
+앱 화면은 **설치할 때 고른 언어**(한국어 또는 영어)로 나옵니다. 카드 이름은 롤 클라이언트 언어로 읽으므로 둘이 달라도 됩니다. 앱 언어를 바꾸려면 설치 파일을 다시 실행해 언어를 고르세요.
 
 ## 설치
 ### 윈도우 사용자용
@@ -27,7 +27,7 @@
 
 1. "Windows의 PC 보호" 경고가 뜨면 **추가 정보 → 실행**을 누릅니다 (코드 서명이 없어서 뜨는 경고입니다).
 2. 설치되면 바로 켜지고, 작업 표시줄 오른쪽 트레이에 카드 세 장 모양 아이콘이 생깁니다. 게임 밖에선 화면에 아무것도 안 보이는 게 정상입니다.
-3. 롤은 **테두리 없는 창 모드**로 두고 **증바람**을 시작합니다. 화면은 16:9 또는 16:10이어야 합니다.
+3. 롤은 **테두리 없는 창 모드** 또는 **창 모드**로 두고 **증바람**을 시작합니다. 어느 해상도·모니터에서도 롤 창에 맞춰 뜹니다. 전체 화면 모드에서는 오버레이가 게임 위에 뜰 수 없습니다.
 4. 끌 때는 트레이 아이콘 우클릭 → **종료**.
 
 새 버전이 나오면 앱이 알아서 받고, 다음에 켤 때 적용됩니다 (트레이 메뉴의 "지금 재시작해서 업데이트"로 바로 적용).
@@ -75,7 +75,7 @@ score = w_b·빌드 적합도 + w_s·승률(베이지안 보정) + w_p·기존 �
 
 ## 실행
 
-Node.js 22 이상, Windows. 게임은 테두리 없는 창 모드, 16:9 또는 16:10 화면 (UI는 화면 높이 기준으로 맞춘다).
+Node.js 22 이상, Windows. 게임은 테두리 없는 창 또는 창 모드. 롤 창 위치·크기를 읽어 캡처와 오버레이를 그 창에 맞추고, UI는 창 높이 기준으로 맞춘다 (실제 게임 확인은 16:10 테두리 없는 창만).
 
 ```bash
 cd overlay
@@ -153,7 +153,7 @@ On the augment selection screen it shows a **grade and a one-line reason** on ea
 
 > Built for personal use (me and friends) first. Public distribution will be decided after checking Riot's policies.
 
-The app follows your **League client language**: Korean if the client is Korean, English otherwise. Restart the app after changing the client language.
+The app uses the **language you pick in the installer** (Korean or English). Card names are read in your League client language, so the two can differ. To change the app language, run the installer again and pick another language.
 
 ### Install
 
@@ -163,7 +163,7 @@ The app follows your **League client language**: Korean if the client is Korean,
 
 1. If "Windows protected your PC" appears, click **More info → Run anyway** (the app is not code-signed).
 2. It starts right after install and a three-card icon appears in the system tray. Nothing shows on screen outside a game; that is normal.
-3. Set League to **borderless window mode** and start **ARAM: Mayhem**. The screen must be 16:9 or 16:10.
+3. Set League to **borderless** or **windowed** mode and start **ARAM: Mayhem**. The overlay follows the League window at any resolution or monitor. It cannot appear over fullscreen mode.
 4. To quit, right-click the tray icon → **Quit**.
 
 New versions download automatically and apply the next time you start the app (or use **Restart now to update** in the tray menu).
@@ -211,7 +211,7 @@ score = w_b·build fit + w_s·win rate (Bayesian adjusted) + w_p·synergy with c
 
 ### Development
 
-Node.js 22+, Windows. The game must be in borderless window mode on a 16:9 or 16:10 screen (UI scales with screen height).
+Node.js 22+, Windows. The game must be in borderless or windowed mode. Capture and overlay follow the League window's position and size, and the UI scales with its height (tested in-game only at 16:10 borderless).
 
 ```bash
 cd overlay

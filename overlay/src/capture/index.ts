@@ -5,7 +5,7 @@ import { CARD_X, NAME, findCards, rerollsLeft, resolveCards, type Region } from 
 import { loadTemplates } from '../engine/match'
 import ICONS_JSON from '../../../data/icon-features.json'
 import AUGMENTS_JSON from '../../../data/augments.json'
-import { LANG } from '../renderer/i18n'
+import { GAME_LANG } from '../renderer/i18n'
 
 const SLOW_MS = 700 // 평소 (초당 1~2회)
 const FAST_MS = 250 // 증강 화면일 때
@@ -16,37 +16,46 @@ const FAST_MS = 250 // 증강 화면일 때
 export const BASE_W = 1920
 export const BASE_H = 1080
 
+// 게임 화면 영역: 어느 모니터(display)의 어디(모니터 대비 0~1 비율)인지. 창 모드·다른 모니터 대응 (main이 롤 창 위치로 알려 준다)
+export type Area = { display: number; x: number; y: number; w: number; h: number }
+
 // active()가 true인 동안 캡처해 onFrame에 넘긴다. onFrame이 true를 돌려주면 다음 캡처를 빨리 한다.
 // 비활성일 땐 스트림을 닫아 비용을 없앤다. 프레임(ImageBitmap)은 onFrame이 끝나면 닫힌다.
+// area(): 게임 화면 영역 (null이면 주 모니터 전체). 모니터가 바뀌면 스트림을 새로 연다 (main이 그 모니터를 넘긴다)
 // video: 원본 해상도 화면 (수집 모드 저장용)
-export function startCapture(active: () => boolean, onFrame: (f: ImageBitmap, video: HTMLVideoElement) => boolean | void) {
-  let video: HTMLVideoElement | null = null
+export function startCapture(active: () => boolean, area: () => Area | null, onFrame: (f: ImageBitmap, video: HTMLVideoElement) => boolean | void) {
+  let video: HTMLVideoElement | null = null, display: number | undefined
+  const stop = () => { (video?.srcObject as MediaStream | null)?.getTracks().forEach((t) => t.stop()); video = null }
 
   const tick = async () => {
     let fast = false
     try {
+      const a = area()
       if (active()) {
+        if (video && a?.display !== display) stop()
         if (!video) {
+          display = a?.display
           video = document.createElement('video')
           video.muted = true
           video.srcObject = await navigator.mediaDevices.getDisplayMedia({ video: { frameRate: 5 }, audio: false })
           await video.play()
         }
         const t = performance.now()
-        const f = await createImageBitmap(video, { resizeWidth: Math.round((video.videoWidth * BASE_H) / video.videoHeight), resizeHeight: BASE_H, resizeQuality: 'high' })
+        // 게임 영역만 잘라 높이 1080으로 줄인다. 테두리 없는 창이면 모니터 전체 (자르지 않은 것과 같다)
+        const vw = video.videoWidth, vh = video.videoHeight
+        const sx = Math.round((a?.x ?? 0) * vw), sy = Math.round((a?.y ?? 0) * vh)
+        const sw = Math.round((a?.w ?? 1) * vw), sh = Math.round((a?.h ?? 1) * vh)
+        const f = await createImageBitmap(video, sx, sy, sw, sh, { resizeWidth: Math.round((sw * BASE_H) / sh), resizeHeight: BASE_H, resizeQuality: 'high' })
         if (import.meta.env.DEV) console.log(`[capture] ${video.videoWidth}x${video.videoHeight} → ${f.width}x${f.height} ${Math.round(performance.now() - t)}ms`)
         try {
           fast = onFrame(f, video) === true
         } finally {
           f.close()
         }
-      } else if (video) {
-        ;(video.srcObject as MediaStream).getTracks().forEach((t) => t.stop())
-        video = null
-      }
+      } else if (video) stop()
     } catch (e) {
       console.error('[capture]', e)
-      video = null
+      stop()
     }
     setTimeout(tick, fast ? FAST_MS : SLOW_MS)
   }
@@ -55,7 +64,7 @@ export function startCapture(active: () => boolean, onFrame: (f: ImageBitmap, vi
 
 const TEMPLATES = loadTemplates(ICONS_JSON)
 // 카드 이름을 읽어 맞춰 볼 이름: 롤 클라이언트 언어
-const NAMES: Record<number, string> = Object.fromEntries(AUGMENTS_JSON.map((a) => [a.id, LANG === 'en' ? a.nameEn : a.name]))
+const NAMES: Record<number, string> = Object.fromEntries(AUGMENTS_JSON.map((a) => [a.id, GAME_LANG === 'en' ? a.nameEn : a.name]))
 
 // 프레임 → 떠 있는 증강 3장 (1-5). 결과는 onCards로, 증강 화면이 아니면 null.
 // 반환 함수는 startCapture의 onFrame: 증강 화면이면 true(다음 캡처를 빨리)

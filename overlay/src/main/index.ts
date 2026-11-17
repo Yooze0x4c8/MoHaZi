@@ -6,6 +6,7 @@ import https from 'node:https'
 import { readText } from './ocr'
 import { autoUpdater } from 'electron-updater'
 import { uIOhook } from 'uiohook-napi'
+import koffi from 'koffi'
 
 // alias: data/builds.json 키 (rawChampionName = 'game_character_displayname_<alias>')
 export type Game = { champion: string; alias: string; gameMode: string } | null
@@ -26,6 +27,34 @@ function getAllGameData(): Promise<any> {
   })
 }
 
+// 롤 게임 창의 화면 영역 (DIP, 제목 표시줄 제외). 창 모드·다른 모니터 대응. 못 찾거나 최소화면 null
+// Win32로 창을 찾는다 (윈도우만. 맥은 주 모니터 전체로 본다)
+const win32 = process.platform === 'win32' ? (() => {
+  const u = koffi.load('user32.dll')
+  const RECT = koffi.struct('RECT', { left: 'long', top: 'long', right: 'long', bottom: 'long' })
+  const POINT = koffi.struct('POINT', { x: 'long', y: 'long' })
+  return {
+    find: u.func('void* __stdcall FindWindowW(str16 cls, str16 title)'),
+    clientRect: u.func('bool __stdcall GetClientRect(void* h, _Out_ RECT* r)'),
+    toScreen: u.func('bool __stdcall ClientToScreen(void* h, _Inout_ POINT* p)'),
+    minimized: u.func('bool __stdcall IsIconic(void* h)')
+  }
+})() : null
+
+function gameRect(): Electron.Rectangle | null {
+  try {
+    const h = win32?.find(null, 'League of Legends (TM) Client')
+    if (!h || win32!.minimized(h)) return null
+    const r = { left: 0, top: 0, right: 0, bottom: 0 }, p = { x: 0, y: 0 }
+    if (!win32!.clientRect(h, r) || !win32!.toScreen(h, p) || r.right < 100 || r.bottom < 100) return null
+    // Win32 좌표는 물리 픽셀 → Electron 좌표(DIP)
+    return screen.screenToDipRect(null, { x: p.x, y: p.y, width: r.right, height: r.bottom })
+  } catch (e) {
+    console.error('[gamewin]', e)
+    return null
+  }
+}
+
 // 게임 중이 아니거나 로딩 중이면 null
 async function detectGame(): Promise<Game> {
   try {
@@ -40,7 +69,7 @@ async function detectGame(): Promise<Game> {
   }
 }
 
-// 롤 클라이언트 언어 (Riot Client 설정의 settings.locale). 한국어가 아니면 영어로 보여준다.
+// 롤 클라이언트 언어 (Riot Client 설정의 settings.locale). 카드 이름을 이 언어로 읽는다. 한국어가 아니면 영어.
 // 파일이 없으면(롤 미설치·다른 경로) 운영체제 언어. 앱을 켤 때 한 번 읽는다 → 롤 언어를 바꾸면 앱을 다시 켜야 한다
 function clientLang(): 'ko' | 'en' {
   const file = join(process.platform === 'darwin' ? '/Users/Shared' : process.env.PROGRAMDATA ?? 'C:/ProgramData',
@@ -49,7 +78,16 @@ function clientLang(): 'ko' | 'en' {
   try { locale = /^\s+locale:\s*"?([\w-]+)/m.exec(readFileSync(file, 'utf8'))?.[1] ?? locale } catch {}
   return locale.toLowerCase().startsWith('ko') ? 'ko' : 'en'
 }
-let LANG: 'ko' | 'en' = 'ko'
+// 앱 화면 언어: 설치할 때 고른 언어 (설치 프로그램이 %APPDATA%\MoHaZi\lang.txt에 ko/en을 쓴다). 없으면(개발·맥) 롤 언어
+function appLang(game: 'ko' | 'en'): 'ko' | 'en' {
+  try {
+    const v = readFileSync(join(app.getPath('appData'), 'MoHaZi', 'lang.txt'), 'utf8').trim()
+    if (v === 'ko' || v === 'en') return v
+  } catch {}
+  return game
+}
+let LANG: 'ko' | 'en' = 'ko' // 화면 문구
+let GAME_LANG: 'ko' | 'en' = 'ko' // 카드 이름 읽기 (OCR)
 const t = (ko: string, en: string) => (LANG === 'en' ? en : ko)
 
 // 전역 단축키 등록. 다른 프로그램이 먼저 잡은 키면 실패하므로 터미널에 알린다
@@ -102,8 +140,8 @@ function createOverlay() {
 
   const COLLECT = !!process.env.COLLECT
   // 화면 언어는 ?lang=로 넘긴다 (renderer/i18n.ts)
-  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(`${process.env.ELECTRON_RENDERER_URL}?lang=${LANG}` + (COLLECT ? '#collect' : process.env.CAPTURE_ALWAYS ? '#capture' : ''))
-  else win.loadFile(join(__dirname, '../renderer/index.html'), { query: { lang: LANG } })
+  if (process.env.ELECTRON_RENDERER_URL) win.loadURL(`${process.env.ELECTRON_RENDERER_URL}?lang=${LANG}&game=${GAME_LANG}` + (COLLECT ? '#collect' : process.env.CAPTURE_ALWAYS ? '#capture' : ''))
+  else win.loadFile(join(__dirname, '../renderer/index.html'), { query: { lang: LANG, game: GAME_LANG } })
 
   // 빌드 패널 위에서만 클릭을 받는다
   const clickThrough = (on: boolean) => win.setIgnoreMouseEvents(on, { forward: true })
@@ -123,7 +161,7 @@ function createOverlay() {
     app.on('will-quit', () => uIOhook.stop())
   } catch (e) { console.error('[hook]', e) }
   // 이름 영역 PNG → 글자 (같은 그림 증강 가르기)
-  ipcMain.handle('ocr', (_e, png: Uint8Array) => readText(png, LANG))
+  ipcMain.handle('ocr', (_e, png: Uint8Array) => readText(png, GAME_LANG))
   // 증강 검색 팝업이 열린 동안만 키 입력을 받는다. 닫으면 포커스를 놓아 게임으로 돌려준다
   ipcMain.on('focus', (_e, on: boolean) => {
     if (on) { win.setFocusable(true); win.focus() }
@@ -202,13 +240,29 @@ function createOverlay() {
     console.log(`[collect] 게임 중 3초마다 자동 저장, ${snapKey}로 직접 저장, 30초마다 allgamedata → ${dir}`)
   }
 
+  // 오버레이·캡처를 게임 창에 맞춘다 (테두리 없는 창이면 모니터 전체 = 예전과 같음). 게임 밖이면 주 모니터 전체
+  let captureDisplay = screen.getPrimaryDisplay().id
+  let lastRect = ''
+  const fitToGame = (inGame: boolean) => {
+    const rect = (inGame && gameRect()) || screen.getPrimaryDisplay().bounds
+    const key = JSON.stringify(rect)
+    if (key === lastRect) return
+    lastRect = key
+    const d = screen.getDisplayMatching(rect), b = d.bounds
+    captureDisplay = d.id
+    win.setBounds(rect)
+    win.webContents.send('game-area', { display: d.id, x: (rect.x - b.x) / b.width, y: (rect.y - b.y) / b.height, w: rect.width / b.width, h: rect.height / b.height })
+  }
+
   // 2초마다 게임 상태 확인, 바뀌었을 때만 렌더러에 알림
   win.webContents.on('did-finish-load', () => {
     let last = ''
+    lastRect = '' // 렌더러가 새로 떴으면 영역도 다시 보낸다
     setInterval(async () => {
       // 증바람 판에서만 켠다 (다른 모드면 패널·캡처·인식 모두 쉼). 쉬는 이유는 트레이 툴팁에 보인다
       const found = await detectGame()
       const game = found?.gameMode === MODE ? found : null
+      fitToGame(!!game)
       const key = JSON.stringify(game)
       if (key !== last) {
         last = key
@@ -218,10 +272,10 @@ function createOverlay() {
     }, 2000)
   })
 
-  // 렌더러의 getDisplayMedia 요청에 선택 창 없이 주 모니터를 넘긴다 (캡처는 src/capture)
+  // 렌더러의 getDisplayMedia 요청에 선택 창 없이 게임이 있는 모니터를 넘긴다 (캡처는 src/capture)
   win.webContents.session.setDisplayMediaRequestHandler(async (_req, cb) => {
     const sources = await desktopCapturer.getSources({ types: ['screen'] })
-    const id = String(screen.getPrimaryDisplay().id)
+    const id = String(captureDisplay)
     cb({ video: sources.find((s) => s.display_id === id) ?? sources[0] })
   })
 }
@@ -240,7 +294,8 @@ else app.whenReady().then(() => {
     // 화면 기록 권한 요청 창을 게임 밖(지금)에 띄운다. 게임 중에 처음 뜨면 전체 화면에 가려진다
     if (systemPreferences.getMediaAccessStatus('screen') !== 'granted') desktopCapturer.getSources({ types: ['screen'] }).catch(() => {})
   }
-  LANG = clientLang()
+  GAME_LANG = clientLang()
+  LANG = appLang(GAME_LANG)
   createOverlay()
 })
 app.on('will-quit', () => globalShortcut.unregisterAll())

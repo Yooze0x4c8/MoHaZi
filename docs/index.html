@@ -130,6 +130,8 @@
   .notes .md ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
   .notes .md a { color: var(--signal); }
   .more { margin: 32px 0 0; color: var(--muted); }
+  #install-mac { scroll-margin-top: 32px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--faint); font-size: 13px; }
   footer p { margin: 0 0 8px; max-width: 70em; }
 
@@ -170,7 +172,7 @@
         <p class="lede">증바람(무작위 총력전: 아수라장) 증강 선택 화면에서 카드마다 등급과 한 줄 이유를 띄워 줍니다. 게임 시작 때 고른 빌드에 맞춰 매깁니다.</p>
         <div class="cta">
           <a class="btn primary" id="dl-main" href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest">윈도우용 받기</a>
-          <a class="btn" id="dl-alt" href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest">맥용 받기</a>
+          <a class="btn" id="dl-alt" href="#install-mac">맥용 받기</a>
         </div>
         <p class="ver" id="ver">무료 · 윈도우 10 이상, macOS</p>
       </div>
@@ -216,7 +218,7 @@
             <li>끌 때는 트레이 아이콘 우클릭 → <strong>종료</strong>. 새 버전은 알아서 받아집니다.</li>
           </ol>
         </div>
-        <div>
+        <div id="install-mac">
           <h3>macOS</h3>
           <ol>
             <li>Apple 칩이면 <a href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest" id="dl-arm"><code>arm64.dmg</code></a>, 인텔 맥이면 <a href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest" id="dl-x64"><code>x64.dmg</code></a>를 받습니다.</li>

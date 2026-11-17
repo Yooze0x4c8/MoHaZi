@@ -130,6 +130,8 @@
   .notes .md ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
   .notes .md a { color: var(--signal); }
   .more { margin: 32px 0 0; color: var(--muted); }
+  #install-mac { scroll-margin-top: 32px; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--faint); font-size: 13px; }
   footer p { margin: 0 0 8px; max-width: 70em; }
 
@@ -170,7 +172,7 @@
         <p class="lede">On the ARAM: Mayhem augment screen, MoHaZi puts a grade and a one-line reason on every card, scored for the build you picked at game start.</p>
         <div class="cta">
           <a class="btn primary" id="dl-main" href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest">Download for Windows</a>
-          <a class="btn" id="dl-alt" href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest">Download for Mac</a>
+          <a class="btn" id="dl-alt" href="#install-mac">Download for Mac</a>
         </div>
         <p class="ver" id="ver">Free · Windows 10 or later, macOS</p>
       </div>
@@ -216,7 +218,7 @@
             <li>To quit, right-click the tray icon → <strong>Quit</strong>. New versions download automatically.</li>
           </ol>
         </div>
-        <div>
+        <div id="install-mac">
           <h3>macOS</h3>
           <ol>
             <li>Download <a href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest" id="dl-arm"><code>arm64.dmg</code></a> for Apple silicon or <a href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest" id="dl-x64"><code>x64.dmg</code></a> for an Intel Mac.</li>

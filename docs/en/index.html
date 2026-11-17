@@ -74,9 +74,11 @@
   .why { padding: 0 10px; display: flex; flex-direction: column; justify-content: center; font-size: 12.5px; line-height: 1.3; min-width: 0; }
   .why b { font-weight: 650; }
   .why span { color: var(--muted); }
-  .body { aspect-ratio: 3 / 3.4; background: var(--card); border: 1px solid rgba(242, 239, 232, .08); border-top: 0; border-radius: 0 0 4px 4px; display: flex; flex-direction: column; align-items: center; padding-top: 18%; gap: 10px; }
-  .body i { width: 34%; aspect-ratio: 1; border-radius: 50%; background: #3B3F49; }
-  .body em { font-style: normal; font-size: 13px; color: var(--muted); text-align: center; padding: 0 8px; }
+  .body { aspect-ratio: 3 / 3.4; background: var(--card); border: 1px solid rgba(242, 239, 232, .08); border-top: 0; border-radius: 0 0 4px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .body[data-r="gold"] { border-color: rgba(200, 170, 110, .45); }
+  .body[data-r="prismatic"] { border-color: rgba(185, 166, 255, .5); }
+  .body img { width: 42%; aspect-ratio: 1; display: block; }
+  .body em { font-style: normal; font-size: 13px; font-weight: 600; text-align: center; padding: 0 8px; line-height: 1.35; }
   /* 추천 꺾쇠 */
   .c::before, .c::after { content: ""; position: absolute; inset: -7px; pointer-events: none; opacity: 0; transition: opacity .25s;
     background:
@@ -150,8 +152,8 @@
       <div class="demo" aria-label="Overlay preview">
         <div class="builds" role="group" aria-label="Choose a build">
           <button type="button" data-b="0" aria-pressed="true">AP ult Gangplank</button>
-          <button type="button" data-b="1" aria-pressed="false">Bruiser Gangplank</button>
-          <button type="button" data-b="2" aria-pressed="false">Crit Gangplank</button>
+          <button type="button" data-b="1" aria-pressed="false">Crit barrel Gangplank</button>
+          <button type="button" data-b="2" aria-pressed="false">Lethality Gangplank</button>
         </div>
         <div class="cards" id="cards"></div>
         <p class="demo-note">Try another build. The cards are re-graded instantly.</p>
@@ -209,21 +211,25 @@
 </div>
 
 <script>
-  // 데모: 빌드마다 [등급, 이름, 이유]. 실제 엔진 결과가 아니라 보여주기용.
-  const CARDS = ['Ult haste', 'Some AP', 'Ability haste']
+  // 데모: 실제 증강 3장, 빌드마다 [등급, 태그, 이유]. 실제 엔진 결과가 아니라 보여주기용.
+  const CARDS = [
+    ['1088', 'Ultimate Revolution', 'prismatic'],
+    ['1047', "It's Critical", 'gold'],
+    ['1084', 'Thread the Needle', 'gold'],
+  ]
   const GRADES = [
-    [['S', 'Core for ult spam'], ['B', 'Off-build'], ['A', 'Helps the ult']],
-    [['C', 'Ult used less'], ['B', 'Off-build'], ['S', 'Synergy with on-hit']],
-    [['B', 'Minor bonus'], ['C', 'Low damage ratio'], ['A', 'Barrel haste']],
+    [['S', 'Ult reset', 'Core for ult spam'], ['C', 'Crit', 'Off-build'], ['A', 'Magic pen', 'Damage boost']],
+    [['B', 'Ult reset', 'Not ult-focused'], ['S', 'Crit', 'Core for barrels'], ['A', 'Pen', 'Helps autos']],
+    [['A', 'Ult reset', 'One more combo'], ['C', 'Crit', 'Off-build'], ['S', 'Lethality', 'Core pen']],
   ]
   const cards = document.getElementById('cards')
   const buttons = document.querySelectorAll('.builds button')
   function render(b) {
     const rows = GRADES[b]
     const best = rows.findIndex(r => r[0] === 'S')
-    cards.innerHTML = rows.map(([g, why], i) =>
+    cards.innerHTML = rows.map(([g, tag, why], i) =>
       `<div class="c${i === best ? ' pick' : ''}"><div class="strip"><div class="g" data-g="${g}">${g}</div>` +
-      `<div class="why"><b>${CARDS[i]}</b><span>${why}</span></div></div><div class="body"><i></i><em>Augment card</em></div></div>`
+      `<div class="why"><b>${tag}</b><span>${why}</span></div></div><div class="body" data-r="${CARDS[i][2]}"><img src="../augments/${CARDS[i][0]}.png" alt="" width="128" height="128"><em>${CARDS[i][1]}</em></div></div>`
     ).join('')
     buttons.forEach(x => x.setAttribute('aria-pressed', String(x.dataset.b == b)))
   }

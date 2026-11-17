@@ -74,9 +74,11 @@
   .why { padding: 0 10px; display: flex; flex-direction: column; justify-content: center; font-size: 12.5px; line-height: 1.3; min-width: 0; }
   .why b { font-weight: 650; }
   .why span { color: var(--muted); }
-  .body { aspect-ratio: 3 / 3.4; background: var(--card); border: 1px solid rgba(242, 239, 232, .08); border-top: 0; border-radius: 0 0 4px 4px; display: flex; flex-direction: column; align-items: center; padding-top: 18%; gap: 10px; }
-  .body i { width: 34%; aspect-ratio: 1; border-radius: 50%; background: #3B3F49; }
-  .body em { font-style: normal; font-size: 13px; color: var(--muted); text-align: center; padding: 0 8px; }
+  .body { aspect-ratio: 3 / 3.4; background: var(--card); border: 1px solid rgba(242, 239, 232, .08); border-top: 0; border-radius: 0 0 4px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+  .body[data-r="gold"] { border-color: rgba(200, 170, 110, .45); }
+  .body[data-r="prismatic"] { border-color: rgba(185, 166, 255, .5); }
+  .body img { width: 42%; aspect-ratio: 1; display: block; }
+  .body em { font-style: normal; font-size: 13px; font-weight: 600; text-align: center; padding: 0 8px; line-height: 1.35; }
   /* 추천 꺾쇠 */
   .c::before, .c::after { content: ""; position: absolute; inset: -7px; pointer-events: none; opacity: 0; transition: opacity .25s;
     background:
@@ -150,8 +152,8 @@
       <div class="demo" aria-label="오버레이 미리보기">
         <div class="builds" role="group" aria-label="빌드 고르기">
           <button type="button" data-b="0" aria-pressed="true">AP 무한궁 갱플</button>
-          <button type="button" data-b="1" aria-pressed="false">브루저 갱플</button>
-          <button type="button" data-b="2" aria-pressed="false">치명타 갱플</button>
+          <button type="button" data-b="1" aria-pressed="false">치명타 배럴 갱플</button>
+          <button type="button" data-b="2" aria-pressed="false">물리 관통 갱플</button>
         </div>
         <div class="cards" id="cards"></div>
         <p class="demo-note">빌드를 눌러 보세요. 등급이 바로 다시 매겨집니다.</p>
@@ -209,21 +211,25 @@
 </div>
 
 <script>
-  // 데모: 빌드마다 [등급, 이름, 이유]. 실제 엔진 결과가 아니라 보여주기용.
-  const CARDS = ['궁 쿨감', 'AP 조금', '스킬 가속']
+  // 데모: 실제 증강 3장, 빌드마다 [등급, 태그, 이유]. 실제 엔진 결과가 아니라 보여주기용.
+  const CARDS = [
+    ['1088', '궁극기 대변혁', 'prismatic'],
+    ['1047', '치명적인 공격', 'gold'],
+    ['1084', '바늘에 실 끼우기', 'gold'],
+  ]
   const GRADES = [
-    [['S', '무한궁 핵심'], ['B', '빌드와 무관'], ['A', '궁 보조']],
-    [['C', '궁을 덜 씀'], ['B', '빌드와 무관'], ['S', '평타 강화와 시너지']],
-    [['B', '보조 효과'], ['C', '딜 계수 낮음'], ['A', '통 쿨감']],
+    [['S', '궁 초기화', '무한궁 핵심'], ['C', '치명타', '빌드와 무관'], ['A', '마법 관통', '딜 보조']],
+    [['B', '궁 초기화', '궁 위주 아님'], ['S', '치명타', '배럴 핵심'], ['A', '관통', '평타 보조']],
+    [['A', '궁 초기화', '콤보 한 번 더'], ['C', '치명타', '빌드와 무관'], ['S', '물리 관통', '관통 핵심']],
   ]
   const cards = document.getElementById('cards')
   const buttons = document.querySelectorAll('.builds button')
   function render(b) {
     const rows = GRADES[b]
     const best = rows.findIndex(r => r[0] === 'S')
-    cards.innerHTML = rows.map(([g, why], i) =>
+    cards.innerHTML = rows.map(([g, tag, why], i) =>
       `<div class="c${i === best ? ' pick' : ''}"><div class="strip"><div class="g" data-g="${g}">${g}</div>` +
-      `<div class="why"><b>${CARDS[i]}</b><span>${why}</span></div></div><div class="body"><i></i><em>증강 카드</em></div></div>`
+      `<div class="why"><b>${tag}</b><span>${why}</span></div></div><div class="body" data-r="${CARDS[i][2]}"><img src="augments/${CARDS[i][0]}.png" alt="" width="128" height="128"><em>${CARDS[i][1]}</em></div></div>`
     ).join('')
     buttons.forEach(x => x.setAttribute('aria-pressed', String(x.dataset.b == b)))
   }

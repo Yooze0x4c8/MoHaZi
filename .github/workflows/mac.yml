@@ -33,7 +33,9 @@ jobs:
         run: |
           TAG="${TAG:-$(gh release view --json tagName -q .tagName)}"
           gh release upload "$TAG" release/*.dmg --clobber
-          # 릴리스 설명에 윈도우용·맥용 다운로드 링크를 나눠 적는다
+          # 릴리스 설명 맨 위에 윈도우용·맥용 다운로드 링크를 적는다. 원래 설명(패치노트, overlay/build/release-notes.md)은 그 아래에 남긴다
+          # 다시 돌려도 링크가 겹치지 않게, 이미 붙은 링크 부분은 떼고 붙인다
+          BODY="$(gh release view "$TAG" --json body -q .body | sed '/^## 🪟/,/^<!-- notes -->$/d')"
           V="${TAG#v}"
           D="https://github.com/${{ github.repository }}/releases/download/$TAG"
           gh release edit "$TAG" --notes "## 🪟 윈도우 사용자용 · Windows
@@ -46,4 +48,8 @@ jobs:
           내 맥 칩 확인: 왼쪽 위 Apple 메뉴 → 이 Mac에 관하여 → '칩' 또는 '프로세서'.
           Check your chip: Apple menu → About This Mac → Chip or Processor.
 
-          설치 방법은 [README](https://github.com/${{ github.repository }}#설치)를 보세요. Install guide: [README (English)](https://github.com/${{ github.repository }}#english)."
+          설치 방법은 [README](https://github.com/${{ github.repository }}#설치)를 보세요. Install guide: [README (English)](https://github.com/${{ github.repository }}#english).
+
+          <!-- notes -->
+
+          $BODY"

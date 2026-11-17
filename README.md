@@ -8,11 +8,12 @@
 <p align="center">
   <a href="https://github.com/Yooze0x4c8/MoHaZi/releases/latest"><img src="https://img.shields.io/github/v/release/Yooze0x4c8/MoHaZi?style=flat-square&label=release&labelColor=0E0F12&color=6E95FF" alt="Latest release"></a>
   <a href="https://github.com/Yooze0x4c8/MoHaZi/releases"><img src="https://img.shields.io/github/downloads/Yooze0x4c8/MoHaZi/total?style=flat-square&label=downloads&labelColor=0E0F12&color=6E95FF" alt="Downloads"></a>
+  <a href="https://yooze0x4c8.github.io/MoHaZi/"><img src="https://img.shields.io/badge/website-yooze0x4c8.github.io%2FMoHaZi-6E95FF?style=flat-square&labelColor=0E0F12" alt="Website"></a>
   <br>
   <sub><a href="#설치">한국어</a> · <a href="#english">English</a></sub>
 </p>
 
-증바람(롤 무작위 총력전: 아수라장) 증강 추천 오버레이.
+증바람(롤 무작위 총력전: 아수라장) 증강 추천 오버레이. **[소개 페이지](https://yooze0x4c8.github.io/MoHaZi/)**
 
 증강 선택 화면의 카드마다 **등급과 한 줄 이유**를 띄워, 게임 시작 때 고른 빌드에 맞는 증강을 몇 초 안에 고르게 돕습니다.
 
@@ -147,7 +148,7 @@ tools/              증강·아이콘 받기, 태그 추출, 빌드 생성
 
 ## English
 
-Augment recommendation overlay for League of Legends **ARAM: Mayhem**.
+Augment recommendation overlay for League of Legends **ARAM: Mayhem**. **[Website](https://yooze0x4c8.github.io/MoHaZi/en/)**
 
 On the augment selection screen it shows a **grade and a one-line reason** on each card, so you can pick the augment that fits the build you chose at game start within seconds.
 

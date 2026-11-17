@@ -16,7 +16,7 @@
 
 증강 선택 화면의 카드마다 **등급과 한 줄 이유**를 띄워, 게임 시작 때 고른 빌드에 맞는 증강을 몇 초 안에 고르게 돕습니다.
 
-> 개인용(본인·친구)으로 먼저 만들고 있습니다. 공개 배포는 라이엇 정책을 확인한 뒤 결정합니다.
+> 개인용으로 먼저 만들고 있습니다. 공개 배포는 라이엇 정책을 확인한 뒤 결정합니다.
 
 앱 화면은 **롤 클라이언트 언어**를 따라 한국어 또는 영어로 나옵니다. 한국어가 아니면 영어입니다. 롤 언어를 바꿨으면 앱을 다시 켜 주세요.
 
@@ -136,8 +136,7 @@ tools/              증강·아이콘 받기, 태그 추출, 빌드 생성
 
 ## 주의
 
-- 화면 캡처만 사용하며, 게임 메모리를 읽거나 게임에 입력을 보내지 않습니다. 오버레이 창은 녹화·방송 화면에 찍히지 않습니다.
-- 라이엇은 2025년 오버레이 정책을 개정했고, TFT에서는 증강 승률 표시가 금지돼 있습니다. 공개 배포 전 Riot Developer Portal에서 허용 여부를 확인할 예정입니다.
+- 화면 캡처와 마우스 클릭 위치(고른 증강을 기록하는 데만 씀)만 사용하며, 게임 메모리를 읽거나 게임에 입력을 보내지 않습니다. 오버레이 창은 녹화·방송 화면에 찍히지 않습니다.
 - 이 프로젝트는 Riot Games와 관련이 없으며, Riot Games가 보증하지 않습니다.
 
 ## 라이선스
@@ -257,7 +256,7 @@ Edit the `BUILDS` table in `tools/make-builds.mjs` and run `node tools/make-buil
 
 ### Notes
 
-- Uses screen capture only. It never reads game memory or sends input to the game. The overlay window does not show up in recordings or streams.
+- Uses only screen capture and mouse click positions (to record which augment you picked). It never reads game memory or sends input to the game. The overlay window does not show up in recordings or streams.
 - Riot revised its overlay policy in 2025, and showing augment win rates is banned in TFT. Whether this is allowed will be checked on the Riot Developer Portal before any public release.
 - This project is not affiliated with or endorsed by Riot Games.
 

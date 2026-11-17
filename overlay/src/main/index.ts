@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs'
 import https from 'node:https'
 import { readText } from './ocr'
 import { autoUpdater } from 'electron-updater'
+import { uIOhook } from 'uiohook-napi'
 
 // alias: data/builds.json 키 (rawChampionName = 'game_character_displayname_<alias>')
 export type Game = { champion: string; alias: string; gameMode: string } | null
@@ -106,7 +107,21 @@ function createOverlay() {
 
   // 빌드 패널 위에서만 클릭을 받는다
   const clickThrough = (on: boolean) => win.setIgnoreMouseEvents(on, { forward: true })
-  ipcMain.on('clickable', (_e, on: boolean) => clickThrough(!on))
+  let throughNow = true
+  ipcMain.on('clickable', (_e, on: boolean) => { throughNow = !on; clickThrough(!on) })
+
+  // 고른 증강 (3-3): 게임에 들어간 왼쪽 클릭 위치를 렌더러로 넘긴다 (창 기준 DIP).
+  // 오버레이 패널을 누른 클릭은 게임에 안 갔으니 뺀다. 훅이 안 되면(맥 손쉬운 사용 권한 등) 마우스 위치 추정만 쓴다
+  try {
+    uIOhook.on('mousedown', (e) => {
+      if (e.button !== 1 || !throughNow || !win.isVisible()) return
+      const p = process.platform === 'win32' ? screen.screenToDipPoint({ x: e.x, y: e.y }) : { x: e.x, y: e.y }
+      const b = win.getBounds()
+      win.webContents.send('game-click', { x: p.x - b.x, y: p.y - b.y })
+    })
+    uIOhook.start()
+    app.on('will-quit', () => uIOhook.stop())
+  } catch (e) { console.error('[hook]', e) }
   // 이름 영역 PNG → 글자 (같은 그림 증강 가르기)
   ipcMain.handle('ocr', (_e, png: Uint8Array) => readText(png, LANG))
   // 증강 검색 팝업이 열린 동안만 키 입력을 받는다. 닫으면 포커스를 놓아 게임으로 돌려준다

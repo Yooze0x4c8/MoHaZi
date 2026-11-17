@@ -141,6 +141,13 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
     addEventListener('mousemove', on) // 클릭 통과 창도 마우스 이동은 받는다 (forward)
     return () => removeEventListener('mousemove', on)
   }, [])
+  // 게임에 들어간 클릭 (전역 마우스 훅). 카드를 누른 클릭이 있으면 마우스 위치 추정보다 이걸 믿는다
+  const clicks = useRef<{ t: number; x: number; y: number }[]>([])
+  useEffect(() => window.api?.onGameClick((p) => {
+    const h = clicks.current, now = performance.now()
+    h.push({ t: now, ...toStage(p.x, p.y) })
+    while (h.length && h[0].t < now - 3000) h.shift()
+  }), [])
 
   const resolved = cards?.map((id, i) => id ?? fixed[i] ?? null) ?? null
   const shown = useRef<{ key: string; ids: (number | null)[] } | null>(null)
@@ -156,10 +163,13 @@ function ChampOverlay({ champ, alias, cards, rerolls = null, picked: initial = [
     }
     if (!prev) return
     shown.current = null
-    // 화면이 닫힌 걸 아는 건 두 프레임 뒤라(약 0.5~1초) 그만큼 앞의 마우스 위치를 본다
-    // ponytail: 시간으로 고른 근사값. 닫힌 순간 마우스를 크게 움직이면 틀릴 수 있다 → 패널에서 고친다
+    // 1순위: 닫히기 전 3초 안에 카드를 누른 마지막 클릭
+    // 2순위(훅이 안 될 때): 화면이 닫힌 걸 아는 건 두 프레임 뒤라(약 0.5~1초) 그만큼 앞의 마우스 위치를 본다
+    // 2순위는 시간으로 고른 근사값. 닫힌 순간 마우스를 크게 움직이면 틀릴 수 있다 -> 패널에서 고친다
+    const click = [...clicks.current].reverse().find((c) => cardAt(c) != null)
+    clicks.current = [] // 다음 화면에 이번 클릭이 섞이지 않게
     const before = performance.now() - 700, h = mouse.current
-    const at = [...h].reverse().find((m) => m.t <= before) ?? h[0] ?? null
+    const at = click ?? [...h].reverse().find((m) => m.t <= before) ?? h[0] ?? null
     const i = cardAt(at), id = i == null ? null : prev.ids[i]
     if (id == null) return
     setPicked((p) => [...p, id])

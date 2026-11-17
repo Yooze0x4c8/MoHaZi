@@ -36,6 +36,8 @@ jobs:
           # 릴리스 설명 맨 위에 윈도우용·맥용 다운로드 링크를 적는다. 원래 설명(패치노트, overlay/build/release-notes.md)은 그 아래에 남긴다
           # 다시 돌려도 링크가 겹치지 않게, 이미 붙은 링크 부분은 떼고 붙인다
           BODY="$(gh release view "$TAG" --json body -q .body | sed '/^## 🪟/,/^<!-- notes -->$/d')"
+          # npm run release는 설명을 비워 올린다 → 비어 있으면 저장소의 패치노트를 넣는다
+          [ -n "$(echo "$BODY" | tr -d '[:space:]')" ] || BODY="$(cat build/release-notes.md)"
           V="${TAG#v}"
           D="https://github.com/${{ github.repository }}/releases/download/$TAG"
           gh release edit "$TAG" --notes "## 🪟 윈도우 사용자용 · Windows

@@ -42,7 +42,7 @@
   header nav a:hover { color: var(--paper); }
 
   /* 첫 화면 */
-  .hero { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; align-items: center; padding: 56px 0 96px; }
+  .hero { display: grid; grid-template-columns: 1fr 1.45fr; gap: 48px; align-items: center; padding: 56px 0 96px; }
   h1 { font-size: clamp(34px, 4.6vw, 52px); line-height: 1.18; font-weight: 720; letter-spacing: -0.035em; margin: 0 0 20px; }
   .lede { color: var(--muted); font-size: 18px; margin: 0 0 32px; max-width: 30em; }
   .cta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
@@ -63,9 +63,10 @@
     background: rgba(14, 15, 18, .8); border: 1px solid var(--line); border-radius: 4px; padding: 6px 11px;
   }
   .builds button[aria-pressed="true"] { color: var(--paper); box-shadow: inset 2px 0 0 var(--signal); }
-  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-  .c { position: relative; }
-  .strip { display: flex; align-items: stretch; height: 44px; background: rgba(14, 15, 18, .86); border-radius: 4px 4px 0 0; overflow: hidden; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .c { container-type: inline-size; min-width: 0; }
+  .sel { position: relative; }
+  .strip { display: flex; align-items: stretch; height: 44px; background: rgba(14, 15, 18, .9); border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
   .g { width: 44px; flex: none; display: grid; place-items: center; font-weight: 800; font-size: 22px; letter-spacing: -0.02em; transition: background .25s, color .25s, box-shadow .25s; }
   .g[data-g="S"] { background: var(--paper); color: var(--ink); }
   .g[data-g="A"] { box-shadow: inset 0 0 0 2px var(--paper); }
@@ -74,21 +75,36 @@
   .why { padding: 0 10px; display: flex; flex-direction: column; justify-content: center; font-size: 12.5px; line-height: 1.3; min-width: 0; }
   .why b { font-weight: 650; }
   .why span { color: var(--muted); }
-  .body { aspect-ratio: 3 / 3.4; background: var(--card); border: 1px solid rgba(242, 239, 232, .08); border-top: 0; border-radius: 0 0 4px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
-  .body[data-r="gold"] { border-color: rgba(200, 170, 110, .45); }
-  .body[data-r="prismatic"] { border-color: rgba(185, 166, 255, .5); }
-  .body img { width: 42%; aspect-ratio: 1; display: block; }
-  .body em { font-style: normal; font-size: 13px; font-weight: 600; text-align: center; padding: 0 8px; line-height: 1.35; }
+  /* 게임 속 골드 증강 카드 (실제 비율 372:610) */
+  .card {
+    --cut: 9cqw;
+    aspect-ratio: 372 / 610; border-radius: 5cqw; padding: 5.5cqw;
+    background: linear-gradient(165deg, #FFF7EA 0%, #F7D9AE 30%, #E6A15C 62%, #F5D3A4 88%, #FFF1DC 100%);
+    box-shadow: 0 0 5cqw rgba(255, 166, 77, .45), 0 0 1.2cqw rgba(255, 214, 160, .7);
+  }
+  .band { height: 100%; background: #23404A; border-radius: 1.6cqw; padding: 2.6cqw; }
+  .edge, .face {
+    height: 100%;
+    clip-path: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+  }
+  .edge { background: linear-gradient(180deg, #F2C58A, #B97A3E 50%, #F2C58A); padding: .9cqw; }
+  .face { background: #050608; display: flex; flex-direction: column; align-items: center; padding: 8cqw 6cqw 0; text-align: center; }
+  .face img { width: 52cqw; height: auto; aspect-ratio: 1; display: block; }
+  .face b { margin-top: 7cqw; font-size: 7.4cqw; font-weight: 500; line-height: 1.25; letter-spacing: 0; color: #F4F1EC; }
+  .face i { margin-top: 2cqw; font-style: normal; font-size: 4.4cqw; font-weight: 600; line-height: 1; padding: .7cqw 1.2cqw; border-radius: .8cqw; background: #F3E4BE; color: #2A2114; }
+  .face p { margin: 6cqw 0 0; font-size: 4.9cqw; line-height: 1.4; color: #ECEAE6; }
+  .face .k-pen { color: #F0583F; } .face .k-mpen { color: #C27BFF; } .face .k-crit { color: #EE9A3C; } .face .k-ult { color: #6FD3E0; }
+  .rr { width: 21cqw; height: 12cqw; margin: 6cqw auto 0; display: grid; place-items: center; border: 1px solid #8A6435; background: linear-gradient(#3A2816, #1E140B); color: #F0D08F; font-size: 7cqw; line-height: 1; }
   /* 추천 꺾쇠 */
-  .c::before, .c::after { content: ""; position: absolute; inset: -7px; pointer-events: none; opacity: 0; transition: opacity .25s;
+  .sel::before, .sel::after { content: ""; position: absolute; inset: -8px; pointer-events: none; opacity: 0; transition: opacity .25s;
     background:
       linear-gradient(var(--signal), var(--signal)) 0 0 / 14px 2px, linear-gradient(var(--signal), var(--signal)) 0 0 / 2px 14px,
       linear-gradient(var(--signal), var(--signal)) 100% 0 / 14px 2px, linear-gradient(var(--signal), var(--signal)) 100% 0 / 2px 14px,
       linear-gradient(var(--signal), var(--signal)) 0 100% / 14px 2px, linear-gradient(var(--signal), var(--signal)) 0 100% / 2px 14px,
       linear-gradient(var(--signal), var(--signal)) 100% 100% / 14px 2px, linear-gradient(var(--signal), var(--signal)) 100% 100% / 2px 14px;
     background-repeat: no-repeat; }
-  .c::after { content: "Pick"; inset: -28px auto auto -7px; background: none; color: var(--signal); font-size: 12px; font-weight: 600; }
-  .c.pick::before, .c.pick::after { opacity: 1; }
+  .sel::after { content: "Pick"; inset: -28px auto auto -8px; background: none; color: var(--signal); font-size: 12px; font-weight: 600; }
+  .pick .sel::before, .pick .sel::after { opacity: 1; }
   .demo-note { margin: 22px 0 0; color: var(--faint); font-size: 13px; }
 
   /* 본문 */
@@ -226,26 +242,29 @@
 </div>
 
 <script>
-  // 데모: 실제 증강 3장, 빌드마다 [등급, 태그, 이유]. 실제 엔진 결과가 아니라 보여주기용.
+  // 데모: 실제 골드 증강 3장(한 번에 나오는 카드는 등급이 같다), 빌드마다 [등급, 태그, 이유]. 실제 엔진 결과가 아니라 보여주기용.
   const CARDS = [
-    ['1088', 'Ultimate Revolution', 'prismatic'],
-    ['1047', "It's Critical", 'gold'],
-    ['1084', 'Thread the Needle', 'gold'],
+    ['3118', 'Arcane Axiom', 'Speed', 'If a champion you damaged dies shortly after, refund part of your <span class="k-ult">ultimate</span>\'s full cooldown.'],
+    ['1047', "It's Critical", 'Damage', 'Gain <span class="k-crit">critical strike chance</span>.'],
+    ['1084', 'Thread the Needle', 'Damage', 'Gain 18% <span class="k-pen">Armor Penetration</span> and <span class="k-mpen">Magic Penetration</span>.'],
   ]
   const GRADES = [
-    [['S', 'Ult reset', 'Core for ult spam'], ['C', 'Crit', 'Off-build'], ['A', 'Magic pen', 'Damage boost']],
-    [['B', 'Ult reset', 'Not ult-focused'], ['S', 'Crit', 'Core for barrels'], ['A', 'Pen', 'Helps autos']],
-    [['A', 'Ult reset', 'One more combo'], ['C', 'Crit', 'Off-build'], ['S', 'Lethality', 'Core pen']],
+    [['S', 'Ult haste', 'Ult spam core'], ['C', 'Crit', 'Off-build'], ['A', 'Magic pen', 'Damage boost']],
+    [['B', 'Ult haste', 'Not ult-focused'], ['S', 'Crit', 'Core for barrels'], ['A', 'Pen', 'Helps autos']],
+    [['A', 'Ult haste', 'One more combo'], ['C', 'Crit', 'Off-build'], ['S', 'Lethality', 'Core pen']],
   ]
   const cards = document.getElementById('cards')
   const buttons = document.querySelectorAll('.builds button')
   function render(b) {
     const rows = GRADES[b]
     const best = rows.findIndex(r => r[0] === 'S')
-    cards.innerHTML = rows.map(([g, tag, why], i) =>
-      `<div class="c${i === best ? ' pick' : ''}"><div class="strip"><div class="g" data-g="${g}">${g}</div>` +
-      `<div class="why"><b>${tag}</b><span>${why}</span></div></div><div class="body" data-r="${CARDS[i][2]}"><img src="../augments/${CARDS[i][0]}.png" alt="" width="128" height="128"><em>${CARDS[i][1]}</em></div></div>`
-    ).join('')
+    cards.innerHTML = rows.map(([g, tag, why], i) => {
+      const [id, name, cat, desc] = CARDS[i]
+      return `<div class="c${i === best ? ' pick' : ''}"><div class="sel"><div class="strip"><div class="g" data-g="${g}">${g}</div>` +
+        `<div class="why"><b>${tag}</b><span>${why}</span></div></div>` +
+        `<div class="card"><div class="band"><div class="edge"><div class="face"><img src="../augments/${id}.png" alt="" width="128" height="128">` +
+        `<b>${name}</b><i>${cat}</i><p>${desc}</p></div></div></div></div></div><div class="rr" aria-hidden="true">&#x21bb;</div></div>`
+    }).join('')
     buttons.forEach(x => x.setAttribute('aria-pressed', String(x.dataset.b == b)))
   }
   buttons.forEach(x => x.addEventListener('click', () => render(+x.dataset.b)))

@@ -6,6 +6,10 @@ release/
 
 docs/*
 !docs/logo/
+# GitHub Pages 랜딩페이지
+!docs/index.html
+!docs/.nojekyll
+!docs/en/
 samples/
 
 AGENTS.md
